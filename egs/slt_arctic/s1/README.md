@@ -41,3 +41,28 @@ To generate new sentences, please follow below steps:
 Step 8: Run either demo voice or full voice. <br/>
 Step 9: ./merlin_synthesis.sh
 
+###################
+
+promark build:
+
+run_full_voice.sh
+cp experiments/slt_arctic_full  experiments/slt_arctic_full_promark
+make full
+run_full_voice_promark.sh
+
+promark test synthesis:
+make link to festival dir in <MERLIN>/tools
+mkdir -p experiments/slt_arctic_full_promark/test_synthesis/txt
+
+#The file that merlin/festival uses to generate prompt-lab 
+echo "This is a test." > experiments/slt_arctic_full_promark/test_synthesis/txt/test.txt
+
+#Really quick-and-dirty way of adding prominence values
+#same file name as above but extension .prom
+#same text as above but punctuation split
+echo "This is a test ." > experiments/slt_arctic_full_promark/test_synthesis/txt/test.prom
+#and a line with the same number of tokens, prominence values this time, appended to the same file
+echo "150 0 0 20 0" >> experiments/slt_arctic_full_promark/test_synthesis/txt/test.prom
+
+./merlin_synthesis_promark.sh
+wavesurfer experiments/slt_arctic_full_promark/test_synthesis/wav/test.wav
