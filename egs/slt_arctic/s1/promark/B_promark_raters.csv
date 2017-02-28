@@ -24,7 +24,7 @@ david	word	voice	batch	file	interval_no	onset	offset	tag1	tagger	joe	todd	mallor
 0	.	rms	B	arctic_a0102_rms	0	0.0	0.061999999		0	0	0	0
 0	He	rms	B	arctic_a0102_rms	1	0.061999999	0.192		0	0	0	0
 0	will	rms	B	arctic_a0102_rms	2	0.192	0.36199999	[0.035346]	0	0	0	0
-2	follow	rms	B	arctic_a0102_rms	3	0.36199999	0.76200002	[0.035346, 0.812784, 0.9]	2	2	2	2
+2	follow	rms	B	arctic_a0102_rms	3	0.36199999	0.76200002	[0.035346, 0.812784, 0.9]	1	2	2	2
 0	us	rms	B	arctic_a0102_rms	4	0.76200002	1.012	[0.275983]	0	0	0	1
 2	soon	rms	B	arctic_a0102_rms	5	1.012	1.572	[0.883958]	1	1	2	1
 0	.	rms	B	arctic_a0102_rms	6	1.572	0.0		0	0	0	0
@@ -70,7 +70,7 @@ david	word	voice	batch	file	interval_no	onset	offset	tag1	tagger	joe	todd	mallor
 0	his	rms	B	arctic_a0104_rms	5	1.232	1.442	[0.35892]	1	0	0	0
 2	protection	rms	B	arctic_a0104_rms	6	1.442	2.102	[0.022374, 0.304932, 0.116775]	1	2	3	2
 0	as	rms	B	arctic_a0104_rms	7	2.102	2.322	[0.530705]	1	0	0	0
-2	sweetly	rms	B	arctic_a0104_rms	8	2.322	2.822	[0.448077, 0.401573]	2	2	1	1
+2	sweetly	rms	B	arctic_a0104_rms	8	2.322	2.822	[0.448077, 0.401573]	1	2	1	1
 0	as	rms	B	arctic_a0104_rms	9	2.822	3.0220001	[0.406465]	1	0	0	0
 0	a	rms	B	arctic_a0104_rms	10	3.0220001	3.052	[0.109689]	0	0	0	0
 2	child	rms	B	arctic_a0104_rms	11	3.052	3.642	[0.109689, 0.994756]	1	1	2	0
@@ -216,7 +216,7 @@ david	word	voice	batch	file	interval_no	onset	offset	tag1	tagger	joe	todd	mallor
 0	are	slt	B	arctic_a0109_slt	6	0.90574998	1.01825	[0.281948]	0	0	0	0
 1	shaking	slt	B	arctic_a0109_slt	7	1.01825	1.43075	[0.611932, 0.174012]	1	2	1	3
 0	my	slt	B	arctic_a0109_slt	8	1.43075	1.5745	[0.578035]	1	0	0	0
-2	confidence	slt	B	arctic_a0109_slt	9	1.5745	2.187	[0.565588, 0.073602, 0.202049]	2	1	2	1
+2	confidence	slt	B	arctic_a0109_slt	9	1.5745	2.187	[0.565588, 0.073602, 0.202049]	1	1	2	1
 0	in	slt	B	arctic_a0109_slt	10	2.187	2.2869999	[0.106]	0	0	0	1
 0	you	slt	B	arctic_a0109_slt	11	2.2869999	2.5432501	[0.469911]	1	0	1	1
 0	.	slt	B	arctic_a0109_slt	12	2.5432501	0.0		0	0	0	0
@@ -266,7 +266,7 @@ david	word	voice	batch	file	interval_no	onset	offset	tag1	tagger	joe	todd	mallor
 0	.	rms	B	arctic_a0112_rms	0	0.0	0.071999997		0	0	0	0
 0	He	rms	B	arctic_a0112_rms	1	0.071999997	0.252		0	0	1	0
 0	was	rms	B	arctic_a0112_rms	2	0.252	0.48199999	[0.379161]	0	0	0	0
-2	wounded	rms	B	arctic_a0112_rms	3	0.48199999	0.88200003	[0.751472, 0.799978]	2	1	2	3
+2	wounded	rms	B	arctic_a0112_rms	3	0.48199999	0.88200003	[0.751472, 0.799978]	1	1	2	3
 0	in	rms	B	arctic_a0112_rms	4	0.88200003	1.0420001	[0.451122]	0	0	0	0
 0	the	rms	B	arctic_a0112_rms	5	1.0420001	1.1720001	[0.776669]	1	0	0	0
 2	arm	rms	B	arctic_a0112_rms	6	1.1720001	1.642	[1.010358]	1	2	2	1
@@ -356,7 +356,7 @@ david	word	voice	batch	file	interval_no	onset	offset	tag1	tagger	joe	todd	mallor
 0	Was	rms	B	arctic_a0116_rms	1	0.102	0.34200001		0	0	0	0
 0	it	rms	B	arctic_a0116_rms	2	0.34200001	0.45199999	[0.138968]	0	0	0	0
 0	the	rms	B	arctic_a0116_rms	3	0.45199999	0.51200002	[0.161996]	0	0	0	0
-2	rendezvous	rms	B	arctic_a0116_rms	4	0.51200002	1.242	[0.161996, 0.772585, 0.233982, 0.94669]	2	2	3	2
+2	rendezvous	rms	B	arctic_a0116_rms	4	0.51200002	1.242	[0.161996, 0.772585, 0.233982, 0.94669]	1	2	3	2
 0	of	rms	B	arctic_a0116_rms	5	1.242	1.472	[0.366427]	0	0	0	1
 1	those	rms	B	arctic_a0116_rms	6	1.472	1.802	[0.780812]	1	0	0	1
 0	who	rms	B	arctic_a0116_rms	7	1.802	1.872		0	0	0	1
@@ -371,7 +371,7 @@ david	word	voice	batch	file	interval_no	onset	offset	tag1	tagger	joe	todd	mallor
 0	Was	slt	B	arctic_a0116_slt	1	0.18700001	0.38699999		0	0	0	0
 0	it	slt	B	arctic_a0116_slt	2	0.38699999	0.4745	[0.201533]	0	0	0	0
 0	the	slt	B	arctic_a0116_slt	3	0.4745	0.57450002	[0.282021]	0	0	0	0
-2	rendezvous	slt	B	arctic_a0116_slt	4	0.57450002	1.2557499	[0.686904, 0.597756, 0.918654]	2	2	2	2
+2	rendezvous	slt	B	arctic_a0116_slt	4	0.57450002	1.2557499	[0.686904, 0.597756, 0.918654]	1	2	2	2
 0	of	slt	B	arctic_a0116_slt	5	1.2557499	1.362	[0.221171]	0	0	0	0
 1	those	slt	B	arctic_a0116_slt	6	1.362	1.71825	[0.91851]	1	1	1	0
 0	who	slt	B	arctic_a0116_slt	7	1.71825	1.8182499	[0.070768]	0	0	0	0
@@ -386,8 +386,8 @@ david	word	voice	batch	file	interval_no	onset	offset	tag1	tagger	joe	todd	mallor
 0	She	rms	B	arctic_a0117_rms	1	0.071999997	0.37200001		0	0	1	0
 2	added	rms	B	arctic_a0117_rms	2	0.37200001	0.83200002	[1.275003, 0.584472]	1	2	2	3
 0	with	rms	B	arctic_a0117_rms	3	0.83200002	1.072	[0.04487]	0	0	0	0
-1	genuine	rms	B	arctic_a0117_rms	4	1.072	1.552	[0.270428, 0.03404, 0.389325]	2	0	0	2
-2	sympathy	rms	B	arctic_a0117_rms	5	1.552	2.2119999	[0.431273, 0.159661, 0.386646]	2	2	3	2
+1	genuine	rms	B	arctic_a0117_rms	4	1.072	1.552	[0.270428, 0.03404, 0.389325]	1	0	0	2
+2	sympathy	rms	B	arctic_a0117_rms	5	1.552	2.2119999	[0.431273, 0.159661, 0.386646]	1	2	3	2
 0	in	rms	B	arctic_a0117_rms	6	2.2119999	2.342	[0.071122]	0	0	0	0
 0	her	rms	B	arctic_a0117_rms	7	2.342	2.4519999	[0.104668]	0	0	0	0
 2	face	rms	B	arctic_a0117_rms	8	2.4519999	2.822	[0.35613]	1	1	2	1
@@ -399,7 +399,7 @@ david	word	voice	batch	file	interval_no	onset	offset	tag1	tagger	joe	todd	mallor
 2	added	slt	B	arctic_a0117_slt	2	0.42449999	0.83700001	[0.9, 0.54946]	1	2	2	2
 0	.	slt	B	arctic_a0117_slt	3	0.83700001	1.0245		0	0	0	0
 0	with	slt	B	arctic_a0117_slt	4	1.0245	1.16825	[0.06822]	0	0	0	0
-0	genuine	slt	B	arctic_a0117_slt	5	1.16825	1.61825	[0.474184, 0.100761, 0.179121]	2	1	0	1
+0	genuine	slt	B	arctic_a0117_slt	5	1.16825	1.61825	[0.474184, 0.100761, 0.179121]	1	1	0	1
 1	sympathy	slt	B	arctic_a0117_slt	6	1.61825	2.1057501	[0.13553, 0.193174, 0.529564]	1	1	1	1
 0	in	slt	B	arctic_a0117_slt	7	2.1057501	2.1745	[0.135368]	0	0	0	0
 0	her	slt	B	arctic_a0117_slt	8	2.1745	2.312	[0.164928]	0	0	0	0
@@ -409,7 +409,7 @@ david	word	voice	batch	file	interval_no	onset	offset	tag1	tagger	joe	todd	mallor
 0	.	slt	B	arctic_a0117_slt	12	3.3182499	0.0		0	0	0	0
 0	.	rms	B	arctic_a0118_rms	0	0.0	0.082000002		0	0	0	0
 1	Pierre	rms	B	arctic_a0118_rms	1	0.082000002	0.51200002	[0.555174]	0	1	0	2
-2	obeys	rms	B	arctic_a0118_rms	2	0.51200002	1.002	[0.690447, 0.913685]	2	2	2	1
+2	obeys	rms	B	arctic_a0118_rms	2	0.51200002	1.002	[0.690447, 0.913685]	1	2	2	1
 0	me	rms	B	arctic_a0118_rms	3	1.002	1.262	[0.367684]	0	0	0	1
 0	when	rms	B	arctic_a0118_rms	4	1.262	1.502	[0.131856]	0	0	2	2
 0	we	rms	B	arctic_a0118_rms	5	1.502	1.632	[0.207691]	1	0	0	0
@@ -423,7 +423,7 @@ david	word	voice	batch	file	interval_no	onset	offset	tag1	tagger	joe	todd	mallor
 0	when	slt	B	arctic_a0118_slt	4	1.15575	1.35575	[0.135355]	0	0	0	0
 0	we	slt	B	arctic_a0118_slt	5	1.35575	1.5057499	[0.32745]	1	0	0	0
 0	are	slt	B	arctic_a0118_slt	6	1.5057499	1.6495	[0.185665]	0	1	0	0
-2	together	slt	B	arctic_a0118_slt	7	1.6495	2.28075	[0.118656, 0.662742, 0.639606]	2	0	2	0
+2	together	slt	B	arctic_a0118_slt	7	1.6495	2.28075	[0.118656, 0.662742, 0.639606]	1	0	2	0
 0	.	slt	B	arctic_a0118_slt	8	2.28075	0.0		0	0	0	0
 0	.	rms	B	arctic_a0119_rms	0	0.0	0.102		0	0	0	0
 2	Jeanne	rms	B	arctic_a0119_rms	1	0.102	0.51200002		0	1	2	3
@@ -452,7 +452,7 @@ david	word	voice	batch	file	interval_no	onset	offset	tag1	tagger	joe	todd	mallor
 0	of	rms	B	arctic_a0120_rms	7	1.902	2.0320001	[0.12673]	0	0	0	0
 0	a	rms	B	arctic_a0120_rms	8	2.0320001	2.092	[0.21013]	0	0	0	0
 2	Chinese	rms	B	arctic_a0120_rms	9	2.092	2.612	[0.426489, 0.53743]	0	0	0	0
-2	debutante	rms	B	arctic_a0120_rms	10	2.612	3.402	[0.655729, 0.045148, 0.482901]	2	2	2	0
+2	debutante	rms	B	arctic_a0120_rms	10	2.612	3.402	[0.655729, 0.045148, 0.482901]	1	2	2	0
 0	.	rms	B	arctic_a0120_rms	11	3.402	0.0		0	0	0	0
 0	.	slt	B	arctic_a0120_slt	0	0.0	0.0		0	0	0	0
 0	.	slt	B	arctic_a0120_slt	1	0.0	0.19325		0	0	0	0
@@ -464,7 +464,7 @@ david	word	voice	batch	file	interval_no	onset	offset	tag1	tagger	joe	todd	mallor
 1	that	slt	B	arctic_a0120_slt	7	1.48075	1.6995	[0.900818]	1	1	0	0
 0	of	slt	B	arctic_a0120_slt	8	1.6995	1.812	[0.119008]	0	0	0	0
 0	a	slt	B	arctic_a0120_slt	9	1.812	1.8494999	[0.0921]	0	0	0	0
-2	Chinese	slt	B	arctic_a0120_slt	10	1.8494999	2.362	[0.290565, 0.271075]	2	0	1	2
+2	Chinese	slt	B	arctic_a0120_slt	10	1.8494999	2.362	[0.290565, 0.271075]	1	0	1	2
 2	debutante	slt	B	arctic_a0120_slt	11	2.362	3.1182499	[0.203187, 0.057369, 0.634363]	1	0	2	1
 0	.	slt	B	arctic_a0120_slt	12	3.1182499	0.0		0	0	0	0
 0	.	rms	B	arctic_a0121_rms	0	0.0	0.082000002		0	0	0	0
@@ -677,7 +677,7 @@ david	word	voice	batch	file	interval_no	onset	offset	tag1	tagger	joe	todd	mallor
 0	was	rms	B	arctic_a0130_rms	2	0.322	0.58200002	[0.604063]	1	0	0	0
 2	his	rms	B	arctic_a0130_rms	3	0.58200002	0.81199998	[0.508681]	0	2	2	0
 0	now	rms	B	arctic_a0130_rms	4	0.81199998	1.222	[1.034443]	1	0	0	2
-2	forever	rms	B	arctic_a0130_rms	5	1.222	1.812	[0.742065, 0.524764, 0.850083]	2	1	2	1
+2	forever	rms	B	arctic_a0130_rms	5	1.222	1.812	[0.742065, 0.524764, 0.850083]	1	1	2	1
 0	.	rms	B	arctic_a0130_rms	6	1.812	0.0		0	0	0	0
 0	.	slt	B	arctic_a0130_slt	0	0.0	0.15575001		0	0	0	0
 0	She	slt	B	arctic_a0130_slt	1	0.15575001	0.39324999		0	1	0	3
@@ -690,11 +690,11 @@ david	word	voice	batch	file	interval_no	onset	offset	tag1	tagger	joe	todd	mallor
 0	.	rms	B	arctic_a0131_rms	0	0.0	0.071999997		0	0	0	0
 2	Providence	rms	B	arctic_a0131_rms	1	0.071999997	0.71200001	[0.597199, 0.85462]	1	1	3	2
 0	had	rms	B	arctic_a0131_rms	2	0.71200001	0.87199998	[0.611348]	0	0	0	0
-1	delivered	rms	B	arctic_a0131_rms	3	0.87199998	1.352	[0.64704, 0.08421, 0.9]	2	2	1	1
+1	delivered	rms	B	arctic_a0131_rms	3	0.87199998	1.352	[0.64704, 0.08421, 0.9]	1	2	1	1
 0	him	rms	B	arctic_a0131_rms	4	1.352	1.492	[0.404651]	0	0	0	0
 1	through	rms	B	arctic_a0131_rms	5	1.492	1.742	[0.403716]	1	0	0	0
 0	the	rms	B	arctic_a0131_rms	6	1.742	1.842	[0.139417]	0	0	0	0
-2	maelstrom	rms	B	arctic_a0131_rms	7	1.842	2.652	[0.139417, 0.736457, 0.322074]	2	1	2	1
+2	maelstrom	rms	B	arctic_a0131_rms	7	1.842	2.652	[0.139417, 0.736457, 0.322074]	1	1	2	1
 0	.	rms	B	arctic_a0131_rms	8	2.652	0.0		0	0	0	0
 0	.	slt	B	arctic_a0131_slt	0	0.0	0.18075		0	0	0	0
 2	Providence	slt	B	arctic_a0131_slt	1	0.18075	0.76200002	[0.104945, 0.321433]	1	2	2	1
@@ -734,8 +734,8 @@ david	word	voice	batch	file	interval_no	onset	offset	tag1	tagger	joe	todd	mallor
 0	that	rms	B	arctic_a0133_rms	6	1.522	1.682	[0.105395]	0	0	0	0
 0	he	rms	B	arctic_a0133_rms	7	1.682	1.852		0	0	0	0
 0	had	rms	B	arctic_a0133_rms	8	1.852	2.0420001	[0.331065]	0	0	0	0
-2	foolishly	rms	B	arctic_a0133_rms	9	2.0420001	2.852	[0.446816, 0.079878, 0.812005]	2	2	2	1
-1	overestimated	rms	B	arctic_a0133_rms	10	2.852	3.802	[0.896778, 0.583417, 0.559383, 0.050647, 0.512531, 0.131467]	2	0	1	1
+2	foolishly	rms	B	arctic_a0133_rms	9	2.0420001	2.852	[0.446816, 0.079878, 0.812005]	1	2	2	1
+1	overestimated	rms	B	arctic_a0133_rms	10	2.852	3.802	[0.896778, 0.583417, 0.559383, 0.050647, 0.512531, 0.131467]	1	0	1	1
 0	his	rms	B	arctic_a0133_rms	11	3.802	3.9920001	[0.223317]	1	0	0	0
 2	strength	rms	B	arctic_a0133_rms	12	3.9920001	4.6919999	[0.450318]	1	1	2	1
 0	.	rms	B	arctic_a0133_rms	13	4.6919999	0.0		0	0	0	0
@@ -799,7 +799,7 @@ david	word	voice	batch	file	interval_no	onset	offset	tag1	tagger	joe	todd	mallor
 0	will	slt	B	arctic_a0135_slt	10	2.0557499	2.1807499	[0.107538]	0	0	0	0
 1	go	slt	B	arctic_a0135_slt	11	2.1807499	2.3557501	[0.277638]	1	0	1	1
 0	with	slt	B	arctic_a0135_slt	12	2.3557501	2.51825	[0.055764]	0	0	0	1
-2	Pierre	slt	B	arctic_a0135_slt	13	2.51825	3.0682499	[0.159787, 0.142803]	2	1	2	1
+2	Pierre	slt	B	arctic_a0135_slt	13	2.51825	3.0682499	[0.159787, 0.142803]	1	1	2	1
 0	.	slt	B	arctic_a0135_slt	14	3.0682499	0.0		0	0	0	0
 0	.	rms	B	arctic_a0136_rms	0	0.0	0.102		0	0	0	0
 2	About	rms	B	arctic_a0136_rms	1	0.102	0.472	[1.088121]	1	2	1	0
@@ -808,9 +808,9 @@ david	word	voice	batch	file	interval_no	onset	offset	tag1	tagger	joe	todd	mallor
 0	.	rms	B	arctic_a0136_rms	4	1.402	1.452		0	0	0	0
 0	were	rms	B	arctic_a0136_rms	5	1.452	1.632	[0.114681]	0	0	0	0
 0	the	rms	B	arctic_a0136_rms	6	1.632	1.7920001	[0.169072]	0	0	0	0
-2	evidences	rms	B	arctic_a0136_rms	7	1.7920001	2.562	[0.278666, 0.092701, 0.152485, 0.090283]	2	1	2	2
+2	evidences	rms	B	arctic_a0136_rms	7	1.7920001	2.562	[0.278666, 0.092701, 0.152485, 0.090283]	1	1	2	2
 0	of	rms	B	arctic_a0136_rms	8	2.562	2.852	[0.208576]	1	0	0	0
-2	luxury	rms	B	arctic_a0136_rms	9	2.852	3.402	[0.16251, 0.160646, 0.100235]	2	0	2	1
+2	luxury	rms	B	arctic_a0136_rms	9	2.852	3.402	[0.16251, 0.160646, 0.100235]	1	0	2	1
 0	and	rms	B	arctic_a0136_rms	10	3.402	3.7219999	[0.466243]	1	0	0	0
 0	of	rms	B	arctic_a0136_rms	11	3.7219999	3.902	[0.188128]	0	0	0	0
 2	age	rms	B	arctic_a0136_rms	12	3.902	4.4520001	[0.489341]	1	0	2	1
@@ -824,9 +824,9 @@ david	word	voice	batch	file	interval_no	onset	offset	tag1	tagger	joe	todd	mallor
 0	.	slt	B	arctic_a0136_slt	6	1.70575	1.762		0	0	0	0
 0	were	slt	B	arctic_a0136_slt	7	1.762	1.86825	[0.122085]	0	0	0	0
 0	the	slt	B	arctic_a0136_slt	8	1.86825	1.9995	[0.193767]	0	0	0	0
-2	evidences	slt	B	arctic_a0136_slt	9	1.9995	2.6057501	[0.352591, 0.277905, 0.164276, 0.680397]	2	1	2	1
+2	evidences	slt	B	arctic_a0136_slt	9	1.9995	2.6057501	[0.352591, 0.277905, 0.164276, 0.680397]	1	1	2	1
 0	of	slt	B	arctic_a0136_slt	10	2.6057501	2.6932499	[0.078501]	0	0	0	0
-2	luxury	slt	B	arctic_a0136_slt	11	2.6932499	3.2744999	[0.421632, 0.233249, 0.4669]	2	2	2	1
+2	luxury	slt	B	arctic_a0136_slt	11	2.6932499	3.2744999	[0.421632, 0.233249, 0.4669]	1	2	2	1
 0	and	slt	B	arctic_a0136_slt	12	3.2744999	3.487	[0.190488]	0	0	0	0
 0	of	slt	B	arctic_a0136_slt	13	3.487	3.58075	[0.08154]	0	0	0	0
 2	age	slt	B	arctic_a0136_slt	14	3.58075	4.0869999	[0.571582]	1	1	2	1
@@ -853,7 +853,7 @@ david	word	voice	batch	file	interval_no	onset	offset	tag1	tagger	joe	todd	mallor
 1	low	slt	B	arctic_a0137_slt	7	1.3745	1.66825	[0.262972]	0	0	0	0
 2	cry	slt	B	arctic_a0137_slt	8	1.66825	2.0369999	[0.543613]	1	0	1	1
 0	of	slt	B	arctic_a0137_slt	9	2.0369999	2.1619999	[0.041664]	0	0	0	0
-2	pleasure	slt	B	arctic_a0137_slt	10	2.1619999	2.737	[0.159822, 0.15878]	2	0	2	1
+2	pleasure	slt	B	arctic_a0137_slt	10	2.1619999	2.737	[0.159822, 0.15878]	1	0	2	1
 0	.	slt	B	arctic_a0137_slt	11	2.737	0.0		0	0	0	0
 0	.	rms	B	arctic_a0138_rms	0	0.0	0.102		0	0	0	0
 0	In	rms	B	arctic_a0138_rms	1	0.102	0.27200001		0	1	0	0
@@ -862,7 +862,7 @@ david	word	voice	batch	file	interval_no	onset	offset	tag1	tagger	joe	todd	mallor
 0	he	rms	B	arctic_a0138_rms	4	0.84200001	0.98199999	[0.080233]	0	0	0	0
 0	saw	rms	B	arctic_a0138_rms	5	0.98199999	1.312	[0.635345]	1	1	0	0
 1	each	rms	B	arctic_a0138_rms	6	1.312	1.602	[0.338199]	0	1	0	1
-2	moment	rms	B	arctic_a0138_rms	7	1.602	2.132	[0.234161, 0.247564]	2	1	2	2
+2	moment	rms	B	arctic_a0138_rms	7	1.602	2.132	[0.234161, 0.247564]	1	1	2	2
 0	a	rms	B	arctic_a0138_rms	8	2.132	2.1819999	[0.107515]	0	0	0	0
 1	greater	rms	B	arctic_a0138_rms	9	2.1819999	2.5020001	[0.538736, 0.030472]	1	1	0	1
 2	resemblance	rms	B	arctic_a0138_rms	10	2.5020001	3.1719999	[0.030472, 0.073859, 0.429488, 0.045892]	1	2	1	1
@@ -878,7 +878,7 @@ david	word	voice	batch	file	interval_no	onset	offset	tag1	tagger	joe	todd	mallor
 1	each	slt	B	arctic_a0138_slt	6	1.24325	1.562	[0.74035]	1	1	0	0
 2	moment	slt	B	arctic_a0138_slt	7	1.562	1.95575	[0.34165, 0.190101]	0	0	2	0
 0	a	slt	B	arctic_a0138_slt	8	1.95575	1.99325	[0.241711]	0	0	0	0
-1	greater	slt	B	arctic_a0138_slt	9	1.99325	2.3182499	[0.28275, 0.284706]	2	0	0	2
+1	greater	slt	B	arctic_a0138_slt	9	1.99325	2.3182499	[0.28275, 0.284706]	1	0	0	2
 2	resemblance	slt	B	arctic_a0138_slt	10	2.3182499	2.9495001	[0.127236, 0.283008, 0.070288]	1	0	1	2
 0	to	slt	B	arctic_a0138_slt	11	2.9495001	3.0682499	[0.095323]	0	0	0	0
 2	Jeanne	slt	B	arctic_a0138_slt	12	3.0682499	3.4995	[0.608518]	1	0	2	1
@@ -985,7 +985,7 @@ david	word	voice	batch	file	interval_no	onset	offset	tag1	tagger	joe	todd	mallor
 0	had	rms	B	arctic_a0143_rms	3	0.662	0.90200001	[0.279654]	0	0	0	0
 2	forgotten	rms	B	arctic_a0143_rms	4	0.90200001	1.602	[0.138383, 0.563483, 0.006282]	1	2	3	1
 0	he	rms	B	arctic_a0143_rms	5	1.602	2.0220001	[0.150859]	0	0	0	0
-2	exclaimed	rms	B	arctic_a0143_rms	6	2.0220001	2.802	[0.179779, 0.212612]	2	1	2	3
+2	exclaimed	rms	B	arctic_a0143_rms	6	2.0220001	2.802	[0.179779, 0.212612]	1	1	2	3
 0	.	rms	B	arctic_a0143_rms	7	2.802	0.0		0	0	0	0
 0	.	slt	B	arctic_a0143_slt	0	0.0	0.0		0	0	0	0
 0	.	slt	B	arctic_a0143_slt	1	0.0	0.19325		0	0	0	0
@@ -1033,7 +1033,7 @@ david	word	voice	batch	file	interval_no	onset	offset	tag1	tagger	joe	todd	mallor
 0	they	rms	B	arctic_a0145_rms	9	2.0120001	2.132	[0.684181]	1	0	0	0
 2	tear	rms	B	arctic_a0145_rms	10	2.132	2.4719999	[0.630212]	1	1	2	1
 0	very	rms	B	arctic_a0145_rms	11	2.4719999	2.7920001	[0.057335]	0	0	0	1
-2	easily	rms	B	arctic_a0145_rms	12	2.7920001	3.4219999	[0.946064, 0.251999, 0.40681]	2	2	2	1
+2	easily	rms	B	arctic_a0145_rms	12	2.7920001	3.4219999	[0.946064, 0.251999, 0.40681]	1	2	2	1
 0	.	rms	B	arctic_a0145_rms	13	3.4219999	0.0		0	0	0	0
 0	.	slt	B	arctic_a0145_slt	0	0.0	0.0		0	0	0	0
 0	.	slt	B	arctic_a0145_slt	1	0.0	0.19325		0	0	0	0
@@ -1049,14 +1049,14 @@ david	word	voice	batch	file	interval_no	onset	offset	tag1	tagger	joe	todd	mallor
 1	they	slt	B	arctic_a0145_slt	11	1.89325	2.0495	[0.755266]	1	0	0	0
 2	tear	slt	B	arctic_a0145_slt	12	2.0495	2.3870001	[0.345911]	0	2	2	1
 0	very	slt	B	arctic_a0145_slt	13	2.3870001	2.70575	[0.337774, 0.252492]	1	0	0	0
-2	easily	slt	B	arctic_a0145_slt	14	2.70575	3.3057499	[0.776329, 0.053278, 0.2907]	2	0	2	1
+2	easily	slt	B	arctic_a0145_slt	14	2.70575	3.3057499	[0.776329, 0.053278, 0.2907]	1	0	2	1
 0	.	slt	B	arctic_a0145_slt	15	3.3057499	0.0		0	0	0	0
 0	.	rms	B	arctic_a0146_rms	0	0.0	0.102		0	0	0	0
 0	Of	rms	B	arctic_a0146_rms	1	0.102	0.26199999		0	1	0	0
 2	course	rms	B	arctic_a0146_rms	2	0.26199999	0.852	[0.820691]	1	1	2	3
 0	that	rms	B	arctic_a0146_rms	3	0.852	1.222	[0.931572]	1	0	0	0
 0	is	rms	B	arctic_a0146_rms	4	1.222	1.452	[0.540786]	0	0	0	0
-2	uninteresting	rms	B	arctic_a0146_rms	5	1.452	2.402	[0.699618, 0.518287, 0.256405, 0.25825]	2	2	3	2
+2	uninteresting	rms	B	arctic_a0146_rms	5	1.452	2.402	[0.699618, 0.518287, 0.256405, 0.25825]	1	2	3	2
 0	she	rms	B	arctic_a0146_rms	6	2.402	2.632	[0.250971]	1	0	0	0
 2	continued	rms	B	arctic_a0146_rms	7	2.632	3.342	[0.043613, 0.3269, 0.156731]	1	0	1	2
 0	.	rms	B	arctic_a0146_rms	8	3.342	0.0		0	0	0	0
@@ -1066,9 +1066,9 @@ david	word	voice	batch	file	interval_no	onset	offset	tag1	tagger	joe	todd	mallor
 1	course	slt	B	arctic_a0146_slt	3	0.33700001	0.78074998	[0.880694]	1	2	2	1
 0	that	slt	B	arctic_a0146_slt	4	0.78074998	0.99949998	[0.729469]	1	0	0	0
 0	is	slt	B	arctic_a0146_slt	5	0.99949998	1.1307499	[0.144786]	0	0	0	0
-2	uninteresting	slt	B	arctic_a0146_slt	6	1.1307499	1.962	[0.900779, 0.281228, 0.215289, 0.177893]	2	1	2	2
+2	uninteresting	slt	B	arctic_a0146_slt	6	1.1307499	1.962	[0.900779, 0.281228, 0.215289, 0.177893]	1	1	2	2
 0	she	slt	B	arctic_a0146_slt	7	1.962	2.1494999	[0.092858]	0	0	0	0
-2	continued	slt	B	arctic_a0146_slt	8	2.1494999	2.8057499	[0.12359, 0.225498, 0.235712]	2	1	1	0
+2	continued	slt	B	arctic_a0146_slt	8	2.1494999	2.8057499	[0.12359, 0.225498, 0.235712]	1	1	1	0
 0	.	slt	B	arctic_a0146_slt	9	2.8057499	0.0		0	0	0	0
 0	.	rms	B	arctic_a0147_rms	0	0.0	0.102		0	0	0	0
 0	A	rms	B	arctic_a0147_rms	1	0.102	0.152		0	0	0	0
@@ -1076,7 +1076,7 @@ david	word	voice	batch	file	interval_no	onset	offset	tag1	tagger	joe	todd	mallor
 2	before	rms	B	arctic_a0147_rms	3	0.52200001	1.132	[0.135952, 0.736762]	1	0	2	2
 0	he	rms	B	arctic_a0147_rms	4	1.132	1.242	[0.18464]	0	0	0	0
 0	was	rms	B	arctic_a0147_rms	5	1.242	1.4220001	[0.069555, 0.026064]	0	0	0	0
-2	intoxicated	rms	B	arctic_a0147_rms	6	1.4220001	2.2420001	[0.026064, 0.447114, 0.059117, 0.19979, 0.142022]	2	2	2	2
+2	intoxicated	rms	B	arctic_a0147_rms	6	1.4220001	2.2420001	[0.026064, 0.447114, 0.059117, 0.19979, 0.142022]	1	2	2	2
 0	by	rms	B	arctic_a0147_rms	7	2.2420001	2.5020001		0	0	0	0
 0	a	rms	B	arctic_a0147_rms	8	2.5020001	2.562	[0.092731]	0	0	0	0
 2	joy	rms	B	arctic_a0147_rms	9	2.562	2.9920001	[0.092731, 1.088386]	1	1	2	1
@@ -1092,7 +1092,7 @@ david	word	voice	batch	file	interval_no	onset	offset	tag1	tagger	joe	todd	mallor
 2	before	slt	B	arctic_a0147_slt	4	0.63700002	1.01825	[0.134445, 0.428611]	1	0	1	0
 0	he	slt	B	arctic_a0147_slt	5	1.01825	1.1495	[0.096352]	0	0	0	0
 0	was	slt	B	arctic_a0147_slt	6	1.1495	1.34325	[0.102898]	0	0	0	0
-2	intoxicated	slt	B	arctic_a0147_slt	7	1.34325	2.1307499	[0.078405, 0.877495, 0.072011, 0.363764, 0.245606]	2	2	2	1
+2	intoxicated	slt	B	arctic_a0147_slt	7	1.34325	2.1307499	[0.078405, 0.877495, 0.072011, 0.363764, 0.245606]	1	2	2	1
 0	by	slt	B	arctic_a0147_slt	8	2.1307499	2.3557501	[0.901174]	1	0	0	0
 0	a	slt	B	arctic_a0147_slt	9	2.3557501	2.40575	[0.144672]	0	0	0	0
 2	joy	slt	B	arctic_a0147_slt	10	2.40575	2.737	[0.832683]	1	0	2	1
@@ -1151,7 +1151,7 @@ david	word	voice	batch	file	interval_no	onset	offset	tag1	tagger	joe	todd	mallor
 2	drawn	slt	B	arctic_a0149_slt	7	1.637	1.99325	[0.540739]	1	1	1	1
 0	like	slt	B	arctic_a0149_slt	8	1.99325	2.1745	[0.132411]	0	0	0	0
 0	a	slt	B	arctic_a0149_slt	9	2.1745	2.21825	[0.054195]	0	0	0	0
-2	silhouette	slt	B	arctic_a0149_slt	10	2.21825	2.812	[0.183664, 0.042241, 0.303522]	2	1	2	1
+2	silhouette	slt	B	arctic_a0149_slt	10	2.21825	2.812	[0.183664, 0.042241, 0.303522]	1	1	2	1
 0	against	slt	B	arctic_a0149_slt	11	2.812	3.1932499	[0.107282, 0.121936]	0	0	0	0
 0	the	slt	B	arctic_a0149_slt	12	3.1932499	3.2869999	[0.03028]	0	0	0	0
 2	sky	slt	B	arctic_a0149_slt	13	3.2869999	3.7869999	[0.903353]	1	1	2	0
@@ -1218,8 +1218,8 @@ david	word	voice	batch	file	interval_no	onset	offset	tag1	tagger	joe	todd	mallor
 1	MacDougall	rms	B	arctic_a0153_rms	1	0.092	0.92199999	[0.932729, 0.23807]	1	2	1	1
 0	tapped	rms	B	arctic_a0153_rms	2	0.92199999	1.342	[1.153207]	1	0	0	1
 0	his	rms	B	arctic_a0153_rms	3	1.342	1.5319999	[0.044099]	0	0	0	0
-2	forehead	rms	B	arctic_a0153_rms	4	1.5319999	2.2119999	[0.615002, 0.625226]	2	2	3	0
-2	suspiciously	rms	B	arctic_a0153_rms	5	2.2119999	3.2820001	[0.084558, 0.206995, 0.122267, 0.291698]	2	1	3	3
+2	forehead	rms	B	arctic_a0153_rms	4	1.5319999	2.2119999	[0.615002, 0.625226]	1	2	3	0
+2	suspiciously	rms	B	arctic_a0153_rms	5	2.2119999	3.2820001	[0.084558, 0.206995, 0.122267, 0.291698]	1	1	3	3
 0	with	rms	B	arctic_a0153_rms	6	3.2820001	3.5020001	[0.04673]	0	0	0	0
 0	a	rms	B	arctic_a0153_rms	7	3.5020001	3.5320001	[0.044979]	0	0	0	0
 2	stubby	rms	B	arctic_a0153_rms	8	3.5320001	3.902	[0.044979, 0.507655, 0.149332]	1	0	1	1
@@ -1230,11 +1230,11 @@ david	word	voice	batch	file	interval_no	onset	offset	tag1	tagger	joe	todd	mallor
 0	tapped	slt	B	arctic_a0153_slt	2	0.74325001	1.08075	[0.908074]	1	0	0	2
 0	his	slt	B	arctic_a0153_slt	3	1.08075	1.212	[0.092517]	0	0	0	0
 2	forehead	slt	B	arctic_a0153_slt	4	1.212	1.61825	[0.602683, 0.35618]	1	0	2	0
-2	suspiciously	slt	B	arctic_a0153_slt	5	1.61825	2.3682499	[0.058106, 0.224658, 0.067974, 0.098298]	2	0	0	3
+2	suspiciously	slt	B	arctic_a0153_slt	5	1.61825	2.3682499	[0.058106, 0.224658, 0.067974, 0.098298]	1	0	0	3
 0	with	slt	B	arctic_a0153_slt	6	2.3682499	2.562	[0.036451]	0	0	0	0
 0	a	slt	B	arctic_a0153_slt	7	2.562	2.59325	[0.051268]	0	0	0	0
 2	stubby	slt	B	arctic_a0153_slt	8	2.59325	2.9807501	[0.675385, 0.194567]	1	2	1	0
-2	forefinger	slt	B	arctic_a0153_slt	9	2.9807501	3.7557499	[0.216017, 0.210019, 0.220771]	2	0	2	0
+2	forefinger	slt	B	arctic_a0153_slt	9	2.9807501	3.7557499	[0.216017, 0.210019, 0.220771]	1	0	2	0
 0	.	slt	B	arctic_a0153_slt	10	3.7557499	0.0		0	0	0	0
 0	.	rms	B	arctic_a0154_rms	0	0.0	0.052000001		0	0	0	0
 0	He	rms	B	arctic_a0154_rms	1	0.052000001	0.222		0	0	0	0
@@ -1267,7 +1267,7 @@ david	word	voice	batch	file	interval_no	onset	offset	tag1	tagger	joe	todd	mallor
 0	you	rms	B	arctic_a0155_rms	2	0.40200001	0.51200002	[0.10095]	0	0	0	0
 1	draw	rms	B	arctic_a0155_rms	3	0.51200002	0.82200003		0	2	2	0
 2	up	rms	B	arctic_a0155_rms	4	0.82200003	1.122	[0.057587]	0	1	1	3
-2	gentlemen	rms	B	arctic_a0155_rms	5	1.122	1.842	[0.168972, 0.007949, 0.185838]	2	1	2	1
+2	gentlemen	rms	B	arctic_a0155_rms	5	1.122	1.842	[0.168972, 0.007949, 0.185838]	1	1	2	1
 0	.	rms	B	arctic_a0155_rms	6	1.842	0.0		0	0	0	0
 0	.	slt	B	arctic_a0155_slt	0	0.0	0.19325		0	0	0	0
 0	Wont	slt	B	arctic_a0155_slt	1	0.19325	0.48699999		0	0	0	0
@@ -1350,7 +1350,7 @@ david	word	voice	batch	file	interval_no	onset	offset	tag1	tagger	joe	todd	mallor
 0	been	rms	B	arctic_a0159_rms	7	1.382	1.602	[0.27396]	0	0	0	0
 2	drumming	rms	B	arctic_a0159_rms	8	1.602	2.0320001	[0.484532, 0.326515]	1	2	1	1
 0	a	rms	B	arctic_a0159_rms	9	2.0320001	2.112	[0.322287]	0	0	0	1
-2	piano	rms	B	arctic_a0159_rms	10	2.112	2.6919999	[0.888164, 0.847845, 0.502849]	2	1	2	1
+2	piano	rms	B	arctic_a0159_rms	10	2.112	2.6919999	[0.888164, 0.847845, 0.502849]	1	1	2	1
 0	all	rms	B	arctic_a0159_rms	11	2.6919999	2.9719999	[0.726478]	1	0	0	1
 0	his	rms	B	arctic_a0159_rms	12	2.9719999	3.1919999	[0.223659]	0	0	0	1
 2	life	rms	B	arctic_a0159_rms	13	3.1919999	3.652	[0.815703]	1	0	2	2
@@ -1595,7 +1595,7 @@ david	word	voice	batch	file	interval_no	onset	offset	tag1	tagger	joe	todd	mallor
 2	stopped	slt	B	arctic_a0169_slt	3	0.89950001	1.30575	[0.908389]	1	2	2	2
 0	for	slt	B	arctic_a0169_slt	4	1.30575	1.5682499	[0.028122, 0.0854]	0	0	0	0
 0	an	slt	B	arctic_a0169_slt	5	1.5682499	1.637	[0.0854]	0	0	0	0
-2	instant	slt	B	arctic_a0169_slt	6	1.637	2.1057501	[0.225433, 0.278886]	2	1	2	1
+2	instant	slt	B	arctic_a0169_slt	6	1.637	2.1057501	[0.225433, 0.278886]	1	1	2	1
 0	.	slt	B	arctic_a0169_slt	7	2.1057501	0.0		0	0	0	0
 0	.	rms	B	arctic_a0170_rms	0	0.0	0.102		0	0	0	0
 0	There	rms	B	arctic_a0170_rms	1	0.102	0.39199999		0	0	0	0
@@ -1634,7 +1634,7 @@ david	word	voice	batch	file	interval_no	onset	offset	tag1	tagger	joe	todd	mallor
 1	few	rms	B	arctic_a0171_rms	8	1.572	1.832	[0.074385, 0.065396]	0	1	0	0
 2	days	rms	B	arctic_a0171_rms	9	1.832	2.4319999	[0.989874]	1	1	2	2
 0	bring	rms	B	arctic_a0171_rms	10	2.4319999	2.802	[0.152287]	0	0	0	0
-2	Eileen	rms	B	arctic_a0171_rms	11	2.802	3.4719999	[0.406302, 0.499198]	2	2	2	1
+2	Eileen	rms	B	arctic_a0171_rms	11	2.802	3.4719999	[0.406302, 0.499198]	1	2	2	1
 0	.	rms	B	arctic_a0171_rms	12	3.4719999	0.0		0	0	0	0
 0	.	slt	B	arctic_a0171_slt	0	0.0	0.18075		0	0	0	0
 0	And	slt	B	arctic_a0171_slt	1	0.18075	0.33700001		0	0	0	2
@@ -1648,7 +1648,7 @@ david	word	voice	batch	file	interval_no	onset	offset	tag1	tagger	joe	todd	mallor
 2	days	slt	B	arctic_a0171_slt	9	1.4995	1.987	[0.500089]	1	1	2	0
 0	.	slt	B	arctic_a0171_slt	10	1.987	2.1370001		0	0	0	0
 0	bring	slt	B	arctic_a0171_slt	11	2.1370001	2.2869999	[0.089389]	0	0	0	1
-2	Eileen	slt	B	arctic_a0171_slt	12	2.2869999	2.8245001	[0.304141, 0.289507]	2	2	2	1
+2	Eileen	slt	B	arctic_a0171_slt	12	2.2869999	2.8245001	[0.304141, 0.289507]	1	2	2	1
 0	.	slt	B	arctic_a0171_slt	13	2.8245001	0.0		0	0	0	0
 0	.	rms	B	arctic_a0172_rms	0	0.0	0.112		0	0	0	0
 2	Gregson	rms	B	arctic_a0172_rms	1	0.112	0.69199997	[0.291164]	0	2	2	2
@@ -1700,7 +1700,7 @@ david	word	voice	batch	file	interval_no	onset	offset	tag1	tagger	joe	todd	mallor
 0	They	slt	B	arctic_a0174_slt	1	0.16824999	0.29324999		0	1	1	0
 0	were	slt	B	arctic_a0174_slt	2	0.29324999	0.43075001	[0.441778]	0	0	0	0
 0	the	slt	B	arctic_a0174_slt	3	0.43075001	0.53074998	[0.205706]	0	0	0	0
-2	presage	slt	B	arctic_a0174_slt	4	0.53074998	1.0745	[0.513954, 0.508323, 0.129383]	2	1	2	2
+2	presage	slt	B	arctic_a0174_slt	4	0.53074998	1.0745	[0.513954, 0.508323, 0.129383]	1	1	2	2
 0	of	slt	B	arctic_a0174_slt	5	1.0745	1.14325	[0.129383]	0	0	0	1
 2	storm	slt	B	arctic_a0174_slt	6	1.14325	1.76825	[0.959274]	1	2	2	2
 0	.	slt	B	arctic_a0174_slt	7	1.76825	0.0		0	0	0	0
@@ -1710,7 +1710,7 @@ david	word	voice	batch	file	interval_no	onset	offset	tag1	tagger	joe	todd	mallor
 0	the	rms	B	arctic_a0175_rms	3	0.852	1.022	[0.113703]	0	0	0	0
 2	earth	rms	B	arctic_a0175_rms	4	1.022	1.362	[0.397295]	1	1	0	0
 0	was	rms	B	arctic_a0175_rms	5	1.362	1.612	[0.076754]	0	0	0	0
-1	already	rms	B	arctic_a0175_rms	6	1.612	2.2219999	[0.252885, 0.024491, 0.147267]	2	2	0	2
+1	already	rms	B	arctic_a0175_rms	6	1.612	2.2219999	[0.252885, 0.024491, 0.147267]	1	2	0	2
 2	swelling	rms	B	arctic_a0175_rms	7	2.2219999	2.7820001	[0.209381, 0.054822]	1	1	2	2
 0	with	rms	B	arctic_a0175_rms	8	2.7820001	2.9719999	[0.02202]	0	0	0	0
 2	life	rms	B	arctic_a0175_rms	9	2.9719999	3.5120001	[0.500844]	1	1	2	1
@@ -1760,7 +1760,7 @@ david	word	voice	batch	file	interval_no	onset	offset	tag1	tagger	joe	todd	mallor
 1	She	rms	B	arctic_a0177_rms	1	0.092	0.42199999		0	1	2	0
 0	had	rms	B	arctic_a0177_rms	2	0.42199999	0.69199997	[0.905152]	1	0	0	0
 0	been	rms	B	arctic_a0177_rms	3	0.69199997	0.98199999	[0.448488]	0	0	0	0
-2	thoroughly	rms	B	arctic_a0177_rms	4	0.98199999	1.702	[0.978549, 0.191247, 0.883225]	2	2	3	2
+2	thoroughly	rms	B	arctic_a0177_rms	4	0.98199999	1.702	[0.978549, 0.191247, 0.883225]	1	2	3	2
 0	and	rms	B	arctic_a0177_rms	5	1.702	2.152	[0.835464]	1	0	0	0
 2	efficiently	rms	B	arctic_a0177_rms	6	2.152	3.0320001	[0.257762, 0.108413, 0.492067]	0	2	3	2
 3	mauled	rms	B	arctic_a0177_rms	7	3.0320001	3.622	[0.82844]	1	0	3	1
@@ -1770,7 +1770,7 @@ david	word	voice	batch	file	interval_no	onset	offset	tag1	tagger	joe	todd	mallor
 0	had	slt	B	arctic_a0177_slt	2	0.3495	0.48699999	[0.209286]	0	0	0	0
 0	been	slt	B	arctic_a0177_slt	3	0.48699999	0.69950002	[0.295176]	0	0	0	0
 0	.	slt	B	arctic_a0177_slt	4	0.69950002	0.7245		0	0	0	0
-2	thoroughly	slt	B	arctic_a0177_slt	5	0.7245	1.2995	[1.153732, 0.168132, 0.687184]	2	2	2	3
+2	thoroughly	slt	B	arctic_a0177_slt	5	0.7245	1.2995	[1.153732, 0.168132, 0.687184]	1	2	2	3
 0	and	slt	B	arctic_a0177_slt	6	1.2995	1.46825	[0.170054]	0	0	0	0
 2	efficiently	slt	B	arctic_a0177_slt	7	1.46825	1.99325	[0.093429, 0.06187, 0.044331, 0.117487]	0	0	2	2
 2	mauled	slt	B	arctic_a0177_slt	8	1.99325	2.59325	[0.730014]	1	2	3	1
@@ -1781,7 +1781,7 @@ david	word	voice	batch	file	interval_no	onset	offset	tag1	tagger	joe	todd	mallor
 0	in	rms	B	arctic_a0178_rms	3	0.98199999	1.152	[0.190158]	0	0	0	0
 0	her	rms	B	arctic_a0178_rms	4	1.152	1.362	[0.273686]	0	0	0	0
 1	aged	rms	B	arctic_a0178_rms	5	1.362	1.7819999	[0.639341]	1	0	2	0
-1	body	rms	B	arctic_a0178_rms	6	1.7819999	2.362	[0.62839, 0.593377]	2	0	1	0
+1	body	rms	B	arctic_a0178_rms	6	1.7819999	2.362	[0.62839, 0.593377]	1	0	1	0
 0	seemed	rms	B	arctic_a0178_rms	7	2.362	2.7720001	[0.170019]	0	0	0	0
 2	broken	rms	B	arctic_a0178_rms	8	2.7720001	3.362	[0.348674, 0.106331]	1	2	2	2
 0	or	rms	B	arctic_a0178_rms	9	3.362	3.572	[0.161682]	1	0	0	0
@@ -1799,7 +1799,7 @@ david	word	voice	batch	file	interval_no	onset	offset	tag1	tagger	joe	todd	mallor
 0	seemed	slt	B	arctic_a0178_slt	9	1.7745	2.1494999	[0.109309]	0	0	0	0
 2	broken	slt	B	arctic_a0178_slt	10	2.1494999	2.58075	[0.163836, 0.234252, 0.02108]	1	1	2	1
 0	or	slt	B	arctic_a0178_slt	11	2.58075	2.6745	[0.02108]	0	0	0	0
-2	dislocated	slt	B	arctic_a0178_slt	12	2.6745	3.40575	[0.157217, 0.061992, 0.159574, 0.111797]	2	0	2	1
+2	dislocated	slt	B	arctic_a0178_slt	12	2.6745	3.40575	[0.157217, 0.061992, 0.159574, 0.111797]	1	0	2	1
 0	.	slt	B	arctic_a0178_slt	13	3.40575	0.0		0	0	0	0
 0	.	rms	B	arctic_a0179_rms	0	0.0	0.071999997		0	0	0	0
 2	Tomorrow	rms	B	arctic_a0179_rms	1	0.071999997	0.78200001	[1.193482, 0.545887]	1	2	1	2
@@ -1813,7 +1813,7 @@ david	word	voice	batch	file	interval_no	onset	offset	tag1	tagger	joe	todd	mallor
 0	.	rms	B	arctic_a0179_rms	9	2.9419999	0.0		0	0	0	0
 0	.	slt	B	arctic_a0179_slt	0	0.0	0.0		0	0	0	0
 0	.	slt	B	arctic_a0179_slt	1	0.0	0.13699999		0	0	0	0
-2	Tomorrow	slt	B	arctic_a0179_slt	2	0.13699999	0.60575002	[0.733062, 0.668408]	2	2	2	1
+2	Tomorrow	slt	B	arctic_a0179_slt	2	0.13699999	0.60575002	[0.733062, 0.668408]	1	2	2	1
 0	I'm	slt	B	arctic_a0179_slt	3	0.60575002	0.75575	[0.713529]	1	0	0	0
 0	going	slt	B	arctic_a0179_slt	4	0.75575	1.05575	[0.92199, 0.119052]	1	0	0	0
 0	after	slt	B	arctic_a0179_slt	5	1.05575	1.34325	[0.699913, 0.159099]	1	0	0	0
@@ -1888,7 +1888,7 @@ david	word	voice	batch	file	interval_no	onset	offset	tag1	tagger	joe	todd	mallor
 0	not	slt	B	arctic_a0182_slt	5	0.99949998	1.26825	[0.320908]	0	1	0	1
 2	yap	slt	B	arctic_a0182_slt	6	1.26825	1.587	[0.458633]	1	1	2	2
 0	for	slt	B	arctic_a0182_slt	7	1.587	1.7495	[0.040305]	0	0	0	0
-2	mercy	slt	B	arctic_a0182_slt	8	1.7495	2.33075	[0.271017, 0.346752]	2	0	2	1
+2	mercy	slt	B	arctic_a0182_slt	8	1.7495	2.33075	[0.271017, 0.346752]	1	0	2	1
 0	.	slt	B	arctic_a0182_slt	9	2.33075	0.0		0	0	0	0
 0	.	rms	B	arctic_a0183_rms	0	0.0	0.112		0	0	0	0
 0	And	rms	B	arctic_a0183_rms	1	0.112	0.51200002		0	0	2	0
@@ -1942,7 +1942,7 @@ david	word	voice	batch	file	interval_no	onset	offset	tag1	tagger	joe	todd	mallor
 0	.	rms	B	arctic_a0185_rms	10	3.122	0.0		0	0	0	0
 0	.	slt	B	arctic_a0185_slt	0	0.0	0.043249998		0	0	0	0
 0	The	slt	B	arctic_a0185_slt	1	0.043249998	0.13699999		0	0	0	0
-2	questions	slt	B	arctic_a0185_slt	2	0.13699999	0.71824998	[0.511683, 0.519918]	2	2	1	1
+2	questions	slt	B	arctic_a0185_slt	2	0.13699999	0.71824998	[0.511683, 0.519918]	1	2	1	1
 0	may	slt	B	arctic_a0185_slt	3	0.71824998	0.86825001	[0.30306]	0	0	0	0
 0	have	slt	B	arctic_a0185_slt	4	0.86825001	1.0369999	[0.114661]	0	0	0	0
 1	come	slt	B	arctic_a0185_slt	5	1.0369999	1.3245	[0.170131]	0	0	0	0
@@ -1990,7 +1990,7 @@ david	word	voice	batch	file	interval_no	onset	offset	tag1	tagger	joe	todd	mallor
 0	a	rms	B	arctic_a0187_rms	6	1.6720001	1.732	[0.084384]	0	0	0	0
 2	glimmer	rms	B	arctic_a0187_rms	7	1.732	2.2219999	[0.084384, 0.068719, 0.629858]	1	2	2	1
 0	of	rms	B	arctic_a0187_rms	8	2.2219999	2.372	[0.123445]	0	0	0	0
-2	sunshine	rms	B	arctic_a0187_rms	9	2.372	3.122	[0.233749, 0.249288]	2	1	2	1
+2	sunshine	rms	B	arctic_a0187_rms	9	2.372	3.122	[0.233749, 0.249288]	1	1	2	1
 0	.	rms	B	arctic_a0187_rms	10	3.122	0.0		0	0	0	0
 0	.	slt	B	arctic_a0187_slt	0	0.0	0.0		0	0	0	0
 0	.	slt	B	arctic_a0187_slt	1	0.0	0.19949999		0	0	0	0
@@ -2006,7 +2006,7 @@ david	word	voice	batch	file	interval_no	onset	offset	tag1	tagger	joe	todd	mallor
 0	.	slt	B	arctic_a0187_slt	11	2.5745001	0.0		0	0	0	0
 0	.	rms	B	arctic_a0188_rms	0	0.0	0.071999997		0	0	0	0
 1	Two	rms	B	arctic_a0188_rms	1	0.071999997	0.39199999		0	2	2	0
-2	gigantic	rms	B	arctic_a0188_rms	2	0.39199999	1.192	[0.807259, 0.787172, 0.208712]	2	1	2	2
+2	gigantic	rms	B	arctic_a0188_rms	2	0.39199999	1.192	[0.807259, 0.787172, 0.208712]	1	1	2	2
 2	owls	rms	B	arctic_a0188_rms	3	1.192	1.762	[0.925972]	1	0	1	1
 0	were	rms	B	arctic_a0188_rms	4	1.762	1.942	[0.310617]	0	0	0	0
 2	tearing	rms	B	arctic_a0188_rms	5	1.942	2.552	[0.675037, 0.167167]	1	2	3	2
@@ -2023,7 +2023,7 @@ david	word	voice	batch	file	interval_no	onset	offset	tag1	tagger	joe	todd	mallor
 2	tearing	slt	B	arctic_a0188_slt	6	1.462	1.8245	[0.102435, 0.105392]	0	1	2	2
 0	at	slt	B	arctic_a0188_slt	7	1.8245	1.9245	[0.125412]	0	0	0	0
 0	the	slt	B	arctic_a0188_slt	8	1.9245	2.0057499	[0.10974]	0	0	0	0
-2	carcass	slt	B	arctic_a0188_slt	9	2.0057499	2.6057501	[0.159439, 0.140892]	2	0	2	1
+2	carcass	slt	B	arctic_a0188_slt	9	2.0057499	2.6057501	[0.159439, 0.140892]	1	0	2	1
 0	.	slt	B	arctic_a0188_slt	10	2.6057501	0.0		0	0	0	0
 0	.	rms	B	arctic_a0189_rms	0	0.0	0.102		0	0	0	0
 0	The	rms	B	arctic_a0189_rms	1	0.102	0.292		0	0	0	0
@@ -2052,11 +2052,11 @@ david	word	voice	batch	file	interval_no	onset	offset	tag1	tagger	joe	todd	mallor
 0	to	rms	B	arctic_a0190_rms	2	0.51200002	0.59200001	[0.07035]	0	0	0	0
 2	them	rms	B	arctic_a0190_rms	3	0.59200001	1.082	[1.199161]	1	2	3	1
 0	the	rms	B	arctic_a0190_rms	4	1.082	1.262	[0.08289]	0	0	0	0
-1	Canada	rms	B	arctic_a0190_rms	5	1.262	1.762	[0.08289, 0.74676, 0.095639, 0.392936]	2	1	1	2
+1	Canada	rms	B	arctic_a0190_rms	5	1.262	1.762	[0.08289, 0.74676, 0.095639, 0.392936]	1	1	1	2
 1	jays	rms	B	arctic_a0190_rms	6	1.762	2.372	[0.914617]	1	1	2	2
 0	were	rms	B	arctic_a0190_rms	7	2.372	2.5020001		0	0	0	0
 1	most	rms	B	arctic_a0190_rms	8	2.5020001	2.872	[0.287293]	1	0	0	1
-2	persistent	rms	B	arctic_a0190_rms	9	2.872	3.6919999	[0.276961, 0.053202, 0.080332]	2	1	2	1
+2	persistent	rms	B	arctic_a0190_rms	9	2.872	3.6919999	[0.276961, 0.053202, 0.080332]	1	1	2	1
 0	.	rms	B	arctic_a0190_rms	10	3.6919999	0.0		0	0	0	0
 0	.	slt	B	arctic_a0190_slt	0	0.0	0.19949999		0	0	0	0
 0	Next	slt	B	arctic_a0190_slt	1	0.19949999	0.51200002		0	0	0	0
@@ -2067,14 +2067,14 @@ david	word	voice	batch	file	interval_no	onset	offset	tag1	tagger	joe	todd	mallor
 2	jays	slt	B	arctic_a0190_slt	6	1.4432499	1.862	[0.948901]	1	1	0	1
 0	were	slt	B	arctic_a0190_slt	7	1.862	1.962	[0.096445]	0	0	0	0
 1	most	slt	B	arctic_a0190_slt	8	1.962	2.2620001	[0.365525]	1	0	2	0
-2	persistent	slt	B	arctic_a0190_slt	9	2.2620001	3.0369999	[0.07895, 0.194196, 0.204604]	2	0	1	0
+2	persistent	slt	B	arctic_a0190_slt	9	2.2620001	3.0369999	[0.07895, 0.194196, 0.204604]	1	0	1	0
 0	.	slt	B	arctic_a0190_slt	10	3.0369999	0.0		0	0	0	0
 0	.	rms	B	arctic_a0191_rms	0	0.0	0.052000001		0	0	0	0
 0	For	rms	B	arctic_a0191_rms	1	0.052000001	0.42199999		0	1	0	0
 0	a	rms	B	arctic_a0191_rms	2	0.42199999	0.46200001	[0.961718]	1	1	0	0
 2	time	rms	B	arctic_a0191_rms	3	0.46200001	1.0420001	[0.935915]	1	0	3	2
 0	the	rms	B	arctic_a0191_rms	4	1.0420001	1.1619999	[0.038976]	0	0	0	0
-1	exciting	rms	B	arctic_a0191_rms	5	1.1619999	1.762	[0.038976, 0.940887, 0.919727, 0.238143]	2	2	0	1
+1	exciting	rms	B	arctic_a0191_rms	5	1.1619999	1.762	[0.038976, 0.940887, 0.919727, 0.238143]	1	2	0	1
 2	thrill	rms	B	arctic_a0191_rms	6	1.762	2.2820001	[0.369488]	1	1	2	1
 0	of	rms	B	arctic_a0191_rms	7	2.2820001	2.4920001	[0.291]	0	0	0	0
 0	his	rms	B	arctic_a0191_rms	8	2.4920001	2.7019999	[0.314694, 0.035482]	1	0	0	0
@@ -2129,7 +2129,7 @@ david	word	voice	batch	file	interval_no	onset	offset	tag1	tagger	joe	todd	mallor
 0	of	rms	B	arctic_a0194_rms	3	0.722	0.86199999	[0.099012]	0	0	0	0
 0	the	rms	B	arctic_a0194_rms	4	0.86199999	0.94199997	[0.065048]	0	0	0	1
 2	water	rms	B	arctic_a0194_rms	5	0.94199997	1.442	[0.065048, 0.62952, 0.496813]	1	1	1	1
-3	cautiously	rms	B	arctic_a0194_rms	6	1.442	2.352	[0.384856, 0.019028, 0.10425]	2	0	2	2
+3	cautiously	rms	B	arctic_a0194_rms	6	1.442	2.352	[0.384856, 0.019028, 0.10425]	1	0	2	2
 0	.	rms	B	arctic_a0194_rms	7	2.352	0.0		0	0	0	0
 0	.	slt	B	arctic_a0194_slt	0	0.0	0.13699999		0	0	0	0
 0	He	slt	B	arctic_a0194_slt	1	0.13699999	0.29949999		0	0	0	0
@@ -2137,7 +2137,7 @@ david	word	voice	batch	file	interval_no	onset	offset	tag1	tagger	joe	todd	mallor
 0	of	slt	B	arctic_a0194_slt	3	0.70574999	0.82450002	[0.036838]	0	0	0	0
 0	the	slt	B	arctic_a0194_slt	4	0.82450002	0.88700002	[0.037191]	0	0	0	0
 2	water	slt	B	arctic_a0194_slt	5	0.88700002	1.20575	[0.037191, 0.260284, 0.128161]	1	0	2	3
-2	cautiously	slt	B	arctic_a0194_slt	6	1.20575	2.03075	[0.217577, 0.023196, 0.131026]	2	0	2	1
+2	cautiously	slt	B	arctic_a0194_slt	6	1.20575	2.03075	[0.217577, 0.023196, 0.131026]	1	0	2	1
 0	.	slt	B	arctic_a0194_slt	7	2.03075	0.0		0	0	0	0
 0	.	rms	B	arctic_a0195_rms	0	0.0	0.071999997		0	0	0	0
 0	But	rms	B	arctic_a0195_rms	1	0.071999997	0.31200001		0	1	0	0
@@ -2159,7 +2159,7 @@ david	word	voice	batch	file	interval_no	onset	offset	tag1	tagger	joe	todd	mallor
 0	to	rms	B	arctic_a0196_rms	3	0.83200002	1.002	[0.04926]	0	0	0	0
 2	follow	rms	B	arctic_a0196_rms	4	1.002	1.5420001	[0.294009, 0.160797]	1	0	1	1
 0	the	rms	B	arctic_a0196_rms	5	1.5420001	1.652	[0.089883]	0	0	0	0
-2	footprints	rms	B	arctic_a0196_rms	6	1.652	2.4419999	[0.089883, 0.096268, 0.130867]	2	1	2	3
+2	footprints	rms	B	arctic_a0196_rms	6	1.652	2.4419999	[0.089883, 0.096268, 0.130867]	1	1	2	3
 0	of	rms	B	arctic_a0196_rms	7	2.4419999	2.592	[0.067009]	0	0	0	0
 0	the	rms	B	arctic_a0196_rms	8	2.592	2.7019999	[0.030118]	0	0	0	0
 2	dog	rms	B	arctic_a0196_rms	9	2.7019999	3.2019999	[0.030118, 0.551671]	1	1	2	2
@@ -2247,7 +2247,7 @@ david	word	voice	batch	file	interval_no	onset	offset	tag1	tagger	joe	todd	mallor
 1	leapt	rms	B	arctic_a0200_rms	2	0.28200001	0.67199999	[1.006357]	1	2	0	1
 2	again	rms	B	arctic_a0200_rms	3	0.67199999	1.212	[1.121611]	1	1	2	2
 0	.	rms	B	arctic_a0200_rms	4	1.212	0.0		0	0	0	0
-0	.	rms	B	arctic_a0200_rms	5	0.0	1.552	[1.006357, 0.455327, 1.121611]	2	0	0	0
+0	.	rms	B	arctic_a0200_rms	5	0.0	1.552	[1.006357, 0.455327, 1.121611]	1	0	0	0
 0	and	rms	B	arctic_a0200_rms	6	1.552	1.902	[0.863653]	1	0	0	0
 0	the	rms	B	arctic_a0200_rms	7	1.902	2.052	[0.371606]	0	0	0	0
 2	club	rms	B	arctic_a0200_rms	8	2.052	2.4419999	[0.431861]	1	1	1	1
@@ -2273,7 +2273,7 @@ david	word	voice	batch	file	interval_no	onset	offset	tag1	tagger	joe	todd	mallor
 2	tell	rms	B	arctic_b0534_rms	2	0.30199999	0.58200002	[0.228833]	0	2	3	2
 0	you	rms	B	arctic_b0534_rms	3	0.58200002	0.93199998		0	0	0	1
 0	the	rms	B	arctic_b0534_rms	4	0.93199998	1.182	[0.048054]	0	0	0	0
-1	librarian	rms	B	arctic_b0534_rms	5	1.182	1.9220001	[0.048054, 0.813498, 0.104468, 0.621696, 0.152723]	2	1	1	1
+1	librarian	rms	B	arctic_b0534_rms	5	1.182	1.9220001	[0.048054, 0.813498, 0.104468, 0.621696, 0.152723]	1	1	1	1
 2	said	rms	B	arctic_b0534_rms	6	1.9220001	2.362	[1.077819]	1	1	2	1
 0	with	rms	B	arctic_b0534_rms	7	2.362	2.612	[0.128966]	0	0	0	0
 0	a	rms	B	arctic_b0534_rms	8	2.612	2.642	[0.114175]	0	0	0	0
@@ -2286,7 +2286,7 @@ david	word	voice	batch	file	interval_no	onset	offset	tag1	tagger	joe	todd	mallor
 2	tell	slt	B	arctic_b0534_slt	3	0.39950001	0.66825002	[0.270711]	0	2	1	1
 0	you	slt	B	arctic_b0534_slt	4	0.66825002	0.99325001	[0.897995]	1	0	0	1
 0	the	slt	B	arctic_b0534_slt	5	0.99325001	1.1495	[0.035781]	0	0	0	0
-2	librarian	slt	B	arctic_b0534_slt	6	1.1495	1.76825	[0.035781, 0.385431, 0.072576, 0.377068, 0.044153]	2	0	1	2
+2	librarian	slt	B	arctic_b0534_slt	6	1.1495	1.76825	[0.035781, 0.385431, 0.072576, 0.377068, 0.044153]	1	0	1	2
 0	said	slt	B	arctic_b0534_slt	7	1.76825	2.0557499	[0.9]	1	1	2	0
 0	with	slt	B	arctic_b0534_slt	8	2.0557499	2.26825	[0.12538]	0	0	0	0
 0	a	slt	B	arctic_b0534_slt	9	2.26825	2.3057499	[0.063192]	0	0	0	0
@@ -2297,7 +2297,7 @@ david	word	voice	batch	file	interval_no	onset	offset	tag1	tagger	joe	todd	mallor
 0	He	rms	B	arctic_b0535_rms	1	0.052000001	0.33199999		0	0	0	0
 2	read	rms	B	arctic_b0535_rms	2	0.33199999	0.63200003	[1.052245]	1	1	1	2
 0	his	rms	B	arctic_b0535_rms	3	0.63200003	0.87199998	[0.243843]	0	0	0	0
-2	fragments	rms	B	arctic_b0535_rms	4	0.87199998	1.562	[0.392754, 0.363678]	2	2	1	1
+2	fragments	rms	B	arctic_b0535_rms	4	0.87199998	1.562	[0.392754, 0.363678]	1	2	1	1
 2	aloud	rms	B	arctic_b0535_rms	5	1.562	2.2320001	[0.016615, 0.88902]	1	1	2	1
 0	.	rms	B	arctic_b0535_rms	6	2.2320001	0.0		0	0	0	0
 0	.	slt	B	arctic_b0535_slt	0	0.0	0.13699999		0	0	0	0
