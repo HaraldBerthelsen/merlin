@@ -46,7 +46,7 @@ Step 9: ./merlin_synthesis.sh
 promark build:
 
 run_full_voice.sh
-cp experiments/slt_arctic_full  experiments/slt_arctic_full_promark
+cp -r experiments/slt_arctic_full  experiments/slt_arctic_full_promark
 make full
 run_full_voice_promark.sh
 
@@ -66,3 +66,11 @@ echo "150 0 0 20 0" >> experiments/slt_arctic_full_promark/test_synthesis/txt/te
 
 ./merlin_synthesis_promark.sh
 wavesurfer experiments/slt_arctic_full_promark/test_synthesis/wav/test.wav
+
+##########
+promark tobi demo
+
+run_demo.sh
+cp -r experiments/slt_arctic_demo experiments/slt_arctic_demo_tobi
+make demo_tobi
+run_demo_tobi.sh

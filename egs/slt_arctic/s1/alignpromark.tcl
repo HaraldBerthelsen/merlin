@@ -56,6 +56,13 @@ if {$csvformat == "demo"} {
     set fileindex 4
     set promindex 6
     readpromarkdata promark/tagger_slt.csv
+} elseif {$csvformat == "tobi"} {
+    #For the tagger_all_slt.csv file
+    set wordindex 2
+    set fileindex 4
+    #tobi features
+    set promindex 8
+    readpromarkdata promark/tagger_all_slt.csv
 } else {
     puts "csvformat: $csvformat not supported"
     exit
@@ -113,12 +120,19 @@ foreach file [lrange $argv 2 end] {
 	    set prominence 0
 	}
 	if [regexp {(.+)(\[\d+\])$} $line match first last] {
-	    lappend outdata $first/K:[expr int(100*[string trim $prominence])]$last
-	    
+	    if {$csvformat == "tobi"} {
+		lappend outdata $first/K:[string trim $prominence]$last
+	    } else {
+		lappend outdata $first/K:[expr int(100*[string trim $prominence])]$last
+	    }
 	} else {
-	    lappend outdata $line/K:[expr int(100*[string trim $prominence])]
+	    if {$csvformat == "tobi"} {
+		lappend outdata $line/K:[string trim $prominence]
+	    } else {
+		lappend outdata $line/K:[expr int(100*[string trim $prominence])]
+	    }
 	}
-   }
+    }
 
     #HB This is a sanity check to see that the number of words in lab and csv are the same.
     #Good, but now I want to continue with a warning if the filename is not in the csv file at all
