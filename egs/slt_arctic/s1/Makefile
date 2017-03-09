@@ -20,12 +20,8 @@ full_tobi:
 	tclsh alignpromark.tcl tobi experiments/slt_arctic_full_tobi/duration_model/data/label_state_align experiments/slt_arctic_full/duration_model/data/label_state_align/*.lab
 	tclsh alignpromark.tcl tobi experiments/slt_arctic_full_tobi/acoustic_model/data/label_state_align experiments/slt_arctic_full/acoustic_model/data/label_state_align/*.lab
 	tclsh alignpromark.tcl tobi experiments/slt_arctic_full_tobi/test_synthesis/prompt-lab experiments/slt_arctic_full/test_synthesis/prompt-lab/*.lab
-<<<<<<< HEAD:egs/slt_arctic/s1/Makefile_zm
 #	tclsh alignpromark.tcl full experiments/slt_arctic_full_promark/test_synthesis/gen-lab experiments/slt_arctic_full/test_synthesis/gen-lab/*.lab
 
-
-=======
->>>>>>> 8c2b4cb828d2c9acf084bf7faaa0f5a604c8b4e5:egs/slt_arctic/s1/Makefile
 
 
 

@@ -63,7 +63,7 @@ if {$csvformat == "demo"} {
     #tobi features
     set promindex 8
 	readpromarkdata promark/tagger_slt.csv
-    #build a hash of mappings from tobi to numeral values
+    #HB: build a hash of mappings from tobi to numeral values
     #set tobimap(!H*) 7
     #set tobimap(H*) 6
     #set tobimap(H+!H*) 5
@@ -130,13 +130,17 @@ foreach file [lrange $argv 2 end] {
 	}
 	if [regexp {(.+)(\[\d+\])$} $line match first last] {
 	    if {$csvformat == "tobi"} {
-		lappend outdata $first/K:[string trim $tobimap($prominence)]$last
+		#If using HB's hash map:
+		#lappend outdata $first/K:[string trim $tobimap($prominence)]$last
+		lappend outdata $first/K:[string trim $prominence]$last
 	    } else {
 		lappend outdata $first/K:[expr int(100*[string trim $prominence])]$last
 	    }
 	} else {
 	    if {$csvformat == "tobi"} {
-		lappend outdata $line/K:[string trim $tobimap($prominence)]
+	    # If using HB's hash map:
+		#lappend outdata $line/K:[string trim $tobimap($prominence)]
+		lappend outdata $line/K:[string trim $prominence]
 	    } else {
 		lappend outdata $line/K:[expr int(100*[string trim $prominence])]
 	    }
