@@ -57,12 +57,12 @@ if {$csvformat == "demo"} {
     set promindex 6
     readpromarkdata promark/tagger_slt.csv
 } elseif {$csvformat == "tobi"} {
-    #For the tagger_all_slt.csv file
+    #For the tagger_slt.csv file
     set wordindex 2
     set fileindex 4
     #tobi features
     set promindex 8
-    readpromarkdata promark/tagger_all_slt.csv
+    readpromarkdata promark/tagger_slt.csv
 } else {
     puts "csvformat: $csvformat not supported"
     exit
