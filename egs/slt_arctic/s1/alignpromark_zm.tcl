@@ -62,7 +62,24 @@ if {$csvformat == "demo"} {
     set fileindex 4
     #tobi features
     set promindex 8
+<<<<<<< HEAD:egs/slt_arctic/s1/alignpromark_zm.tcl
     readpromarkdata promark/tagger_slt.csv
+=======
+
+    #build a hash of mappings from tobi to numeral values
+    set tobimap(!H*) 7
+    set tobimap(H*) 6
+    set tobimap(H+!H*) 5
+    set tobimap(L*) 4
+    set tobimap(L*+H) 3
+    set tobimap(L+H*) 2
+    set tobimap(X*?) 1
+    set tobimap(0) 0
+
+
+    
+    readpromarkdata promark/tagger_all_slt.csv
+>>>>>>> 8c2b4cb828d2c9acf084bf7faaa0f5a604c8b4e5:egs/slt_arctic/s1/alignpromark.tcl
 } else {
     puts "csvformat: $csvformat not supported"
     exit
@@ -121,13 +138,13 @@ foreach file [lrange $argv 2 end] {
 	}
 	if [regexp {(.+)(\[\d+\])$} $line match first last] {
 	    if {$csvformat == "tobi"} {
-		lappend outdata $first/K:[string trim $prominence]$last
+		lappend outdata $first/K:[string trim $tobimap($prominence)]$last
 	    } else {
 		lappend outdata $first/K:[expr int(100*[string trim $prominence])]$last
 	    }
 	} else {
 	    if {$csvformat == "tobi"} {
-		lappend outdata $line/K:[string trim $prominence]
+		lappend outdata $line/K:[string trim $tobimap($prominence)]
 	    } else {
 		lappend outdata $line/K:[expr int(100*[string trim $prominence])]
 	    }

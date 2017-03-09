@@ -70,7 +70,14 @@ wavesurfer experiments/slt_arctic_full_promark/test_synthesis/wav/test.wav
 ##########
 promark tobi demo
 
+8/3 Now using a string to int map for tobi labels, to avoid having to use a different questions file. see alignpromark.tcl for the mapping!
+
 run_demo.sh
 cp -r experiments/slt_arctic_demo experiments/slt_arctic_demo_tobi
 make demo_tobi
 run_demo_tobi.sh
+
+run_full_voice.sh
+cp -r experiments/slt_arctic_full  experiments/slt_arctic_full_tobi
+make full_tobi
+run_full_voice_tobi.sh

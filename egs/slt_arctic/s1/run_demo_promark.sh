@@ -23,12 +23,12 @@ fi
 ### Step 2: train duration model ###
 echo "Step 2: training duration model..."
 echo ./scripts/submit.sh ${MerlinDir}/src/run_merlin.py conf/duration_${Voice}.conf
-#./scripts/submit.sh ${MerlinDir}/src/run_merlin.py conf/duration_${Voice}.conf
+./scripts/submit.sh ${MerlinDir}/src/run_merlin.py conf/duration_${Voice}.conf
 
 ### Step 3: train acoustic model ###
 echo "Step 3: training acoustic model..."
 echo ./scripts/submit.sh ${MerlinDir}/src/run_merlin.py conf/acoustic_${Voice}.conf
-#./scripts/submit.sh ${MerlinDir}/src/run_merlin.py conf/acoustic_${Voice}.conf
+./scripts/submit.sh ${MerlinDir}/src/run_merlin.py conf/acoustic_${Voice}.conf
 
 ### Step 4: synthesize speech   ###
 echo "Step 4: synthesizing speech..."
