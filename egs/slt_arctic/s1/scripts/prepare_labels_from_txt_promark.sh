@@ -82,6 +82,11 @@ rm -rf ${testDir}/prompt-lab/{full,mono,tmp}
 echo "adding promark prominence values"
 python scripts/addProminenceValues.py ${testDir}/txt ${testDir}/prompt-lab
 
+status_add_prom=$?
+if [ $status_add_prom -eq 1 ]; then
+    echo "Failed to add prominence!!"
+    exit 1
+fi
 
 
 echo "Labels are ready in: ${testDir}/prompt-lab !!"
