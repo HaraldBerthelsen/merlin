@@ -35,9 +35,9 @@ for txtfile in txtfiles:
     
     #Add the final silence token to texttokens and promvalues
     #IF the last token isn't punctuation
-    if not re.match("[.,?!:;]", texttokens[-1]):
-        texttokens.append("final_silence")
-        promvalues.append("0")
+    #if not re.match("[.,?!:;]", texttokens[-1]):
+    texttokens.append("final_silence")
+    promvalues.append("0")
 
         
     #Now read prompt-lab, append prom values, and print it back
