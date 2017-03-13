@@ -3,19 +3,29 @@
 
 import sys, glob, re, os.path
 
-indir = sys.argv[1]
-promptlabdir = sys.argv[2]
+def main():
+    global indir, promptlabdir
+    
+    indir = sys.argv[1]
+    promptlabdir = sys.argv[2]
+    
+    txtfiles = glob.glob("%s/*.txt" % indir)
 
-txtfiles = glob.glob("%s/*.txt" % indir)
+    for txtfile in txtfiles:
+        try:
+            addProm(txtfile)
+        except:
+            sys.exit(1)
 
-for txtfile in txtfiles:
+
+def addProm(txtfile):
     print("TXT %s" % txtfile)
     basename = os.path.basename(os.path.splitext(txtfile)[0])
     print("BASENAME: %s" % basename)
     promfile = os.path.join(indir,basename+".prom")
     if not os.path.isfile(promfile):
         print("NO PROMFILE")
-        continue
+        return
 
     fh = open(promfile)
     promlines = fh.readlines()
@@ -26,7 +36,7 @@ for txtfile in txtfiles:
 
     if len(texttokens) != len(promvalues):
         print("ERROR (text tokens and prominence values don't match in %s):\n%s\n%s" % (promfile,texttokens,promvalues))
-        sys.exit()
+        sys.exit(1)
 
 
     #Add the initial silence token to texttokens and promvalues
@@ -44,7 +54,7 @@ for txtfile in txtfiles:
     promptlabfile = os.path.join(promptlabdir,basename+".lab")
     if not os.path.isfile(promfile):
         print("ERROR: %s missing" % promptlabfile)
-        sys.exit()
+        sys.exit(1)
     pfh = open(promptlabfile)
     pl_lines = pfh.readlines()
     pfh.close()
@@ -79,6 +89,10 @@ for txtfile in txtfiles:
     out.write(new_pl_data)
     out.close()
 
+
+    
     
     
 
+if __name__ == "__main__":
+    main()
