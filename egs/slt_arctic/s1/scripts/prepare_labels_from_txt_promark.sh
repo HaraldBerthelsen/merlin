@@ -16,7 +16,8 @@ fi
 FESTDIR=${MerlinDir}/tools/festival
 
 if [ ! -d "${FESTDIR}" ]; then
-    echo "Please configure festival path in scripts/prepare_labels_from_txt.sh !!"
+    echo "Failed to find $FESTDIR"
+    echo "Please configure festival path in scripts/prepare_labels_from_txt_promark.sh !!"
     exit 1
 fi
 
