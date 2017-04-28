@@ -103,7 +103,9 @@ void F0Estimation(double *x, int x_length, WorldParameters *world_parameters) {
   // You should not set option.f0_floor to under world::kFloorF0.
   // If you want to analyze such low F0 speech, please change world::kFloorF0.
   // Processing speed may sacrify, provided that the FFT length changes.
-  option.f0_floor = 71.0;
+  //HBoption.f0_floor = 71.0;
+  option.f0_floor = 51.0;
+
 
   // You can give a positive real number as the threshold.
   // Most strict value is 0, but almost all results are counted as unvoiced.
@@ -154,7 +156,8 @@ void SpectralEnvelopeEstimation(double *x, int x_length,
   // The default value (71.0) is strongly recommended.
   // On the other hand, setting the lowest F0 of speech is a good choice
   // to reduce the fft_size.
-  option.f0_floor = 71.0;
+  //HBoption.f0_floor = 71.0;
+  option.f0_floor = 51.0;
 
   // Parameters setting and memory allocation.
   world_parameters->fft_size =

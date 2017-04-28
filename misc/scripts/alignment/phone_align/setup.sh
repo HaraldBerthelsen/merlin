@@ -15,27 +15,27 @@ audio_data=slt_wav
 audio_data_url=http://104.131.174.95/${audio_data}.zip
 text_data_url=http://festvox.org/cmu_arctic/cmuarctic.data
 
-if [[ ! -f ${audio_data}.zip ]]; then
-    echo "downloading data....."
-    rm -f ${audio_data}.zip
-    if hash curl 2>/dev/null; then
-        curl -O $audio_data_url
-        curl -O $text_data_url
-    elif hash wget 2>/dev/null; then
-        wget $audio_data_url
-        wget $text_data_url
-    else
-        echo "please download the audio data from $audio_data_url"
-        echo "please download the text data from $text_data_url"
-        exit 1
-    fi
-    do_unzip=true
-fi
+# if [[ ! -f ${audio_data}.zip ]]; then
+#     echo "downloading data....."
+#     rm -f ${audio_data}.zip
+#     if hash curl 2>/dev/null; then
+#         curl -O $audio_data_url
+#         curl -O $text_data_url
+#     elif hash wget 2>/dev/null; then
+#         wget $audio_data_url
+#         wget $text_data_url
+#     else
+#         echo "please download the audio data from $audio_data_url"
+#         echo "please download the text data from $text_data_url"
+#         exit 1
+#     fi
+#     do_unzip=true
+# fi
 
-if [[ ! -d ${audio_data} ]] || [[ -n "$do_unzip" ]]; then
-    echo "unzipping files....."
-    unzip -q ${audio_data}.zip
-fi
+# if [[ ! -d ${audio_data} ]] || [[ -n "$do_unzip" ]]; then
+#     echo "unzipping files....."
+#     unzip -q ${audio_data}.zip
+# fi
 
 ### default settings ###
 config_file=config.cfg

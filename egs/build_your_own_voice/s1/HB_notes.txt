@@ -1,0 +1,135 @@
+Used festival with swedish (lund) voice to make utterances
+Alignment as in README file
+
+Vocoder fatures as in README file
+
+cp -r /media/bigdisk/git/hb_merlin/misc/scripts/alignment/phone_align/label_phone_align experiments/stts_se_nst/duration_model/data/
+
+changed in conf/duration_stts_se_nst.conf:
+#question_file_name: %(Merlin)s/misc/questions/questions-radio_dnn_416.hed
+question_file_name: %(TOPLEVEL)s/questions-lu_sv_dnn_416.hed
+(That file doesn't exist yet..)
+
+Trying:
+./scripts/submit.sh /media/bigdisk/git/hb_merlin/src/run_merlin.py conf/duration_stts_se_nst.conf
+
+2017-04-07 11:16:38,470 CRITICAL       main    : Could not load file id list from /media/bigdisk/git/hb_merlin/egs/build_your_own_voice/s1/experiments/stts_se_nst/duration_model/data/file_id_list_full.scp
+
+HB:
+cp ../../../misc/scripts/alignment/phone_align/file_id_list.scp experiments/stts_se_nst/duration_model/data/file_id_list_full.scp
+
+Trying again:
+
+IOError: [Errno 2] No such file or directory: '/media/bigdisk/git/hb_merlin/egs/build_your_own_voice/s1/questions-lu_sv_dnn_416.hed'
+
+HB: ok good that it complains early about missing questions file. So I'll copy the radio questions file and change it.
+There will be a problem with the long vowels ending in +, lab files have symbols between - and + ...
+Also change @ to "eh".
+
+So that should have been modified first - but I can do that now in the label files.
+a+ -> aa
+e+ -> ee
+i+ -> ii
+o+ -> oo
+u+ -> uu
+y+ -> yy
+ao+ -> aao
+ae+ -> aae
+oe+ -> ooe
+
+Example words:
+a+ = bad
+e+ = beda
+i+ = bida
+o+ = bod
+u+ = bud
+y+ = ny
+ao+ = båda
+ae+ = befäl, bära
+oe+ = avgörande, beslöt
+So no difference between the two ä's and ö's. Let's hope context handles it. Of course there are also no retroflex consonants.
+
+Changed questions file to /media/bigdisk/git/hb_merlin/misc/questions/questions-lu_sv_dnn_361.hed'
+
+script to fix labels:
+convertLabelsFromLuToHts.pl
+
+Trying again:
+
+made label matrix goes on for a long time.
+If I reduce the file_id_list_full.scp, will it only do the ones listed there?
+Yes so now using file_id_list_demo.scp
+2017-04-07 14:47:52,737 INFO     main.train_DNN: building the model
+
+Seems to succeed, but there is no model file
+
+IOError: [Errno 2] No such file or directory: '/media/bigdisk/git/hb_merlin/egs/build_your_own_voice/s1/experiments/stts_se_nst/duration_model/nnets_model/DNN_TANH_TANH_TANH_TANH_TANH_TANH_LINEAR__dur_0_6_1024_1024_1024_1024_1024_1024_361.1.train.50.0.002000.rnn.model'
+Lock freed
+harald@harald-Vox:/media/bigdisk/git/hb_merlin/egs/build_your_own_voice/s1$ ls experiments/stts_se_nst/duration_model/
+data  gen  log  nnets_model
+harald@harald-Vox:/media/bigdisk/git/hb_merlin/egs/build_your_own_voice/s1$ ls experiments/stts_se_nst/duration_model/nnets_model/
+harald@harald-Vox:
+
+Nothing there..
+
+line 347 run_merlin.py is commented, is this where the file should be written?
+Yes at least when uncommenting that line the training seems to have worked.
+
+So next step is train acoustic model.
+
+Editing conf/acoustic_stts_se_nst.conf
+Change file_id_list, question_file_name
+
+Copy labels_phone_align, file_id_list_*.scp from duration_model to acoustic_model
+mkdir experiments/stts_se_nst/acoustic_model/data
+cp experiments/stts_se_nst/duration_model/data/file_id_list_*.scp experiments/stts_se_nst/acoustic_model/data/
+cp -r experiments/stts_se_nst/duration_model/data/label_phone_align/ experiments/stts_se_nst/acoustic_model/data/
+
+Should need to copy in mgc, bap, lf0
+
+Trying:
+./scripts/submit.sh /media/bigdisk/git/hb_merlin/src/run_merlin.py conf/acoustic_stts_se_nst.conf
+
+IOError: [Errno 2] No such file or directory: '/media/bigdisk/git/hb_merlin/egs/build_your_own_voice/s1/experiments/stts_se_nst/acoustic_model/data/mgc/sw_all_mf_01_0001.mgc'
+
+cp -r database/feat/mgc experiments/stts_se_nst/acoustic_model/data/
+cp -r database/feat/bap experiments/stts_se_nst/acoustic_model/data/
+cp -r database/feat/lf0 experiments/stts_se_nst/acoustic_model/data/
+
+Trying again:
+
+Yes it works and synthesis is acceptable for the small amount of data.
+
+Next test with 1000/10/10 sentences so 1020 sentences in file_id_list_small.scp
+Yes works, main problem seems to be with f0?
+
+So last test is with 5177/50/50, file_id_list_full.scp
+
+Still bad, probably because of f0-estimation?
+
+Changed f0_floor in WORLD/anaysis.cpp tfrom 71 to 51
+Reran extract_features_for_merlin_HB to get new features.
+cp database/feat/mgc/* experiments/stts_se_nst/acoustic_model/data/mgc/
+cp database/feat/bap/* experiments/stts_se_nst/acoustic_model/data/bap/
+cp database/feat/lf0/* experiments/stts_se_nst/acoustic_model/data/lf0/
+
+Trying again with demo settings..
+Yes much better.
+
+Trying again with "small" settings (only acoustic for now)
+Yes much better. (But was it this unclear with the previous run?)
+
+Trying again with "full" settings (only acoustic for now)
+Yes much better. (But was it this unclear with the previous run?)
+
+Running duration training also with "full" settings.
+OK.
+
+mkdir -p experiments/stts_se_nst/test_synthesis/prompt-lab
+
+cp experiments/stts_se_nst/duration_model/data/label_phone_align/*_527*.lab experiments/stts_se_nst/test_synthesis/prompt-lab/
+
+grep "_527.$" experiments/stts_se_nst/duration_model/data/file_id_list_full.scp > experiments/stts_se_nst/test_synthesis/test_id_list.scp
+
+./scripts/submit.sh /media/bigdisk/git/hb_merlin/src/run_merlin.py conf/test_dur_synth_stts_se_nst.conf
+./scripts/submit.sh /media/bigdisk/git/hb_merlin/src/run_merlin.py conf/test_synth_stts_se_nst.conf

@@ -19,6 +19,9 @@ fi
 ./scripts/prepare_config_files.sh $global_config_file
 ./scripts/prepare_config_files_for_synthesis.sh $global_config_file
 
+#HB
+exit
+
 ### Step 2: train duration model ###
 echo "Step 2: training duration model..."
 ./scripts/submit.sh ${MerlinDir}/src/run_merlin.py conf/duration_${Voice}.conf
