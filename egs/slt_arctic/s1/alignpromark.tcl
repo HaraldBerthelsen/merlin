@@ -27,15 +27,23 @@ proc readpromarkdata {fn} {
 #	set interval [lindex $line 5]
 	set prominence [string trim [lindex $line $::promindex] \[\]]
 	set maxprom 0 
+	set sylprom {}
 	foreach val [split $prominence ,] {
+	    set val [string trim $val]
 	    if {$val>$maxprom} {
 		set maxprom $val
 	    }
+	    lappend sylprom $val
+	}
+	if {$sylprom==""} {
+	    set sylprom [list 0]
 	}
 	set ::prom($file,$wordnr) $maxprom
+	set ::prom($file,$wordnr,sylprom) $sylprom
 	if {[string match "*'s" $word]} {
 	    incr wordnr
 	    set ::prom($file,$wordnr) $maxprom
+	    set ::prom($file,$wordnr,sylprom) $sylprom
 	}
     }
 }
@@ -50,7 +58,7 @@ if {$csvformat == "demo"} {
     set promindex 8
     readpromarkdata promark/A_promark_raters.csv
     readpromarkdata promark/B_promark_raters.csv
-} elseif {$csvformat == "full"} {
+} elseif {$csvformat == "full" || $csvformat == "sylprom"} {
     #For the tagger_slt.csv file
     set wordindex 2
     set fileindex 4
@@ -81,8 +89,7 @@ foreach file [lrange $argv 2 end] {
     set f [open $file]
     set data [split [string trim [read $f]] \n]
     close $f
- 
- 
+  
     set filename [file tail [file root $file]]_slt
     set outfile $outdir/[file tail $file]
 
@@ -105,27 +112,53 @@ foreach file [lrange $argv 2 end] {
 		# puts "wordinphrase=$wordinphrase"
 		
 		set wordnumber [expr $wordinphrase+$accumword]
-		# puts "wordnumber: $wordnumber"
+		#puts "wordnumber: $wordnumber"
 		# puts "prom($filename,$wordnumber): $prom($filename,$wordnumber)"
 	    }
-	    if {[catch {set prominence $prom($filename,$wordnumber)} err]} {
-		puts "WARNING: $err"
-
+	    if [regexp {@(\d+)\-} $line all sylinword] {
+		set sylnumber $sylinword
+		# puts "word#=$wordnumber, syl#=$sylnumber ([llength $prom($filename,$wordnumber,sylprom)])"
+	    }
+	    if {![info exists prom($filename,$wordnumber)]} {
 		#HB What to do if the file is not in the csv list? Now setting prominence to 0,
 		#just to be able to continue
+		puts "WARNING: missing prominece data for $filename"
 		set prominence 0
-		#exit 1
+		set sylpromlist [list 0]
+	    } else {
+		
+		set prominence $prom($filename,$wordnumber)
+		set sylpromlist $prom($filename,$wordnumber,sylprom)
 	    }
+
+	    if {[llength $sylpromlist]==0} {
+		set sylprominence 0
+	    } elseif {$sylinword >= [llength $sylpromlist]} {
+		set sylprominence [lindex $sylpromlist end]
+	    } else {
+		set sylprominence [lindex $sylpromlist $sylinword-1]
+	    }
+
+
 	} else {
 	    set prominence 0
+	    set sylprominence 0
 	}
 	if [regexp {(.+)(\[\d+\])$} $line match first last] {
-	    if {$csvformat == "tobi"} {
-		lappend outdata $first/K:[string trim $prominence]$last
-	    } else {
-		lappend outdata $first/K:[expr int(100*[string trim $prominence])]$last
+	    # state labels
+	    switch $csvformat {
+		tobi {
+		    lappend outdata $first/K:[string trim $prominence]$last
+		}
+		sylprom {
+		    lappend outdata $first/K:[expr int(100*[string trim $sylprominence])]$last
+		}
+		default {
+		    lappend outdata $first/K:[expr int(100*[string trim $prominence])]$last
+		}
 	    }
 	} else {
+	    # phoneme labels
 	    if {$csvformat == "tobi"} {
 		lappend outdata $line/K:[string trim $prominence]
 	    } else {
