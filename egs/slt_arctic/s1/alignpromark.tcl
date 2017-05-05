@@ -65,12 +65,21 @@ if {$csvformat == "demo"} {
     set promindex 6
     readpromarkdata promark/tagger_slt.csv
 } elseif {$csvformat == "tobi"} {
-    #For the tagger_all_slt.csv file
+    #For the tagger_slt.csv file
     set wordindex 2
     set fileindex 4
     #tobi features
     set promindex 8
-    readpromarkdata promark/tagger_all_slt.csv
+	readpromarkdata promark/tagger_slt.csv
+    #HB: build a hash of mappings from tobi to numeral values
+    #set tobimap(!H*) 7
+    #set tobimap(H*) 6
+    #set tobimap(H+!H*) 5
+    #set tobimap(L*) 4
+    #set tobimap(L*+H) 3
+    #set tobimap(L+H*) 2
+    #set tobimap(X*?) 1
+    #set tobimap(0) 0
 } else {
     puts "csvformat: $csvformat not supported"
     exit
@@ -145,9 +154,12 @@ foreach file [lrange $argv 2 end] {
 	    set sylprominence 0
 	}
 	if [regexp {(.+)(\[\d+\])$} $line match first last] {
+
 	    # state labels
 	    switch $csvformat {
 		tobi {
+		    #If using HB's hash map:
+		    #lappend outdata $first/K:[string trim $tobimap($prominence)]$last
 		    lappend outdata $first/K:[string trim $prominence]$last
 		}
 		sylprom {
@@ -160,6 +172,8 @@ foreach file [lrange $argv 2 end] {
 	} else {
 	    # phoneme labels
 	    if {$csvformat == "tobi"} {
+	    # If using HB's hash map:
+		#lappend outdata $line/K:[string trim $tobimap($prominence)]
 		lappend outdata $line/K:[string trim $prominence]
 	    } else {
 		lappend outdata $line/K:[expr int(100*[string trim $prominence])]

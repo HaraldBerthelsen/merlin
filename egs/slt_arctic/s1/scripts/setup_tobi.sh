@@ -86,6 +86,8 @@ then
 #HB
 elif [ "$voice_name" == "slt_arctic_demo_tobi" ]
 then
+    #HB now using the same questions file as for promark
+    #echo "QuestionFile=questions-radio_tobi_dnn_416.hed" >> $global_config_file
     echo "QuestionFile=questions-radio_tobi_dnn_416.hed" >> $global_config_file
     echo "FileIDList=file_id_list_demo.scp" >> $global_config_file
     echo "Train=50" >> $global_config_file 
@@ -93,6 +95,8 @@ then
     echo "Test=5" >> $global_config_file 
 elif [ "$voice_name" == "slt_arctic_full_tobi" ]
 then
+    #HB now using the same questions file as for promark
+    #echo "QuestionFile=questions-radio_tobi_dnn_416.hed" >> $global_config_file
     echo "QuestionFile=questions-radio_tobi_dnn_416.hed" >> $global_config_file
     echo "FileIDList=file_id_list_full.scp" >> $global_config_file
     echo "Train=1000" >> $global_config_file 

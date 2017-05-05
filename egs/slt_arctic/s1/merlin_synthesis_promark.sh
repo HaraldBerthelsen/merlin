@@ -1,7 +1,7 @@
 #!/bin/bash
 
-if test "$#" -ne 0; then
-    echo "Usage: ./merlin_synthesis.sh"
+if test "$#" -ne 1; then
+    echo "Usage: ./merlin_synthesis_promark.sh voice_config_file"
     exit 1
 fi
 
@@ -11,11 +11,13 @@ PrintUsage () {
     echo "To run full voice: ./run_full_voice.sh"
 }
 
-global_config_file=conf/global_settings.cfg
+#global_config_file=conf/global_settings.cfg
+global_config_file=$1
+
 
 if [ ! -f  $global_config_file ]; then
-    echo "Global config file doesn't exist"
-    PrintUsage
+    echo "Voice config file doesn't exist"
+    #PrintUsage
     exit 1
 else
     source $global_config_file
