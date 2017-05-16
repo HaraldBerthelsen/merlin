@@ -11,7 +11,7 @@ full:
 	tclsh alignpromark.tcl full experiments/slt_arctic_full_promark/test_synthesis/prompt-lab experiments/slt_arctic_full/test_synthesis/prompt-lab/*.lab
 
 full-syl:
-	cp -pr experiments/slt_arctic_full experiments/slt_arctic_full_promark
+#	cp -pr experiments/slt_arctic_full experiments/slt_arctic_full_promark
 #	cd experiments; ln -sf slt_arctic_full_promark  slt_arctic_full_promark_syl
 	tclsh alignpromark.tcl sylprom experiments/slt_arctic_full_promark/duration_model/data/label_state_align experiments/slt_arctic_full/duration_model/data/label_state_align/*.lab
 	tclsh alignpromark.tcl sylprom experiments/slt_arctic_full_promark/acoustic_model/data/label_state_align experiments/slt_arctic_full/acoustic_model/data/label_state_align/*.lab

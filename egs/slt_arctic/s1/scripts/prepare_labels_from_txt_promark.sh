@@ -80,7 +80,8 @@ rm -rf ${testDir}/prompt-lab/{full,mono,tmp}
 ### If text files are in test_synthesis/txt, look for corresponding .prom files
 ### in the same directory and add prominence values from them
 echo "adding promark prominence values"
-python scripts/addProminenceValues.py ${testDir}/txt ${testDir}/prompt-lab
+#python scripts/addProminenceValues.py ${testDir}/txt ${testDir}/prompt-lab
+python scripts/addProminenceValues_syll_token-per-line.py ${testDir}/txt ${testDir}/prompt-lab
 
 status_add_prom=$?
 if [ $status_add_prom -eq 1 ]; then
