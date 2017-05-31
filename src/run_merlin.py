@@ -525,6 +525,7 @@ def main_function(cfg):
     nn_label_norm_file_list  = prepare_file_path_list(file_id_list, nn_label_norm_dir, cfg.lab_ext)
     dur_file_list            = prepare_file_path_list(file_id_list, cfg.in_dur_dir, cfg.dur_ext)
     lf0_file_list            = prepare_file_path_list(file_id_list, cfg.in_lf0_dir, cfg.lf0_ext)
+    prom_file_list           = prepare_file_path_list(file_id_list, cfg.in_prom_dir, cfg.prom_ext)
     
     # to do - sanity check the label dimension here?
     
