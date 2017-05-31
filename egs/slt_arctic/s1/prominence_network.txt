@@ -1,0 +1,16 @@
+Adding prominence network - outline of required changes and affected files 
+
+prepare training data
+
+-> new conf-file  prominence_slt_arctic_demo_pr.conf (or similar)
+   in_prom_dir
+   prom_ext
+   cfg.MAKEPROM
+
+-> run_merlin.py
+   prom_file_list = ...
+   if cfg.MAKEPROM ...
+
+   
+-> label_normalisation.py
+   prepare_prom_data ...
