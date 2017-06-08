@@ -186,6 +186,8 @@ class configuration(object):
             ('in_seq_dur_dir' , os.path.join(self.work_dir, 'data/S2S_dur')  , 'Paths', 'in_seq_dur_dir'),
             ('in_dur_dir'     , os.path.join(self.work_dir, 'data/dur')      , 'Paths', 'in_dur_dir'),
 
+            ## for prominence
+            ('in_prom_dir'     , os.path.join(self.work_dir, 'data/prom')      , 'Paths', 'in_prom_dir'),
 
             ('nn_norm_temp_dir', os.path.join(self.work_dir, 'data/step_hidden9'), 'Paths', 'nn_norm_temp_dir'),
 
@@ -305,6 +307,10 @@ class configuration(object):
             ('remove_silence_from_dur'  , True  , 'Outputs', 'remove_silence_from_dur'),
             ('dur_dim' ,5     ,'Outputs','dur'),
             ('dur_feature_type' , 'numerical' , 'Outputs', 'dur_feature_type'),
+            
+            ## for prominence
+            ('prom_dim' ,5     ,'Outputs','prominence'),
+            ('prom_feature_type' , 'numerical' , 'Outputs', 'prom_feature_type'),
 
 
             ('output_feature_normalisation', 'MVN', 'Outputs', 'output_feature_normalisation'),
@@ -371,6 +377,7 @@ class configuration(object):
             ('apply_GV'         ,False                 ,'Waveform'  , 'apply_GV'),
             ('test_synth_dir'   ,'test_synthesis/wav'  ,'Waveform'  , 'test_synth_dir'),
 
+            ('ProminenceModel'        , False, 'Processes', 'ProminenceModel'),
             ('DurationModel'        , False, 'Processes', 'DurationModel'),
             ('AcousticModel'        , False, 'Processes', 'AcousticModel'),
             ('GenTestList'          , False, 'Processes', 'GenTestList'),
@@ -405,6 +412,10 @@ class configuration(object):
 
             ## joint dur
             ('dur_ext'   , '.dur'     , 'Extensions', 'dur_ext'),
+
+            ## prominence
+            ('prom_ext'   , '.prom'     , 'Extensions', 'prom_ext'),
+            ('MAKEPROM'         , False, 'Processes', 'MAKEPROM'),
 
         ]
 
@@ -632,6 +643,11 @@ class configuration(object):
 #                current_stream_weight      = self.stream_weight_dur
             ## for joint dur (end)
 
+            elif feature_name == 'prominence':
+                in_dimension = self.prom_dim
+                out_dimension = self.prom_dim
+                in_directory  = self.in_prom_dir
+
 
             else:
                 logger.critical('%s feature is not supported right now. Please change the configuration.py to support it' %(feature_name))
@@ -718,6 +734,8 @@ class configuration(object):
 
         ## joint dur
         self.file_extension_dict['dur'] = self.dur_ext
+
+        self.file_extension_dict['prominence'] = self.prom_ext
 
         ## hyper parameters for DNN. need to be setted by the user, as they depend on the architecture
         self.hyper_params = { 'learning_rate'      : '0.0002',        ###

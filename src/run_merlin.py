@@ -372,6 +372,9 @@ def dnn_generation(valid_file_list, nnets_file_name, n_ins, n_outs, out_file_lis
         features = features[:(n_ins * (features.size / n_ins))]
         test_set_x = features.reshape((-1, n_ins))
 
+        print("input file: %s" % valid_file_list[i])
+        print("features size: %d " % numpy.shape(features))
+
         predicted_parameter = dnn_model.parameter_prediction(test_set_x)
 
         ### write to cmp file
@@ -485,6 +488,8 @@ def main_function(cfg):
 
     in_file_list_dict = {}
 
+    print(cfg.in_dir_dict.keys())
+    print(cfg.file_extension_dict.keys())
     for feature_name in cfg.in_dir_dict.keys():
         in_file_list_dict[feature_name] = prepare_file_path_list(file_id_list, cfg.in_dir_dict[feature_name], cfg.file_extension_dict[feature_name], False)
 
@@ -674,13 +679,19 @@ def main_function(cfg):
         logger.info('saved %s vectors to %s' %(label_min_vector.size, label_norm_file))
 
 
+    ### make output prominence data
+    if cfg.MAKEPROM:
+    	logger.info('creating prominence (output) features')
+        label_type = cfg.label_type
+        feature_type = cfg.prom_feature_type
+        label_normaliser.prepare_prom_data(in_label_align_file_list, prom_file_list, label_type, feature_type)
+
     ### make output duration data
     if cfg.MAKEDUR:
     	logger.info('creating duration (output) features')
         label_type = cfg.label_type
         feature_type = cfg.dur_feature_type
         label_normaliser.prepare_dur_data(in_label_align_file_list, dur_file_list, label_type, feature_type)
-
 
     ### make output acoustic data
     if cfg.MAKECMP:
@@ -954,6 +965,18 @@ def main_function(cfg):
            
             label_modifier = HTSLabelModification(silence_pattern = cfg.silence_pattern, label_type = cfg.label_type)
             label_modifier.modify_duration_labels(in_gen_label_align_file_list, gen_dur_list, gen_label_list)
+            
+        if cfg.ProminenceModel:
+            ### Perform prominence normalization(min. state prom set to 1) ### 
+            gen_prom_list   = prepare_file_path_list(gen_file_id_list, gen_dir, cfg.prom_ext)
+            gen_label_list = prepare_file_path_list(gen_file_id_list, gen_dir, cfg.lab_ext)
+            in_gen_label_align_file_list = prepare_file_path_list(gen_file_id_list, cfg.in_label_align_dir, cfg.lab_ext, False)
+            
+            generator = ParameterGeneration(gen_wav_features = cfg.gen_wav_features)
+            generator.duration_decomposition(gen_file_list, cfg.cmp_dim, cfg.out_dimension_dict, cfg.file_extension_dict)
+           
+            label_modifier = HTSLabelModification(silence_pattern = cfg.silence_pattern, label_type = cfg.label_type)
+            label_modifier.modify_prominence_labels(in_gen_label_align_file_list, gen_prom_list, gen_label_list)
             
 
     ### generate wav

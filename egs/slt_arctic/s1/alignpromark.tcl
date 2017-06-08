@@ -51,6 +51,13 @@ proc readpromarkdata {fn} {
 #HB to be able to read the two formats
 set csvformat [lindex $argv 0]
 
+if [string match *-prom $csvformat] {
+    set mode prominence_model
+    set csvformat [lindex [split $csvformat -] 0]
+} else {
+    set mode ""
+}
+
 if {$csvformat == "demo"} {
     #For the A/B_promark_raters files
     set wordindex 1
@@ -105,6 +112,7 @@ foreach file [lrange $argv 2 end] {
     puts $filename...
 
     set outdata {}
+    
     set accumword 0
     set currphrase 1
     foreach line $data {
@@ -163,10 +171,18 @@ foreach file [lrange $argv 2 end] {
 		    lappend outdata $first/K:[string trim $prominence]$last
 		}
 		sylprom {
-		    lappend outdata $first/K:[expr int(100*[string trim $sylprominence])]$last
+		    if {$mode=="prominence_model"} {
+			lappend outdata "$line [expr int(100*[string trim $sylprominence])]"
+		    } else {
+			lappend outdata $first/K:[expr int(100*[string trim $sylprominence])]$last
+		    }
 		}
 		default {
-		    lappend outdata $first/K:[expr int(100*[string trim $prominence])]$last
+		    if {$mode=="prominence_model"} {
+			lappend outdata "$line [expr int(100*[string trim $prominence])]"
+		    } else {
+			lappend outdata $first/K:[expr int(100*[string trim $prominence])]$last
+		    }
 		}
 	    }
 	} else {
@@ -176,7 +192,11 @@ foreach file [lrange $argv 2 end] {
 		#lappend outdata $line/K:[string trim $tobimap($prominence)]
 		lappend outdata $line/K:[string trim $prominence]
 	    } else {
-		lappend outdata $line/K:[expr int(100*[string trim $prominence])]
+		if {$mode=="prominence_model"} {
+		    lappend outdata "$line [expr int(100*[string trim $prominence]"
+		} else {
+		    lappend outdata $line/K:[expr int(100*[string trim $prominence])]
+		}
 	    }
 	}
     }

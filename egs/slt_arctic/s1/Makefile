@@ -1,5 +1,6 @@
 
 demo:
+	tclsh alignpromark.tcl demo-prom experiments/slt_arctic_demo_promark/prominence_model/data/label_state_align experiments/slt_arctic_demo/duration_model/data/label_state_align/*.lab
 	tclsh alignpromark.tcl demo experiments/slt_arctic_demo_promark/duration_model/data/label_state_align experiments/slt_arctic_demo/duration_model/data/label_state_align/*.lab
 	tclsh alignpromark.tcl demo experiments/slt_arctic_demo_promark/acoustic_model/data/label_state_align experiments/slt_arctic_demo/acoustic_model/data/label_state_align/*.lab
 	tclsh alignpromark.tcl demo experiments/slt_arctic_demo_promark/test_synthesis/prompt-lab experiments/slt_arctic_demo/test_synthesis/prompt-lab/*.lab

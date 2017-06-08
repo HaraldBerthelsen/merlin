@@ -160,3 +160,135 @@ class HTSLabelModification(object):
      
         logger.debug('modifed label with predicted duration of %d frames x %d features' % dur_features.shape )
     
+
+
+    def modify_prominence_labels(self, in_gen_label_align_file_list, gen_prom_list, gen_label_list):
+        '''
+        modifying prominence from label alignments with predicted prominence.
+        '''
+        utt_number = len(gen_prom_list)
+        if utt_number != len(in_gen_label_align_file_list):
+            print   "the number of input and output files should be the same!\n";
+            sys.exit(1)
+               
+        for i in xrange(utt_number):
+            if (self.label_type=="state_align"):
+                self.modify_prom_from_state_alignment_labels(in_gen_label_align_file_list[i], gen_prom_list[i], gen_label_list[i])
+            elif (self.label_type=="phone_align"):
+                self.modify_prom_from_phone_alignment_labels(in_gen_label_align_file_list[i], gen_prom_list[i], gen_label_list[i])
+            else:
+                logger.critical("we don't support %s labels as of now!!" % (self.label_type))
+                sys.exit(1)
+    
+    def modify_prom_from_state_alignment_labels(self, label_file_name, gen_prom_file_name, gen_lab_file_name): 
+        #HB prom logger doesn't work. Why?
+        logger = logging.getLogger("main")
+
+        state_number = self.state_number
+        prom_dim = state_number
+        
+        io_funcs = BinaryIOCollection()
+        prom_features, frame_number = io_funcs.load_binary_file_frame(gen_prom_file_name, prom_dim)
+
+        fid = open(label_file_name)
+        utt_labels = fid.readlines()
+        fid.close()
+        
+        label_number = len(utt_labels)
+        logger.info('loaded %s, %3d labels' % (label_file_name, label_number) )
+		
+        out_fid = open(gen_lab_file_name, 'w')
+
+        current_index = 0
+        prev_end_time = 0
+        for line in utt_labels:
+            line = line.strip()
+            
+            if len(line) < 1:
+                continue
+
+#            logger.debug("Line: %s" % line)
+
+            temp_list = re.split('\s+', line)
+            start_time = int(temp_list[0])
+            end_time = int(temp_list[1])
+            
+            full_label = temp_list[2]
+            full_label_length = len(full_label) - 3  # remove state information [k]
+            state_index = full_label[full_label_length + 1]
+            state_index = int(state_index) - 1
+
+            prominence = int(temp_list[3])
+
+
+            label_binary_flag = self.check_silence_pattern(full_label)
+            #label_binary_flag = 0
+            if label_binary_flag == 1:
+                #current_state_prom = end_time - start_time
+                #out_fid.write(str(prev_end_time)+' '+str(prev_end_time+current_state_prom)+' '+full_label+' '+str(prominence)+'\n')
+                #prev_end_time = prev_end_time+current_state_prom
+                current_state_prom = 0
+                out_fid.write(str(start_time)+' '+str(end_time)+' '+full_label+' '+str(current_state_prom)+'\n')
+                prev_end_time = prev_end_time+current_state_prom
+                continue;
+            else:
+#                logger.debug("current_index: %d, state_index-1: %d" % (current_index, state_index-1))
+                state_prom = prom_features[current_index, state_index-1]
+#                logger.debug("state_prom: %s" % state_prom)
+                #state_prom = int(state_prom)*5*10000
+                #out_fid.write(str(prev_end_time)+' '+str(prev_end_time+state_prom)+' '+full_label+' '+str(state_prom)+'\n')
+                out_fid.write(str(start_time)+' '+str(end_time)+' '+full_label+' '+str(int(state_prom))+'\n')
+                prev_end_time = prev_end_time+state_prom
+        
+            if state_index == state_number:
+                current_index += 1
+     
+        logger.debug('modifed label with predicted prominence of %d frames x %d features' % prom_features.shape )
+    
+    def modify_prom_from_phone_alignment_labels(self, label_file_name, gen_prom_file_name, gen_lab_file_name): 
+        logger = logging.getLogger("prom")
+
+        prom_dim = 1
+        
+        io_funcs = BinaryIOCollection()
+        prom_features, frame_number = io_funcs.load_binary_file_frame(gen_prom_file_name, prom_dim)
+
+        fid = open(label_file_name)
+        utt_labels = fid.readlines()
+        fid.close()
+        
+        label_number = len(utt_labels)
+        logger.info('loaded %s, %3d labels' % (label_file_name, label_number) )
+		
+        out_fid = open(gen_lab_file_name, 'w')
+
+        current_index = 0
+        prev_end_time = 0
+        for line in utt_labels:
+            line = line.strip()
+            
+            if len(line) < 1:
+                continue
+            temp_list = re.split('\s+', line)
+            start_time = int(temp_list[0])
+            end_time = int(temp_list[1])
+            
+            full_label = temp_list[2]
+
+            label_binary_flag = self.check_silence_pattern(full_label)
+          
+            if label_binary_flag == 1:
+                current_phone_prom = end_time - start_time
+                out_fid.write(str(prev_end_time)+' '+str(prev_end_time+current_phone_prom)+' '+full_label+'\n')
+                prev_end_time = prev_end_time+current_phone_prom
+                continue;
+            else:
+                phone_prom = prom_features[current_index]
+                phone_prom = int(phone_prom)*5*10000
+                out_fid.write(str(prev_end_time)+' '+str(prev_end_time+phone_prom)+' '+full_label+'\n')
+                prev_end_time = prev_end_time+phone_prom
+        
+            current_index += 1
+     
+        logger.debug('modifed label with predicted prominence of %d frames x %d features' % prom_features.shape )
+    

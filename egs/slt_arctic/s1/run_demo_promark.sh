@@ -9,7 +9,7 @@ fi
 echo "Step 1: setting up experiments directory and the training data files..."
 global_config_file=conf/global_settings.cfg
 
-./scripts/setup_promark.sh slt_arctic_demo_promark
+#./scripts/setup_promark.sh slt_arctic_demo_promark
 ./scripts/prepare_config_files.sh $global_config_file
 ./scripts/prepare_config_files_for_synthesis.sh $global_config_file
 

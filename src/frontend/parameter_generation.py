@@ -90,6 +90,9 @@ class   ParameterGeneration(object):
             file_id = os.path.splitext(os.path.basename(file_name))[0]
 
             features, frame_number = io_funcs.load_binary_file_frame(file_name, dimension)
+            print("features length: %d" % len(features))
+
+
             gen_features = numpy.int32(numpy.round(features))
             gen_features[gen_features<1]=1
 
@@ -99,6 +102,7 @@ class   ParameterGeneration(object):
             logger.info('processing %4d of %4d: %s' % (findex,flen,file_name) )
 
             new_file_name = os.path.join(dir_name, file_id + file_extension_dict[feature_name])
+            print("get_features length: %d" % len(gen_features))
             io_funcs.array_to_binary_file(gen_features, new_file_name) 
 
             logger.debug('wrote to file %s' % new_file_name)

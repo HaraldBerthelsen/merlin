@@ -14,12 +14,14 @@ voice_dir=${experiments_dir}/${voice_name}
 
 acoustic_dir=${voice_dir}/acoustic_model
 duration_dir=${voice_dir}/duration_model
+prominence_dir=${voice_dir}/prominence_model
 synthesis_dir=${voice_dir}/test_synthesis
 
 mkdir -p ${experiments_dir}
 mkdir -p ${voice_dir}
 mkdir -p ${acoustic_dir}
 mkdir -p ${duration_dir}
+mkdir -p ${prominence_dir}
 
 if [ "$voice_name" == "slt_arctic_demo" ]
 then
@@ -59,8 +61,10 @@ if [[ ! -d ${data_dir} ]] || [[ -n "$do_unzip" ]]; then
     rm -fr ${data_dir}
     rm -fr ${duration_dir}/data
     rm -fr ${acoustic_dir}/data
+    rm -fr ${prominence_dir}/data
     unzip -q ${data_dir}.zip
     mv ${data_dir}/merlin_baseline_practice/duration_data/ ${duration_dir}/data
+    cp -r ${duration_dir}/data ${prominence_dir}/data
     mv ${data_dir}/merlin_baseline_practice/acoustic_data/ ${acoustic_dir}/data
     mv ${data_dir}/merlin_baseline_practice/test_data/ ${synthesis_dir}
 fi
