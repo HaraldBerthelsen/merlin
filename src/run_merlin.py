@@ -369,11 +369,12 @@ def dnn_generation(valid_file_list, nnets_file_name, n_ins, n_outs, out_file_lis
         fid_lab = open(valid_file_list[i], 'rb')
         features = numpy.fromfile(fid_lab, dtype=numpy.float32)
         fid_lab.close()
+
+
         features = features[:(n_ins * (features.size / n_ins))]
         test_set_x = features.reshape((-1, n_ins))
 
         print("input file: %s" % valid_file_list[i])
-        print("features size: %d " % numpy.shape(features))
 
         predicted_parameter = dnn_model.parameter_prediction(test_set_x)
 
