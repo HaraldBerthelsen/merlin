@@ -1,17 +1,22 @@
 #!/bin/sh
 
+
+merlin_dir=$1
+wav_dir=$2
+out_dir=$3
+
 # top merlin directory
-merlin_dir="/afs/inf.ed.ac.uk/group/cstr/projects/phd/s1432486/work/test/merlin"
+#merlin_dir="/afs/inf.ed.ac.uk/group/cstr/projects/phd/s1432486/work/test/merlin"
 
 # tools directory
 world="${merlin_dir}/tools/bin/WORLD"
 sptk="${merlin_dir}/tools/bin/SPTK-3.9"
 
 # input audio directory
-wav_dir="${merlin_dir}/egs/slt_arctic/s1/slt_arctic_full_data/wav"
+#wav_dir="${merlin_dir}/egs/slt_arctic/s1/slt_arctic_full_data/wav"
 
 # Output features directory
-out_dir="${merlin_dir}/egs/slt_arctic/s1/slt_arctic_full_data/feat"
+#out_dir="${merlin_dir}/egs/slt_arctic/s1/slt_arctic_full_data/feat"
 
 sp_dir="${out_dir}/sp"
 mgc_dir="${out_dir}/mgc"
