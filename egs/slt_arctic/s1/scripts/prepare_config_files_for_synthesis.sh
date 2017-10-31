@@ -57,7 +57,7 @@ elif [ "$Labels" == "phone_align" ]
 then
     $SED -i s#'dur\s*:.*'#'dur: 1'# $duration_config_file
 else
-    echo "These labels ($Lables) are not supported as of now...please use state_align or phone_align!!"
+    echo "These labels ($Labels) are not supported as of now...please use state_align or phone_align!!"
 fi
 
 
@@ -71,6 +71,7 @@ if [ "$Voice" == "slt_arctic_demo" ]
 then
     $SED -i s#'hidden_layer_size\s*:.*'#'hidden_layer_size: [512, 512, 512, 512]'# $duration_config_file
     $SED -i s#'hidden_layer_type\s*:.*'#'hidden_layer_type: ['\''TANH'\'', '\''TANH'\'', '\''TANH'\'', '\''TANH'\'']'# $duration_config_file
+    $SED -i s#'model_file_name\s*:.*'#'model_file_name: feed_forward_4_tanh'# $duration_config_file
 fi
 
 
@@ -198,6 +199,7 @@ if [ "$Voice" == "slt_arctic_demo" ]
 then
     $SED -i s#'hidden_layer_size\s*:.*'#'hidden_layer_size: [512, 512, 512, 512]'# $acoustic_config_file
     $SED -i s#'hidden_layer_type\s*:.*'#'hidden_layer_type: ['\''TANH'\'', '\''TANH'\'', '\''TANH'\'', '\''TANH'\'']'# $acoustic_config_file
+    $SED -i s#'model_file_name\s*:.*'#'model_file_name: feed_forward_4_tanh'# $acoustic_config_file
 fi
 
 
