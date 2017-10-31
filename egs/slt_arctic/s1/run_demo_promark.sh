@@ -32,10 +32,14 @@ echo ./scripts/submit.sh ${MerlinDir}/src/run_merlin.py conf/acoustic_${Voice}.c
 
 ### Step 4: synthesize speech   ###
 echo "Step 4: synthesizing speech..."
-echo ./scripts/submit.sh ${MerlinDir}/src/run_merlin.py conf/test_dur_synth_${Voice}.conf
-./scripts/submit.sh ${MerlinDir}/src/run_merlin.py conf/test_dur_synth_${Voice}.conf
-echo ./scripts/submit.sh ${MerlinDir}/src/run_merlin.py conf/test_synth_${Voice}.conf
-./scripts/submit.sh ${MerlinDir}/src/run_merlin.py conf/test_synth_${Voice}.conf
+#echo ./scripts/submit.sh ${MerlinDir}/src/run_merlin.py conf/test_dur_synth_${Voice}.conf
+#./scripts/submit.sh ${MerlinDir}/src/run_merlin.py conf/test_dur_synth_${Voice}.conf
+#echo ./scripts/submit.sh ${MerlinDir}/src/run_merlin.py conf/test_synth_${Voice}.conf
+#./scripts/submit.sh ${MerlinDir}/src/run_merlin.py conf/test_synth_${Voice}.conf
+
+echo sh 05_run_merlin_promark.sh test_prom_synth_slt_arctic_demo_promark.conf test_dur_synth_slt_arctic_demo_promark.conf test_synth_slt_arctic_demo_promark.conf
+sh 05_run_merlin_promark.sh test_prom_synth_slt_arctic_demo_promark.conf test_dur_synth_slt_arctic_demo_promark.conf test_synth_slt_arctic_demo_promark.conf
+
 
 ### Step 5: delete intermediate synth files ###
 echo "Step 5: deleting intermediate synthesis files..."
