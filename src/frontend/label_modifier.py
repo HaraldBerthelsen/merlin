@@ -177,7 +177,7 @@ class HTSLabelModification(object):
             current_index += 1
 
         logger.debug('modifed label with predicted duration of %d frames x %d features' % dur_features.shape )
-    
+
 
 
     def modify_prominence_labels(self, in_gen_label_align_file_list, gen_prom_list, gen_label_list):
@@ -233,6 +233,7 @@ class HTSLabelModification(object):
             
             full_label = temp_list[2]
             full_label_length = len(full_label) - 3  # remove state information [k]
+            full_label_nostate = full_label[0:full_label_length-1]
             state_index = full_label[full_label_length + 1]
             state_index = int(state_index) - 1
 
@@ -246,18 +247,19 @@ class HTSLabelModification(object):
                 #out_fid.write(str(prev_end_time)+' '+str(prev_end_time+current_state_prom)+' '+full_label+' '+str(prominence)+'\n')
                 #prev_end_time = prev_end_time+current_state_prom
                 current_state_prom = 0
-                out_fid.write(str(start_time)+' '+str(end_time)+' '+full_label+' '+str(current_state_prom)+'\n')
-                prev_end_time = prev_end_time+current_state_prom
+                #                out_fid.write(str(start_time)+' '+str(end_time)+' '+full_label+' '+str(current_state_prom)+'\n')
+                out_fid.write(str(start_time)+' '+str(end_time)+' '+full_label_nostate+'/K:'+str(current_state_prom)+'['+str(state_index)+']\n')
+                
                 continue;
             else:
-#                logger.debug("current_index: %d, state_index-1: %d" % (current_index, state_index-1))
-                state_prom = prom_features[current_index, state_index-1]
-#                logger.debug("state_prom: %s" % state_prom)
+                #                logger.debug("current_index: %d, state_index-1: %d" % (current_index, state_index-1))
+                state_prom = int(round(prom_features[current_index, state_index-1]))
+                #                logger.debug("state_prom: %s" % state_prom)
                 #state_prom = int(state_prom)*5*10000
-                #out_fid.write(str(prev_end_time)+' '+str(prev_end_time+state_prom)+' '+full_label+' '+str(state_prom)+'\n')
-                out_fid.write(str(start_time)+' '+str(end_time)+' '+full_label+' '+str(int(state_prom))+'\n')
-                prev_end_time = prev_end_time+state_prom
-        
+                #out_fid.write(str(prev_end_time)+' '+str(prev_end_time+state_prom)+' '+full_label+' '+str(state_prom)+'\n')  
+                # out_fid.write(str(start_time)+' '+str(end_time)+' '+full_label+' '+str(int(state_prom))+'\n')
+                out_fid.write(str(start_time)+' '+str(end_time)+' '+full_label_nostate+'/K:'+str(state_prom)+'['+str(state_index)+']\n')
+
             if state_index == state_number:
                 current_index += 1
      

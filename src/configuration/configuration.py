@@ -232,6 +232,7 @@ class configuration(object):
             ## for prominence
             ('in_prom_dir'     , os.path.join(self.work_dir, 'data/prom')      , 'Paths', 'in_prom_dir'),
 
+
             ('nn_norm_temp_dir', os.path.join(self.work_dir, 'data/step_hidden9'), 'Paths', 'nn_norm_temp_dir'),
 
             ('process_labels_in_work_dir', False, 'Labels', 'process_labels_in_work_dir'),
@@ -406,8 +407,7 @@ class configuration(object):
             ('dur_feature_type' , 'numerical' , 'Outputs', 'dur_feature_type'),
             ('dur_unit_size' , 'phoneme' , 'Outputs', 'dur_unit_size'),
             ('dur_feat_size' , 'phoneme' , 'Outputs', 'dur_feat_size'),
-
-            
+        
             ## for prominence
             ('prom_dim' ,5     ,'Outputs','prominence'),
             ('prom_feature_type' , 'numerical' , 'Outputs', 'prom_feature_type'),
@@ -840,15 +840,15 @@ class configuration(object):
                 out_dimension = self.dur_dim
                 in_directory  = self.in_dur_dir
 
-#                current_stream_hidden_size = self.stream_dur_hidden_size
-#                current_stream_weight      = self.stream_weight_dur
-            ## for joint dur (end)
+                #                current_stream_hidden_size = self.stream_dur_hidden_size
+                #                current_stream_weight      = self.stream_weight_dur
+                ## for joint dur (end)
+
 
             elif feature_name == 'prominence':
                 in_dimension = self.prom_dim
                 out_dimension = self.prom_dim
                 in_directory  = self.in_prom_dir
-
 
             else:
                 logger.critical('%s feature is not supported right now. Please change the configuration.py to support it' %(feature_name))

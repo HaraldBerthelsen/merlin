@@ -432,8 +432,6 @@ def dnn_generation(valid_file_list, nnets_file_name, n_ins, n_outs, out_file_lis
             test_set_x = numpy.reshape(test_set_x, (1, test_set_x.shape[0], n_ins))
             test_set_x = numpy.array(test_set_x, 'float32')
 
-        print("input file: %s" % valid_file_list[i])
-
         predicted_parameter = dnn_model.parameter_prediction(test_set_x)
         predicted_parameter = predicted_parameter.reshape(-1, n_outs)
         predicted_parameter = predicted_parameter[0:n_rows]
@@ -522,9 +520,7 @@ def main_function(cfg):
 
     in_file_list_dict = {}
 
-    print(cfg.in_dir_dict.keys())
-    print(cfg.file_extension_dict.keys())
-    for feature_name in cfg.in_dir_dict.keys():
+    for feature_name in list(cfg.in_dir_dict.keys()):
         in_file_list_dict[feature_name] = prepare_file_path_list(file_id_list, cfg.in_dir_dict[feature_name], cfg.file_extension_dict[feature_name], False)
 
     nn_cmp_file_list         = file_paths.get_nn_cmp_file_list()
@@ -563,7 +559,6 @@ def main_function(cfg):
     binary_label_file_list   = file_paths.binary_label_file_list
     nn_label_file_list       = file_paths.nn_label_file_list
     nn_label_norm_file_list  = file_paths.nn_label_norm_file_list
-
 
     min_max_normaliser = None
 
@@ -625,9 +620,7 @@ def main_function(cfg):
     ### make output prominence data
     if cfg.MAKEPROM:
     	logger.info('creating prominence (output) features')
-        label_type = cfg.label_type
-        feature_type = cfg.prom_feature_type
-        label_normaliser.prepare_prom_data(in_label_align_file_list, prom_file_list, label_type, feature_type)
+        label_normaliser.prepare_prom_data(in_label_align_file_list, file_paths.prom_file_list, cfg.label_type, cfg.prom_feature_type)
 
     ### make output duration data
     if cfg.MAKEDUR:
@@ -944,7 +937,7 @@ def main_function(cfg):
 
             label_modifier = HTSLabelModification(silence_pattern = cfg.silence_pattern, label_type = cfg.label_type)
             label_modifier.modify_duration_labels(in_gen_label_align_file_list, gen_dur_list, gen_label_list)
-            
+           
         if cfg.ProminenceModel:
             ### Perform prominence normalization(min. state prom set to 1) ### 
             gen_prom_list   = prepare_file_path_list(gen_file_id_list, gen_dir, cfg.prom_ext)
@@ -957,7 +950,6 @@ def main_function(cfg):
             label_modifier = HTSLabelModification(silence_pattern = cfg.silence_pattern, label_type = cfg.label_type)
             label_modifier.modify_prominence_labels(in_gen_label_align_file_list, gen_prom_list, gen_label_list)
             
-
     ### generate wav
     if cfg.GENWAV:
         logger.info('reconstructing waveform(s)')

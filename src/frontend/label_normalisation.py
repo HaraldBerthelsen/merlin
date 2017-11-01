@@ -113,6 +113,7 @@ class HTSLabelNormalisation(LabelNormalisation):
 
         logger.debug('HTS-derived input feature dimension is %d + %d = %d' % (self.dict_size, self.frame_feature_size, self.dimension) )
 
+
         
     def prepare_prom_data(self, ori_file_list, output_file_list, label_type="state_align", feature_type=None, unit_size=None, feat_size=None):
         '''
@@ -319,6 +320,8 @@ class HTSLabelNormalisation(LabelNormalisation):
         dur_feature_matrix = dur_feature_matrix[0:dur_feature_index,]
         logger.debug('made duration matrix of %d frames x %d features' % dur_feature_matrix.shape )
         return  dur_feature_matrix
+
+
 
 
     def prepare_dur_data(self, ori_file_list, output_file_list, label_type="state_align", feature_type=None, unit_size=None, feat_size=None):
