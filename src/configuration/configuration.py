@@ -147,10 +147,9 @@ class configuration(object):
         self.data_dir       = os.path.join(self.work_dir, 'data')
         self.inter_data_dir = os.path.join(self.work_dir, 'inter_module')
 
-        self.keras_dir   = os.path.join(self.work_dir, 'keras')
-        self.gen_dir     = os.path.join(self.keras_dir, 'gen')
-        self.model_dir   = os.path.join(self.keras_dir, 'models')
-        self.stats_dir   = os.path.join(self.keras_dir, 'stats')
+        self.gen_dir     = os.path.join(self.work_dir, 'gen')
+        self.model_dir   = os.path.join(self.work_dir, 'nnets_model')
+        self.stats_dir   = os.path.join(self.work_dir, 'stats')
 
         self.def_inp_dir    = os.path.join(self.inter_data_dir, 'nn_no_silence_lab_norm_425')
         self.def_out_dir    = os.path.join(self.inter_data_dir, 'nn_norm_mgc_lf0_vuv_bap_187')
@@ -216,10 +215,22 @@ class configuration(object):
             ('in_LSF_dir'   , os.path.join(self.work_dir, 'data/LSF')  , 'Paths', 'in_LSF_dir'),
             ('in_LSFsource_dir'   , os.path.join(self.work_dir, 'data/LSFsource')  , 'Paths', 'in_LSFsource_dir'),
 
+            ## for glottDNN
+            ('in_f0_dir'   , os.path.join(self.work_dir, 'data/f0')  , 'Paths', 'in_f0_dir'),
+            ('in_gain_dir'   , os.path.join(self.work_dir, 'data/gain')  , 'Paths', 'in_gain_dir'),
+            ('in_hnr_dir'   , os.path.join(self.work_dir, 'data/hnr')  , 'Paths', 'in_hnr_dir'),
+            ('in_lsf_dir'   , os.path.join(self.work_dir, 'data/lsf')  , 'Paths', 'in_lsf_dir'),
+            ('in_slsf_dir'   , os.path.join(self.work_dir, 'data/slsf')  , 'Paths', 'in_slsf_dir'),
+
+            ## for sinusoidal
+            ('in_pdd_dir'   , os.path.join(self.work_dir, 'data/pdd')  , 'Paths', 'in_pdd_dir'),
+
             ## for joint duration
             ('in_seq_dur_dir' , os.path.join(self.work_dir, 'data/S2S_dur')  , 'Paths', 'in_seq_dur_dir'),
             ('in_dur_dir'     , os.path.join(self.work_dir, 'data/dur')      , 'Paths', 'in_dur_dir'),
 
+            ## for prominence
+            ('in_prom_dir'     , os.path.join(self.work_dir, 'data/prom')      , 'Paths', 'in_prom_dir'),
 
             ('nn_norm_temp_dir', os.path.join(self.work_dir, 'data/step_hidden9'), 'Paths', 'nn_norm_temp_dir'),
 
@@ -231,6 +242,7 @@ class configuration(object):
             ('label_type'         , 'state_align'                                         ,    'Labels', 'label_type'),
             ('in_label_align_dir' , os.path.join(self.work_dir, 'data/label_state_align') ,    'Labels', 'label_align'),
             ('question_file_name' , os.path.join(self.work_dir, 'data/questions.hed')     ,    'Labels', 'question_file_name'),
+            ('linguistic_file_name' , os.path.join(self.work_dir, 'data/hed_feats.txt')   ,    'Labels', 'linguistic_file_name'),
             ('silence_pattern'    , ['*-#+*']                                             ,    'Labels', 'silence_pattern'),
             ('subphone_feats'     , 'full'                                                ,    'Labels', 'subphone_feats'),
             ('additional_features', {}                                                    ,    'Labels', 'additional_features'),
@@ -264,6 +276,9 @@ class configuration(object):
             ('sptk_bindir', 'tools/bin/SPTK-3.9', 'Paths','sptk'),
             ('straight_bindir', 'tools/bin/straight', 'Paths','straight'),
             ('world_bindir', 'tools/bin/WORLD', 'Paths','world'),
+            ('glotthmm_bindir', 'tools/bin/glotthmm', 'Paths', 'glotthmm'),
+            ('glottdnn_bindir', 'tools/bin/glottdnn', 'Paths', 'glottdnn'),
+            ('hmpd_bindir', 'tools/bin/hmpd', 'Paths', 'hmpd'),
 
             ('network_type'           , 'RNN'                                           , 'Architecture', 'network_type'),
             ('model_type'           , 'DNN'                                             , 'Architecture', 'model_type'),
@@ -273,6 +288,7 @@ class configuration(object):
             ('rnn_batch_training'   , False                                             , 'Architecture', 'rnn_batch_training'),
             ('dropout_rate'         , 0.0                                               , 'Architecture', 'dropout_rate'),
             ('switch_to_keras'      , False                                             , 'Architecture', 'switch_to_keras'),
+            ('switch_to_tensorflow' , False                                             , 'Architecture', 'switch_to_tensorflow'),
 
             ## some config variables for token projection DNN
             ('scheme'               , 'stagewise'                   , 'Architecture', 'scheme'),
@@ -299,6 +315,10 @@ class configuration(object):
             ('seq_length'   , 200, 'Architecture', 'seq_length'),
             ('bucket_range' , 100, 'Architecture', 'bucket_range'),
 
+            ('encoder_decoder'      , False                                           ,  'Architecture','encoder_decoder'),
+            ('attention'            , False                                           ,  'Architecture', 'attention'),
+            ("cbhg"                 , False                                           ,   "Architecture", "cbhg"),
+            
             # Data
             ('shuffle_data', True, 'Data', 'shuffle_data'),
 
@@ -332,7 +352,7 @@ class configuration(object):
             ('mean_log_det',        -100.0                        , 'Architecture', 'mean_log_det'),
             ('start_from_trained_model',  '_'                     , 'Architecture', 'start_from_trained_model'),
             ('use_rprop',           0                             , 'Architecture', 'use_rprop'),
-
+            ('use_lhuc',           False                             , 'Architecture', 'use_lhuc'),
 
             ('mgc_dim' ,60     ,'Outputs','mgc'),
             ('dmgc_dim',60 * 3 ,'Outputs','dmgc'),
@@ -362,11 +382,35 @@ class configuration(object):
             ('LSFsource_dim' ,10     ,'Outputs','LSFsource'),
             ('dLSFsource_dim',10 * 3 ,'Outputs','dLSFsource'),
 
+            ## for GlottDNN
+             ('f0_dim' ,1     ,'Outputs','f0'),
+            ('df0_dim',1 * 3 ,'Outputs','df0'),
+            ('gain_dim' ,1     ,'Outputs','gain'),
+            ('dgain_dim',1 * 3 ,'Outputs','dgain'),
+            ('hnr_dim' ,5     ,'Outputs','hnr'),
+            ('dhnr_dim',5 * 3 ,'Outputs','dhnr'),
+            ('lsf_dim' ,30     ,'Outputs','lsf'),
+            ('dlsf_dim',30 * 3 ,'Outputs','dlsf'),
+            ('slsf_dim' ,10     ,'Outputs','slsf'),
+            ('dslsf_dim',10 * 3 ,'Outputs','dslsf'),
+        
+        ## for sinusoidal
+            ('pdd_dim', 25, 'Outputs', 'pdd'),
+            ('dpdd_dim', 25 * 3, 'Outputs', 'dpdd'),
+
+
         ## for joint dur:-
             ('seq_dur_dim' ,1     ,'Outputs','seq_dur'),
             ('remove_silence_from_dur'  , True  , 'Outputs', 'remove_silence_from_dur'),
             ('dur_dim' ,5     ,'Outputs','dur'),
             ('dur_feature_type' , 'numerical' , 'Outputs', 'dur_feature_type'),
+            ('dur_unit_size' , 'phoneme' , 'Outputs', 'dur_unit_size'),
+            ('dur_feat_size' , 'phoneme' , 'Outputs', 'dur_feat_size'),
+
+            
+            ## for prominence
+            ('prom_dim' ,5     ,'Outputs','prominence'),
+            ('prom_feature_type' , 'numerical' , 'Outputs', 'prom_feature_type'),
 
 
             ('output_feature_normalisation', 'MVN', 'Outputs', 'output_feature_normalisation'),
@@ -391,6 +435,7 @@ class configuration(object):
             ('apply_GV'         ,False                 ,'Waveform'  , 'apply_GV'),
             ('test_synth_dir'   ,'test_synthesis/wav'  ,'Waveform'  , 'test_synth_dir'),
 
+            ('ProminenceModel'        , False, 'Processes', 'ProminenceModel'),
             ('DurationModel'        , False, 'Processes', 'DurationModel'),
             ('AcousticModel'        , False, 'Processes', 'AcousticModel'),
             ('VoiceConversion'      , False, 'Processes', 'VoiceConversion'),
@@ -424,8 +469,22 @@ class configuration(object):
             ('LSF_ext'   , '.LSF'     , 'Extensions', 'LSF_ext'),
             ('LSFsource_ext'   , '.LSFsource'     , 'Extensions', 'LSFsource_ext'),
 
+             ## GlottDNN
+            ('f0_ext'   , '.f0'     , 'Extensions', 'f0_ext'),
+            ('gain_ext'   , '.gain'     , 'Extensions', 'gain_ext'),
+            ('hnr_ext'   , '.hnr'     , 'Extensions', 'hnr_ext'),
+            ('lsf_ext'   , '.lsf'     , 'Extensions', 'lsf_ext'),
+            ('slsf_ext'   , '.slsf'     , 'Extensions', 'slsf_ext'),
+
+            ## sinusoidal
+            ('pdd_ext'  , '.pdd', 'Extensions', 'pdd_ext'),
+
             ## joint dur
             ('dur_ext'   , '.dur'     , 'Extensions', 'dur_ext'),
+
+            ## prominence
+            ('prom_ext'   , '.prom'     , 'Extensions', 'prom_ext'),
+            ('MAKEPROM'         , False, 'Processes', 'MAKEPROM'),
 
         ]
 
@@ -516,6 +575,23 @@ class configuration(object):
             'SYNTHESIS'     : os.path.join(self.world_bindir, 'synth'),
             'ANALYSIS'      : os.path.join(self.world_bindir, 'analysis'),
             }
+        
+        self.GLOTTHMM= {
+            'SYNTHESIS'     : os.path.join(self.glotthmm_bindir, 'Synthesis'),
+            'config_file'   : os.path.join(self.glotthmm_bindir, 'config_default_48'),
+            'config_file_16'   : os.path.join(self.glotthmm_bindir, 'config_default_16'),
+            }
+
+        self.GLOTTDNN = {
+            'SYNTHESIS'     : os.path.join(self.glottdnn_bindir, 'Synthesis'),         
+            'config_file'   : os.path.join(self.glottdnn_bindir, 'config_default_48'),
+            'config_file_16'   : os.path.join(self.glottdnn_bindir, 'config_default_16'),
+            }
+
+        self.HMPD = {
+            'SYNTHESIS'     : os.path.join(self.hmpd_bindir, 'synthesis.py'),
+           }
+
 
         # set input extension same as output for voice conversion
         if self.VoiceConversion:
@@ -529,15 +605,30 @@ class configuration(object):
                 self.sequential_training = True
                 break
 
-        # switch to keras
-        if self.switch_to_keras:
+        # switch to tensorflow
+        if self.switch_to_tensorflow:
             ## create directories if not exists
+            self.model_dir = os.path.join(self.model_dir, "tensorflow")
+            self.model_dir = os.path.join(self.model_dir, self.model_file_name)
             if not os.path.exists(self.model_dir):
                 os.makedirs(self.model_dir)
 
-            if not os.path.exists(self.stats_dir):
-                os.makedirs(self.stats_dir)
+        # switch to keras
+        if self.switch_to_keras:
+            ## create directories if not exists
+            self.model_dir = os.path.join(self.model_dir, "keras")
+            if not os.path.exists(self.model_dir):
+                os.makedirs(self.model_dir)
 
+            # model files
+            self.json_model_file = os.path.join(self.model_dir, self.model_file_name+'.json')
+            self.h5_model_file   = os.path.join(self.model_dir, self.model_file_name+'.h5')
+
+        if self.switch_to_keras and self.switch_to_tensorflow:
+            logger.critical("Please switch to either tensorflow or keras, but not both!!")
+            sys.exit(1)
+
+        if self.switch_to_keras or self.switch_to_tensorflow:
             if not os.path.exists(self.gen_dir):
                 os.makedirs(self.gen_dir)
 
@@ -547,10 +638,6 @@ class configuration(object):
 
             # define model file name
             logger.info('model file: %s' % (self.model_file_name))
-
-            # model files
-            self.json_model_file = os.path.join(self.model_dir, self.model_file_name+'.json')
-            self.h5_model_file   = os.path.join(self.model_dir, self.model_file_name+'.h5')
 
             # predicted features directory
             self.pred_feat_dir = os.path.join(self.gen_dir, self.model_file_name)
@@ -713,6 +800,40 @@ class configuration(object):
 #                current_stream_weight      = self.stream_weight_LSFsource
             ## for GlottHMM (end)
 
+            ## for GlottDNN (start)
+            elif feature_name == 'f0':
+                in_dimension = self.f0_dim
+                out_dimension = self.df0_dim
+                in_directory  = self.in_f0_dir
+
+            elif feature_name == 'gain':
+                in_dimension = self.gain_dim
+                out_dimension = self.dgain_dim
+                in_directory  = self.in_gain_dir
+
+            elif feature_name == 'hnr':
+                in_dimension = self.hnr_dim
+                out_dimension = self.dhnr_dim
+                in_directory  = self.in_hnr_dir
+
+            elif feature_name == 'lsf':
+                in_dimension = self.lsf_dim
+                out_dimension = self.dlsf_dim
+                in_directory  = self.in_lsf_dir
+
+            elif feature_name == 'slsf':
+                in_dimension = self.slsf_dim
+                out_dimension = self.dslsf_dim
+                in_directory  = self.in_slsf_dir
+            ## for GlottDNN (end)
+
+            ## for HMPD (start)
+            elif feature_name == 'pdd':
+                in_dimension = self.pdd_dim
+                out_dimension = self.dpdd_dim
+                in_directory  = self.in_pdd_dir
+            ## for HMPD (end)
+
             ## for joint dur (start)
             elif feature_name == 'dur':
                 in_dimension = self.dur_dim
@@ -722,6 +843,11 @@ class configuration(object):
 #                current_stream_hidden_size = self.stream_dur_hidden_size
 #                current_stream_weight      = self.stream_weight_dur
             ## for joint dur (end)
+
+            elif feature_name == 'prominence':
+                in_dimension = self.prom_dim
+                out_dimension = self.prom_dim
+                in_directory  = self.in_prom_dir
 
 
             else:
@@ -807,8 +933,20 @@ class configuration(object):
         self.file_extension_dict['LSF'] = self.LSF_ext
         self.file_extension_dict['LSFsource'] = self.LSFsource_ext
 
+        ## gDNN
+        self.file_extension_dict['f0'] = self.f0_ext
+        self.file_extension_dict['gain'] = self.gain_ext
+        self.file_extension_dict['hnr'] = self.hnr_ext
+        self.file_extension_dict['lsf'] = self.lsf_ext
+        self.file_extension_dict['slsf'] = self.slsf_ext
+        
+        ## HMPD
+        self.file_extension_dict['pdd'] = self.pdd_ext
+
         ## joint dur
         self.file_extension_dict['dur'] = self.dur_ext
+
+        self.file_extension_dict['prominence'] = self.prom_ext
 
         ## hyper parameters for DNN. need to be setted by the user, as they depend on the architecture
         self.hyper_params = { 'learning_rate'      : '0.0002',        ###

@@ -78,13 +78,13 @@ from utils.learn_rates import ExpDecreaseLearningRate
 
 from io_funcs.binary_io import  BinaryIOCollection
 
-from run_keras_with_merlin_io import KerasClass
-
 # our custom logging class that can also plot
 from logplot.logging_plotting import LoggerPlotter, MultipleSeriesPlot, SingleWeightMatrixPlot
 import logging # as logging
 import logging.config
 import io
+from utils.file_paths import FilePaths
+from utils.utils import read_file_list, prepare_file_path_list
 
 
 def extract_file_id_list(file_list):
@@ -95,23 +95,6 @@ def extract_file_id_list(file_list):
 
     return  file_id_list
 
-def read_file_list(file_name):
-
-    logger = logging.getLogger("read_file_list")
-
-    file_lists = []
-    fid = open(file_name)
-    for line in fid.readlines():
-        line = line.strip()
-        if len(line) < 1:
-            continue
-        file_lists.append(line)
-    fid.close()
-
-    logger.debug('Read file list from %s' % file_name)
-    return  file_lists
-
-
 def make_output_file_list(out_dir, in_file_lists):
     out_file_lists = []
 
@@ -121,17 +104,6 @@ def make_output_file_list(out_dir, in_file_lists):
         out_file_lists.append(out_file_name)
 
     return  out_file_lists
-
-def prepare_file_path_list(file_id_list, file_dir, file_extension, new_dir_switch=True):
-    if not os.path.exists(file_dir) and new_dir_switch:
-        os.makedirs(file_dir)
-    file_name_list = []
-    for file_id in file_id_list:
-        file_name = file_dir + '/' + file_id + file_extension
-        file_name_list.append(file_name)
-
-    return  file_name_list
-
 
 def visualize_dnn(dnn):
 
@@ -248,7 +220,7 @@ def train_DNN(train_xy_file_list, valid_xy_file_list, \
     
     shared_train_set_xy, temp_train_set_x, temp_train_set_y = train_data_reader.load_one_partition()
     train_set_x, train_set_y = shared_train_set_xy
-    shared_valid_set_xy, temp_valid_set_x, temp_valid_set_y = valid_data_reader.load_one_partition() 
+    shared_valid_set_xy, temp_valid_set_x, temp_valid_set_y = valid_data_reader.load_one_partition()
     valid_set_x, valid_set_y = shared_valid_set_xy
     train_data_reader.reset()
     valid_data_reader.reset()
@@ -269,15 +241,47 @@ def train_DNN(train_xy_file_list, valid_xy_file_list, \
     valid_model = None ## valid_fn and valid_model are the same. reserve to computer multi-stream distortion
     if model_type == 'DNN':
         dnn_model = DeepRecurrentNetwork(n_in= n_ins, hidden_layer_size = hidden_layer_size, n_out = n_outs,
-                                         L1_reg = l1_reg, L2_reg = l2_reg, hidden_layer_type = hidden_layer_type, 
+                                         L1_reg = l1_reg, L2_reg = l2_reg, hidden_layer_type = hidden_layer_type, output_type = cfg.output_layer_type,
                                          dropout_rate = dropout_rate, optimizer = cfg.optimizer, rnn_batch_training = cfg.rnn_batch_training)
-        train_fn, valid_fn = dnn_model.build_finetune_functions(
-                    (train_set_x, train_set_y), (valid_set_x, valid_set_y))  #, batch_size=batch_size
 
     else:
         logger.critical('%s type NN model is not supported!' %(model_type))
         raise
 
+    ## Model adaptation -- fine tuning the existing model
+    ## We can't just unpickle the old model and use that because fine-tune functions
+    ## depend on opt_l2e option used in construction of initial model. One way around this
+    ## would be to unpickle, manually set unpickled_dnn_model.opt_l2e=True and then call
+    ## unpickled_dnn_model.build_finetne_function() again. This is another way, construct
+    ## new model from scratch with opt_l2e=True, then copy existing weights over:
+    use_lhuc = cfg.use_lhuc
+    if init_dnn_model_file != "_":
+        logger.info('load parameters from existing model: %s' %(init_dnn_model_file))
+        if not os.path.isfile(init_dnn_model_file):
+            sys.exit('Model file %s does not exist'%(init_dnn_model_file))
+        existing_dnn_model = pickle.load(open(init_dnn_model_file, 'rb'))
+        if not use_lhuc and not len(existing_dnn_model.params) == len(dnn_model.params):
+            sys.exit('Old and new models have different numbers of weight matrices')
+        elif use_lhuc and len(dnn_model.params) < len(existing_dnn_model.params):
+            sys.exit('In LHUC adaptation new model must have more parameters than old model.')
+        # assign the existing dnn model parameters to the new dnn model
+        k = 0
+        for i in range(len(dnn_model.params)):
+            ## Added for LHUC ##
+            # In LHUC, we keep all the old parameters intact and learn only a small set of new
+            # parameters
+            if dnn_model.params[i].name == 'c':
+                continue
+            else:
+                old_val = existing_dnn_model.params[k].get_value()
+                new_val = dnn_model.params[i].get_value()
+                if numpy.shape(old_val) == numpy.shape(new_val):
+                    dnn_model.params[i].set_value(old_val)
+                else:
+                    sys.exit('old and new weight matrices have different shapes')
+                k = k + 1        
+    train_fn, valid_fn = dnn_model.build_finetune_functions(
+                    (train_set_x, train_set_y), (valid_set_x, valid_set_y), use_lhuc)  #, batch_size=batch_size
     logger.info('fine-tuning the %s model' %(model_type))
 
     start_time = time.time()
@@ -330,7 +334,7 @@ def train_DNN(train_xy_file_list, valid_xy_file_list, \
         logger.debug("training params -- learning rate: %f, early_stop: %d/%d" % (current_finetune_lr, early_stop, early_stop_epoch))
         while (not train_data_reader.is_finish()):
 
-            shared_train_set_xy, temp_train_set_x, temp_train_set_y = train_data_reader.load_one_partition()
+            _, temp_train_set_x, temp_train_set_y = train_data_reader.load_one_partition()
 
             # if sequential training, the batch size will be the number of frames in an utterance
             # batch_size for sequential training is considered only when rnn_batch_training is set to True
@@ -428,6 +432,8 @@ def dnn_generation(valid_file_list, nnets_file_name, n_ins, n_outs, out_file_lis
             test_set_x = numpy.reshape(test_set_x, (1, test_set_x.shape[0], n_ins))
             test_set_x = numpy.array(test_set_x, 'float32')
 
+        print("input file: %s" % valid_file_list[i])
+
         predicted_parameter = dnn_model.parameter_prediction(test_set_x)
         predicted_parameter = predicted_parameter.reshape(-1, n_outs)
         predicted_parameter = predicted_parameter[0:n_rows]
@@ -440,38 +446,8 @@ def dnn_generation(valid_file_list, nnets_file_name, n_ins, n_outs, out_file_lis
         logger.debug('saved to %s' % out_file_list[i])
         fid.close()
 
-def dnn_generation_lstm(valid_file_list, nnets_file_name, n_ins, n_outs, out_file_list):
-    logger = logging.getLogger("dnn_generation")
-    logger.debug('Starting dnn_generation')
-
-    plotlogger = logging.getLogger("plotting")
-
-    dnn_model = pickle.load(open(nnets_file_name, 'rb'))
-
-    visualize_dnn(dnn_model)
-
-    file_number = len(valid_file_list)
-
-    for i in range(file_number):  #file_number
-        logger.info('generating %4d of %4d: %s' % (i+1,file_number,valid_file_list[i]) )
-        fid_lab = open(valid_file_list[i], 'rb')
-        features = numpy.fromfile(fid_lab, dtype=numpy.float32)
-        fid_lab.close()
-        features = features[:(n_ins * (features.size // n_ins))]
-        test_set_x = features.reshape((-1, n_ins))
-
-        predicted_parameter = dnn_model.parameter_prediction_lstm(test_set_x)
-
-        ### write to cmp file
-        predicted_parameter = numpy.array(predicted_parameter, 'float32')
-        temp_parameter = predicted_parameter
-        fid = open(out_file_list[i], 'wb')
-        predicted_parameter.tofile(fid)
-        logger.debug('saved to %s' % out_file_list[i])
-        fid.close()
-
-##generate bottleneck layer as festures
-def dnn_hidden_generation(valid_file_list, nnets_file_name, n_ins, n_outs, out_file_list):
+##generate bottleneck layer as features
+def dnn_hidden_generation(valid_file_list, nnets_file_name, n_ins, n_outs, out_file_list, bottleneck_index):
     logger = logging.getLogger("dnn_generation")
     logger.debug('Starting dnn_generation')
 
@@ -491,7 +467,7 @@ def dnn_hidden_generation(valid_file_list, nnets_file_name, n_ins, n_outs, out_f
         temp_set_x = features.tolist()
         test_set_x = theano.shared(numpy.asarray(temp_set_x, dtype=theano.config.floatX))
 
-        predicted_parameter = dnn_model.generate_top_hidden_layer(test_set_x=test_set_x)
+        predicted_parameter = dnn_model.generate_hidden_layer(test_set_x, bottleneck_index)
 
         ### write to cmp file
         predicted_parameter = numpy.array(predicted_parameter, 'float32')
@@ -503,6 +479,7 @@ def dnn_hidden_generation(valid_file_list, nnets_file_name, n_ins, n_outs, out_f
 
 
 def main_function(cfg):
+    file_paths = FilePaths(cfg)
 
     # get a logger for this main function
     logger = logging.getLogger("main")
@@ -538,26 +515,23 @@ def main_function(cfg):
     data_dir = cfg.data_dir
 
     inter_data_dir = cfg.inter_data_dir
-    if not os.path.exists(inter_data_dir):
-        os.makedirs(inter_data_dir)
-
-
-    nn_cmp_dir      = os.path.join(inter_data_dir, 'nn' + cfg.combined_feature_name + '_' + str(cfg.cmp_dim))
-    nn_cmp_norm_dir = os.path.join(inter_data_dir, 'nn_norm'  + cfg.combined_feature_name + '_' + str(cfg.cmp_dim))
-
-    model_dir = os.path.join(cfg.work_dir, 'nnets_model')
-    gen_dir   = os.path.join(cfg.work_dir, 'gen')
+    nn_cmp_dir       = file_paths.nn_cmp_dir
+    nn_cmp_norm_dir   = file_paths.nn_cmp_norm_dir
+    model_dir = file_paths.model_dir
+    gen_dir   = file_paths.gen_dir
 
     in_file_list_dict = {}
 
-    for feature_name in list(cfg.in_dir_dict.keys()):
+    print(cfg.in_dir_dict.keys())
+    print(cfg.file_extension_dict.keys())
+    for feature_name in cfg.in_dir_dict.keys():
         in_file_list_dict[feature_name] = prepare_file_path_list(file_id_list, cfg.in_dir_dict[feature_name], cfg.file_extension_dict[feature_name], False)
 
-    nn_cmp_file_list         = prepare_file_path_list(file_id_list, nn_cmp_dir, cfg.cmp_ext)
-    nn_cmp_norm_file_list    = prepare_file_path_list(file_id_list, nn_cmp_norm_dir, cfg.cmp_ext)
+    nn_cmp_file_list         = file_paths.get_nn_cmp_file_list()
+    nn_cmp_norm_file_list    = file_paths.get_nn_cmp_norm_file_list()
 
     ###normalisation information
-    norm_info_file = os.path.join(inter_data_dir, 'norm_info' + cfg.combined_feature_name + '_' + str(cfg.cmp_dim) + '_' + cfg.output_feature_normalisation + '.dat')
+    norm_info_file = file_paths.norm_info_file
 
     ### normalise input full context label
     # currently supporting two different forms of lingustic features
@@ -578,42 +552,24 @@ def main_function(cfg):
         inter_data_dir = cfg.work_dir
 
     # the number can be removed
-    binary_label_dir      = os.path.join(inter_data_dir, 'binary_label_'+str(label_normaliser.dimension))
-    nn_label_dir          = os.path.join(inter_data_dir, 'nn_no_silence_lab_'+suffix)
-    nn_label_norm_dir     = os.path.join(inter_data_dir, 'nn_no_silence_lab_norm_'+suffix)
+    file_paths.set_label_dir(label_normaliser.dimension, suffix, lab_dim)
+    file_paths.set_label_file_list()
 
-    in_label_align_file_list = prepare_file_path_list(file_id_list, cfg.in_label_align_dir, cfg.lab_ext, False)
-    binary_label_file_list   = prepare_file_path_list(file_id_list, binary_label_dir, cfg.lab_ext)
-    nn_label_file_list       = prepare_file_path_list(file_id_list, nn_label_dir, cfg.lab_ext)
-    nn_label_norm_file_list  = prepare_file_path_list(file_id_list, nn_label_norm_dir, cfg.lab_ext)
+    binary_label_dir      = file_paths.binary_label_dir
+    nn_label_dir          = file_paths.nn_label_dir
+    nn_label_norm_dir     = file_paths.nn_label_norm_dir
 
-    # to do - sanity check the label dimension here?
-
+    in_label_align_file_list = file_paths.in_label_align_file_list
+    binary_label_file_list   = file_paths.binary_label_file_list
+    nn_label_file_list       = file_paths.nn_label_file_list
+    nn_label_norm_file_list  = file_paths.nn_label_norm_file_list
 
 
     min_max_normaliser = None
-    label_norm_file = 'label_norm_%s_%d.dat' %(cfg.label_style, lab_dim)
-    label_norm_file = os.path.join(inter_data_dir, label_norm_file)
 
-    if cfg.GenTestList:
-        try:
-            test_id_list = read_file_list(cfg.test_id_scp)
-            logger.debug('Loaded file id list from %s' % cfg.test_id_scp)
-        except IOError:
-            # this means that open(...) threw an error
-            logger.critical('Could not load file id list from %s' % cfg.test_id_scp)
-            raise
+    label_norm_file = file_paths.label_norm_file
 
-        in_label_align_file_list = prepare_file_path_list(test_id_list, cfg.in_label_align_dir, cfg.lab_ext, False)
-
-        if cfg.test_synth_dir!="None" and not cfg.VoiceConversion:
-            binary_label_file_list   = prepare_file_path_list(test_id_list, cfg.test_synth_dir, cfg.lab_ext)
-            nn_label_file_list       = prepare_file_path_list(test_id_list, cfg.test_synth_dir, cfg.lab_ext)
-            nn_label_norm_file_list  = prepare_file_path_list(test_id_list, cfg.test_synth_dir, cfg.lab_ext)
-        else:
-            binary_label_file_list   = prepare_file_path_list(test_id_list, binary_label_dir, cfg.lab_ext)
-            nn_label_file_list       = prepare_file_path_list(test_id_list, nn_label_dir, cfg.lab_ext)
-            nn_label_norm_file_list  = prepare_file_path_list(test_id_list, nn_label_norm_dir, cfg.lab_ext)
+    test_id_list = file_paths.test_id_list
 
     if cfg.NORMLAB:
         # simple HTS labels
@@ -621,9 +577,9 @@ def main_function(cfg):
         label_normaliser.perform_normalisation(in_label_align_file_list, binary_label_file_list, label_type=cfg.label_type)
 
         if cfg.additional_features:
-            out_feat_dir  = os.path.join(inter_data_dir, 'binary_label_'+suffix)
-            out_feat_file_list = prepare_file_path_list(file_id_list, out_feat_dir, cfg.lab_ext)
+            out_feat_file_list = file_paths.out_feat_file_list
             in_dim = label_normaliser.dimension
+
             for new_feature, new_feature_dim in cfg.additional_features.items():
                 new_feat_dir  = os.path.join(data_dir, new_feature)
                 new_feat_file_list = prepare_file_path_list(file_id_list, new_feat_dir, '.'+new_feature)
@@ -638,16 +594,19 @@ def main_function(cfg):
         remover.remove_silence(binary_label_file_list, in_label_align_file_list, nn_label_file_list)
 
         min_max_normaliser = MinMaxNormalisation(feature_dimension = lab_dim, min_value = 0.01, max_value = 0.99)
+
         ###use only training data to find min-max information, then apply on the whole dataset
         if cfg.GenTestList:
             min_max_normaliser.load_min_max_values(label_norm_file)
         else:
             min_max_normaliser.find_min_max_values(nn_label_file_list[0:cfg.train_file_number])
+
         ### enforce silence such that the normalization runs without removing silence: only for final synthesis
         if cfg.GenTestList and cfg.enforce_silence:
             min_max_normaliser.normalise_data(binary_label_file_list, nn_label_norm_file_list)
         else:
             min_max_normaliser.normalise_data(nn_label_file_list, nn_label_norm_file_list)
+
 
 
     if min_max_normaliser != None and not cfg.GenTestList:
@@ -663,14 +622,17 @@ def main_function(cfg):
         logger.info('saved %s vectors to %s' %(label_min_vector.size, label_norm_file))
 
 
+    ### make output prominence data
+    if cfg.MAKEPROM:
+    	logger.info('creating prominence (output) features')
+        label_type = cfg.label_type
+        feature_type = cfg.prom_feature_type
+        label_normaliser.prepare_prom_data(in_label_align_file_list, prom_file_list, label_type, feature_type)
+
     ### make output duration data
     if cfg.MAKEDUR:
         logger.info('creating duration (output) features')
-        label_type = cfg.label_type
-        feature_type = cfg.dur_feature_type
-        dur_file_list = prepare_file_path_list(file_id_list, cfg.in_dur_dir, cfg.dur_ext)
-        label_normaliser.prepare_dur_data(in_label_align_file_list, dur_file_list, label_type, feature_type)
-
+        label_normaliser.prepare_dur_data(in_label_align_file_list, file_paths.dur_file_list, cfg.label_type, cfg.dur_feature_type)
 
     ### make output acoustic data
     if cfg.MAKECMP:
@@ -685,9 +647,11 @@ def main_function(cfg):
             nn_cmp_norm_file_list = prepare_file_path_list(test_id_list, nn_cmp_norm_dir, cfg.cmp_ext)
         
         acoustic_worker = AcousticComposition(delta_win = delta_win, acc_win = acc_win)
+
         if 'dur' in list(cfg.in_dir_dict.keys()) and cfg.AcousticModel:
-            lf0_file_list = prepare_file_path_list(file_id_list, cfg.in_lf0_dir, cfg.lf0_ext)
+            lf0_file_list = file_paths.get_lf0_file_list()
             acoustic_worker.make_equal_frames(dur_file_list, lf0_file_list, cfg.in_dimension_dict)
+
         acoustic_worker.prepare_nn_data(in_file_list_dict, nn_cmp_file_list, cfg.in_dimension_dict, cfg.out_dimension_dict)
 
         if cfg.remove_silence_using_binary_labels:
@@ -709,13 +673,8 @@ def main_function(cfg):
             remover.remove_silence(nn_cmp_file_list, in_label_align_file_list, nn_cmp_file_list) # save to itself
 
     ### save acoustic normalisation information for normalising the features back
-    var_dir   = os.path.join(inter_data_dir, 'var')
-    if not os.path.exists(var_dir):
-        os.makedirs(var_dir)
-
-    var_file_dict = {}
-    for feature_name in list(cfg.out_dimension_dict.keys()):
-        var_file_dict[feature_name] = os.path.join(var_dir, feature_name + '_' + str(cfg.out_dimension_dict[feature_name]))
+    var_dir  = file_paths.var_dir
+    var_file_dict = file_paths.get_var_dic()
 
     ### normalise output acoustic data
     if cfg.NORMCMP:
@@ -730,6 +689,24 @@ def main_function(cfg):
                 ###calculate mean and std vectors on the training data, and apply on the whole dataset
                 global_mean_vector = normaliser.compute_mean(nn_cmp_file_list[0:cfg.train_file_number], 0, cfg.cmp_dim)
                 global_std_vector = normaliser.compute_std(nn_cmp_file_list[0:cfg.train_file_number], global_mean_vector, 0, cfg.cmp_dim)
+                # for hmpd vocoder we don't need to normalize the 
+                # pdd values
+                if cfg.vocoder_type == 'hmpd':
+                    stream_start_index = {}
+                    dimension_index = 0
+                    recorded_vuv = False
+                    vuv_dimension = None
+                    for feature_name in cfg.out_dimension_dict.keys():
+                        if feature_name != 'vuv':
+                            stream_start_index[feature_name] = dimension_index
+                        else:
+                            vuv_dimension = dimension_index
+                            recorded_vuv = True
+                        
+                        dimension_index += cfg.out_dimension_dict[feature_name]
+                    logger.info('hmpd pdd values are not normalized since they are in 0 to 1')
+                    global_mean_vector[:,stream_start_index['pdd']: stream_start_index['pdd'] + cfg.out_dimension_dict['pdd']] = 0
+                    global_std_vector[:,stream_start_index['pdd']: stream_start_index['pdd'] + cfg.out_dimension_dict['pdd']] = 1
             normaliser.feature_normalisation(nn_cmp_file_list, nn_cmp_norm_file_list)
             cmp_norm_info = numpy.concatenate((global_mean_vector, global_std_vector), axis=0)
 
@@ -769,13 +746,9 @@ def main_function(cfg):
 
                 feature_index += cfg.out_dimension_dict[feature_name]
 
-    train_x_file_list = nn_label_norm_file_list[0:cfg.train_file_number]
-    train_y_file_list = nn_cmp_norm_file_list[0:cfg.train_file_number]
-    valid_x_file_list = nn_label_norm_file_list[cfg.train_file_number:cfg.train_file_number+cfg.valid_file_number]
-    valid_y_file_list = nn_cmp_norm_file_list[cfg.train_file_number:cfg.train_file_number+cfg.valid_file_number]
-    test_x_file_list  = nn_label_norm_file_list[cfg.train_file_number+cfg.valid_file_number:cfg.train_file_number+cfg.valid_file_number+cfg.test_file_number]
-    test_y_file_list  = nn_cmp_norm_file_list[cfg.train_file_number+cfg.valid_file_number:cfg.train_file_number+cfg.valid_file_number+cfg.test_file_number]
-
+    train_x_file_list, train_y_file_list = file_paths.get_train_list_x_y()
+    valid_x_file_list, valid_y_file_list = file_paths.get_valid_list_x_y()
+    test_x_file_list, test_y_file_list = file_paths.get_test_list_x_y()
 
     # we need to know the label dimension before training the DNN
     # computing that requires us to look at the labels
@@ -792,12 +765,12 @@ def main_function(cfg):
     for hid_size in hidden_layer_size:
         combined_model_arch += '_' + str(hid_size)
 
-    nnets_file_name = '%s/%s.model' %(model_dir, cfg.model_file_name)
-    temp_dir_name   = cfg.model_file_name
+    nnets_file_name = file_paths.get_nnets_file_name()
+    temp_dir_name = file_paths.get_temp_nn_dir_name()
 
     gen_dir = os.path.join(gen_dir, temp_dir_name)
 
-    if cfg.switch_to_keras:
+    if cfg.switch_to_keras or cfg.switch_to_tensorflow:
         ### set configuration variables ###
         cfg.inp_dim = lab_dim
         cfg.out_dim = cfg.cmp_dim
@@ -810,8 +783,15 @@ def main_function(cfg):
             cfg.inp_feat_dir  = cfg.test_synth_dir
             cfg.pred_feat_dir = cfg.test_synth_dir
         
+    if cfg.switch_to_keras:
         ### call kerasclass and use an instance ###
+        from run_keras_with_merlin_io import KerasClass
         keras_instance = KerasClass(cfg)
+    
+    elif cfg.switch_to_tensorflow:
+        ### call Tensorflowclass and use an instance ###
+        from run_tensorflow_with_merlin_io import TensorflowClass
+        tf_instance = TensorflowClass(cfg)
 
     ### DNN model training
     if cfg.TRAINDNN:
@@ -842,13 +822,15 @@ def main_function(cfg):
         try:
             if cfg.switch_to_keras:
                 keras_instance.train_keras_model()
+            elif cfg.switch_to_tensorflow:
+                tf_instance.train_tensorflow_model()
             else:
                 train_DNN(train_xy_file_list = (train_x_file_list, train_y_file_list), \
                       valid_xy_file_list = (valid_x_file_list, valid_y_file_list), \
                       nnets_file_name = nnets_file_name, \
                       n_ins = lab_dim, n_outs = cfg.cmp_dim, ms_outs = cfg.multistream_outs, \
                       hyper_params = cfg.hyper_params, buffer_size = cfg.buffer_size, plot = cfg.plot, var_dict = var_dict,
-                      cmp_mean_vector = cmp_mean_vector, cmp_std_vector = cmp_std_vector)
+                      cmp_mean_vector = cmp_mean_vector, cmp_std_vector = cmp_std_vector,init_dnn_model_file=cfg.start_from_trained_model)
         except KeyboardInterrupt:
             logger.critical('train_DNN interrupted via keyboard')
             # Could 'raise' the exception further, but that causes a deep traceback to be printed
@@ -862,16 +844,12 @@ def main_function(cfg):
 
     if cfg.GENBNFEA:
         # Please only tune on this step when you want to generate bottleneck features from DNN
-        temp_dir_name = '%s_%s_%d_%d_%d_%d_%s_hidden' \
-                        %(cfg.model_type, cfg.combined_feature_name, \
-                          cfg.train_file_number, lab_dim, cfg.cmp_dim, \
-                          len(hidden_layers_sizes), combined_model_arch)
-        gen_dir = os.path.join(gen_dir, temp_dir_name)
+        gen_dir = file_paths.bottleneck_features
 
-        bottleneck_size = min(hidden_layers_sizes)
+        bottleneck_size = min(hidden_layer_size)
         bottleneck_index = 0
-        for i in range(len(hidden_layers_sizes)):
-            if hidden_layers_sizes(i) == bottleneck_size:
+        for i in range(len(hidden_layer_size)):
+            if hidden_layer_size[i] == bottleneck_size:
                 bottleneck_index = i
 
         logger.info('generating bottleneck features from DNN')
@@ -888,7 +866,7 @@ def main_function(cfg):
                 raise
 
         gen_file_id_list = file_id_list[0:cfg.train_file_number+cfg.valid_file_number+cfg.test_file_number]
-        test_x_file_list  = nn_label_norm_file_list[0:cfg.train_file_number+cfg.valid_file_number+cfg.test_file_number]
+        test_x_file_list = nn_label_norm_file_list[0:cfg.train_file_number+cfg.valid_file_number+cfg.test_file_number]
 
         gen_file_list = prepare_file_path_list(gen_file_id_list, gen_dir, cfg.cmp_ext)
 
@@ -923,6 +901,8 @@ def main_function(cfg):
 
         if cfg.switch_to_keras:
             keras_instance.test_keras_model()
+        elif cfg.switch_to_tensorflow:
+            tf_instance.test_tensorflow_model()
         else:
             reshape_io = True if cfg.rnn_batch_training else False
             dnn_generation(test_x_file_list, nnets_file_name, lab_dim, cfg.cmp_dim, gen_file_list, reshape_io)
@@ -964,7 +944,19 @@ def main_function(cfg):
 
             label_modifier = HTSLabelModification(silence_pattern = cfg.silence_pattern, label_type = cfg.label_type)
             label_modifier.modify_duration_labels(in_gen_label_align_file_list, gen_dur_list, gen_label_list)
-
+            
+        if cfg.ProminenceModel:
+            ### Perform prominence normalization(min. state prom set to 1) ### 
+            gen_prom_list   = prepare_file_path_list(gen_file_id_list, gen_dir, cfg.prom_ext)
+            gen_label_list = prepare_file_path_list(gen_file_id_list, gen_dir, cfg.lab_ext)
+            in_gen_label_align_file_list = prepare_file_path_list(gen_file_id_list, cfg.in_label_align_dir, cfg.lab_ext, False)
+            
+            generator = ParameterGeneration(gen_wav_features = cfg.gen_wav_features)
+            generator.duration_decomposition(gen_file_list, cfg.cmp_dim, cfg.out_dimension_dict, cfg.file_extension_dict)
+           
+            label_modifier = HTSLabelModification(silence_pattern = cfg.silence_pattern, label_type = cfg.label_type)
+            label_modifier.modify_prominence_labels(in_gen_label_align_file_list, gen_prom_list, gen_label_list)
+            
 
     ### generate wav
     if cfg.GENWAV:
@@ -1013,10 +1005,17 @@ def main_function(cfg):
         logger.info('calculating MCD')
 
         ref_data_dir = os.path.join(inter_data_dir, 'ref_data')
-
+        ref_lf0_list = prepare_file_path_list(gen_file_id_list, ref_data_dir, cfg.lf0_ext)
+        # for straight or world vocoders
         ref_mgc_list = prepare_file_path_list(gen_file_id_list, ref_data_dir, cfg.mgc_ext)
         ref_bap_list = prepare_file_path_list(gen_file_id_list, ref_data_dir, cfg.bap_ext)
-        ref_lf0_list = prepare_file_path_list(gen_file_id_list, ref_data_dir, cfg.lf0_ext)
+        # for GlottDNN vocoder
+        ref_lsf_list = prepare_file_path_list(gen_file_id_list, ref_data_dir, cfg.lsf_ext)
+        ref_slsf_list = prepare_file_path_list(gen_file_id_list, ref_data_dir, cfg.slsf_ext)
+        ref_gain_list = prepare_file_path_list(gen_file_id_list, ref_data_dir, cfg.gain_ext)
+        ref_hnr_list = prepare_file_path_list(gen_file_id_list, ref_data_dir, cfg.hnr_ext)
+        # for pulsemodel vocoder
+        ref_pdd_list = prepare_file_path_list(gen_file_id_list, ref_data_dir, cfg.pdd_ext)
 
         in_gen_label_align_file_list = in_label_align_file_list[cfg.train_file_number:cfg.train_file_number+cfg.valid_file_number+cfg.test_file_number]
         calculator = IndividualDistortionComp()
@@ -1085,6 +1084,62 @@ def main_function(cfg):
                 ref_data_dir = os.path.join(data_dir, 'lf0')
             valid_f0_mse, valid_f0_corr, valid_vuv_error   = calculator.compute_distortion(valid_file_id_list, ref_data_dir, gen_dir, cfg.lf0_ext, cfg.lf0_dim)
             test_f0_mse , test_f0_corr, test_vuv_error    = calculator.compute_distortion(test_file_id_list , ref_data_dir, gen_dir, cfg.lf0_ext, cfg.lf0_dim)
+        
+        if 'lsf' in cfg.in_dimension_dict:
+            if cfg.remove_silence_using_binary_labels:
+                untrimmed_reference_data = in_file_list_dict['lsf'][cfg.train_file_number:cfg.train_file_number+cfg.valid_file_number+cfg.test_file_number]
+                trim_silence(untrimmed_reference_data, ref_lsf_list, cfg.lsf_dim, \
+                                    untrimmed_test_labels, lab_dim, silence_feature)
+            else:
+                remover = SilenceRemover(n_cmp = cfg.lsf_dim, silence_pattern = cfg.silence_pattern, label_type=cfg.label_type)
+                remover.remove_silence(in_file_list_dict['lsf'][cfg.train_file_number:cfg.train_file_number+cfg.valid_file_number+cfg.test_file_number], in_gen_label_align_file_list, ref_lsf_list)
+            valid_spectral_distortion = calculator.compute_distortion(valid_file_id_list, ref_data_dir, gen_dir, cfg.lsf_ext, cfg.lsf_dim)
+            test_spectral_distortion  = calculator.compute_distortion(test_file_id_list , ref_data_dir, gen_dir, cfg.lsf_ext, cfg.lsf_dim)
+        
+        if 'slsf' in cfg.in_dimension_dict:
+            if cfg.remove_silence_using_binary_labels:
+                untrimmed_reference_data = in_file_list_dict['slsf'][cfg.train_file_number:cfg.train_file_number+cfg.valid_file_number+cfg.test_file_number]
+                trim_silence(untrimmed_reference_data, ref_slsf_list, cfg.slsf_dim, \
+                                    untrimmed_test_labels, lab_dim, silence_feature)
+            else:
+                remover = SilenceRemover(n_cmp = cfg.slsf_dim, silence_pattern = cfg.silence_pattern, label_type=cfg.label_type)
+                remover.remove_silence(in_file_list_dict['slsf'][cfg.train_file_number:cfg.train_file_number+cfg.valid_file_number+cfg.test_file_number], in_gen_label_align_file_list, ref_slsf_list)
+            valid_spectral_distortion = calculator.compute_distortion(valid_file_id_list, ref_data_dir, gen_dir, cfg.slsf_ext, cfg.slsf_dim)
+            test_spectral_distortion  = calculator.compute_distortion(test_file_id_list , ref_data_dir, gen_dir, cfg.slsf_ext, cfg.slsf_dim)
+        
+        if 'hnr' in cfg.in_dimension_dict:
+            if cfg.remove_silence_using_binary_labels:
+                untrimmed_reference_data = in_file_list_dict['hnr'][cfg.train_file_number:cfg.train_file_number+cfg.valid_file_number+cfg.test_file_number]
+                trim_silence(untrimmed_reference_data, ref_hnr_list, cfg.hnr_dim, \
+                                    untrimmed_test_labels, lab_dim, silence_feature)
+            else:
+                remover = SilenceRemover(n_cmp = cfg.hnr_dim, silence_pattern = cfg.silence_pattern, label_type=cfg.label_type)
+                remover.remove_silence(in_file_list_dict['hnr'][cfg.train_file_number:cfg.train_file_number+cfg.valid_file_number+cfg.test_file_number], in_gen_label_align_file_list, ref_hnr_list)
+            valid_spectral_distortion = calculator.compute_distortion(valid_file_id_list, ref_data_dir, gen_dir, cfg.hnr_ext, cfg.hnr_dim)
+            test_spectral_distortion  = calculator.compute_distortion(test_file_id_list , ref_data_dir, gen_dir, cfg.hnr_ext, cfg.hnr_dim)
+        
+        if 'gain' in cfg.in_dimension_dict:
+            if cfg.remove_silence_using_binary_labels:
+                untrimmed_reference_data = in_file_list_dict['gain'][cfg.train_file_number:cfg.train_file_number+cfg.valid_file_number+cfg.test_file_number]
+                trim_silence(untrimmed_reference_data, ref_gain_list, cfg.gain_dim, \
+                                    untrimmed_test_labels, lab_dim, silence_feature)
+            else:
+                remover = SilenceRemover(n_cmp = cfg.gain_dim, silence_pattern = cfg.silence_pattern, label_type=cfg.label_type)
+                remover.remove_silence(in_file_list_dict['gain'][cfg.train_file_number:cfg.train_file_number+cfg.valid_file_number+cfg.test_file_number], in_gen_label_align_file_list, ref_gain_list)
+            valid_spectral_distortion = calculator.compute_distortion(valid_file_id_list, ref_data_dir, gen_dir, cfg.gain_ext, cfg.gain_dim)
+            test_spectral_distortion  = calculator.compute_distortion(test_file_id_list , ref_data_dir, gen_dir, cfg.gain_ext, cfg.gain_dim)
+        
+        if 'pdd' in cfg.in_dimension_dict:
+            if cfg.remove_silence_using_binary_labels:
+                untrimmed_reference_data = in_file_list_dict['pdd'][cfg.train_file_number:cfg.train_file_number+cfg.valid_file_number+cfg.test_file_number]
+                trim_silence(untrimmed_reference_data, ref_pdd_list, cfg.pdd_dim, \
+                                    untrimmed_test_labels, lab_dim, silence_feature)
+            else:
+                remover = SilenceRemover(n_cmp = cfg.pdd_dim, silence_pattern = cfg.silence_pattern, label_type=cfg.label_type)
+                remover.remove_silence(in_file_list_dict['pdd'][cfg.train_file_number:cfg.train_file_number+cfg.valid_file_number+cfg.test_file_number], in_gen_label_align_file_list, ref_pdd_list)
+            valid_spectral_distortion = calculator.compute_distortion(valid_file_id_list, ref_data_dir, gen_dir, cfg.pdd_ext, cfg.pdd_dim)
+            test_spectral_distortion  = calculator.compute_distortion(test_file_id_list , ref_data_dir, gen_dir, cfg.pdd_ext, cfg.pdd_dim)
+        
 
         logger.info('Develop: DNN -- MCD: %.3f dB; BAP: %.3f dB; F0:- RMSE: %.3f Hz; CORR: %.3f; VUV: %.3f%%' \
                     %(valid_spectral_distortion, valid_bap_mse, valid_f0_mse, valid_f0_corr, valid_vuv_error*100.))

@@ -113,6 +113,214 @@ class HTSLabelNormalisation(LabelNormalisation):
 
         logger.debug('HTS-derived input feature dimension is %d + %d = %d' % (self.dict_size, self.frame_feature_size, self.dimension) )
 
+        
+    def prepare_prom_data(self, ori_file_list, output_file_list, label_type="state_align", feature_type=None, unit_size=None, feat_size=None):
+        '''
+        extracting duration binary features or numerical features.
+        '''
+        logger = logging.getLogger("prom")
+        utt_number = len(ori_file_list)
+
+        print("utt_number = %d" % utt_number)
+
+        if utt_number != len(output_file_list):
+            print   "the number of input and output files should be the same!\n";
+            sys.exit(1)
+               
+        ### set default feature type to numerical, if not assigned ###
+        if not feature_type:
+            feature_type = "numerical"
+        
+        ### set default unit size to state, if not assigned ###
+        if not unit_size:
+            unit_size = "state"
+        if label_type=="phone_align":
+            unit_size = "phoneme"
+
+        ### set default feat size to frame or phoneme, if not assigned ###
+        if feature_type=="binary":
+            if not feat_size:
+                feat_size = "frame"
+        elif feature_type=="numerical":
+            if not feat_size:
+                feat_size = "phoneme"
+        else:
+            logger.critical("Unknown feature type: %s \n Please use one of the following: binary, numerical\n" %(feature_type))
+            sys.exit(1)
+            
+        for i in xrange(utt_number):
+            #defaults will be: feature_type=numerical, unit_size=state, feat_size=phoneme
+            self.extract_prom_features(ori_file_list[i], output_file_list[i], label_type, feature_type, unit_size, feat_size)
+    
+    def extract_prom_features(self, in_file_name, out_file_name=None, label_type="state_align", feature_type=None, unit_size=None, feat_size=None):
+        logger = logging.getLogger("prom")
+  
+        #if label_type=="phone_align":
+        #    A = self.extract_prom_from_phone_alignment_labels(in_file_name, feature_type, unit_size, feat_size)
+        if label_type=="state_align":
+            A = self.extract_prom_from_state_alignment_labels(in_file_name, feature_type, unit_size, feat_size)
+        else:
+            logger.critical("we don't support %s labels as of now!!" % (label_type))
+            sys.exit(1)
+
+        if out_file_name:
+            io_funcs = BinaryIOCollection()
+            io_funcs.array_to_binary_file(A, out_file_name)
+        else:
+            return A
+    
+    def extract_prom_from_state_alignment_labels(self, file_name, feature_type, unit_size, feat_size): 
+        logger = logging.getLogger("prom")
+
+        state_number = 5
+        prom_dim = state_number
+        
+        print("file %s" % file_name);
+
+        if feature_type=="binary":
+            prom_feature_matrix = numpy.empty((100000, 1))
+        elif feature_type=="numerical":
+            if unit_size=="state":
+                prom_feature_matrix = numpy.empty((100000, prom_dim))
+                current_prom_array = numpy.zeros((prom_dim, 1))
+            elif unit_size=="phoneme":
+                prom_feature_matrix = numpy.empty((100000, 1))
+
+        fid = open(file_name)
+        utt_labels = fid.readlines()
+        fid.close()
+        
+        label_number = len(utt_labels)
+        
+        print('loaded %s, %3d labels' % (file_name, label_number) )
+        logger.info('loaded %s, %3d labels' % (file_name, label_number) )
+		
+        current_index = 0
+        prom_feature_index = 0
+        for line in utt_labels:
+            line = line.strip()
+            
+            if len(line) < 1:
+                continue
+            temp_list = re.split('\s+', line)
+            start_time = int(temp_list[0])
+            end_time = int(temp_list[1])
+            
+            full_label = temp_list[2]
+            full_label_length = len(full_label) - 3  # remove state information [k]
+            state_index = full_label[full_label_length + 1]
+            state_index = int(state_index) - 1
+
+            prominence = int(temp_list[3])
+
+            frame_number = int((end_time - start_time)/50000)
+            
+            #if state_index == 1:
+            #    phone_duration = frame_number
+                
+            #    for i in xrange(state_number - 1):
+            #        line = utt_labels[current_index + i + 1].strip()
+            #        temp_list = re.split('\s+', line)
+            #        phone_duration += int((int(temp_list[1]) - int(temp_list[0]))/50000)
+
+            if feature_type == "binary":
+                current_block_array = numpy.zeros((frame_number, 1))
+                if unit_size == "state":
+                    current_block_array[-1] = 1
+                elif unit_size == "phoneme":
+                    if state_index == state_number:
+                        current_block_array[-1] = 1
+                else:
+                    logger.critical("Unknown unit size: %s \n Please use one of the following: state, phoneme\n" %(unit_size))
+                    sys.exit(1)
+            elif feature_type == "numerical":
+                if unit_size == "state":
+                    #current_dur_array[current_index%5] = frame_number 
+                    current_prom_array[current_index%5] = prominence 
+                    if feat_size == "phoneme" and state_index == state_number:
+                        current_block_array =  current_prom_array.transpose() 
+                    if feat_size == "frame":
+                        current_block_array = numpy.tile(current_dur_array.transpose(), (frame_number, 1))
+                elif unit_size == "phoneme":
+                    current_block_array = numpy.array([phone_duration])
+            
+            ### writing into dur_feature_matrix ### 
+            if feat_size == "frame":
+                dur_feature_matrix[dur_feature_index:dur_feature_index+frame_number,] = current_block_array
+                dur_feature_index = dur_feature_index + frame_number
+            elif feat_size == "phoneme" and state_index == state_number: 
+                prom_feature_matrix[prom_feature_index:prom_feature_index+1,] = current_block_array
+                prom_feature_index = prom_feature_index + 1
+
+            current_index += 1
+
+        prom_feature_matrix = prom_feature_matrix[0:prom_feature_index,]
+        print('made prominence matrix of %d frames x %d features' % prom_feature_matrix.shape )
+        logger.debug('made prominence matrix of %d frames x %d features' % prom_feature_matrix.shape )
+        return  prom_feature_matrix
+
+
+    def extract_prom_from_phone_alignment_labels(self, file_name, feature_type, unit_size, feat_size): 
+        logger = logging.getLogger("prom")
+
+        prom_dim = 1 
+        
+        if feature_type=="binary":
+            prom_feature_matrix = numpy.empty((100000, 1))
+        elif feature_type=="numerical":
+            if unit_size=="phoneme":
+                prom_feature_matrix = numpy.empty((100000, 1))
+
+        fid = open(file_name)
+        utt_labels = fid.readlines()
+        fid.close()
+        
+        label_number = len(utt_labels)
+        logger.info('loaded %s, %3d labels' % (file_name, label_number) )
+		
+        current_index = 0
+        prom_feature_index = 0
+        for line in utt_labels:
+            line = line.strip()
+            
+            if len(line) < 1:
+                continue
+            temp_list = re.split('\s+', line)
+            start_time = int(temp_list[0])
+            end_time = int(temp_list[1])
+            
+            full_label = temp_list[2]
+
+            frame_number = int((end_time - start_time)/50000)
+            
+            phone_duration = frame_number
+                
+            if feature_type == "binary":
+                current_block_array = numpy.zeros((frame_number, 1))
+                if unit_size == "phoneme":
+                    current_block_array[-1] = 1
+                else:
+                    logger.critical("Unknown unit size: %s \n Please use one of the following: phoneme\n" %(unit_size))
+                    sys.exit(1)
+            elif feature_type == "numerical":
+                if unit_size == "phoneme":
+                    current_block_array = numpy.array([phone_duration])
+            
+            ### writing into dur_feature_matrix ### 
+            if feat_size == "frame":
+                dur_feature_matrix[dur_feature_index:dur_feature_index+frame_number,] = current_block_array
+                dur_feature_index = dur_feature_index + frame_number
+            elif feat_size == "phoneme": 
+                dur_feature_matrix[dur_feature_index:dur_feature_index+1,] = current_block_array
+                dur_feature_index = dur_feature_index + 1
+
+            current_index += 1
+
+        dur_feature_matrix = dur_feature_matrix[0:dur_feature_index,]
+        logger.debug('made duration matrix of %d frames x %d features' % dur_feature_matrix.shape )
+        return  dur_feature_matrix
+
+
     def prepare_dur_data(self, ori_file_list, output_file_list, label_type="state_align", feature_type=None, unit_size=None, feat_size=None):
         '''
         extracting duration binary features or numerical features.
@@ -175,7 +383,7 @@ class HTSLabelNormalisation(LabelNormalisation):
             if unit_size=="state":
                 dur_feature_matrix = numpy.empty((100000, dur_dim))
                 current_dur_array = numpy.zeros((dur_dim, 1))
-            elif unit_size=="phoneme":
+            else: ## phoneme/syllable/word
                 dur_feature_matrix = numpy.empty((100000, 1))
 
         fid = open(file_name)
@@ -185,8 +393,12 @@ class HTSLabelNormalisation(LabelNormalisation):
         label_number = len(utt_labels)
         logger.info('loaded %s, %3d labels' % (file_name, label_number) )
 
+        MLU_dur = [[],[],[]]
+        list_of_silences=['#', 'sil', 'pau', 'SIL']
         current_index = 0
         dur_feature_index = 0
+        syllable_duration = 0
+        word_duration = 0
         for line in utt_labels:
             line = line.strip()
 
@@ -200,6 +412,7 @@ class HTSLabelNormalisation(LabelNormalisation):
             full_label_length = len(full_label) - 3  # remove state information [k]
             state_index = full_label[full_label_length + 1]
             state_index = int(state_index) - 1
+            current_phone = full_label[full_label.index('-') + 1:full_label.index('+')]
 
             frame_number = int((end_time - start_time)/50000)
 
@@ -210,6 +423,23 @@ class HTSLabelNormalisation(LabelNormalisation):
                     line = utt_labels[current_index + i + 1].strip()
                     temp_list = re.split('\s+', line)
                     phone_duration += int((int(temp_list[1]) - int(temp_list[0]))/50000)
+                
+                syllable_duration+=phone_duration
+                word_duration+=phone_duration
+
+                ### for syllable and word positional information ###
+                label_binary_vector = self.pattern_matching_binary(full_label)
+                label_continuous_vector = self.pattern_matching_continous_position(full_label)
+
+                ### syllable ending information ###
+                syl_end = 0        
+                if(label_continuous_vector[0, 1]==1 or current_phone in list_of_silences): ##pos-bw and c-silences
+                    syl_end = 1
+
+                ### word ending information ###
+                word_end = 0        
+                if(syl_end and label_continuous_vector[0, 9]==1 or current_phone in list_of_silences):
+                    word_end = 1
 
             if feature_type == "binary":
                 current_block_array = numpy.zeros((frame_number, 1))
@@ -228,19 +458,57 @@ class HTSLabelNormalisation(LabelNormalisation):
                         current_block_array =  current_dur_array.transpose()
                     if feat_size == "frame":
                         current_block_array = numpy.tile(current_dur_array.transpose(), (frame_number, 1))
-                elif unit_size == "phoneme":
-                    current_block_array = numpy.array([phone_duration])
+                elif state_index == state_number: 
+                    if unit_size == "phoneme":
+                        current_block_array = numpy.array([phone_duration])
+                    elif unit_size == "syllable":
+                        current_block_array = numpy.array([syllable_duration])
+                    elif unit_size == "word":
+                        current_block_array = numpy.array([word_duration])
+                    if syl_end:
+                        syllable_duration = 0
+                    if word_end:
+                        word_duration = 0
+
 
             ### writing into dur_feature_matrix ###
             if feat_size == "frame":
                 dur_feature_matrix[dur_feature_index:dur_feature_index+frame_number,] = current_block_array
                 dur_feature_index = dur_feature_index + frame_number
-            elif feat_size == "phoneme" and state_index == state_number:
-                dur_feature_matrix[dur_feature_index:dur_feature_index+1,] = current_block_array
-                dur_feature_index = dur_feature_index + 1
+            elif state_index == state_number:
+                if feat_size == "phoneme":
+                    dur_feature_matrix[dur_feature_index:dur_feature_index+1,] = current_block_array
+                    dur_feature_index = dur_feature_index + 1
+                elif current_phone!='#': ## removing silence here
+                    if feat_size == "syllable" and syl_end:
+                        dur_feature_matrix[dur_feature_index:dur_feature_index+1,] = current_block_array
+                        dur_feature_index = dur_feature_index + 1
+                    elif feat_size == "word" and word_end:
+                        dur_feature_matrix[dur_feature_index:dur_feature_index+1,] = current_block_array
+                        dur_feature_index = dur_feature_index + 1
+                    elif feat_size == "MLU":
+                        if word_end:
+                            if current_phone=='pau':
+                                MLU_dur[0].append(1)
+                            else:
+                                MLU_dur[0].append(int(label_continuous_vector[0, 24]))
+                        if syl_end:
+                            if current_phone=='pau':
+                                MLU_dur[1].append(1)
+                            else:
+                                MLU_dur[1].append(int(label_continuous_vector[0, 7]))
+                        MLU_dur[2].append(int(phone_duration))
+
 
             current_index += 1
 
+        if feat_size == "MLU":
+            for seg_indx in xrange(len(MLU_dur)):
+                seg_len = len(MLU_dur[seg_indx])
+                current_block_array = numpy.reshape(numpy.array(MLU_dur[seg_indx]), (-1, 1))
+                dur_feature_matrix[dur_feature_index:dur_feature_index+seg_len, ] = current_block_array
+                dur_feature_index = dur_feature_index + seg_len
+        
         dur_feature_matrix = dur_feature_matrix[0:dur_feature_index,]
         logger.debug('made duration matrix of %d frames x %d features' % dur_feature_matrix.shape )
         return  dur_feature_matrix
@@ -248,13 +516,13 @@ class HTSLabelNormalisation(LabelNormalisation):
     def extract_dur_from_phone_alignment_labels(self, file_name, feature_type, unit_size, feat_size):
         logger = logging.getLogger("dur")
 
-        dur_dim = 1
+        dur_dim = 1 # hard coded here 
 
         if feature_type=="binary":
-            dur_feature_matrix = numpy.empty((100000, 1))
+            dur_feature_matrix = numpy.empty((100000, dur_dim))
         elif feature_type=="numerical":
             if unit_size=="phoneme":
-                dur_feature_matrix = numpy.empty((100000, 1))
+                dur_feature_matrix = numpy.empty((100000, dur_dim))
 
         fid = open(file_name)
         utt_labels = fid.readlines()
@@ -334,16 +602,24 @@ class HTSLabelNormalisation(LabelNormalisation):
             if len(line) < 1:
                 continue
             temp_list = re.split('\s+', line)
-            start_time = int(temp_list[0])
-            end_time = int(temp_list[1])
-            full_label = temp_list[2]
-
-            # to do - support different frame shift - currently hardwired to 5msec
-            # currently under beta testing: support different frame shift
-            if dur_file_name:
-                frame_number = manual_dur_data[ph_count]
+            
+            if len(temp_list)==1:
+                frame_number = 0
+                full_label = temp_list[0]
             else:
-                frame_number = int((end_time - start_time)/50000)
+                start_time = int(temp_list[0])
+                end_time = int(temp_list[1])
+                full_label = temp_list[2]
+
+                # to do - support different frame shift - currently hardwired to 5msec
+                # currently under beta testing: support different frame shift
+                if dur_file_name:
+                    frame_number = manual_dur_data[ph_count]
+                else:
+                    frame_number = int((end_time - start_time)/50000)
+
+                if self.subphone_feats == "coarse_coding":
+                    cc_feat_matrix = self.extract_coarse_coding_features_relative(frame_number)
 
             ph_count = ph_count+1
             #label_binary_vector = self.pattern_matching(full_label)
@@ -352,9 +628,6 @@ class HTSLabelNormalisation(LabelNormalisation):
             # if there is no CQS question, the label_continuous_vector will become to empty
             label_continuous_vector = self.pattern_matching_continous_position(full_label)
             label_vector = numpy.concatenate([label_binary_vector, label_continuous_vector], axis = 1)
-
-            if self.subphone_feats == "coarse_coding":
-                cc_feat_matrix = self.extract_coarse_coding_features_relative(frame_number)
 
             if self.add_frame_features:
                 current_block_binary_array = numpy.zeros((frame_number, self.dict_size+self.frame_feature_size))
@@ -433,18 +706,23 @@ class HTSLabelNormalisation(LabelNormalisation):
             if len(line) < 1:
                 continue
             temp_list = re.split('\s+', line)
-            start_time = int(temp_list[0])
-            end_time = int(temp_list[1])
-            full_label = temp_list[2]
-            full_label_length = len(full_label) - 3  # remove state information [k]
-            state_index = full_label[full_label_length + 1]
 
-#            print state_index
-            state_index = int(state_index) - 1
-            state_index_backward = 6 - state_index
-            full_label = full_label[0:full_label_length]
+            if len(temp_list)==1:
+                frame_number = 0
+                state_index = 1
+                full_label = temp_list[0]
+            else:
+                start_time = int(temp_list[0])
+                end_time = int(temp_list[1])
+                frame_number = int((end_time - start_time)/50000)
+                full_label = temp_list[2]
+            
+                full_label_length = len(full_label) - 3  # remove state information [k]
+                state_index = full_label[full_label_length + 1]
 
-            frame_number = int((end_time - start_time)/50000)
+                state_index = int(state_index) - 1
+                state_index_backward = 6 - state_index
+                full_label = full_label[0:full_label_length]
 
             if state_index == 1:
                 current_frame_number = 0
@@ -458,13 +736,16 @@ class HTSLabelNormalisation(LabelNormalisation):
                 label_continuous_vector = self.pattern_matching_continous_position(full_label)
                 label_vector = numpy.concatenate([label_binary_vector, label_continuous_vector], axis = 1)
 
-                for i in range(state_number - 1):
-                    line = utt_labels[current_index + i + 1].strip()
-                    temp_list = re.split('\s+', line)
-                    phone_duration += int((int(temp_list[1]) - int(temp_list[0]))/50000)
+                if len(temp_list)==1:
+                    state_index = state_number
+                else:
+                    for i in range(state_number - 1):
+                        line = utt_labels[current_index + i + 1].strip()
+                        temp_list = re.split('\s+', line)
+                        phone_duration += int((int(temp_list[1]) - int(temp_list[0]))/50000)
 
-                if self.subphone_feats == "coarse_coding":
-                    cc_feat_matrix = self.extract_coarse_coding_features_relative(phone_duration)
+                    if self.subphone_feats == "coarse_coding":
+                        cc_feat_matrix = self.extract_coarse_coding_features_relative(phone_duration)
 
             if self.add_frame_features:
                 current_block_binary_array = numpy.zeros((frame_number, self.dict_size+self.frame_feature_size))
@@ -563,6 +844,28 @@ class HTSLabelNormalisation(LabelNormalisation):
                     duration_feature_array[frame_index, 2] = cc_feat_matrix[j, 2]
                     duration_feature_array[frame_index, 3] = float(frame_number)
                     frame_index+=1
+
+            elif self.subphone_feats == 'full':
+                state_number = 5 # hard coded here 
+                phone_duration = sum(dur_data[i, :])
+                state_duration_base = 0
+                for state_index in xrange(1, state_number+1):
+                    state_index_backward = (state_number - state_index) + 1
+                    frame_number = int(dur_data[i][state_index-1])
+                    for j in xrange(frame_number):
+                        duration_feature_array[frame_index, 0] = float(j+1) / float(frame_number)   ## fraction through state (forwards)
+                        duration_feature_array[frame_index, 1] = float(frame_number - j) / float(frame_number)  ## fraction through state (backwards)
+                        duration_feature_array[frame_index, 2] = float(frame_number)  ## length of state in frames
+                        duration_feature_array[frame_index, 3] = float(state_index)   ## state index (counting forwards)
+                        duration_feature_array[frame_index, 4] = float(state_index_backward) ## state index (counting backwards)
+    
+                        duration_feature_array[frame_index, 5] = float(phone_duration)   ## length of phone in frames
+                        duration_feature_array[frame_index, 6] = float(frame_number) / float(phone_duration)   ## fraction of the phone made up by current state
+                        duration_feature_array[frame_index, 7] = float(phone_duration - j - state_duration_base) / float(phone_duration) ## fraction through phone (forwards)
+                        duration_feature_array[frame_index, 8] = float(state_duration_base + j + 1) / float(phone_duration)  ## fraction through phone (backwards)
+                        frame_index+=1
+                    
+                    state_duration_base += frame_number
 
         return duration_feature_array
 
@@ -797,16 +1100,18 @@ class HTSLabelNormalisation(LabelNormalisation):
         """
 
         ## handle HTK wildcards (and lack of them) at ends of label:
+        prefix = ""
+        postfix = ""
         if '*' in question:
             if not question.startswith('*'):
-                question = '\A' + question
+                prefix = "\A"
             if not question.endswith('*'):
-                question = question + '\Z'
+                postfix = "\Z"
         question = question.strip('*')
         question = re.escape(question)
         ## convert remaining HTK wildcards * and ? to equivalent regex:
         question = question.replace('\\*', '.*')
-        #question = question.replace('\\?', '.?')
+        question = prefix + question + postfix
 
         if convert_number_pattern:
             question = question.replace('\\(\\\\d\\+\\)', '(\d+)')

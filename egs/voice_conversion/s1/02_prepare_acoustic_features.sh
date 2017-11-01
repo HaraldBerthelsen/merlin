@@ -3,7 +3,7 @@
 global_config_file=conf/global_settings.cfg
 source $global_config_file
 
-if test "$#" -ne 2; then
+if test "$#" -lt 2; then
     echo "################################"
     echo "Usage:"
     echo "$0 <path_to_wav_dir> <path_to_feat_dir>"
@@ -16,6 +16,10 @@ fi
 
 wav_dir=$1
 feat_dir=$2
+
+if test "$#" -eq 3; then
+    SamplingFreq=$3
+fi
 
 if [ ! "$(ls -A ${wav_dir})" ]; then
     echo "Please place your audio files in: ${wav_dir}"
@@ -31,6 +35,7 @@ prepare_feats=true
 if [ "$prepare_feats" = true ]; then
     echo "Step 2:" 
     echo "Prepare acoustic features using "${Vocoder}" vocoder..."
-    python ${MerlinDir}/misc/scripts/vocoder/${Vocoder,,}/extract_features_for_merlin.py ${MerlinDir} ${wav_dir} ${feat_dir} $SamplingFreq 
+    Vocoder=$(echo ${Vocoder} | tr '[A-Z]' '[a-z]')
+    python ${MerlinDir}/misc/scripts/vocoder/${Vocoder}/extract_features_for_merlin.py ${MerlinDir} ${wav_dir} ${feat_dir} $SamplingFreq
 fi
 

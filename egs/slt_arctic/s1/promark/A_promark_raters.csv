@@ -1,0 +1,2301 @@
+todd	word	voice	batch	file	interval_no	onset	offset	tag1	tagger	mallory	joe	david
+0	.	rms	A	arctic_a0001_rms	0	0.0	0.102		0	0	0	0
+2	Author	rms	A	arctic_a0001_rms	1	0.102	0.48199999	[0.901691, 0.700223]	1	1	1	1
+0	of	rms	A	arctic_a0001_rms	2	0.48199999	0.542	[0.04185]	0	0	0	0
+0	the	rms	A	arctic_a0001_rms	3	0.542	0.65200001	[0.102958]	0	0	0	0
+2	danger	rms	A	arctic_a0001_rms	4	0.65200001	1.012	[0.102958, 0.548862, 0.132463]	1	0	1	2
+1	trail	rms	A	arctic_a0001_rms	5	1.012	1.432	[0.424928]	1	0	0	1
+2	Philip	rms	A	arctic_a0001_rms	6	1.432	1.802	[0.021056, 0.03891]	0	1	0	0
+1	Steels	rms	A	arctic_a0001_rms	7	1.802	2.342	[0.491149]	1	1	1	2
+0	etc	rms	A	arctic_a0001_rms	8	2.342	2.812	[0.056828, 0.192636, 0.26608, 0.092067]	1	0	0	1
+0	.	rms	A	arctic_a0001_rms	9	2.812	0.0		0	0	0	0
+0	.	slt	A	arctic_a0001_slt	0	0.0	0.0		0	0	0	0
+0	.	slt	A	arctic_a0001_slt	1	0.0	0.18075		0	0	0	0
+1	Author	slt	A	arctic_a0001_slt	2	0.18075	0.61825001	[0.906274, 1.129349]	1	1	2	1
+0	of	slt	A	arctic_a0001_slt	3	0.61825001	0.76824999	[0.280543]	0	0	0	0
+0	the	slt	A	arctic_a0001_slt	4	0.76824999	0.85575002	[0.09795]	0	0	0	0
+2	danger	slt	A	arctic_a0001_slt	5	0.85575002	1.2244999	[0.538455, 0.132373]	1	1	1	2
+1	trail	slt	A	arctic_a0001_slt	6	1.2244999	1.6619999	[0.31102]	1	1	1	1
+0	.	slt	A	arctic_a0001_slt	7	1.6619999	1.68075		0	0	0	0
+2	Philip	slt	A	arctic_a0001_slt	8	1.68075	2.0432501	[0.061487, 0.101498]	0	1	0	0
+1	Steels	slt	A	arctic_a0001_slt	9	2.0432501	2.59325	[0.346994]	1	1	0	2
+0	.	slt	A	arctic_a0001_slt	10	2.59325	2.6307499	[0.021521]	0	0	0	0
+0	etc	slt	A	arctic_a0001_slt	11	2.6307499	3.1494999	[0.021521, 0.264693, 0.366311, 0.101969]	1	0	0	1
+0	.	slt	A	arctic_a0001_slt	12	3.1494999	0.0		0	0	0	0
+0	.	rms	A	arctic_a0002_rms	0	0.0	0.112		0	0	0	0
+1	Not	rms	A	arctic_a0002_rms	1	0.112	0.31200001		0	1	1	0
+0	at	rms	A	arctic_a0002_rms	2	0.31200001	0.43200001	[0.002931]	0	0	0	0
+0	this	rms	A	arctic_a0002_rms	3	0.43200001	0.59200001	[0.002931, 0.066502]	0	0	0	0
+2	particular	rms	A	arctic_a0002_rms	4	0.59200001	1.142	[0.103438, 0.376815, 0.062111, 0.112308]	1	0	1	0
+1	case	rms	A	arctic_a0002_rms	5	1.142	1.582	[0.477508]	1	0	1	2
+1	Tom	rms	A	arctic_a0002_rms	6	1.582	2.052	[0.33943]	1	2	0	1
+0	apologized	rms	A	arctic_a0002_rms	7	2.052	2.802	[0.07743, 0.015656, 0.041012, 0.453285]	1	0	0	1
+1	Whittemore	rms	A	arctic_a0002_rms	8	2.802	3.2620001	[0.038174, 0.151707]	1	1	0	2
+0	.	rms	A	arctic_a0002_rms	9	3.2620001	0.0		0	0	0	0
+0	.	slt	A	arctic_a0002_slt	0	0.0	0.19325		0	0	0	0
+2	Not	slt	A	arctic_a0002_slt	1	0.19325	0.49950001	[1.251598]	1	0	1	0
+0	at	slt	A	arctic_a0002_slt	2	0.49950001	0.60575002	[0.302677]	0	0	0	0
+0	this	slt	A	arctic_a0002_slt	3	0.60575002	0.83700001	[0.191264]	0	0	0	0
+1	particular	slt	A	arctic_a0002_slt	4	0.83700001	1.36825	[0.053702, 0.083411, 0.063203, 0.119394]	1	1	0	0
+0	case	slt	A	arctic_a0002_slt	5	1.36825	1.837	[0.339881]	1	0	0	1
+0	.	slt	A	arctic_a0002_slt	6	1.837	1.8807499		0	0	0	0
+2	Tom	slt	A	arctic_a0002_slt	7	1.8807499	2.2995	[0.498376]	1	2	1	2
+0	.	slt	A	arctic_a0002_slt	8	2.2995	2.3557501		0	0	0	0
+1	apologized	slt	A	arctic_a0002_slt	9	2.3557501	3.0120001	[0.051129, 0.067285, 0.042715, 0.22891]	1	0	0	1
+2	Whittemore	slt	A	arctic_a0002_slt	10	3.0120001	3.58075	[0.088811, 0.239362]	1	1	0	2
+0	.	slt	A	arctic_a0002_slt	11	3.58075	0.0		0	0	0	0
+0	.	rms	A	arctic_a0003_rms	0	0.0	0.061999999		0	0	0	0
+0	For	rms	A	arctic_a0003_rms	1	0.061999999	0.31200001	[0.042003]	0	0	0	0
+0	the	rms	A	arctic_a0003_rms	2	0.31200001	0.40200001	[0.107751]	0	0	0	0
+2	twentieth	rms	A	arctic_a0003_rms	3	0.40200001	0.83200002	[0.107751, 0.094247, 0.769219, 0.294832]	1	1	1	1
+0	time	rms	A	arctic_a0003_rms	4	0.83200002	1.142	[0.655134]	1	1	1	2
+0	that	rms	A	arctic_a0003_rms	5	1.142	1.302	[0.539601]	0	0	0	0
+1	evening	rms	A	arctic_a0003_rms	6	1.302	1.802	[0.971482, 0.169673]	1	1	1	2
+0	the	rms	A	arctic_a0003_rms	7	1.802	1.892	[0.102676]	0	0	0	0
+0	two	rms	A	arctic_a0003_rms	8	1.892	2.082	[0.102676, 0.300162]	0	0	0	0
+0	men	rms	A	arctic_a0003_rms	9	2.082	2.312	[0.531139]	1	0	0	1
+0	shook	rms	A	arctic_a0003_rms	10	2.312	2.622	[0.300397]	0	0	0	0
+1	hands	rms	A	arctic_a0003_rms	11	2.622	3.122	[0.804036]	1	0	0	2
+0	.	rms	A	arctic_a0003_rms	12	3.122	0.0		0	0	0	0
+0	.	slt	A	arctic_a0003_slt	0	0.0	0.13699999		0	0	0	0
+0	For	slt	A	arctic_a0003_slt	1	0.13699999	0.24325	[0.015087]	0	0	0	0
+0	the	slt	A	arctic_a0003_slt	2	0.24325	0.36199999	[0.148492]	0	0	0	0
+2	twentieth	slt	A	arctic_a0003_slt	3	0.36199999	0.81825	[0.358018, 0.150897, 0.124844]	1	1	2	1
+1	time	slt	A	arctic_a0003_slt	4	0.81825	1.1495	[0.917807]	1	0	2	1
+0	that	slt	A	arctic_a0003_slt	5	1.1495	1.3182499	[0.393716]	0	0	0	0
+1	evening	slt	A	arctic_a0003_slt	6	1.3182499	1.7495	[0.443717, 0.122707]	1	0	1	1
+0	the	slt	A	arctic_a0003_slt	7	1.7495	1.812	[0.038155]	0	0	0	0
+0	two	slt	A	arctic_a0003_slt	8	1.812	2.0682499	[0.172362]	0	0	1	0
+0	men	slt	A	arctic_a0003_slt	9	2.0682499	2.33075	[0.319518]	1	0	0	1
+1	shook	slt	A	arctic_a0003_slt	10	2.33075	2.6182499	[0.142363]	0	0	0	0
+1	hands	slt	A	arctic_a0003_slt	11	2.6182499	3.1370001	[0.456567]	1	0	0	2
+0	.	slt	A	arctic_a0003_slt	12	3.1370001	0.0		0	0	0	0
+0	.	rms	A	arctic_a0004_rms	0	0.0	0.032000002		0	0	0	0
+2	Lord	rms	A	arctic_a0004_rms	1	0.032000002	0.40200001	[1.148007]	1	2	1	2
+0	but	rms	A	arctic_a0004_rms	2	0.40200001	0.542	[0.414398]	0	0	0	0
+0	I'm	rms	A	arctic_a0004_rms	3	0.542	0.69199997	[0.727587]	0	0	0	0
+2	glad	rms	A	arctic_a0004_rms	4	0.69199997	0.93199998	[0.987836]	1	0	1	2
+0	to	rms	A	arctic_a0004_rms	5	0.93199998	1.022	[0.0451]	0	0	0	0
+0	see	rms	A	arctic_a0004_rms	6	1.022	1.222	[0.0451, 0.079614]	0	0	1	2
+0	you	rms	A	arctic_a0004_rms	7	1.222	1.372	[0.308563]	0	0	0	0
+1	again	rms	A	arctic_a0004_rms	8	1.372	1.742	[0.359959, 0.695956]	1	0	0	0
+2	Phil	rms	A	arctic_a0004_rms	9	1.742	2.092	[0.328421]	0	1	1	2
+0	.	rms	A	arctic_a0004_rms	10	2.092	0.0		0	0	0	0
+0	.	slt	A	arctic_a0004_slt	0	0.0	0.212		0	0	0	0
+2	Lord	slt	A	arctic_a0004_slt	1	0.212	0.61199999	[1.040852]	1	1	1	2
+0	but	slt	A	arctic_a0004_slt	2	0.61199999	0.76824999	[0.441489]	0	0	0	0
+0	I'm	slt	A	arctic_a0004_slt	3	0.76824999	0.88700002	[0.199524]	0	0	0	0
+1	glad	slt	A	arctic_a0004_slt	4	0.88700002	1.1307499	[0.9]	1	0	1	2
+0	to	slt	A	arctic_a0004_slt	5	1.1307499	1.23075	[0.203746]	0	0	0	0
+0	see	slt	A	arctic_a0004_slt	6	1.23075	1.4432499	[0.203746, 0.391401]	1	0	1	1
+0	you	slt	A	arctic_a0004_slt	7	1.4432499	1.5994999	[0.359461, 0.053472]	1	0	0	0
+0	again	slt	A	arctic_a0004_slt	8	1.5994999	1.8995	[0.053472, 0.420447]	1	0	0	1
+2	Phil	slt	A	arctic_a0004_slt	9	1.8995	2.3182499	[0.37347]	1	1	1	2
+0	.	slt	A	arctic_a0004_slt	10	2.3182499	0.0		0	0	0	0
+0	.	rms	A	arctic_a0005_rms	0	0.0	0.082000002		0	0	0	0
+0	Will	rms	A	arctic_a0005_rms	1	0.082000002	0.31200001	[0.158465]	0	0	1	0
+0	we	rms	A	arctic_a0005_rms	2	0.31200001	0.51200002	[0.884562]	1	0	0	0
+2	ever	rms	A	arctic_a0005_rms	3	0.51200002	0.722	[0.594153, 0.723169]	1	0	1	2
+0	forget	rms	A	arctic_a0005_rms	4	0.722	1.122	[0.316851, 1.030832]	1	2	0	2
+0	it	rms	A	arctic_a0005_rms	5	1.122	1.302	[0.506148]	0	1	0	0
+0	.	rms	A	arctic_a0005_rms	6	1.302	0.0		0	0	0	0
+0	.	slt	A	arctic_a0005_slt	0	0.0	0.19949999		0	0	0	0
+0	Will	slt	A	arctic_a0005_slt	1	0.19949999	0.36825001	[0.114197]	0	0	0	0
+0	we	slt	A	arctic_a0005_slt	2	0.36825001	0.54325002	[0.500717]	0	0	0	0
+2	ever	slt	A	arctic_a0005_slt	3	0.54325002	0.79949999	[0.9, 0.489937]	1	1	2	2
+0	forget	slt	A	arctic_a0005_slt	4	0.79949999	1.187	[0.160177, 0.72408]	1	0	1	1
+0	it	slt	A	arctic_a0005_slt	5	1.187	1.3182499	[0.355416]	0	0	0	1
+0	.	slt	A	arctic_a0005_slt	6	1.3182499	0.0		0	0	0	0
+0	.	rms	A	arctic_a0006_rms	0	0.0	0.071999997		0	0	0	0
+2	God	rms	A	arctic_a0006_rms	1	0.071999997	0.31200001	[0.901093]	1	1	1	0
+0	bless	rms	A	arctic_a0006_rms	2	0.31200001	0.64200002	[0.041422]	0	1	0	2
+0	em	rms	A	arctic_a0006_rms	3	0.64200002	0.90200001	[0.07401]	1	2	0	0
+0	I	rms	A	arctic_a0006_rms	4	0.90200001	1.0420001	[0.091566]	0	0	0	0
+2	hope	rms	A	arctic_a0006_rms	5	1.0420001	1.262	[0.243012, 0.028061]	1	0	1	1
+0	I'll	rms	A	arctic_a0006_rms	6	1.262	1.332	[0.028061]	0	0	0	0
+0	go	rms	A	arctic_a0006_rms	7	1.332	1.582	[0.534621]	1	0	0	0
+0	on	rms	A	arctic_a0006_rms	8	1.582	1.702	[0.243701]	0	0	0	0
+1	seeing	rms	A	arctic_a0006_rms	9	1.702	2.072	[0.161692, 0.035742]	0	0	1	2
+0	them	rms	A	arctic_a0006_rms	10	2.072	2.2520001	[0.185269]	1	0	0	0
+2	forever	rms	A	arctic_a0006_rms	11	2.2520001	2.7219999	[0.170718, 0.169877, 0.23845]	1	0	0	2
+0	.	rms	A	arctic_a0006_rms	12	2.7219999	0.0		0	0	0	0
+0	.	slt	A	arctic_a0006_slt	0	0.0	0.0		0	0	0	0
+0	.	slt	A	arctic_a0006_slt	1	0.0	0.19325		0	0	0	0
+0	God	slt	A	arctic_a0006_slt	2	0.19325	0.41824999	[0.883566]	1	0	0	0
+0	bless	slt	A	arctic_a0006_slt	3	0.41824999	0.76200002	[0.824013]	1	0	1	2
+0	em	slt	A	arctic_a0006_slt	4	0.76200002	0.89324999	[0.269224]	0	0	0	0
+0	I	slt	A	arctic_a0006_slt	5	0.89324999	1.01825	[0.9]	1	0	0	0
+2	hope	slt	A	arctic_a0006_slt	6	1.01825	1.2869999	[0.41804]	0	1	1	1
+0	I'll	slt	A	arctic_a0006_slt	7	1.2869999	1.36825	[0.303812]	0	0	0	0
+0	go	slt	A	arctic_a0006_slt	8	1.36825	1.5994999	[0.575645]	1	0	0	0
+0	on	slt	A	arctic_a0006_slt	9	1.5994999	1.7557499	[0.453127]	0	0	0	0
+1	seeing	slt	A	arctic_a0006_slt	10	1.7557499	2.1307499	[0.385986, 0.049025]	1	0	1	2
+0	them	slt	A	arctic_a0006_slt	11	2.1307499	2.2995	[0.237442]	0	0	0	0
+2	forever	slt	A	arctic_a0006_slt	12	2.2995	2.84325	[0.24407, 0.37221, 0.322452]	1	0	0	2
+0	.	slt	A	arctic_a0006_slt	13	2.84325	0.0		0	0	0	0
+0	.	rms	A	arctic_a0007_rms	0	0.0	0.102		0	0	0	0
+0	And	rms	A	arctic_a0007_rms	1	0.102	0.28200001	[0.812213]	1	0	0	0
+0	you	rms	A	arctic_a0007_rms	2	0.28200001	0.412	[0.351683, 0.057319]	0	0	0	0
+2	always	rms	A	arctic_a0007_rms	3	0.412	0.80199999	[0.057319, 0.691523]	1	1	1	1
+0	want	rms	A	arctic_a0007_rms	4	0.80199999	0.98199999	[0.375506]	0	0	0	0
+0	to	rms	A	arctic_a0007_rms	5	0.98199999	1.0420001	[0.170953]	0	0	0	0
+0	see	rms	A	arctic_a0007_rms	6	1.0420001	1.312	[0.663528]	1	0	1	1
+0	it	rms	A	arctic_a0007_rms	7	1.312	1.402		0	0	0	0
+0	in	rms	A	arctic_a0007_rms	8	1.402	1.502	[0.360492]	0	0	0	0
+0	the	rms	A	arctic_a0007_rms	9	1.502	1.562	[0.065063]	0	0	0	0
+0	superlative	rms	A	arctic_a0007_rms	10	1.562	2.1919999	[0.065063, 0.039554, 0.922251, 0.066357, 0.2843]	1	1	1	2
+2	degree	rms	A	arctic_a0007_rms	11	2.1919999	2.7620001	[0.18731, 0.766092]	1	1	0	2
+0	.	rms	A	arctic_a0007_rms	12	2.7620001	0.0		0	0	0	0
+0	.	slt	A	arctic_a0007_slt	0	0.0	0.0		0	0	0	0
+0	.	slt	A	arctic_a0007_slt	1	0.0	0.18075		0	0	0	0
+0	And	slt	A	arctic_a0007_slt	2	0.18075	0.33074999	[0.144737]	0	0	0	0
+0	you	slt	A	arctic_a0007_slt	3	0.33074999	0.43700001	[0.146014]	0	0	0	0
+2	always	slt	A	arctic_a0007_slt	4	0.43700001	0.82450002	[1.199172, 0.3186]	1	0	1	1
+0	want	slt	A	arctic_a0007_slt	5	0.82450002	1.0495	[0.384406]	1	0	0	0
+0	to	slt	A	arctic_a0007_slt	6	1.0495	1.11825	[0.095745]	0	0	0	0
+0	see	slt	A	arctic_a0007_slt	7	1.11825	1.35575	[0.095745, 0.403482]	1	0	1	2
+0	it	slt	A	arctic_a0007_slt	8	1.35575	1.45575	[0.131803]	0	0	0	0
+0	in	slt	A	arctic_a0007_slt	9	1.45575	1.54325	[0.090788]	0	0	0	0
+0	the	slt	A	arctic_a0007_slt	10	1.54325	1.612	[0.083981]	0	0	0	0
+1	superlative	slt	A	arctic_a0007_slt	11	1.612	2.33075	[0.083981, 0.030066, 0.279069, 0.081697, 0.133873]	1	1	0	2
+1	degree	slt	A	arctic_a0007_slt	12	2.33075	2.862	[0.118651, 0.532201]	1	1	0	2
+0	.	slt	A	arctic_a0007_slt	13	2.862	0.0		0	0	0	0
+0	.	rms	A	arctic_a0008_rms	0	0.0	0.071999997		0	0	0	0
+2	Gad	rms	A	arctic_a0008_rms	1	0.071999997	0.49200001	[0.912126]	1	2	1	2
+0	your	rms	A	arctic_a0008_rms	2	0.49200001	0.69199997	[0.015819]	0	0	0	0
+0	letter	rms	A	arctic_a0008_rms	3	0.69199997	0.89200002	[0.022136, 0.104669]	1	1	0	1
+0	came	rms	A	arctic_a0008_rms	4	0.89200002	1.222	[0.116332]	0	0	0	0
+2	just	rms	A	arctic_a0008_rms	5	1.222	1.5420001	[0.16767]	1	0	1	2
+0	in	rms	A	arctic_a0008_rms	6	1.5420001	1.652	[0.043378]	0	0	0	0
+2	time	rms	A	arctic_a0008_rms	7	1.652	2.1619999	[0.183997]	1	1	1	1
+0	.	rms	A	arctic_a0008_rms	8	2.1619999	0.0		0	0	0	0
+0	.	slt	A	arctic_a0008_slt	0	0.0	0.18700001		0	0	0	0
+2	Gad	slt	A	arctic_a0008_slt	1	0.18700001	0.53074998	[0.978508]	1	1	1	1
+0	your	slt	A	arctic_a0008_slt	2	0.53074998	0.67449999	[0.01393]	0	0	0	0
+0	letter	slt	A	arctic_a0008_slt	3	0.67449999	0.94950002	[0.128009, 0.064942]	1	0	1	2
+0	came	slt	A	arctic_a0008_slt	4	0.94950002	1.23075	[0.099012]	1	0	0	0
+0	just	slt	A	arctic_a0008_slt	5	1.23075	1.5057499	[0.064412]	0	0	0	1
+0	in	slt	A	arctic_a0008_slt	6	1.5057499	1.637	[0.038052]	0	0	0	0
+2	time	slt	A	arctic_a0008_slt	7	1.637	2.062	[0.406198]	1	0	2	1
+0	.	slt	A	arctic_a0008_slt	8	2.062	0.0		0	0	0	0
+0	.	rms	A	arctic_a0009_rms	0	0.0	0.052000001		0	0	0	0
+0	He	rms	A	arctic_a0009_rms	1	0.052000001	0.20200001	[0.239737]	0	0	0	0
+0	turned	rms	A	arctic_a0009_rms	2	0.20200001	0.46200001	[0.652021]	1	0	0	1
+2	sharply	rms	A	arctic_a0009_rms	3	0.46200001	1.1720001	[0.122222]	0	2	2	2
+0	and	rms	A	arctic_a0009_rms	4	1.1720001	1.352	[0.057012]	0	0	0	0
+0	faced	rms	A	arctic_a0009_rms	5	1.352	1.642	[0.90269]	1	1	0	0
+1	Gregson	rms	A	arctic_a0009_rms	6	1.642	2.072	[0.109319, 0.374748, 0.025827]	1	2	1	2
+0	across	rms	A	arctic_a0009_rms	7	2.072	2.4319999	[0.025827, 0.70881]	1	0	0	0
+0	the	rms	A	arctic_a0009_rms	8	2.4319999	2.5020001	[0.075879]	0	0	0	0
+0	table	rms	A	arctic_a0009_rms	9	2.5020001	2.9119999	[0.075879, 0.693182, 0.014025]	1	0	0	2
+0	.	rms	A	arctic_a0009_rms	10	2.9119999	0.0		0	0	0	0
+0	.	slt	A	arctic_a0009_slt	0	0.0	0.13699999		0	0	0	0
+0	He	slt	A	arctic_a0009_slt	1	0.13699999	0.27450001	[0.433069]	0	0	0	0
+0	turned	slt	A	arctic_a0009_slt	2	0.27450001	0.58700001	[0.900744]	1	1	0	0
+2	sharply	slt	A	arctic_a0009_slt	3	0.58700001	1.14325	[0.496897, 0.894615]	1	1	2	2
+0	and	slt	A	arctic_a0009_slt	4	1.14325	1.2995	[0.161548]	0	0	0	0
+0	faced	slt	A	arctic_a0009_slt	5	1.2995	1.58075	[0.927273]	1	1	0	0
+1	Gregson	slt	A	arctic_a0009_slt	6	1.58075	2.0057499	[1.137193, 0.182848]	1	0	1	2
+0	across	slt	A	arctic_a0009_slt	7	2.0057499	2.3682499	[0.230197, 0.591339]	1	0	0	0
+0	the	slt	A	arctic_a0009_slt	8	2.3682499	2.487	[0.102149]	0	0	0	0
+1	table	slt	A	arctic_a0009_slt	9	2.487	2.8870001	[0.559859, 0.083237]	1	0	1	2
+0	.	slt	A	arctic_a0009_slt	10	2.8870001	0.0		0	0	0	0
+0	.	rms	A	arctic_a0010_rms	0	0.0	0.102		0	0	0	0
+0	I'm	rms	A	arctic_a0010_rms	1	0.102	0.27200001	[0.428058]	1	0	0	0
+2	playing	rms	A	arctic_a0010_rms	2	0.27200001	0.69199997	[0.673986, 0.067039]	1	2	1	2
+0	a	rms	A	arctic_a0010_rms	3	0.69199997	0.73199999	[0.238354]	1	0	0	0
+0	single	rms	A	arctic_a0010_rms	4	0.73199999	1.092	[0.119876, 0.061314]	0	0	0	0
+2	hand	rms	A	arctic_a0010_rms	5	1.092	1.442	[0.957914]	1	0	1	2
+0	in	rms	A	arctic_a0010_rms	6	1.442	1.512	[0.03548]	0	0	0	0
+0	what	rms	A	arctic_a0010_rms	7	1.512	1.682	[0.200215]	1	1	0	0
+0	looks	rms	A	arctic_a0010_rms	8	1.682	1.902	[0.079397]	0	1	1	1
+0	like	rms	A	arctic_a0010_rms	9	1.902	2.1919999	[0.66308]	1	1	1	0
+0	a	rms	A	arctic_a0010_rms	10	2.1919999	2.2219999	[0.044943]	0	0	0	0
+1	losing	rms	A	arctic_a0010_rms	11	2.2219999	2.612	[0.044943, 0.221658, 0.093428]	1	0	0	2
+2	game	rms	A	arctic_a0010_rms	12	2.612	3.082	[0.915214]	1	0	1	2
+0	.	rms	A	arctic_a0010_rms	13	3.082	0.0		0	0	0	0
+0	.	slt	A	arctic_a0010_slt	0	0.0	0.19325		0	0	0	0
+0	I'm	slt	A	arctic_a0010_slt	1	0.19325	0.29949999	[0.196107]	0	0	0	0
+0	playing	slt	A	arctic_a0010_slt	2	0.29949999	0.5995	[0.562672, 0.153589, 0.112535]	1	1	1	0
+0	a	slt	A	arctic_a0010_slt	3	0.5995	0.62449998	[0.112535]	0	0	0	0
+0	single	slt	A	arctic_a0010_slt	4	0.62449998	0.96824998	[0.112535, 0.265101, 0.52808]	0	1	1	1
+2	hand	slt	A	arctic_a0010_slt	5	0.96824998	1.29325	[0.9]	1	0	1	2
+0	in	slt	A	arctic_a0010_slt	6	1.29325	1.39325	[0.171238]	0	0	0	0
+0	what	slt	A	arctic_a0010_slt	7	1.39325	1.54325	[0.201612]	1	0	0	0
+0	looks	slt	A	arctic_a0010_slt	8	1.54325	1.8182499	[0.07437]	0	1	1	1
+0	like	slt	A	arctic_a0010_slt	9	1.8182499	2.0120001	[0.417736, 0.05324]	1	0	0	0
+0	a	slt	A	arctic_a0010_slt	10	2.0120001	2.03075	[0.05324]	0	0	0	0
+2	losing	slt	A	arctic_a0010_slt	11	2.03075	2.4495001	[0.05324, 0.427008, 0.199628]	1	0	1	1
+1	game	slt	A	arctic_a0010_slt	12	2.4495001	2.7932501	[0.687865]	1	0	1	2
+0	.	slt	A	arctic_a0010_slt	13	2.7932501	0.0		0	0	0	0
+0	.	rms	A	arctic_a0011_rms	0	0.0	0.102		0	0	0	0
+0	If	rms	A	arctic_a0011_rms	1	0.102	0.292	[0.167653]	0	0	0	0
+0	I	rms	A	arctic_a0011_rms	2	0.292	0.45199999	[1.17]	1	0	0	0
+0	ever	rms	A	arctic_a0011_rms	3	0.45199999	0.68199998	[0.55966]	0	0	1	1
+0	needed	rms	A	arctic_a0011_rms	4	0.68199998	0.98199999	[0.969205, 0.328459]	1	2	1	0
+0	a	rms	A	arctic_a0011_rms	5	0.98199999	1.012	[0.308307]	0	0	0	0
+2	fighter	rms	A	arctic_a0011_rms	6	1.012	1.4220001	[1.029112, 0.460379]	1	0	1	2
+0	in	rms	A	arctic_a0011_rms	7	1.4220001	1.552	[0.105148]	0	0	0	0
+0	my	rms	A	arctic_a0011_rms	8	1.552	1.712	[0.643523]	1	0	0	0
+0	life	rms	A	arctic_a0011_rms	9	1.712	2.092	[0.631545]	1	1	1	2
+0	I	rms	A	arctic_a0011_rms	10	2.092	2.1819999	[0.394757]	0	0	0	0
+0	need	rms	A	arctic_a0011_rms	11	2.1819999	2.4119999	[0.232544]	0	1	0	1
+0	one	rms	A	arctic_a0011_rms	12	2.4119999	2.592	[0.173855]	0	0	0	1
+1	now	rms	A	arctic_a0011_rms	13	2.592	3.0320001	[1.155974]	1	0	2	2
+0	.	rms	A	arctic_a0011_rms	14	3.0320001	0.0		0	0	0	0
+0	.	slt	A	arctic_a0011_slt	0	0.0	0.080750003		0	0	0	0
+0	If	slt	A	arctic_a0011_slt	1	0.080750003	0.21825001	[0.246887]	0	0	0	0
+0	I	slt	A	arctic_a0011_slt	2	0.21825001	0.3495	[0.741195]	1	0	0	0
+0	ever	slt	A	arctic_a0011_slt	3	0.3495	0.56199998	[0.917545, 0.227081]	1	0	1	0
+0	needed	slt	A	arctic_a0011_slt	4	0.56199998	0.89950001	[0.411171, 0.145166]	1	0	0	0
+0	a	slt	A	arctic_a0011_slt	5	0.89950001	0.94950002	[0.203105]	0	0	0	0
+2	fighter	slt	A	arctic_a0011_slt	6	0.94950002	1.3807499	[0.9, 0.319419]	1	2	2	2
+0	in	slt	A	arctic_a0011_slt	7	1.3807499	1.4744999	[0.052425]	0	0	0	0
+0	my	slt	A	arctic_a0011_slt	8	1.4744999	1.61825	[0.265059]	0	0	0	0
+0	life	slt	A	arctic_a0011_slt	9	1.61825	1.93075	[0.66448]	1	0	2	2
+0	I	slt	A	arctic_a0011_slt	10	1.93075	2.01825	[0.309746]	0	0	0	0
+0	need	slt	A	arctic_a0011_slt	11	2.01825	2.237	[0.17762]	0	0	0	1
+0	one	slt	A	arctic_a0011_slt	12	2.237	2.45575	[0.198435]	0	0	0	0
+1	now	slt	A	arctic_a0011_slt	13	2.45575	2.83075	[0.848111]	1	1	1	2
+0	.	slt	A	arctic_a0011_slt	14	2.83075	0.0		0	0	0	0
+0	.	rms	A	arctic_a0012_rms	0	0.0	0.061999999		0	0	0	0
+2	Gregson	rms	A	arctic_a0012_rms	1	0.061999999	0.53200001	[0.270036, 0.175731]	1	2	2	1
+1	shoved	rms	A	arctic_a0012_rms	2	0.53200001	0.90200001	[0.561508]	0	0	1	0
+0	back	rms	A	arctic_a0012_rms	3	0.90200001	1.232	[0.900518]	1	0	0	2
+0	his	rms	A	arctic_a0012_rms	4	1.232	1.432	[0.234368]	0	0	0	0
+2	chair	rms	A	arctic_a0012_rms	5	1.432	1.852	[0.213664]	1	0	1	2
+0	and	rms	A	arctic_a0012_rms	6	1.852	1.942	[0.164935]	0	0	0	0
+1	rose	rms	A	arctic_a0012_rms	7	1.942	2.2620001	[0.096696]	0	1	1	2
+0	to	rms	A	arctic_a0012_rms	8	2.2620001	2.372	[0.061417]	0	0	0	0
+0	his	rms	A	arctic_a0012_rms	9	2.372	2.572	[0.061417, 0.199745]	1	0	0	0
+2	feet	rms	A	arctic_a0012_rms	10	2.572	2.9419999	[0.282197]	1	0	1	2
+0	.	rms	A	arctic_a0012_rms	11	2.9419999	0.0		0	0	0	0
+0	.	slt	A	arctic_a0012_slt	0	0.0	0.1745		0	0	0	0
+1	Gregson	slt	A	arctic_a0012_slt	1	0.1745	0.63700002	[0.43218, 0.565284]	0	0	1	1
+0	shoved	slt	A	arctic_a0012_slt	2	0.63700002	0.9745	[0.794881]	1	1	1	1
+0	back	slt	A	arctic_a0012_slt	3	0.9745	1.23075	[0.904501]	1	0	1	0
+0	his	slt	A	arctic_a0012_slt	4	1.23075	1.33075	[0.052847]	0	0	0	0
+2	chair	slt	A	arctic_a0012_slt	5	1.33075	1.71825	[0.458568, 0.090086]	1	0	1	2
+0	and	slt	A	arctic_a0012_slt	6	1.71825	1.83075	[0.090086]	0	1	0	0
+1	rose	slt	A	arctic_a0012_slt	7	1.83075	2.0682499	[0.484662]	1	2	0	1
+0	to	slt	A	arctic_a0012_slt	8	2.0682499	2.237	[0.195383]	0	0	0	0
+0	his	slt	A	arctic_a0012_slt	9	2.237	2.3994999	[0.052081]	0	0	0	0
+2	feet	slt	A	arctic_a0012_slt	10	2.3994999	2.6807499	[0.61676]	1	0	0	2
+0	.	slt	A	arctic_a0012_slt	11	2.6807499	0.0		0	0	0	0
+0	.	rms	A	arctic_a0013_rms	0	0.0	0.052000001		0	0	0	0
+0	He	rms	A	arctic_a0013_rms	1	0.052000001	0.20200001	[0.364551]	0	0	0	1
+0	was	rms	A	arctic_a0013_rms	2	0.20200001	0.37200001	[0.34966]	0	0	0	0
+0	a	rms	A	arctic_a0013_rms	3	0.37200001	0.43200001	[0.476135]	0	0	0	0
+2	head	rms	A	arctic_a0013_rms	4	0.43200001	0.62199998	[1.148267]	1	0	1	2
+1	shorter	rms	A	arctic_a0013_rms	5	0.62199998	1.012	[0.693817, 0.9]	1	0	1	2
+0	than	rms	A	arctic_a0013_rms	6	1.012	1.202	[0.176291]	0	0	0	0
+0	his	rms	A	arctic_a0013_rms	7	1.202	1.362	[0.269767]	1	0	0	0
+0	companion	rms	A	arctic_a0013_rms	8	1.362	2.072	[0.06314, 0.996447, 0.217398]	1	1	1	2
+0	of	rms	A	arctic_a0013_rms	9	2.072	2.2520001	[0.117407]	0	0	0	0
+0	almost	rms	A	arctic_a0013_rms	10	2.2520001	2.592	[0.721403, 0.41093]	1	0	0	0
+1	delicate	rms	A	arctic_a0013_rms	11	2.592	2.9920001	[0.328174, 0.036765, 0.145284]	0	1	1	1
+2	physique	rms	A	arctic_a0013_rms	12	2.9920001	3.5020001	[0.20759, 0.558417]	1	1	0	2
+0	.	rms	A	arctic_a0013_rms	13	3.5020001	0.0		0	0	0	0
+0	.	slt	A	arctic_a0013_slt	0	0.0	0.14325		0	0	0	0
+0	He	slt	A	arctic_a0013_slt	1	0.14325	0.25575	[0.6642]	1	0	0	0
+0	was	slt	A	arctic_a0013_slt	2	0.25575	0.43700001	[0.222365]	0	0	0	0
+0	a	slt	A	arctic_a0013_slt	3	0.43700001	0.48699999	[0.283176]	0	0	0	0
+2	head	slt	A	arctic_a0013_slt	4	0.48699999	0.70574999	[0.844548]	1	1	1	1
+0	shorter	slt	A	arctic_a0013_slt	5	0.70574999	1.0745	[0.754044, 0.67936]	1	1	1	2
+0	than	slt	A	arctic_a0013_slt	6	1.0745	1.237	[0.385271]	0	0	0	0
+0	his	slt	A	arctic_a0013_slt	7	1.237	1.35575	[0.197223]	0	0	0	0
+1	companion	slt	A	arctic_a0013_slt	8	1.35575	1.9744999	[0.137558, 1.029771, 0.277482]	1	2	1	2
+0	.	slt	A	arctic_a0013_slt	9	1.9744999	2.09325		0	0	0	0
+0	of	slt	A	arctic_a0013_slt	10	2.09325	2.1745	[0.09756]	0	0	0	0
+0	almost	slt	A	arctic_a0013_slt	11	2.1745	2.5557499	[0.9, 0.436877]	1	0	0	0
+2	delicate	slt	A	arctic_a0013_slt	12	2.5557499	2.937	[0.835004, 0.156645, 0.413656]	1	0	0	2
+1	physique	slt	A	arctic_a0013_slt	13	2.937	3.46825	[0.289181, 1.024644]	1	0	0	2
+0	.	slt	A	arctic_a0013_slt	14	3.46825	0.0		0	0	0	0
+0	.	rms	A	arctic_a0014_rms	0	0.0	0.102		0	0	0	0
+2	Now	rms	A	arctic_a0014_rms	1	0.102	0.382	[0.9]	1	2	1	1
+0	youre	rms	A	arctic_a0014_rms	2	0.382	0.542	[0.042874]	0	0	0	0
+0	coming	rms	A	arctic_a0014_rms	3	0.542	0.89200002	[0.045571, 0.06088]	0	0	0	0
+0	down	rms	A	arctic_a0014_rms	4	0.89200002	1.1619999	[0.414319]	1	0	1	1
+0	to	rms	A	arctic_a0014_rms	5	1.1619999	1.252	[0.010833]	0	0	0	0
+0	business	rms	A	arctic_a0014_rms	6	1.252	1.7920001	[0.010833, 0.221553, 0.095103]	1	0	1	2
+1	Phil	rms	A	arctic_a0014_rms	7	1.7920001	2.1719999	[0.173073]	1	1	0	1
+0	he	rms	A	arctic_a0014_rms	8	2.1719999	2.372		0	0	0	0
+0	exclaimed	rms	A	arctic_a0014_rms	9	2.372	3.092	[0.069451, 0.120045]	1	0	1	2
+0	.	rms	A	arctic_a0014_rms	10	3.092	0.0		0	0	0	0
+0	.	slt	A	arctic_a0014_slt	0	0.0	0.19949999		0	0	0	0
+1	Now	slt	A	arctic_a0014_slt	1	0.19949999	0.40575001	[1.270509]	1	1	1	0
+0	youre	slt	A	arctic_a0014_slt	2	0.40575001	0.56199998	[0.117084]	0	0	0	0
+1	coming	slt	A	arctic_a0014_slt	3	0.56199998	0.90574998	[0.196881, 0.09848]	1	1	0	0
+0	down	slt	A	arctic_a0014_slt	4	0.90574998	1.11825	[0.498027]	1	0	0	0
+0	to	slt	A	arctic_a0014_slt	5	1.11825	1.1995	[0.068947]	0	0	0	0
+2	business	slt	A	arctic_a0014_slt	6	1.1995	1.6495	[0.416404, 0.153926]	1	0	1	2
+2	Phil	slt	A	arctic_a0014_slt	7	1.6495	1.96825	[0.258215]	1	0	1	1
+0	he	slt	A	arctic_a0014_slt	8	1.96825	2.1182499	[0.118357]	0	0	0	0
+1	exclaimed	slt	A	arctic_a0014_slt	9	2.1182499	2.7620001	[0.040085, 0.179891]	1	0	1	2
+0	.	slt	A	arctic_a0014_slt	10	2.7620001	0.0		0	0	0	0
+0	.	rms	A	arctic_a0015_rms	0	0.0	0.102		0	0	0	0
+0	It's	rms	A	arctic_a0015_rms	1	0.102	0.31200001	[0.375373]	0	2	0	0
+0	the	rms	A	arctic_a0015_rms	2	0.31200001	0.49200001	[0.693185]	1	0	0	0
+2	aurora	rms	A	arctic_a0015_rms	3	0.49200001	0.89200002	[0.783524, 0.704203, 0.416661]	1	1	1	2
+2	borealis	rms	A	arctic_a0015_rms	4	0.89200002	1.7920001	[0.416661, 0.273867, 0.349563, 0.9, 0.091165]	1	1	1	2
+0	.	rms	A	arctic_a0015_rms	5	1.7920001	0.0		0	0	0	0
+0	.	slt	A	arctic_a0015_slt	0	0.0	0.19949999		0	0	0	0
+0	It's	slt	A	arctic_a0015_slt	1	0.19949999	0.41824999	[0.719454]	1	1	1	0
+0	the	slt	A	arctic_a0015_slt	2	0.41824999	0.53074998	[0.247184]	0	0	0	0
+2	aurora	slt	A	arctic_a0015_slt	3	0.53074998	0.96200001	[0.316283, 1.043487, 0.078293]	1	2	1	2
+2	borealis	slt	A	arctic_a0015_slt	4	0.96200001	1.7869999	[0.078293, 0.371737, 0.211104, 0.680949, 0.116645]	1	2	1	2
+0	.	slt	A	arctic_a0015_slt	5	1.7869999	0.0		0	0	0	0
+0	.	rms	A	arctic_a0016_rms	0	0.0	0.102		0	0	0	0
+0	There's	rms	A	arctic_a0016_rms	1	0.102	0.49200001	[0.920853]	1	0	1	0
+1	Fort	rms	A	arctic_a0016_rms	2	0.49200001	0.71200001	[0.289821]	0	1	1	0
+2	Churchill	rms	A	arctic_a0016_rms	3	0.71200001	1.212	[0.667662, 0.017333]	1	1	1	2
+0	a	rms	A	arctic_a0016_rms	4	1.212	1.312		0	0	0	0
+2	rifle	rms	A	arctic_a0016_rms	5	1.312	1.802	[0.118447, 0.62527, 0.011652]	1	1	0	1
+1	shot	rms	A	arctic_a0016_rms	6	1.802	2.062	[0.692131]	1	0	0	0
+0	beyond	rms	A	arctic_a0016_rms	7	2.062	2.5120001	[0.57424, 0.936789]	1	0	1	1
+0	the	rms	A	arctic_a0016_rms	8	2.5120001	2.622	[0.123805]	0	0	0	0
+2	ridge	rms	A	arctic_a0016_rms	9	2.622	3.062	[0.123805, 0.496851]	1	0	0	1
+2	asleep	rms	A	arctic_a0016_rms	10	3.062	3.602	[0.141871, 0.444562]	1	2	1	2
+0	.	rms	A	arctic_a0016_rms	11	3.602	0.0		0	0	0	0
+0	.	slt	A	arctic_a0016_slt	0	0.0	0.1745		0	0	0	0
+0	There's	slt	A	arctic_a0016_slt	1	0.1745	0.45574999	[0.481151]	1	0	0	0
+1	Fort	slt	A	arctic_a0016_slt	2	0.45574999	0.68075001	[0.272348]	0	1	1	0
+2	Churchill	slt	A	arctic_a0016_slt	3	0.68075001	1.212	[0.397846, 0.185424]	1	1	1	2
+0	.	slt	A	arctic_a0016_slt	4	1.212	1.362		0	0	0	0
+0	a	slt	A	arctic_a0016_slt	5	1.362	1.3995	[0.070417]	0	0	0	0
+1	rifle	slt	A	arctic_a0016_slt	6	1.3995	1.74325	[1.005931, 0.038307]	1	0	1	0
+0	shot	slt	A	arctic_a0016_slt	7	1.74325	1.99325	[0.988425]	1	0	1	0
+0	beyond	slt	A	arctic_a0016_slt	8	1.99325	2.3182499	[0.17412, 0.477504]	1	0	0	0
+0	the	slt	A	arctic_a0016_slt	9	2.3182499	2.3745	[0.320068]	0	0	0	0
+2	ridge	slt	A	arctic_a0016_slt	10	2.3745	2.812	[0.541091]	1	0	1	2
+0	.	slt	A	arctic_a0016_slt	11	2.812	2.9995		0	0	0	0
+1	asleep	slt	A	arctic_a0016_slt	12	2.9995	3.5432501	[0.056099, 0.322267]	1	1	0	2
+0	.	slt	A	arctic_a0016_slt	13	3.5432501	0.0		0	0	0	0
+0	.	rms	A	arctic_a0017_rms	0	0.0	0.071999997		0	0	0	0
+0	From	rms	A	arctic_a0017_rms	1	0.071999997	0.36199999	[0.044902]	0	0	0	0
+2	that	rms	A	arctic_a0017_rms	2	0.36199999	0.50199997	[1.028955]	1	0	1	0
+0	moment	rms	A	arctic_a0017_rms	3	0.50199997	0.95200002	[0.66447, 0.107605]	0	0	1	1
+0	his	rms	A	arctic_a0017_rms	4	0.95200002	1.1619999	[0.093808]	0	0	0	0
+0	friendship	rms	A	arctic_a0017_rms	5	1.1619999	1.642	[0.061246, 0.137533]	1	2	1	1
+0	for	rms	A	arctic_a0017_rms	6	1.642	1.822	[0.089964]	0	0	0	0
+0	Belize	rms	A	arctic_a0017_rms	7	1.822	2.342	[0.671609, 0.378856]	1	1	1	2
+0	turns	rms	A	arctic_a0017_rms	8	2.342	2.7420001	[0.23439]	1	0	0	0
+0	to	rms	A	arctic_a0017_rms	9	2.7420001	2.882	[0.12428]	0	0	0	0
+2	hatred	rms	A	arctic_a0017_rms	10	2.882	3.332	[0.379595, 0.02577]	1	1	0	1
+0	and	rms	A	arctic_a0017_rms	11	3.332	3.5020001	[0.234616]	0	0	0	0
+2	jealousy	rms	A	arctic_a0017_rms	12	3.5020001	4.072	[0.323167, 0.026612, 0.178081]	1	1	0	1
+0	.	rms	A	arctic_a0017_rms	13	4.072	0.0		0	0	0	0
+0	.	slt	A	arctic_a0017_slt	0	0.0	0.15575001		0	0	0	0
+0	From	slt	A	arctic_a0017_slt	1	0.15575001	0.33700001	[0.136459]	0	0	0	0
+2	that	slt	A	arctic_a0017_slt	2	0.33700001	0.51200002	[1.159165]	1	0	1	2
+0	moment	slt	A	arctic_a0017_slt	3	0.51200002	0.93699998	[0.344873, 0.133588]	0	0	1	1
+0	his	slt	A	arctic_a0017_slt	4	0.93699998	1.137	[0.049826]	0	0	0	0
+0	friendship	slt	A	arctic_a0017_slt	5	1.137	1.61825	[0.154239, 0.235041]	1	1	1	2
+0	for	slt	A	arctic_a0017_slt	6	1.61825	1.79325	[0.056517]	0	0	0	0
+1	Belize	slt	A	arctic_a0017_slt	7	1.79325	2.2995	[0.153591, 0.372909]	1	0	1	2
+0	turns	slt	A	arctic_a0017_slt	8	2.2995	2.6245	[0.104147]	0	0	0	0
+0	to	slt	A	arctic_a0017_slt	9	2.6245	2.687	[0.060139]	0	0	0	0
+1	hatred	slt	A	arctic_a0017_slt	10	2.687	3.0869999	[0.231007, 0.094396]	1	1	0	2
+0	and	slt	A	arctic_a0017_slt	11	3.0869999	3.2557499	[0.416451]	1	0	0	0
+1	jealousy	slt	A	arctic_a0017_slt	12	3.2557499	3.89325	[0.182715, 0.047998, 0.246264]	1	1	0	2
+0	.	slt	A	arctic_a0017_slt	13	3.89325	0.0		0	0	0	0
+0	.	rms	A	arctic_a0018_rms	0	0.0	0.092		0	0	0	0
+0	There	rms	A	arctic_a0018_rms	1	0.092	0.292	[0.257891]	1	0	0	0
+0	was	rms	A	arctic_a0018_rms	2	0.292	0.48199999	[0.117724]	0	0	0	0
+0	a	rms	A	arctic_a0018_rms	3	0.48199999	0.52200001	[0.281417]	0	0	0	0
+2	change	rms	A	arctic_a0018_rms	4	0.52200001	1.092	[1.091438]	1	2	2	2
+0	now	rms	A	arctic_a0018_rms	5	1.092	1.432	[0.519159]	1	0	0	1
+0	.	rms	A	arctic_a0018_rms	6	1.432	0.0		0	0	0	0
+0	.	slt	A	arctic_a0018_slt	0	0.0	0.16824999		0	0	0	0
+0	There	slt	A	arctic_a0018_slt	1	0.16824999	0.28075001	[0.391571]	1	0	0	0
+0	was	slt	A	arctic_a0018_slt	2	0.28075001	0.48699999	[0.16744]	0	0	0	0
+0	a	slt	A	arctic_a0018_slt	3	0.48699999	0.52450001	[0.110239]	0	0	0	0
+2	change	slt	A	arctic_a0018_slt	4	0.52450001	1.01825	[0.577233]	1	1	2	2
+0	now	slt	A	arctic_a0018_slt	5	1.01825	1.36825	[0.92017]	1	0	0	1
+0	.	slt	A	arctic_a0018_slt	6	1.36825	0.0		0	0	0	0
+0	.	rms	A	arctic_a0019_rms	0	0.0	0.102		0	0	0	0
+0	I	rms	A	arctic_a0019_rms	1	0.102	0.20200001	[0.390187]	1	0	0	0
+0	followed	rms	A	arctic_a0019_rms	2	0.20200001	0.64200002	[0.339142, 0.392751]	1	1	1	1
+0	the	rms	A	arctic_a0019_rms	3	0.64200002	0.70200002	[0.021347]	0	0	0	0
+2	line	rms	A	arctic_a0019_rms	4	0.70200002	1.222	[0.021347, 1.106988]	1	2	1	2
+0	of	rms	A	arctic_a0019_rms	5	1.222	1.372	[0.081944]	0	0	0	0
+0	the	rms	A	arctic_a0019_rms	6	1.372	1.442	[0.047295]	0	0	0	0
+2	proposed	rms	A	arctic_a0019_rms	7	1.442	1.952	[0.047295, 0.009896, 0.432469]	1	1	1	1
+2	railroad	rms	A	arctic_a0019_rms	8	1.952	2.642	[0.31931, 0.193597]	1	2	1	2
+0	looking	rms	A	arctic_a0019_rms	9	2.642	2.9920001	[0.069868, 0.016952]	0	0	0	1
+0	for	rms	A	arctic_a0019_rms	10	2.9920001	3.112	[0.017581]	0	0	0	0
+1	chances	rms	A	arctic_a0019_rms	11	3.112	3.7520001	[0.151783, 0.06667]	1	0	0	2
+0	.	rms	A	arctic_a0019_rms	12	3.7520001	0.0		0	0	0	0
+0	.	slt	A	arctic_a0019_slt	0	0.0	0.0		0	0	0	0
+0	.	slt	A	arctic_a0019_slt	1	0.0	0.20575		0	0	0	0
+0	I	slt	A	arctic_a0019_slt	2	0.20575	0.29324999	[0.447955]	0	0	0	0
+0	followed	slt	A	arctic_a0019_slt	3	0.29324999	0.68699998	[0.575599, 0.305486]	1	1	1	0
+0	the	slt	A	arctic_a0019_slt	4	0.68699998	0.74325001	[0.11942]	0	0	0	0
+2	line	slt	A	arctic_a0019_slt	5	0.74325001	1.11825	[0.903024]	1	0	1	2
+0	of	slt	A	arctic_a0019_slt	6	1.11825	1.21825	[0.064025]	0	0	0	0
+0	the	slt	A	arctic_a0019_slt	7	1.21825	1.28075	[0.230472]	1	0	0	0
+2	proposed	slt	A	arctic_a0019_slt	8	1.28075	1.74325	[0.230472, 0.006629, 0.366464]	1	2	0	1
+2	railroad	slt	A	arctic_a0019_slt	9	1.74325	2.34325	[0.157666, 0.333827]	1	0	1	2
+0	looking	slt	A	arctic_a0019_slt	10	2.34325	2.6307499	[0.018703, 0.017672]	0	0	0	0
+0	for	slt	A	arctic_a0019_slt	11	2.6307499	2.7432499	[0.012609]	0	0	0	0
+0	chances	slt	A	arctic_a0019_slt	12	2.7432499	3.4432499	[0.277355, 0.140337]	1	0	0	2
+0	.	slt	A	arctic_a0019_slt	13	3.4432499	0.0		0	0	0	0
+0	.	rms	A	arctic_a0020_rms	0	0.0	0.032000002		0	0	0	0
+2	Clubs	rms	A	arctic_a0020_rms	1	0.032000002	0.49200001	[0.559398]	1	1	1	2
+0	and	rms	A	arctic_a0020_rms	2	0.49200001	0.62199998	[0.144343]	0	0	0	0
+2	balls	rms	A	arctic_a0020_rms	3	0.62199998	1.102	[0.909466]	1	1	1	2
+0	and	rms	A	arctic_a0020_rms	4	1.102	1.192	[0.0176]	0	0	0	0
+2	cities	rms	A	arctic_a0020_rms	5	1.192	1.692	[0.127566, 0.268032]	1	1	1	2
+0	grew	rms	A	arctic_a0020_rms	6	1.692	1.902	[0.256938]	1	0	0	0
+0	to	rms	A	arctic_a0020_rms	7	1.902	2.0420001	[0.011033]	0	0	0	0
+0	be	rms	A	arctic_a0020_rms	8	2.0420001	2.2320001	[0.011033, 0.221211]	0	0	0	0
+1	only	rms	A	arctic_a0020_rms	9	2.2320001	2.4820001	[0.360368, 0.102683]	1	0	1	1
+2	memories	rms	A	arctic_a0020_rms	10	2.4820001	3.112	[0.177087, 0.25146, 0.046612]	1	1	1	2
+0	.	rms	A	arctic_a0020_rms	11	3.112	0.0		0	0	0	0
+0	.	slt	A	arctic_a0020_slt	0	0.0	0.086999997		0	0	0	0
+2	Clubs	slt	A	arctic_a0020_slt	1	0.086999997	0.54325002	[1.108647]	1	1	2	2
+0	and	slt	A	arctic_a0020_slt	2	0.54325002	0.69325	[0.070401]	0	0	0	0
+2	balls	slt	A	arctic_a0020_slt	3	0.69325	1.09325	[1.057806, 0.022165]	1	1	2	2
+0	and	slt	A	arctic_a0020_slt	4	1.09325	1.1995	[0.022165]	0	0	0	0
+2	cities	slt	A	arctic_a0020_slt	5	1.1995	1.65575	[0.311668, 0.216839]	1	1	2	2
+0	grew	slt	A	arctic_a0020_slt	6	1.65575	1.8807499	[0.180216]	1	0	0	1
+0	to	slt	A	arctic_a0020_slt	7	1.8807499	2.0057499	[0.025569]	0	0	0	0
+0	be	slt	A	arctic_a0020_slt	8	2.0057499	2.1619999	[0.243081]	1	0	0	0
+0	only	slt	A	arctic_a0020_slt	9	2.1619999	2.40575	[0.213484, 0.055531]	1	0	1	1
+1	memories	slt	A	arctic_a0020_slt	10	2.40575	3.0495	[0.100823, 0.157904, 0.0771]	1	0	0	2
+0	.	slt	A	arctic_a0020_slt	11	3.0495	0.0		0	0	0	0
+0	.	rms	A	arctic_a0021_rms	0	0.0	0.122		0	0	0	0
+0	It	rms	A	arctic_a0021_rms	1	0.122	0.26199999	[0.449742]	1	0	0	0
+1	fairly	rms	A	arctic_a0021_rms	2	0.26199999	0.56199998	[0.05097, 0.35101]	0	0	1	0
+2	clubbed	rms	A	arctic_a0021_rms	3	0.56199998	0.95200002	[0.35101, 0.775002]	1	2	2	2
+0	me	rms	A	arctic_a0021_rms	4	0.95200002	1.272		0	0	1	1
+0	into	rms	A	arctic_a0021_rms	5	1.272	1.522	[0.309982, 0.030751]	0	0	0	0
+0	recognizing	rms	A	arctic_a0021_rms	6	1.522	2.332	[0.030751, 0.353349, 0.147261, 0.418449, 0.140959]	1	0	1	2
+0	it	rms	A	arctic_a0021_rms	7	2.332	2.572	[0.593031]	1	2	0	1
+0	.	rms	A	arctic_a0021_rms	8	2.572	0.0		0	0	0	0
+0	.	slt	A	arctic_a0021_slt	0	0.0	0.20575		0	0	0	0
+0	It	slt	A	arctic_a0021_slt	1	0.20575	0.31200001	[0.570019]	0	0	0	0
+2	fairly	slt	A	arctic_a0021_slt	2	0.31200001	0.71824998	[0.7009, 0.423713]	1	0	1	0
+1	clubbed	slt	A	arctic_a0021_slt	3	0.71824998	1.08075	[1.14717]	1	2	2	2
+0	me	slt	A	arctic_a0021_slt	4	1.08075	1.2745	[0.440909]	0	0	1	0
+0	into	slt	A	arctic_a0021_slt	5	1.2745	1.487	[0.230834, 0.105553]	0	0	0	0
+0	recognizing	slt	A	arctic_a0021_slt	6	1.487	2.1995001	[0.512777, 0.012454, 0.46196, 0.090105]	1	0	1	2
+0	it	slt	A	arctic_a0021_slt	7	2.1995001	2.3494999	[0.215887]	1	0	0	0
+0	.	slt	A	arctic_a0021_slt	8	2.3494999	0.0		0	0	0	0
+0	.	rms	A	arctic_a0022_rms	0	0.0	0.092		0	0	0	0
+0	Hardly	rms	A	arctic_a0022_rms	1	0.092	0.48199999	[0.349096, 0.17853]	1	2	1	1
+0	were	rms	A	arctic_a0022_rms	2	0.48199999	0.75199997	[0.17853, 0.724176]	1	0	0	0
+0	our	rms	A	arctic_a0022_rms	3	0.75199997	0.94199997	[0.292602]	0	0	1	0
+0	plans	rms	A	arctic_a0022_rms	4	0.94199997	1.402	[0.388952]	1	0	1	2
+0	made	rms	A	arctic_a0022_rms	5	1.402	1.612	[0.330101]	0	0	0	0
+2	public	rms	A	arctic_a0022_rms	6	1.612	2.0320001	[0.424689, 0.026076]	1	0	1	2
+0	before	rms	A	arctic_a0022_rms	7	2.0320001	2.382	[0.117937, 0.205327]	1	0	0	0
+0	we	rms	A	arctic_a0022_rms	8	2.382	2.5020001	[0.151476]	0	0	0	0
+0	were	rms	A	arctic_a0022_rms	9	2.5020001	2.612	[0.399566]	1	0	0	0
+0	met	rms	A	arctic_a0022_rms	10	2.612	2.862	[0.346968]	0	0	1	2
+0	by	rms	A	arctic_a0022_rms	11	2.862	3.092	[0.437744]	1	0	0	0
+2	powerful	rms	A	arctic_a0022_rms	12	3.092	3.6719999	[0.397727, 0.160212, 0.01335]	1	1	1	2
+1	opposition	rms	A	arctic_a0022_rms	13	3.6719999	4.3920002	[0.311461, 0.192269, 0.241973, 0.104469]	1	1	1	2
+0	.	rms	A	arctic_a0022_rms	14	4.3920002	0.0		0	0	0	0
+0	.	slt	A	arctic_a0022_slt	0	0.0	0.16824999		0	0	0	0
+2	Hardly	slt	A	arctic_a0022_slt	1	0.16824999	0.59324998	[0.333116, 0.908964]	1	0	1	1
+0	were	slt	A	arctic_a0022_slt	2	0.59324998	0.82450002	[0.9, 0.148672]	1	0	0	0
+0	our	slt	A	arctic_a0022_slt	3	0.82450002	0.86825001	[0.148672, 0.138047]	0	0	0	0
+0	plans	slt	A	arctic_a0022_slt	4	0.86825001	1.26825	[0.138047, 0.423766]	0	0	1	1
+0	made	slt	A	arctic_a0022_slt	5	1.26825	1.49325	[0.729901]	1	0	0	0
+0	public	slt	A	arctic_a0022_slt	6	1.49325	1.90575	[0.438961, 0.12837]	0	2	2	2
+0	before	slt	A	arctic_a0022_slt	7	1.90575	2.2432499	[0.074201, 0.269341]	1	0	0	1
+0	we	slt	A	arctic_a0022_slt	8	2.2432499	2.3807499	[0.168097]	0	0	0	0
+0	were	slt	A	arctic_a0022_slt	9	2.3807499	2.53075	[0.234678]	0	0	0	0
+0	met	slt	A	arctic_a0022_slt	10	2.53075	2.7432499	[0.790557]	1	0	0	1
+0	by	slt	A	arctic_a0022_slt	11	2.7432499	2.937	[0.388527]	0	0	0	0
+0	powerful	slt	A	arctic_a0022_slt	12	2.937	3.4119999	[1.058607, 0.338463, 0.057548]	1	1	0	2
+0	opposition	slt	A	arctic_a0022_slt	13	3.4119999	4.1182499	[0.914438, 0.037665, 0.101623, 0.095309]	1	1	0	1
+0	.	slt	A	arctic_a0022_slt	14	4.1182499	0.0		0	0	0	0
+0	.	rms	A	arctic_a0023_rms	0	0.0	0.102		0	0	0	0
+0	A	rms	A	arctic_a0023_rms	1	0.102	0.17200001	[0.094745]	0	0	0	0
+0	combination	rms	A	arctic_a0023_rms	2	0.17200001	0.86199999	[0.578333, 0.212188, 0.347057, 0.030245]	1	2	1	1
+0	of	rms	A	arctic_a0023_rms	3	0.86199999	0.96200001	[0.04545]	0	0	0	0
+2	Canadian	rms	A	arctic_a0023_rms	4	0.96200001	1.482	[0.138267, 0.788413, 0.607289, 0.057481]	1	1	1	1
+1	capital	rms	A	arctic_a0023_rms	5	1.482	2.052	[0.933508, 0.095123, 0.060627]	1	2	1	2
+0	quickly	rms	A	arctic_a0023_rms	6	2.052	2.4519999	[0.056212, 0.226585]	0	0	0	0
+0	organized	rms	A	arctic_a0023_rms	7	2.4519999	3.2119999	[0.532352, 0.147712, 0.633415]	1	1	0	2
+0	and	rms	A	arctic_a0023_rms	8	3.2119999	3.312	[0.133878]	0	0	0	0
+0	petitioned	rms	A	arctic_a0023_rms	9	3.312	3.862	[0.219631, 0.177043, 0.040222]	1	1	1	2
+0	for	rms	A	arctic_a0023_rms	10	3.862	4.052	[0.037235]	0	0	0	0
+0	the	rms	A	arctic_a0023_rms	11	4.052	4.1220002	[0.018631]	0	0	0	0
+1	same	rms	A	arctic_a0023_rms	12	4.1220002	4.4320002	[0.018631, 0.611374]	1	0	1	1
+0	privileges	rms	A	arctic_a0023_rms	13	4.4320002	5.2719998	[0.020599, 0.069154, 0.149264]	1	0	0	2
+0	.	rms	A	arctic_a0023_rms	14	5.2719998	0.0		0	0	0	0
+0	.	slt	A	arctic_a0023_slt	0	0.0	0.0		0	0	0	0
+0	.	slt	A	arctic_a0023_slt	1	0.0	0.086999997		0	0	0	0
+0	A	slt	A	arctic_a0023_slt	2	0.086999997	0.14325	[0.170093]	0	0	0	0
+2	combination	slt	A	arctic_a0023_slt	3	0.14325	0.85575002	[0.854544, 0.641654, 0.903571, 0.050992]	1	0	1	2
+0	of	slt	A	arctic_a0023_slt	4	0.85575002	0.95574999	[0.25266]	1	0	0	0
+2	Canadian	slt	A	arctic_a0023_slt	5	0.95574999	1.4744999	[0.07556, 0.422799, 0.272219, 0.126567]	1	1	1	1
+1	capital	slt	A	arctic_a0023_slt	6	1.4744999	1.937	[0.861953, 0.024411, 0.139683]	1	1	1	2
+0	quickly	slt	A	arctic_a0023_slt	7	1.937	2.33075	[0.381591, 0.359146]	1	0	0	0
+0	organized	slt	A	arctic_a0023_slt	8	2.33075	2.8682499	[0.367327, 0.090667, 0.81682]	1	1	0	2
+0	and	slt	A	arctic_a0023_slt	9	2.8682499	2.9744999	[0.073698]	0	0	0	0
+0	petitioned	slt	A	arctic_a0023_slt	10	2.9744999	3.46825	[0.057851, 0.232036, 0.057344]	1	1	0	2
+0	for	slt	A	arctic_a0023_slt	11	3.46825	3.59325	[0.022735]	0	0	0	0
+0	the	slt	A	arctic_a0023_slt	12	3.59325	3.70575	[0.068415]	0	0	0	0
+0	same	slt	A	arctic_a0023_slt	13	3.70575	3.9995	[0.252076]	1	0	0	1
+1	privileges	slt	A	arctic_a0023_slt	14	3.9995	4.7432499	[0.065764, 0.101464, 0.201183]	1	1	0	2
+0	.	slt	A	arctic_a0023_slt	15	4.7432499	0.0		0	0	0	0
+0	.	rms	A	arctic_a0024_rms	0	0.0	0.112		0	0	0	0
+0	It	rms	A	arctic_a0024_rms	1	0.112	0.212	[0.359363]	1	0	0	0
+0	was	rms	A	arctic_a0024_rms	2	0.212	0.42199999	[0.181083]	0	0	0	0
+0	my	rms	A	arctic_a0024_rms	3	0.42199999	0.542	[0.280894]	1	0	0	0
+2	reports	rms	A	arctic_a0024_rms	4	0.542	1.0319999	[0.086727, 0.112253]	1	1	1	1
+0	from	rms	A	arctic_a0024_rms	5	1.0319999	1.192	[0.064013]	0	0	0	0
+0	the	rms	A	arctic_a0024_rms	6	1.192	1.262	[0.122682]	0	0	0	0
+2	north	rms	A	arctic_a0024_rms	7	1.262	1.6619999	[0.122682, 0.579052]	1	0	1	1
+0	which	rms	A	arctic_a0024_rms	8	1.6619999	1.9220001	[0.050595]	0	0	0	0
+1	chiefly	rms	A	arctic_a0024_rms	9	1.9220001	2.4219999	[0.261921, 0.238233]	1	2	1	1
+2	induced	rms	A	arctic_a0024_rms	10	2.4219999	2.852	[0.1386, 0.461329]	1	1	1	2
+1	people	rms	A	arctic_a0024_rms	11	2.852	3.1819999	[0.149733, 0.017034]	0	0	0	0
+0	to	rms	A	arctic_a0024_rms	12	3.1819999	3.2720001	[0.04358]	0	0	0	0
+1	buy	rms	A	arctic_a0024_rms	13	3.2720001	3.7520001	[0.04358, 0.983485]	1	1	1	2
+0	.	rms	A	arctic_a0024_rms	14	3.7520001	0.0		0	0	0	0
+0	.	slt	A	arctic_a0024_slt	0	0.0	0.19949999		0	0	0	0
+0	It	slt	A	arctic_a0024_slt	1	0.19949999	0.27450001	[0.093502]	0	0	0	0
+0	was	slt	A	arctic_a0024_slt	2	0.27450001	0.48699999	[0.119971]	0	0	0	0
+2	my	slt	A	arctic_a0024_slt	3	0.48699999	0.68075001	[0.638635]	1	1	1	2
+0	reports	slt	A	arctic_a0024_slt	4	0.68075001	1.14325	[0.060662, 0.09705]	1	0	1	1
+0	from	slt	A	arctic_a0024_slt	5	1.14325	1.337	[0.075729]	1	0	0	0
+0	the	slt	A	arctic_a0024_slt	6	1.337	1.39325	[0.039822]	0	0	0	0
+0	north	slt	A	arctic_a0024_slt	7	1.39325	1.712	[0.039822, 0.287187]	1	0	1	2
+0	which	slt	A	arctic_a0024_slt	8	1.712	2.0244999	[0.05359]	0	0	0	0
+0	chiefly	slt	A	arctic_a0024_slt	9	2.0244999	2.51825	[0.23293, 0.583203, 0.125927]	1	2	1	2
+0	induced	slt	A	arctic_a0024_slt	10	2.51825	2.9245	[0.125927, 0.198267]	1	0	1	1
+0	people	slt	A	arctic_a0024_slt	11	2.9245	3.20575	[0.064352, 0.020958]	0	0	0	1
+0	to	slt	A	arctic_a0024_slt	12	3.20575	3.3182499	[0.031557]	0	0	0	0
+1	buy	slt	A	arctic_a0024_slt	13	3.3182499	3.7620001	[0.931656]	1	0	1	2
+0	.	slt	A	arctic_a0024_slt	14	3.7620001	0.0		0	0	0	0
+0	.	rms	A	arctic_a0025_rms	0	0.0	0.112		0	0	0	0
+0	I	rms	A	arctic_a0025_rms	1	0.112	0.23199999	[0.702253]	1	0	0	0
+0	was	rms	A	arctic_a0025_rms	2	0.23199999	0.40200001	[0.220232]	0	0	0	0
+2	about	rms	A	arctic_a0025_rms	3	0.40200001	0.68199998	[0.158211, 1.203902]	1	2	1	1
+0	to	rms	A	arctic_a0025_rms	4	0.68199998	0.792	[0.114352]	0	0	0	0
+0	do	rms	A	arctic_a0025_rms	5	0.792	1.012	[0.114352, 0.977519]	1	0	1	2
+0	this	rms	A	arctic_a0025_rms	6	1.012	1.302	[0.412271]	0	0	0	0
+0	when	rms	A	arctic_a0025_rms	7	1.302	1.572	[0.050117]	0	0	0	0
+1	cooler	rms	A	arctic_a0025_rms	8	1.572	1.962	[0.067537, 0.362044]	0	1	1	2
+1	judgment	rms	A	arctic_a0025_rms	9	1.962	2.4820001	[0.70784, 0.023451]	1	1	1	1
+0	prevailed	rms	A	arctic_a0025_rms	10	2.4820001	3.132	[0.01869, 0.973974]	1	1	0	2
+0	.	rms	A	arctic_a0025_rms	11	3.132	0.0		0	0	0	0
+0	.	slt	A	arctic_a0025_slt	0	0.0	0.0		0	0	0	0
+0	.	slt	A	arctic_a0025_slt	1	0.0	0.20575		0	0	0	0
+0	I	slt	A	arctic_a0025_slt	2	0.20575	0.29949999	[0.638028]	1	0	0	0
+0	was	slt	A	arctic_a0025_slt	3	0.29949999	0.49325001	[0.142213]	0	0	0	0
+2	about	slt	A	arctic_a0025_slt	4	0.49325001	0.80575001	[0.139403, 0.906903]	1	2	1	1
+0	to	slt	A	arctic_a0025_slt	5	0.80575001	0.92449999	[0.091684]	0	1	0	0
+0	do	slt	A	arctic_a0025_slt	6	0.92449999	1.112	[0.79141]	1	1	1	1
+0	this	slt	A	arctic_a0025_slt	7	1.112	1.362	[0.305115]	0	1	1	0
+0	when	slt	A	arctic_a0025_slt	8	1.362	1.51825	[0.058526]	0	0	0	0
+0	cooler	slt	A	arctic_a0025_slt	9	1.51825	1.8807499	[0.114552, 0.099232]	0	1	0	1
+0	judgment	slt	A	arctic_a0025_slt	10	1.8807499	2.3557501	[0.496528, 0.151489]	1	0	0	1
+2	prevailed	slt	A	arctic_a0025_slt	11	2.3557501	2.96825	[0.049783, 0.711033]	1	0	1	2
+0	.	slt	A	arctic_a0025_slt	12	2.96825	0.0		0	0	0	0
+0	.	rms	A	arctic_a0026_rms	0	0.0	0.102		0	0	0	0
+0	It	rms	A	arctic_a0026_rms	1	0.102	0.212	[0.357625]	0	0	0	0
+2	occurred	rms	A	arctic_a0026_rms	2	0.212	0.59200001	[0.746914, 0.887397]	1	2	1	2
+0	to	rms	A	arctic_a0026_rms	3	0.59200001	0.70200002	[0.037743]	0	0	0	0
+0	me	rms	A	arctic_a0026_rms	4	0.70200002	0.93199998	[0.037743, 0.519598]	1	0	0	0
+0	that	rms	A	arctic_a0026_rms	5	0.93199998	1.132	[0.038437]	0	0	0	0
+0	there	rms	A	arctic_a0026_rms	6	1.132	1.242	[0.117775]	0	0	0	0
+0	would	rms	A	arctic_a0026_rms	7	1.242	1.4119999	[0.297636]	0	0	0	0
+1	have	rms	A	arctic_a0026_rms	8	1.4119999	1.652	[0.555435]	1	0	1	1
+0	to	rms	A	arctic_a0026_rms	9	1.652	1.752	[0.082567]	0	0	0	0
+0	be	rms	A	arctic_a0026_rms	10	1.752	2.062	[0.082567, 0.923252]	1	0	0	0
+0	an	rms	A	arctic_a0026_rms	11	2.062	2.152	[0.285128]	0	0	0	0
+1	accounting	rms	A	arctic_a0026_rms	12	2.152	2.7620001	[0.057038, 0.47573, 0.192441]	1	1	0	2
+0	.	rms	A	arctic_a0026_rms	13	2.7620001	0.0		0	0	0	0
+0	.	slt	A	arctic_a0026_slt	0	0.0	0.20575		0	0	0	0
+0	It	slt	A	arctic_a0026_slt	1	0.20575	0.32449999	[0.249515]	1	0	0	0
+2	occurred	slt	A	arctic_a0026_slt	2	0.32449999	0.65574998	[0.173472, 0.983469]	1	2	1	2
+0	to	slt	A	arctic_a0026_slt	3	0.65574998	0.75575	[0.120993]	0	0	0	0
+0	me	slt	A	arctic_a0026_slt	4	0.75575	0.96200001	[0.347591]	1	0	0	1
+0	that	slt	A	arctic_a0026_slt	5	0.96200001	1.112	[0.205699]	0	0	0	0
+1	there	slt	A	arctic_a0026_slt	6	1.112	1.28075	[0.202488]	0	1	0	0
+0	would	slt	A	arctic_a0026_slt	7	1.28075	1.43075	[0.152347]	0	1	0	0
+1	have	slt	A	arctic_a0026_slt	8	1.43075	1.65575	[0.557785]	1	1	1	1
+0	to	slt	A	arctic_a0026_slt	9	1.65575	1.76825	[0.088074]	0	0	0	0
+0	be	slt	A	arctic_a0026_slt	10	1.76825	1.9245	[0.299304]	1	0	0	0
+0	an	slt	A	arctic_a0026_slt	11	1.9245	2.0432501	[0.152745]	0	0	0	0
+2	accounting	slt	A	arctic_a0026_slt	12	2.0432501	2.6370001	[0.094289, 0.453783, 0.22748]	1	1	1	2
+0	.	slt	A	arctic_a0026_slt	13	2.6370001	0.0		0	0	0	0
+0	.	rms	A	arctic_a0027_rms	0	0.0	0.061999999		0	0	0	0
+0	To	rms	A	arctic_a0027_rms	1	0.061999999	0.182	[0.019004]	0	0	0	0
+2	my	rms	A	arctic_a0027_rms	2	0.182	0.34200001	[0.019004, 0.42596]	1	0	1	0
+0	surprise	rms	A	arctic_a0027_rms	3	0.34200001	1.022	[0.122268, 1.031776]	1	0	2	2
+0	he	rms	A	arctic_a0027_rms	4	1.022	1.082	[0.031107]	0	0	0	0
+0	began	rms	A	arctic_a0027_rms	5	1.082	1.432	[0.112916, 0.381185]	1	1	0	1
+0	to	rms	A	arctic_a0027_rms	6	1.432	1.522	[0.056965]	0	0	0	0
+0	show	rms	A	arctic_a0027_rms	7	1.522	1.842	[0.056965, 0.389144]	1	1	0	1
+2	actual	rms	A	arctic_a0027_rms	8	1.842	2.2720001	[0.405077, 0.030675, 0.031411]	1	1	1	1
+1	enthusiasm	rms	A	arctic_a0027_rms	9	2.2720001	3.152	[0.031411, 0.068489, 0.483703, 0.238818, 0.247091, 0.053892]	1	1	1	2
+0	in	rms	A	arctic_a0027_rms	10	3.152	3.2620001	[0.072096]	0	0	0	0
+0	my	rms	A	arctic_a0027_rms	11	3.2620001	3.4419999	[0.234444]	1	0	0	1
+0	favor	rms	A	arctic_a0027_rms	12	3.4419999	3.902	[0.262518, 0.196021]	1	0	0	2
+0	.	rms	A	arctic_a0027_rms	13	3.902	0.0		0	0	0	0
+0	.	slt	A	arctic_a0027_slt	0	0.0	0.0		0	0	0	0
+0	.	slt	A	arctic_a0027_slt	1	0.0	0.18075		0	0	0	0
+0	To	slt	A	arctic_a0027_slt	2	0.18075	0.28075001	[0.013156]	0	0	0	0
+2	my	slt	A	arctic_a0027_slt	3	0.28075001	0.49950001	[0.013156, 0.999373]	1	2	1	0
+2	surprise	slt	A	arctic_a0027_slt	4	0.49950001	1.012	[0.031305, 0.94025]	1	2	1	2
+0	he	slt	A	arctic_a0027_slt	5	1.012	1.11825	[0.064064]	0	0	0	0
+0	began	slt	A	arctic_a0027_slt	6	1.11825	1.45575	[0.22991, 0.220743]	1	0	1	0
+0	to	slt	A	arctic_a0027_slt	7	1.45575	1.55575	[0.024894]	0	0	0	0
+0	show	slt	A	arctic_a0027_slt	8	1.55575	1.84325	[0.024894, 0.621401]	0	0	0	0
+1	actual	slt	A	arctic_a0027_slt	9	1.84325	2.3557501	[1.087607, 0.197816, 0.031569, 0.040123]	1	0	1	1
+1	enthusiasm	slt	A	arctic_a0027_slt	10	2.3557501	3.112	[0.040123, 0.317451, 0.205892, 0.26837, 0.067804]	1	1	0	2
+0	in	slt	A	arctic_a0027_slt	11	3.112	3.20575	[0.051891]	0	0	0	0
+0	my	slt	A	arctic_a0027_slt	12	3.20575	3.39325	[0.246791]	0	0	0	0
+0	favor	slt	A	arctic_a0027_slt	13	3.39325	3.9495001	[0.341867, 0.269213]	1	0	0	2
+0	.	slt	A	arctic_a0027_slt	14	3.9495001	0.0		0	0	0	0
+0	.	rms	A	arctic_a0028_rms	0	0.0	0.112		0	0	0	0
+2	Robbery	rms	A	arctic_a0028_rms	1	0.112	0.76200002	[1.002357, 0.448562, 0.138411]	1	1	1	2
+2	bribery	rms	A	arctic_a0028_rms	2	0.76200002	1.552	[0.88505, 0.299721, 0.208039]	1	1	1	2
+2	fraud	rms	A	arctic_a0028_rms	3	1.552	2.1919999	[0.97457]	1	1	1	2
+0	.	rms	A	arctic_a0028_rms	4	2.1919999	0.0		0	0	0	0
+0	.	slt	A	arctic_a0028_slt	0	0.0	0.212		0	0	0	0
+2	Robbery	slt	A	arctic_a0028_slt	1	0.212	0.76200002	[0.593508, 0.208445, 0.312877]	1	1	0	2
+2	bribery	slt	A	arctic_a0028_slt	2	0.76200002	1.58075	[0.496142, 0.19299, 0.360001]	1	1	1	2
+2	fraud	slt	A	arctic_a0028_slt	3	1.58075	2.2432499	[0.915812]	1	1	0	2
+0	.	slt	A	arctic_a0028_slt	4	2.2432499	0.0		0	0	0	0
+0	.	rms	A	arctic_a0029_rms	0	0.0	0.071999997		0	0	0	0
+0	Their	rms	A	arctic_a0029_rms	1	0.071999997	0.27200001	[0.677815]	1	0	0	0
+2	forces	rms	A	arctic_a0029_rms	2	0.27200001	0.82200003	[0.383467, 0.290397]	0	2	1	2
+0	were	rms	A	arctic_a0029_rms	3	0.82200003	0.99199998	[0.544764]	0	0	0	0
+0	already	rms	A	arctic_a0029_rms	4	0.99199998	1.382	[0.9, 0.072567, 0.369888]	1	0	1	0
+2	moving	rms	A	arctic_a0029_rms	5	1.382	1.852	[0.56816, 0.229616]	1	0	1	2
+0	into	rms	A	arctic_a0029_rms	6	1.852	2.072	[0.215786, 0.049926]	0	1	0	0
+0	the	rms	A	arctic_a0029_rms	7	2.072	2.142	[0.046157]	0	0	0	0
+2	north	rms	A	arctic_a0029_rms	8	2.142	2.4119999	[0.046157, 0.493674]	1	1	1	1
+2	country	rms	A	arctic_a0029_rms	9	2.4119999	2.9619999	[0.476287, 0.123129]	1	0	0	2
+0	.	rms	A	arctic_a0029_rms	10	2.9619999	0.0		0	0	0	0
+0	.	slt	A	arctic_a0029_slt	0	0.0	0.1745		0	0	0	0
+0	Their	slt	A	arctic_a0029_slt	1	0.1745	0.31825	[0.192519]	0	0	1	0
+2	forces	slt	A	arctic_a0029_slt	2	0.31825	0.82450002	[0.620489, 0.751202]	1	1	2	1
+0	were	slt	A	arctic_a0029_slt	3	0.82450002	1.0245	[0.9]	1	0	0	0
+2	already	slt	A	arctic_a0029_slt	4	1.0245	1.387	[0.629578, 0.322175, 0.23188]	0	0	0	0
+1	moving	slt	A	arctic_a0029_slt	5	1.387	1.7869999	[0.262079, 0.165007]	1	1	1	1
+0	into	slt	A	arctic_a0029_slt	6	1.7869999	1.98075	[0.088085, 0.171149]	1	0	0	0
+0	the	slt	A	arctic_a0029_slt	7	1.98075	2.09325	[0.077062]	0	0	0	0
+2	north	slt	A	arctic_a0029_slt	8	2.09325	2.3682499	[0.077062, 0.248699]	0	0	0	2
+1	country	slt	A	arctic_a0029_slt	9	2.3682499	2.937	[0.32809, 0.338416]	1	0	0	1
+0	.	slt	A	arctic_a0029_slt	10	2.937	0.0		0	0	0	0
+0	.	rms	A	arctic_a0030_rms	0	0.0	0.102		0	0	0	0
+0	I	rms	A	arctic_a0030_rms	1	0.102	0.23199999	[0.524469]	0	0	0	0
+0	had	rms	A	arctic_a0030_rms	2	0.23199999	0.442	[0.945127]	1	0	0	0
+2	faith	rms	A	arctic_a0030_rms	3	0.442	0.82200003	[0.856357]	1	2	1	2
+0	in	rms	A	arctic_a0030_rms	4	0.82200003	0.972	[0.160489]	0	0	0	0
+1	them	rms	A	arctic_a0030_rms	5	0.972	1.332	[0.268783]	1	0	0	1
+0	.	rms	A	arctic_a0030_rms	6	1.332	0.0		0	0	0	0
+0	.	slt	A	arctic_a0030_slt	0	0.0	0.0		0	0	0	0
+0	.	slt	A	arctic_a0030_slt	1	0.0	0.19949999		0	0	0	0
+0	I	slt	A	arctic_a0030_slt	2	0.19949999	0.287	[0.9]	1	0	1	0
+1	had	slt	A	arctic_a0030_slt	3	0.287	0.48074999	[0.347487]	0	0	1	0
+2	faith	slt	A	arctic_a0030_slt	4	0.48074999	0.83074999	[0.838762]	1	1	1	2
+0	in	slt	A	arctic_a0030_slt	5	0.83074999	0.95574999	[0.071718]	0	1	0	0
+1	them	slt	A	arctic_a0030_slt	6	0.95574999	1.2995	[0.617638]	1	1	1	1
+0	.	slt	A	arctic_a0030_slt	7	1.2995	0.0		0	0	0	0
+0	.	rms	A	arctic_a0031_rms	0	0.0	0.092		0	0	0	0
+0	They	rms	A	arctic_a0031_rms	1	0.092	0.292	[0.915814]	1	0	1	0
+0	were	rms	A	arctic_a0031_rms	2	0.292	0.442	[0.640468]	0	0	0	0
+1	three	rms	A	arctic_a0031_rms	3	0.442	0.722	[0.51082]	0	1	1	1
+1	hundred	rms	A	arctic_a0031_rms	4	0.722	1.062	[0.539301, 0.046234]	1	1	0	0
+2	yards	rms	A	arctic_a0031_rms	5	1.062	1.512	[0.189676]	1	0	1	2
+2	apart	rms	A	arctic_a0031_rms	6	1.512	2.0120001	[0.11537, 0.166482]	1	1	0	2
+0	.	rms	A	arctic_a0031_rms	7	2.0120001	0.0		0	0	0	0
+0	.	slt	A	arctic_a0031_slt	0	0.0	0.15575001		0	0	0	0
+0	They	slt	A	arctic_a0031_slt	1	0.15575001	0.28075001	[0.523591]	1	0	0	0
+0	were	slt	A	arctic_a0031_slt	2	0.28075001	0.42449999	[0.322247]	0	0	0	0
+2	three	slt	A	arctic_a0031_slt	3	0.42449999	0.71200001	[1.187146]	1	1	2	1
+0	hundred	slt	A	arctic_a0031_slt	4	0.71200001	1.08075	[0.450928, 0.423075]	0	1	0	1
+1	yards	slt	A	arctic_a0031_slt	5	1.08075	1.4119999	[0.944137]	1	1	0	2
+0	apart	slt	A	arctic_a0031_slt	6	1.4119999	1.8494999	[0.127867, 0.502173]	1	1	1	2
+0	.	slt	A	arctic_a0031_slt	7	1.8494999	0.0		0	0	0	0
+0	.	rms	A	arctic_a0032_rms	0	0.0	0.071999997		0	0	0	0
+0	Since	rms	A	arctic_a0032_rms	1	0.071999997	0.50199997	[0.339152]	0	0	1	0
+1	then	rms	A	arctic_a0032_rms	2	0.50199997	0.80199999	[0.981639]	1	2	1	1
+0	some	rms	A	arctic_a0032_rms	3	0.80199999	1.0420001	[0.224768]	0	0	0	0
+0	mysterious	rms	A	arctic_a0032_rms	4	1.0420001	1.652	[0.126357, 0.168047, 0.172349, 0.164143]	1	1	1	1
+2	force	rms	A	arctic_a0032_rms	5	1.652	2.112	[0.331877]	1	1	1	1
+0	has	rms	A	arctic_a0032_rms	6	2.112	2.352	[0.325757]	1	0	0	0
+0	been	rms	A	arctic_a0032_rms	7	2.352	2.552	[0.17627]	0	0	0	0
+2	fighting	rms	A	arctic_a0032_rms	8	2.552	2.9920001	[0.482893, 0.164916]	1	1	1	2
+1	us	rms	A	arctic_a0032_rms	9	2.9920001	3.2520001	[0.29948]	0	0	0	0
+0	at	rms	A	arctic_a0032_rms	10	3.2520001	3.332	[0.369062]	1	0	0	0
+0	every	rms	A	arctic_a0032_rms	11	3.332	3.5420001	[0.184385, 0.26523, 0.113565]	1	0	0	1
+2	step	rms	A	arctic_a0032_rms	12	3.5420001	4.0219998	[0.556176]	1	1	1	1
+0	.	rms	A	arctic_a0032_rms	13	4.0219998	0.0		0	0	0	0
+0	.	slt	A	arctic_a0032_slt	0	0.0	0.086999997		0	0	0	0
+0	Since	slt	A	arctic_a0032_slt	1	0.086999997	0.44325	[0.215165]	0	0	0	0
+1	then	slt	A	arctic_a0032_slt	2	0.44325	0.7245	[0.911087]	1	0	2	1
+0	some	slt	A	arctic_a0032_slt	3	0.7245	0.96824998	[0.16496]	0	0	0	0
+1	mysterious	slt	A	arctic_a0032_slt	4	0.96824998	1.5682499	[0.044157, 0.07223, 0.180232, 0.071511]	1	1	1	1
+2	force	slt	A	arctic_a0032_slt	5	1.5682499	1.91825	[0.416111]	1	1	1	1
+0	has	slt	A	arctic_a0032_slt	6	1.91825	2.0869999	[0.095569]	0	0	0	0
+0	been	slt	A	arctic_a0032_slt	7	2.0869999	2.2495	[0.084024]	0	0	0	0
+2	fighting	slt	A	arctic_a0032_slt	8	2.2495	2.6245	[0.527509, 0.06874]	1	1	1	2
+0	us	slt	A	arctic_a0032_slt	9	2.6245	2.83075	[0.247516]	1	0	0	0
+0	at	slt	A	arctic_a0032_slt	10	2.83075	2.9119999	[0.138406]	0	0	0	0
+0	every	slt	A	arctic_a0032_slt	11	2.9119999	3.2307501	[0.2031, 0.139735, 0.147723]	1	0	0	1
+2	step	slt	A	arctic_a0032_slt	12	3.2307501	3.64325	[0.467131]	1	0	1	1
+0	.	slt	A	arctic_a0032_slt	13	3.64325	0.0		0	0	0	0
+0	.	rms	A	arctic_a0033_rms	0	0.0	0.082000002		0	0	0	0
+0	He	rms	A	arctic_a0033_rms	1	0.082000002	0.292	[0.479814]	1	0	0	0
+2	unfolded	rms	A	arctic_a0033_rms	2	0.292	0.92199999	[0.446503, 0.269857, 0.413976, 0.072139]	1	1	1	2
+0	a	rms	A	arctic_a0033_rms	3	0.92199999	0.95200002	[0.072139]	0	0	0	0
+0	long	rms	A	arctic_a0033_rms	4	0.95200002	1.2920001	[0.072139, 0.908081]	1	0	0	1
+0	typewritten	rms	A	arctic_a0033_rms	5	1.2920001	1.9119999	[0.644082, 0.04148, 0.020814]	1	0	0	1
+2	letter	rms	A	arctic_a0033_rms	6	1.9119999	2.362	[0.724808]	1	2	2	2
+0	and	rms	A	arctic_a0033_rms	7	2.362	2.652	[0.273836]	0	0	0	0
+0	handed	rms	A	arctic_a0033_rms	8	2.652	3.0420001	[0.876695, 0.157431]	1	1	1	2
+0	it	rms	A	arctic_a0033_rms	9	3.0420001	3.102	[0.125152]	0	0	0	0
+0	to	rms	A	arctic_a0033_rms	10	3.102	3.2019999	[0.02306]	0	0	0	0
+1	Gregson	rms	A	arctic_a0033_rms	11	3.2019999	3.842	[0.02306, 0.473507, 0.182525]	1	1	1	1
+0	.	rms	A	arctic_a0033_rms	12	3.842	0.0		0	0	0	0
+0	.	slt	A	arctic_a0033_slt	0	0.0	0.14325		0	0	0	0
+0	He	slt	A	arctic_a0033_slt	1	0.14325	0.33074999	[0.310611]	0	0	0	0
+1	unfolded	slt	A	arctic_a0033_slt	2	0.33074999	0.91825002	[0.498443, 0.086491, 0.528622]	1	1	1	1
+0	a	slt	A	arctic_a0033_slt	3	0.91825002	0.96824998	[0.142926]	0	0	0	0
+0	long	slt	A	arctic_a0033_slt	4	0.96824998	1.36825	[1.057201]	1	0	1	2
+1	typewritten	slt	A	arctic_a0033_slt	5	1.36825	1.862	[0.553101, 0.122431, 0.050929]	0	2	0	1
+2	letter	slt	A	arctic_a0033_slt	6	1.862	2.2307501	[0.424599, 0.577168]	1	1	0	2
+0	and	slt	A	arctic_a0033_slt	7	2.2307501	2.312	[0.061746]	0	0	0	0
+0	handed	slt	A	arctic_a0033_slt	8	2.312	2.6494999	[0.258975, 0.158143]	1	1	0	1
+0	it	slt	A	arctic_a0033_slt	9	2.6494999	2.7744999	[0.170283]	0	0	0	0
+0	to	slt	A	arctic_a0033_slt	10	2.7744999	2.8745	[0.08551]	0	0	0	0
+1	Gregson	slt	A	arctic_a0033_slt	11	2.8745	3.4932499	[0.230589, 0.12242]	1	0	1	2
+0	.	slt	A	arctic_a0033_slt	12	3.4932499	0.0		0	0	0	0
+0	.	rms	A	arctic_a0034_rms	0	0.0	0.092		0	0	0	0
+0	Men	rms	A	arctic_a0034_rms	1	0.092	0.322	[0.824922, 0.158018]	1	0	0	1
+0	of	rms	A	arctic_a0034_rms	2	0.322	0.40200001	[0.158018]	0	0	0	0
+2	Selden's	rms	A	arctic_a0034_rms	3	0.40200001	1.092	[0.518276, 0.273313]	1	2	1	1
+1	stamp	rms	A	arctic_a0034_rms	4	1.092	1.562	[0.9]	1	2	2	2
+0	dont	rms	A	arctic_a0034_rms	5	1.562	1.7920001	[0.419158]	0	0	0	0
+0	stop	rms	A	arctic_a0034_rms	6	1.7920001	2.142	[0.499564]	1	0	1	2
+0	at	rms	A	arctic_a0034_rms	7	2.142	2.2119999	[0.20368]	0	0	0	0
+0	women	rms	A	arctic_a0034_rms	8	2.2119999	2.552	[0.051458, 0.099368]	1	0	0	2
+0	and	rms	A	arctic_a0034_rms	9	2.552	2.652	[0.052303]	0	0	0	0
+0	children	rms	A	arctic_a0034_rms	10	2.652	3.2019999	[0.038071, 0.184782]	1	0	1	2
+0	.	rms	A	arctic_a0034_rms	11	3.2019999	0.0		0	0	0	0
+0	.	slt	A	arctic_a0034_slt	0	0.0	0.0		0	0	0	0
+0	.	slt	A	arctic_a0034_slt	1	0.0	0.18700001		0	0	0	0
+0	Men	slt	A	arctic_a0034_slt	2	0.18700001	0.39950001	[0.1907]	1	0	0	0
+0	of	slt	A	arctic_a0034_slt	3	0.39950001	0.4745	[0.149708]	0	0	0	0
+2	Selden's	slt	A	arctic_a0034_slt	4	0.4745	0.99949998	[0.436598, 0.064819]	1	2	2	2
+0	stamp	slt	A	arctic_a0034_slt	5	0.99949998	1.43075	[0.561278]	1	1	0	1
+0	dont	slt	A	arctic_a0034_slt	6	1.43075	1.65575	[0.213298]	0	0	0	0
+0	stop	slt	A	arctic_a0034_slt	7	1.65575	2.01825	[0.901289]	1	0	2	2
+0	at	slt	A	arctic_a0034_slt	8	2.01825	2.1245	[0.072569]	0	0	0	0
+0	women	slt	A	arctic_a0034_slt	9	2.1245	2.4182501	[0.025225, 0.046313]	0	1	0	2
+0	and	slt	A	arctic_a0034_slt	10	2.4182501	2.5369999	[0.07925]	1	0	0	0
+0	children	slt	A	arctic_a0034_slt	11	2.5369999	3.08075	[0.07478, 0.037432]	1	1	0	2
+0	.	slt	A	arctic_a0034_slt	12	3.08075	0.0		0	0	0	0
+0	.	rms	A	arctic_a0035_rms	0	0.0	0.071999997		0	0	0	0
+0	He	rms	A	arctic_a0035_rms	1	0.071999997	0.20200001	[0.159185]	0	0	0	0
+2	stopped	rms	A	arctic_a0035_rms	2	0.20200001	0.81199998	[0.690612]	1	2	2	2
+0	and	rms	A	arctic_a0035_rms	3	0.81199998	1.022	[0.065473]	0	0	0	0
+0	Philip	rms	A	arctic_a0035_rms	4	1.022	1.4119999	[0.074101, 0.048241]	1	0	0	1
+2	nodded	rms	A	arctic_a0035_rms	5	1.4119999	1.842	[1.109087, 0.129077]	1	1	2	2
+0	at	rms	A	arctic_a0035_rms	6	1.842	2.0020001	[0.129038]	0	0	0	0
+0	the	rms	A	arctic_a0035_rms	7	2.0020001	2.072	[0.057238]	0	0	0	0
+1	horrified	rms	A	arctic_a0035_rms	8	2.072	2.622	[0.054827, 0.00839, 0.558935]	1	0	1	1
+1	question	rms	A	arctic_a0035_rms	9	2.622	3.1919999	[0.149194, 0.112723]	0	0	1	2
+0	in	rms	A	arctic_a0035_rms	10	3.1919999	3.362	[0.077305]	0	0	0	0
+0	his	rms	A	arctic_a0035_rms	11	3.362	3.562	[0.055856]	0	0	0	0
+1	eyes	rms	A	arctic_a0035_rms	12	3.562	4.052	[0.56976]	1	0	1	2
+0	.	rms	A	arctic_a0035_rms	13	4.052	0.0		0	0	0	0
+0	.	slt	A	arctic_a0035_slt	0	0.0	0.1495		0	0	0	0
+0	He	slt	A	arctic_a0035_slt	1	0.1495	0.287	[0.137322]	0	0	0	0
+2	stopped	slt	A	arctic_a0035_slt	2	0.287	0.82450002	[1.126334]	1	2	2	2
+0	and	slt	A	arctic_a0035_slt	3	0.82450002	1.03075	[0.07319]	0	0	0	0
+0	Philip	slt	A	arctic_a0035_slt	4	1.03075	1.36825	[0.159648, 0.084328]	1	0	1	2
+1	nodded	slt	A	arctic_a0035_slt	5	1.36825	1.74325	[0.617923, 0.129994]	1	0	1	1
+0	at	slt	A	arctic_a0035_slt	6	1.74325	1.83075	[0.038949]	0	0	0	0
+0	the	slt	A	arctic_a0035_slt	7	1.83075	1.9119999	[0.0519]	0	0	0	0
+1	horrified	slt	A	arctic_a0035_slt	8	1.9119999	2.4619999	[0.181875, 0.034852, 0.379062]	1	0	1	2
+1	question	slt	A	arctic_a0035_slt	9	2.4619999	2.937	[0.115554, 0.02614]	0	0	0	1
+0	in	slt	A	arctic_a0035_slt	10	2.937	3.0682499	[0.072431]	1	0	0	0
+0	his	slt	A	arctic_a0035_slt	11	3.0682499	3.2119999	[0.043486]	0	0	0	0
+1	eyes	slt	A	arctic_a0035_slt	12	3.2119999	3.6682501	[0.45092]	1	0	0	1
+0	.	slt	A	arctic_a0035_slt	13	3.6682501	0.0		0	0	0	0
+0	.	rms	A	arctic_a0036_rms	0	0.0	0.071999997		0	0	0	0
+0	She	rms	A	arctic_a0036_rms	1	0.071999997	0.31200001	[0.296396]	0	0	0	0
+0	turned	rms	A	arctic_a0036_rms	2	0.31200001	0.65200001	[0.652892]	1	2	1	0
+2	in	rms	A	arctic_a0036_rms	3	0.65200001	0.95200002	[0.912982]	1	0	1	2
+0	at	rms	A	arctic_a0036_rms	4	0.95200002	1.122	[0.301409]	0	0	0	0
+0	the	rms	A	arctic_a0036_rms	5	1.122	1.192	[0.148823]	0	0	0	0
+1	hotel	rms	A	arctic_a0036_rms	6	1.192	1.7819999	[0.335223, 0.778013]	1	1	1	2
+0	.	rms	A	arctic_a0036_rms	7	1.7819999	0.0		0	0	0	0
+0	.	slt	A	arctic_a0036_slt	0	0.0	0.1495		0	0	0	0
+0	She	slt	A	arctic_a0036_slt	1	0.1495	0.36825001	[0.558707]	0	0	0	0
+2	turned	slt	A	arctic_a0036_slt	2	0.36825001	0.68075001	[0.9]	1	1	1	0
+0	in	slt	A	arctic_a0036_slt	3	0.68075001	0.85575002	[0.786542]	1	1	1	2
+0	at	slt	A	arctic_a0036_slt	4	0.85575002	0.96824998	[0.242089]	0	0	0	0
+0	the	slt	A	arctic_a0036_slt	5	0.96824998	1.04325	[0.135509]	0	0	0	0
+2	hotel	slt	A	arctic_a0036_slt	6	1.04325	1.587	[0.359726, 0.446504]	1	1	1	2
+0	.	slt	A	arctic_a0036_slt	7	1.587	0.0		0	0	0	0
+0	.	rms	A	arctic_a0037_rms	0	0.0	0.122		0	0	0	0
+0	I	rms	A	arctic_a0037_rms	1	0.122	0.23199999	[0.909005]	1	0	1	0
+0	was	rms	A	arctic_a0037_rms	2	0.23199999	0.472	[0.18174]	0	1	0	0
+0	the	rms	A	arctic_a0037_rms	3	0.472	0.62199998	[0.337963]	0	0	0	0
+2	only	rms	A	arctic_a0037_rms	4	0.62199998	0.89200002	[0.598009, 0.283528]	1	0	1	0
+0	one	rms	A	arctic_a0037_rms	5	0.89200002	1.272	[0.455113]	1	1	1	2
+0	who	rms	A	arctic_a0037_rms	6	1.272	1.392		0	0	0	0
+2	remained	rms	A	arctic_a0037_rms	7	1.392	1.862	[0.064722, 0.618262]	1	1	1	1
+0	sitting	rms	A	arctic_a0037_rms	8	1.862	2.4319999	[0.366637, 0.400455]	1	1	0	2
+0	.	rms	A	arctic_a0037_rms	9	2.4319999	0.0		0	0	0	0
+0	.	slt	A	arctic_a0037_slt	0	0.0	0.19949999		0	0	0	0
+1	I	slt	A	arctic_a0037_slt	1	0.19949999	0.36199999	[1.273948]	1	2	2	1
+0	was	slt	A	arctic_a0037_slt	2	0.36199999	0.56825	[0.098486]	0	0	0	0
+0	the	slt	A	arctic_a0037_slt	3	0.56825	0.70574999	[0.123758]	0	0	0	0
+2	only	slt	A	arctic_a0037_slt	4	0.70574999	0.93699998	[0.396416, 0.133391]	1	0	1	1
+0	one	slt	A	arctic_a0037_slt	5	0.93699998	1.20575	[0.206568]	1	0	1	1
+0	who	slt	A	arctic_a0037_slt	6	1.20575	1.36825	[0.122735]	0	0	0	0
+0	remained	slt	A	arctic_a0037_slt	7	1.36825	1.76825	[0.022646, 0.259446]	1	0	0	2
+0	sitting	slt	A	arctic_a0037_slt	8	1.76825	2.2244999	[0.199025, 0.083015]	1	0	1	2
+0	.	slt	A	arctic_a0037_slt	9	2.2244999	0.0		0	0	0	0
+0	.	rms	A	arctic_a0038_rms	0	0.0	0.092		0	0	0	0
+0	Well	rms	A	arctic_a0038_rms	1	0.092	0.322	[0.175927]	0	0	0	0
+1	have	rms	A	arctic_a0038_rms	2	0.322	0.56199998	[0.761214]	1	0	1	0
+0	to	rms	A	arctic_a0038_rms	3	0.56199998	0.65200001	[0.201214]	0	0	0	0
+2	watch	rms	A	arctic_a0038_rms	4	0.65200001	1.0420001	[0.925918]	1	1	1	2
+0	our	rms	A	arctic_a0038_rms	5	1.0420001	1.242	[0.422614, 0.743635]	1	0	0	0
+2	chances	rms	A	arctic_a0038_rms	6	1.242	1.962	[0.841475, 0.220339]	1	1	1	2
+0	.	rms	A	arctic_a0038_rms	7	1.962	0.0		0	0	0	0
+0	.	slt	A	arctic_a0038_slt	0	0.0	0.0		0	0	0	0
+0	.	slt	A	arctic_a0038_slt	1	0.0	0.18700001		0	0	0	0
+0	Well	slt	A	arctic_a0038_slt	2	0.18700001	0.37450001	[0.128265]	0	1	0	0
+2	have	slt	A	arctic_a0038_slt	3	0.37450001	0.60575002	[0.942057]	1	0	2	0
+0	to	slt	A	arctic_a0038_slt	4	0.60575002	0.70574999	[0.036731]	0	0	0	0
+2	watch	slt	A	arctic_a0038_slt	5	0.70574999	1.05575	[0.036731, 0.627891, 0.026]	1	1	1	1
+0	our	slt	A	arctic_a0038_slt	6	1.05575	1.1307499	[0.026, 0.126448]	0	0	0	0
+1	chances	slt	A	arctic_a0038_slt	7	1.1307499	1.8182499	[0.410872, 0.110367]	1	0	0	1
+0	.	slt	A	arctic_a0038_slt	8	1.8182499	0.0		0	0	0	0
+0	.	rms	A	arctic_a0039_rms	0	0.0	0.082000002		0	0	0	0
+0	The	rms	A	arctic_a0039_rms	1	0.082000002	0.222	[0.080014]	0	0	0	0
+1	ship	rms	A	arctic_a0039_rms	2	0.222	0.57200003	[0.080014, 0.481591]	1	1	2	2
+0	should	rms	A	arctic_a0039_rms	3	0.57200003	0.81199998	[0.504629]	1	0	0	0
+0	be	rms	A	arctic_a0039_rms	4	0.81199998	0.96200001		0	0	0	0
+2	in	rms	A	arctic_a0039_rms	5	0.96200001	1.192	[0.849212]	1	0	1	2
+0	within	rms	A	arctic_a0039_rms	6	1.192	1.492	[0.06104, 0.15148]	1	0	0	0
+0	a	rms	A	arctic_a0039_rms	7	1.492	1.522	[0.058875]	0	0	0	0
+1	week	rms	A	arctic_a0039_rms	8	1.522	1.7920001	[0.058875, 0.480876]	1	1	1	2
+0	or	rms	A	arctic_a0039_rms	9	1.7920001	1.902	[0.036538]	0	0	0	0
+1	ten	rms	A	arctic_a0039_rms	10	1.902	2.2019999	[0.316559]	0	1	1	1
+1	days	rms	A	arctic_a0039_rms	11	2.2019999	2.7620001	[0.909854]	1	0	1	2
+0	.	rms	A	arctic_a0039_rms	12	2.7620001	0.0		0	0	0	0
+0	.	slt	A	arctic_a0039_slt	0	0.0	0.0		0	0	0	0
+0	.	slt	A	arctic_a0039_slt	1	0.0	0.19325		0	0	0	0
+0	The	slt	A	arctic_a0039_slt	2	0.19325	0.24950001	[0.072717]	0	0	0	0
+2	ship	slt	A	arctic_a0039_slt	3	0.24950001	0.56825	[0.072717, 0.911663]	1	2	1	2
+0	should	slt	A	arctic_a0039_slt	4	0.56825	0.79325002	[0.297293]	0	0	0	0
+0	be	slt	A	arctic_a0039_slt	5	0.79325002	0.9745	[1.083192]	1	0	0	0
+0	in	slt	A	arctic_a0039_slt	6	0.9745	1.10575	[0.482551]	0	0	1	2
+0	within	slt	A	arctic_a0039_slt	7	1.10575	1.437	[0.076008, 0.13669, 0.069508]	1	1	0	0
+0	a	slt	A	arctic_a0039_slt	8	1.437	1.462	[0.069508]	0	0	0	0
+2	week	slt	A	arctic_a0039_slt	9	1.462	1.76825	[0.069508, 0.300682]	1	0	1	2
+0	or	slt	A	arctic_a0039_slt	10	1.76825	1.86825	[0.117942]	0	0	0	0
+2	ten	slt	A	arctic_a0039_slt	11	1.86825	2.1682501	[0.27011]	0	0	0	1
+1	days	slt	A	arctic_a0039_slt	12	2.1682501	2.612	[0.736622]	1	0	0	2
+0	.	slt	A	arctic_a0039_slt	13	2.612	0.0		0	0	0	0
+0	.	rms	A	arctic_a0040_rms	0	0.0	0.112		0	0	0	0
+0	I	rms	A	arctic_a0040_rms	1	0.112	0.23199999	[0.9]	1	0	0	0
+2	suppose	rms	A	arctic_a0040_rms	2	0.23199999	0.74199998	[0.099805, 0.503971]	1	2	1	1
+0	you	rms	A	arctic_a0040_rms	3	0.74199998	0.852	[0.112427]	0	0	0	0
+0	wonder	rms	A	arctic_a0040_rms	4	0.852	1.1720001	[0.517854, 0.113865]	1	0	1	1
+0	why	rms	A	arctic_a0040_rms	5	1.1720001	1.4119999	[0.549915]	1	0	0	0
+0	she	rms	A	arctic_a0040_rms	6	1.4119999	1.6619999	[0.259018]	0	0	0	0
+0	is	rms	A	arctic_a0040_rms	7	1.6619999	1.7920001	[0.089457]	0	0	0	0
+1	coming	rms	A	arctic_a0040_rms	8	1.7920001	2.132	[0.106767, 0.038665]	1	0	1	1
+0	up	rms	A	arctic_a0040_rms	9	2.132	2.2820001	[0.20057]	1	0	0	2
+0	here	rms	A	arctic_a0040_rms	10	2.2820001	2.592	[0.130137]	0	0	0	1
+0	.	rms	A	arctic_a0040_rms	11	2.592	0.0		0	0	0	0
+0	.	slt	A	arctic_a0040_slt	0	0.0	0.0		0	0	0	0
+0	.	slt	A	arctic_a0040_slt	1	0.0	0.19325		0	0	0	0
+0	I	slt	A	arctic_a0040_slt	2	0.19325	0.287	[0.416592]	1	0	0	0
+2	suppose	slt	A	arctic_a0040_slt	3	0.287	0.74949998	[0.114325, 0.9]	1	1	1	1
+0	you	slt	A	arctic_a0040_slt	4	0.74949998	0.81825	[0.455853]	0	0	0	0
+0	wonder	slt	A	arctic_a0040_slt	5	0.81825	1.112	[0.647735, 0.199257]	1	1	1	2
+0	why	slt	A	arctic_a0040_slt	6	1.112	1.312	[0.498849]	1	0	0	0
+0	she	slt	A	arctic_a0040_slt	7	1.312	1.5245	[0.165796]	0	0	0	0
+0	is	slt	A	arctic_a0040_slt	8	1.5245	1.64325	[0.064172]	0	0	0	0
+2	coming	slt	A	arctic_a0040_slt	9	1.64325	1.96825	[0.095694, 0.06336]	1	1	1	1
+0	up	slt	A	arctic_a0040_slt	10	1.96825	2.1307499	[0.374411]	1	0	0	1
+0	here	slt	A	arctic_a0040_slt	11	2.1307499	2.46825	[0.130043]	0	0	0	2
+0	.	slt	A	arctic_a0040_slt	12	2.46825	0.0		0	0	0	0
+0	.	rms	A	arctic_a0041_rms	0	0.0	0.061999999		0	0	0	0
+2	Meanwhile	rms	A	arctic_a0041_rms	1	0.061999999	0.75199997	[0.822597, 0.371008]	1	1	1	1
+0	I'll	rms	A	arctic_a0041_rms	2	0.75199997	0.93199998	[0.045031]	0	0	0	0
+0	go	rms	A	arctic_a0041_rms	3	0.93199998	1.102		0	0	0	0
+0	out	rms	A	arctic_a0041_rms	4	1.102	1.262	[0.009535]	0	0	1	2
+0	to	rms	A	arctic_a0041_rms	5	1.262	1.392	[0.009535, 0.042667]	0	0	0	0
+2	breathe	rms	A	arctic_a0041_rms	6	1.392	1.682	[0.701091]	1	2	1	2
+0	a	rms	A	arctic_a0041_rms	7	1.682	1.712	[0.042342]	0	0	0	0
+0	spell	rms	A	arctic_a0041_rms	8	1.712	2.1919999	[0.042342, 0.258196]	1	1	1	1
+0	.	rms	A	arctic_a0041_rms	9	2.1919999	0.0		0	0	0	0
+0	.	slt	A	arctic_a0041_slt	0	0.0	0.18700001		0	0	0	0
+2	Meanwhile	slt	A	arctic_a0041_slt	1	0.18700001	0.73075002	[0.697393, 0.9]	1	0	1	1
+0	I'll	slt	A	arctic_a0041_slt	2	0.73075002	0.88700002	[0.47171]	0	0	0	0
+0	go	slt	A	arctic_a0041_slt	3	0.88700002	1.05575	[0.202883]	0	0	0	0
+0	out	slt	A	arctic_a0041_slt	4	1.05575	1.23075	[0.551725]	1	0	0	1
+0	to	slt	A	arctic_a0041_slt	5	1.23075	1.362	[0.028868]	0	0	0	0
+2	breathe	slt	A	arctic_a0041_slt	6	1.362	1.65575	[0.028868, 0.431888]	1	1	1	2
+0	a	slt	A	arctic_a0041_slt	7	1.65575	1.70575	[0.070945]	0	0	0	0
+1	spell	slt	A	arctic_a0041_slt	8	1.70575	2.1807499	[0.439929]	1	1	1	1
+0	.	slt	A	arctic_a0041_slt	9	2.1807499	0.0		0	0	0	0
+0	.	rms	A	arctic_a0042_rms	0	0.0	0.061999999		0	0	0	0
+0	How	rms	A	arctic_a0042_rms	1	0.061999999	0.292		0	0	2	0
+0	could	rms	A	arctic_a0042_rms	2	0.292	0.55199999	[0.197052]	0	0	0	0
+0	he	rms	A	arctic_a0042_rms	3	0.55199999	0.65200001	[0.302626]	1	1	0	0
+2	explain	rms	A	arctic_a0042_rms	4	0.65200001	1.242	[0.269848, 0.901468]	1	0	2	2
+0	his	rms	A	arctic_a0042_rms	5	1.242	1.4220001	[0.190735]	0	0	0	0
+1	possession	rms	A	arctic_a0042_rms	6	1.4220001	1.982	[0.115113, 0.392568, 0.029694]	1	1	1	2
+0	of	rms	A	arctic_a0042_rms	7	1.982	2.142	[0.127861]	1	0	0	0
+0	the	rms	A	arctic_a0042_rms	8	2.142	2.2119999	[0.053325]	0	0	0	0
+1	sketch	rms	A	arctic_a0042_rms	9	2.2119999	2.822	[0.053325, 0.657351]	1	1	1	2
+0	.	rms	A	arctic_a0042_rms	10	2.822	0.0		0	0	0	0
+0	.	slt	A	arctic_a0042_slt	0	0.0	0.0		0	0	0	0
+0	.	slt	A	arctic_a0042_slt	1	0.0	0.15575001		0	0	0	0
+2	How	slt	A	arctic_a0042_slt	2	0.15575001	0.35574999	[0.9]	1	0	1	0
+0	could	slt	A	arctic_a0042_slt	3	0.35574999	0.537	[0.350996]	0	0	0	0
+0	he	slt	A	arctic_a0042_slt	4	0.537	0.67449999	[0.254073]	0	0	0	0
+1	explain	slt	A	arctic_a0042_slt	5	0.67449999	1.14325	[0.082991, 0.170019]	1	0	1	2
+0	his	slt	A	arctic_a0042_slt	6	1.14325	1.3245	[0.038247]	0	1	0	0
+1	possession	slt	A	arctic_a0042_slt	7	1.3245	1.8245	[0.04121, 0.295, 0.018471]	1	1	1	2
+0	of	slt	A	arctic_a0042_slt	8	1.8245	1.962	[0.06572]	0	0	0	0
+0	the	slt	A	arctic_a0042_slt	9	1.962	2.03075	[0.070636]	0	0	0	0
+1	sketch	slt	A	arctic_a0042_slt	10	2.03075	2.59325	[0.37778]	1	1	1	2
+0	.	slt	A	arctic_a0042_slt	11	2.59325	0.0		0	0	0	0
+0	.	rms	A	arctic_a0043_rms	0	0.0	0.102		0	0	0	0
+0	It	rms	A	arctic_a0043_rms	1	0.102	0.222	[0.3845]	0	0	0	0
+0	seemed	rms	A	arctic_a0043_rms	2	0.222	0.62199998	[0.823567]	1	0	1	0
+2	nearer	rms	A	arctic_a0043_rms	3	0.62199998	1.0319999	[0.851926, 0.9]	1	2	1	2
+0	to	rms	A	arctic_a0043_rms	4	1.0319999	1.222	[0.262251]	0	0	0	0
+0	him	rms	A	arctic_a0043_rms	5	1.222	1.522	[0.345705]	1	0	0	1
+0	since	rms	A	arctic_a0043_rms	6	1.522	1.862	[0.157783]	0	0	0	0
+0	he	rms	A	arctic_a0043_rms	7	1.862	1.952		0	0	0	0
+0	had	rms	A	arctic_a0043_rms	8	1.952	2.122	[0.260385]	0	0	0	0
+1	seen	rms	A	arctic_a0043_rms	9	2.122	2.4719999	[0.748471]	1	0	0	2
+0	and	rms	A	arctic_a0043_rms	10	2.4719999	2.642	[0.090259]	0	0	0	0
+1	talked	rms	A	arctic_a0043_rms	11	2.642	2.9419999	[0.789259]	1	0	1	2
+0	with	rms	A	arctic_a0043_rms	12	2.9419999	3.102	[0.068813]	0	0	0	0
+1	Gregson	rms	A	arctic_a0043_rms	13	3.102	3.632	[0.263059, 0.215115]	1	1	1	2
+0	.	rms	A	arctic_a0043_rms	14	3.632	0.0		0	0	0	0
+0	.	slt	A	arctic_a0043_slt	0	0.0	0.20575		0	0	0	0
+0	It	slt	A	arctic_a0043_slt	1	0.20575	0.31200001	[0.199614]	0	0	0	0
+0	seemed	slt	A	arctic_a0043_slt	2	0.31200001	0.58074999	[0.470905]	0	0	0	0
+2	nearer	slt	A	arctic_a0043_slt	3	0.58074999	0.93699998	[0.692006, 0.192725]	1	2	2	2
+0	to	slt	A	arctic_a0043_slt	4	0.93699998	1.09325	[0.233901]	1	0	0	0
+0	him	slt	A	arctic_a0043_slt	5	1.09325	1.34325	[0.253073]	1	0	0	0
+0	since	slt	A	arctic_a0043_slt	6	1.34325	1.587	[0.060492]	0	0	0	0
+0	he	slt	A	arctic_a0043_slt	7	1.587	1.68075	[0.180808]	1	0	0	0
+0	had	slt	A	arctic_a0043_slt	8	1.68075	1.83075	[0.107846]	0	0	0	0
+1	seen	slt	A	arctic_a0043_slt	9	1.83075	2.08075	[0.422149]	1	1	1	1
+0	and	slt	A	arctic_a0043_slt	10	2.08075	2.2307501	[0.224931]	0	0	0	0
+1	talked	slt	A	arctic_a0043_slt	11	2.2307501	2.5557499	[0.91743]	1	1	1	1
+0	with	slt	A	arctic_a0043_slt	12	2.5557499	2.6995001	[0.047104]	0	0	0	0
+2	Gregson	slt	A	arctic_a0043_slt	13	2.6995001	3.2932501	[0.461416, 0.14312]	1	2	1	1
+0	.	slt	A	arctic_a0043_slt	14	3.2932501	0.0		0	0	0	0
+0	.	rms	A	arctic_a0044_rms	0	0.0	0.071999997		0	0	0	0
+0	Her	rms	A	arctic_a0044_rms	1	0.071999997	0.33199999	[0.747334]	0	0	0	0
+2	own	rms	A	arctic_a0044_rms	2	0.33199999	0.542	[1.131062]	1	1	2	1
+0	betrayal	rms	A	arctic_a0044_rms	3	0.542	1.122	[0.476776, 0.866209, 0.456754]	1	1	2	2
+0	of	rms	A	arctic_a0044_rms	4	1.122	1.262	[0.179288]	0	0	0	0
+2	herself	rms	A	arctic_a0044_rms	5	1.262	1.842	[0.45718, 0.23012]	1	0	2	2
+0	was	rms	A	arctic_a0044_rms	6	1.842	1.982	[0.065574]	0	0	0	0
+0	like	rms	A	arctic_a0044_rms	7	1.982	2.2019999	[0.352189]	1	0	0	0
+1	tonic	rms	A	arctic_a0044_rms	8	2.2019999	2.602	[0.424012, 0.140076]	1	2	1	2
+0	to	rms	A	arctic_a0044_rms	9	2.602	2.7320001	[0.035424]	0	1	0	0
+1	Philip	rms	A	arctic_a0044_rms	10	2.7320001	3.2219999	[0.035424, 0.118682, 0.071642]	1	2	1	2
+0	.	rms	A	arctic_a0044_rms	11	3.2219999	0.0		0	0	0	0
+0	.	slt	A	arctic_a0044_slt	0	0.0	0.0		0	0	0	0
+0	.	slt	A	arctic_a0044_slt	1	0.0	0.162		0	0	0	0
+0	Her	slt	A	arctic_a0044_slt	2	0.162	0.38699999	[0.9]	1	0	0	0
+2	own	slt	A	arctic_a0044_slt	3	0.38699999	0.62449998	[0.271355]	0	0	1	1
+0	betrayal	slt	A	arctic_a0044_slt	4	0.62449998	1.16825	[0.153237, 0.352454, 0.05845]	1	1	1	2
+0	of	slt	A	arctic_a0044_slt	5	1.16825	1.262	[0.071666]	1	0	0	0
+0	herself	slt	A	arctic_a0044_slt	6	1.262	1.7244999	[0.036984, 0.126671]	1	0	1	1
+0	was	slt	A	arctic_a0044_slt	7	1.7244999	1.85575	[0.022247]	0	0	0	0
+0	like	slt	A	arctic_a0044_slt	8	1.85575	2.0745001	[0.104885]	0	0	0	0
+2	tonic	slt	A	arctic_a0044_slt	9	2.0745001	2.437	[0.306609, 0.107881]	1	2	1	2
+0	to	slt	A	arctic_a0044_slt	10	2.437	2.5432501	[0.0146]	0	0	0	0
+0	Philip	slt	A	arctic_a0044_slt	11	2.5432501	3.03075	[0.037176, 0.17373]	1	1	1	1
+0	.	slt	A	arctic_a0044_slt	12	3.03075	0.0		0	0	0	0
+0	.	rms	A	arctic_a0045_rms	0	0.0	0.032000002		0	0	0	0
+0	He	rms	A	arctic_a0045_rms	1	0.032000002	0.192	[0.138677]	0	1	0	0
+0	moved	rms	A	arctic_a0045_rms	2	0.192	0.51200002	[0.791881]	1	0	1	0
+2	away	rms	A	arctic_a0045_rms	3	0.51200002	0.94199997	[0.072775, 0.70517]	1	1	1	2
+0	as	rms	A	arctic_a0045_rms	4	0.94199997	1.112	[0.170853]	0	0	0	0
+2	quietly	rms	A	arctic_a0045_rms	5	1.112	1.742	[0.968111, 0.068749, 0.389325]	1	0	1	2
+0	as	rms	A	arctic_a0045_rms	6	1.742	1.932	[0.160175]	0	0	0	0
+0	he	rms	A	arctic_a0045_rms	7	1.932	2.0320001	[0.204403]	1	0	0	0
+0	had	rms	A	arctic_a0045_rms	8	2.0320001	2.1719999	[0.066315]	0	0	0	0
+1	come	rms	A	arctic_a0045_rms	9	2.1719999	2.562	[0.399415]	1	0	1	2
+0	.	rms	A	arctic_a0045_rms	10	2.562	0.0		0	0	0	0
+0	.	slt	A	arctic_a0045_slt	0	0.0	0.13075		0	0	0	0
+0	He	slt	A	arctic_a0045_slt	1	0.13075	0.26824999	[0.147129]	0	0	0	0
+2	moved	slt	A	arctic_a0045_slt	2	0.26824999	0.56825	[0.337096]	1	0	1	0
+1	away	slt	A	arctic_a0045_slt	3	0.56825	0.92449999	[0.127878, 0.9, 0.237685]	1	2	1	1
+0	as	slt	A	arctic_a0045_slt	4	0.92449999	1.0245	[0.237685]	0	0	0	0
+2	quietly	slt	A	arctic_a0045_slt	5	1.0245	1.5245	[0.962463, 0.097896, 0.149191]	1	0	1	2
+0	as	slt	A	arctic_a0045_slt	6	1.5245	1.6619999	[0.148546]	1	0	0	0
+0	he	slt	A	arctic_a0045_slt	7	1.6619999	1.7869999	[0.111032]	0	0	0	0
+0	had	slt	A	arctic_a0045_slt	8	1.7869999	1.93075	[0.134223]	0	0	0	0
+2	come	slt	A	arctic_a0045_slt	9	1.93075	2.312	[0.28038]	1	1	1	2
+0	.	slt	A	arctic_a0045_slt	10	2.312	0.0		0	0	0	0
+0	.	rms	A	arctic_a0046_rms	0	0.0	0.102		0	0	0	0
+0	The	rms	A	arctic_a0046_rms	1	0.102	0.212	[0.135718]	0	0	0	0
+2	girl	rms	A	arctic_a0046_rms	2	0.212	0.52200001	[0.571528]	1	1	1	0
+0	faced	rms	A	arctic_a0046_rms	3	0.52200001	0.92199999	[0.494702]	1	1	1	2
+2	him	rms	A	arctic_a0046_rms	4	0.92199999	1.212	[0.236658]	0	2	0	0
+0	her	rms	A	arctic_a0046_rms	5	1.212	1.562	[0.36563]	0	0	0	0
+2	eyes	rms	A	arctic_a0046_rms	6	1.562	1.932	[0.902445]	1	0	0	1
+0	shining	rms	A	arctic_a0046_rms	7	1.932	2.392	[0.361683, 0.083643]	1	1	1	1
+0	with	rms	A	arctic_a0046_rms	8	2.392	2.5420001	[0.039895]	0	0	0	0
+0	sudden	rms	A	arctic_a0046_rms	9	2.5420001	2.882	[0.279299, 0.015962]	1	2	0	1
+2	fear	rms	A	arctic_a0046_rms	10	2.882	3.342	[0.378445]	1	1	0	2
+0	.	rms	A	arctic_a0046_rms	11	3.342	0.0		0	0	0	0
+0	.	slt	A	arctic_a0046_slt	0	0.0	0.16824999		0	0	0	0
+0	The	slt	A	arctic_a0046_slt	1	0.16824999	0.24325	[0.041545]	0	0	0	0
+0	girl	slt	A	arctic_a0046_slt	2	0.24325	0.48699999	[0.041545, 0.734304]	1	0	1	0
+2	faced	slt	A	arctic_a0046_slt	3	0.48699999	0.94325	[0.60044]	1	2	1	2
+0	him	slt	A	arctic_a0046_slt	4	0.94325	1.2495	[0.525433]	1	0	0	0
+0	.	slt	A	arctic_a0046_slt	5	1.2495	1.3745		0	0	0	0
+0	her	slt	A	arctic_a0046_slt	6	1.3745	1.5682499	[0.332967]	0	0	0	0
+0	eyes	slt	A	arctic_a0046_slt	7	1.5682499	1.7557499	[0.953159]	1	0	0	2
+1	shining	slt	A	arctic_a0046_slt	8	1.7557499	2.20575	[0.323273, 0.089879]	0	1	1	1
+0	with	slt	A	arctic_a0046_slt	9	2.20575	2.34325	[0.02797]	0	0	0	0
+0	sudden	slt	A	arctic_a0046_slt	10	2.34325	2.7307501	[0.374259, 0.127517]	1	0	0	1
+2	fear	slt	A	arctic_a0046_slt	11	2.7307501	3.1807499	[0.228445]	1	0	0	2
+0	.	slt	A	arctic_a0046_slt	12	3.1807499	0.0		0	0	0	0
+0	.	rms	A	arctic_a0047_rms	0	0.0	0.061999999		0	0	0	0
+0	Close	rms	A	arctic_a0047_rms	1	0.061999999	0.442	[0.425078]	1	1	1	0
+2	beside	rms	A	arctic_a0047_rms	2	0.442	0.94199997	[0.116081, 0.869662]	1	0	0	1
+0	him	rms	A	arctic_a0047_rms	3	0.94199997	1.222	[0.120272]	0	0	0	0
+2	gleamed	rms	A	arctic_a0047_rms	4	1.222	1.642	[0.577036]	1	2	1	1
+0	the	rms	A	arctic_a0047_rms	5	1.642	1.762	[0.08914]	0	0	0	0
+2	white	rms	A	arctic_a0047_rms	6	1.762	2.082	[0.08914, 0.606378]	1	0	1	1
+2	fangs	rms	A	arctic_a0047_rms	7	2.082	2.7119999	[0.925608]	1	2	1	2
+0	of	rms	A	arctic_a0047_rms	8	2.7119999	2.852	[0.099462]	0	0	0	0
+0	the	rms	A	arctic_a0047_rms	9	2.852	2.9119999	[0.021157, 0.049739]	1	0	0	0
+2	wolf	rms	A	arctic_a0047_rms	10	2.9119999	3.2219999	[0.049739]	1	0	1	2
+1	dog	rms	A	arctic_a0047_rms	11	3.2219999	3.6819999	[0.470616]	1	0	0	1
+0	.	rms	A	arctic_a0047_rms	12	3.6819999	0.0		0	0	0	0
+0	.	slt	A	arctic_a0047_slt	0	0.0	0.093249999		0	0	0	0
+0	Close	slt	A	arctic_a0047_slt	1	0.093249999	0.42449999	[0.288882]	1	0	0	0
+1	beside	slt	A	arctic_a0047_slt	2	0.42449999	0.83700001	[0.098606, 0.913248]	1	0	0	1
+1	him	slt	A	arctic_a0047_slt	3	0.83700001	1.062	[0.171914]	0	0	0	0
+0	gleamed	slt	A	arctic_a0047_slt	4	1.062	1.4119999	[0.160732]	1	2	0	1
+0	the	slt	A	arctic_a0047_slt	5	1.4119999	1.48075	[0.064871]	0	0	0	0
+0	white	slt	A	arctic_a0047_slt	6	1.48075	1.737	[0.453448]	1	2	1	1
+0	fangs	slt	A	arctic_a0047_slt	7	1.737	2.1619999	[0.513358]	1	2	1	2
+0	of	slt	A	arctic_a0047_slt	8	2.1619999	2.2557499	[0.047448]	0	0	0	0
+0	the	slt	A	arctic_a0047_slt	9	2.2557499	2.34325	[0.126202]	1	0	0	0
+2	wolf	slt	A	arctic_a0047_slt	10	2.34325	2.6682501	[0.048502]	0	0	1	1
+1	dog	slt	A	arctic_a0047_slt	11	2.6682501	3.0432501	[0.551946]	1	0	1	1
+0	.	slt	A	arctic_a0047_slt	12	3.0432501	0.0		0	0	0	0
+0	.	rms	A	arctic_a0048_rms	0	0.0	0.061999999		0	0	0	0
+0	He	rms	A	arctic_a0048_rms	1	0.061999999	0.28200001	[0.970562]	1	0	0	0
+0	looked	rms	A	arctic_a0048_rms	2	0.28200001	0.53200001	[0.027789]	0	1	1	1
+0	at	rms	A	arctic_a0048_rms	3	0.53200001	0.64200002	[0.244828]	0	0	0	0
+0	the	rms	A	arctic_a0048_rms	4	0.64200002	0.722	[0.419428]	1	0	0	0
+2	handkerchief	rms	A	arctic_a0048_rms	5	0.722	1.502	[0.325013, 0.208853, 0.403475]	1	0	1	2
+0	more	rms	A	arctic_a0048_rms	6	1.502	1.762	[0.243542]	1	0	0	0
+0	closely	rms	A	arctic_a0048_rms	7	1.762	2.372	[0.173752, 0.098603]	0	1	0	2
+0	.	rms	A	arctic_a0048_rms	8	2.372	0.0		0	0	0	0
+0	.	slt	A	arctic_a0048_slt	0	0.0	0.13699999		0	0	0	0
+0	He	slt	A	arctic_a0048_slt	1	0.13699999	0.24325	[0.119198]	0	0	0	0
+0	looked	slt	A	arctic_a0048_slt	2	0.24325	0.48074999	[0.119198, 0.15026]	0	2	1	1
+0	at	slt	A	arctic_a0048_slt	3	0.48074999	0.56825	[0.529987]	1	0	0	0
+0	the	slt	A	arctic_a0048_slt	4	0.56825	0.64324999	[0.324945]	0	0	0	0
+0	handkerchief	slt	A	arctic_a0048_slt	5	0.64324999	1.137	[0.496376, 0.241781, 0.424728]	1	0	1	2
+2	more	slt	A	arctic_a0048_slt	6	1.137	1.637	[0.794944]	1	1	1	2
+0	.	slt	A	arctic_a0048_slt	7	1.637	1.7869999		0	0	0	0
+2	closely	slt	A	arctic_a0048_slt	8	1.7869999	2.4432499	[0.951689, 0.405828]	1	0	1	2
+0	.	slt	A	arctic_a0048_slt	9	2.4432499	0.0		0	0	0	0
+0	.	rms	A	arctic_a0049_rms	0	0.0	0.112		0	0	0	0
+1	Gregson	rms	A	arctic_a0049_rms	1	0.112	0.58200002	[0.492744, 0.3435]	1	1	0	0
+0	was	rms	A	arctic_a0049_rms	2	0.58200002	0.76200002	[0.234556]	0	0	0	0
+2	asleep	rms	A	arctic_a0049_rms	3	0.76200002	1.362	[0.146062, 0.959677]	1	0	2	2
+0	when	rms	A	arctic_a0049_rms	4	1.362	1.642	[0.320141]	0	0	0	0
+0	he	rms	A	arctic_a0049_rms	5	1.642	1.7920001	[0.627341]	0	0	0	0
+0	re	rms	A	arctic_a0049_rms	6	1.7920001	1.952		0	1	1	0
+2	entered	rms	A	arctic_a0049_rms	7	1.952	2.2720001	[0.536657, 0.278379]	0	1	0	1
+0	the	rms	A	arctic_a0049_rms	8	2.2720001	2.332	[0.114995]	0	0	0	0
+2	cabin	rms	A	arctic_a0049_rms	9	2.332	2.852	[0.114995, 0.849244, 0.232728]	1	0	0	2
+0	.	rms	A	arctic_a0049_rms	10	2.852	0.0		0	0	0	0
+0	.	slt	A	arctic_a0049_slt	0	0.0	0.18075		0	0	0	0
+2	Gregson	slt	A	arctic_a0049_slt	1	0.18075	0.62449998	[0.537775, 0.253809]	1	0	1	1
+0	was	slt	A	arctic_a0049_slt	2	0.62449998	0.81199998	[0.139888]	0	0	0	0
+0	asleep	slt	A	arctic_a0049_slt	3	0.81199998	1.23075	[0.161195, 0.420841]	1	1	1	2
+0	when	slt	A	arctic_a0049_slt	4	1.23075	1.35575	[0.067444]	0	0	0	0
+0	he	slt	A	arctic_a0049_slt	5	1.35575	1.4995	[0.124397]	0	0	0	0
+0	re	slt	A	arctic_a0049_slt	6	1.4995	1.70575	[0.190705]	1	0	0	0
+2	entered	slt	A	arctic_a0049_slt	7	1.70575	2.01825	[0.178878, 0.219609]	1	0	0	2
+0	the	slt	A	arctic_a0049_slt	8	2.01825	2.0869999	[0.065676]	0	0	0	0
+2	cabin	slt	A	arctic_a0049_slt	9	2.0869999	2.53075	[0.065676, 0.9, 0.126628]	1	0	1	2
+0	.	slt	A	arctic_a0049_slt	10	2.53075	0.0		0	0	0	0
+0	.	rms	A	arctic_a0050_rms	0	0.0	0.092		0	0	0	0
+0	In	rms	A	arctic_a0050_rms	1	0.092	0.23199999	[0.50202]	0	1	0	0
+0	spite	rms	A	arctic_a0050_rms	2	0.23199999	0.542	[0.669564]	1	1	1	1
+0	of	rms	A	arctic_a0050_rms	3	0.542	0.67199999	[0.184667]	0	0	0	0
+0	their	rms	A	arctic_a0050_rms	4	0.67199999	0.90200001	[0.265977]	1	0	0	0
+2	absurdity	rms	A	arctic_a0050_rms	5	0.90200001	1.762	[0.120943, 0.903004, 0.169353, 0.668561]	1	2	1	2
+0	the	rms	A	arctic_a0050_rms	6	1.762	1.932	[0.126201]	0	0	0	0
+0	words	rms	A	arctic_a0050_rms	7	1.932	2.322	[0.126201, 0.9]	1	1	1	0
+1	affected	rms	A	arctic_a0050_rms	8	2.322	2.842	[0.362461, 0.483079, 0.199215]	1	1	1	1
+0	Philip	rms	A	arctic_a0050_rms	9	2.842	3.2019999	[0.40405, 0.048224]	1	1	1	1
+1	curiously	rms	A	arctic_a0050_rms	10	3.2019999	4.0120001	[0.127598, 0.120725, 0.125243, 0.413111]	1	0	0	2
+0	.	rms	A	arctic_a0050_rms	11	4.0120001	0.0		0	0	0	0
+0	.	slt	A	arctic_a0050_slt	0	0.0	0.19949999		0	0	0	0
+0	In	slt	A	arctic_a0050_slt	1	0.19949999	0.31200001	[0.107121]	0	0	0	0
+0	spite	slt	A	arctic_a0050_slt	2	0.31200001	0.64950001	[0.906331]	1	1	2	1
+0	of	slt	A	arctic_a0050_slt	3	0.64950001	0.74325001	[0.125967]	0	0	0	0
+0	their	slt	A	arctic_a0050_slt	4	0.74325001	0.94950002	[0.363931, 0.067577]	1	0	0	0
+2	absurdity	slt	A	arctic_a0050_slt	5	0.94950002	1.60575	[0.067577, 0.535305, 0.147546, 0.196328]	1	0	2	2
+0	the	slt	A	arctic_a0050_slt	6	1.60575	1.687	[0.089716]	0	0	0	0
+0	words	slt	A	arctic_a0050_slt	7	1.687	2.0057499	[0.089716, 0.280025]	1	0	0	1
+0	affected	slt	A	arctic_a0050_slt	8	2.0057499	2.45575	[0.083104, 0.147223, 0.053598]	1	1	0	0
+1	Philip	slt	A	arctic_a0050_slt	9	2.45575	2.8182499	[0.078295, 0.066685]	1	1	0	1
+2	curiously	slt	A	arctic_a0050_slt	10	2.8182499	3.59325	[0.02509, 0.20088, 0.054207, 0.177038]	1	1	1	2
+0	.	slt	A	arctic_a0050_slt	11	3.59325	0.0		0	0	0	0
+0	.	rms	A	arctic_a0051_rms	0	0.0	0.092		0	0	0	0
+0	The	rms	A	arctic_a0051_rms	1	0.092	0.212	[0.086879]	0	0	0	0
+0	lace	rms	A	arctic_a0051_rms	2	0.212	0.58200002	[0.086879, 0.98842]	1	1	2	1
+0	was	rms	A	arctic_a0051_rms	3	0.58200002	0.78200001	[0.080757, 0.070658]	0	0	0	0
+0	of	rms	A	arctic_a0051_rms	4	0.78200001	0.852	[0.070658]	0	0	0	0
+0	a	rms	A	arctic_a0051_rms	5	0.852	0.90200001	[0.090281]	0	0	0	0
+0	delicate	rms	A	arctic_a0051_rms	6	0.90200001	1.362	[0.461196, 0.057693, 0.171313]	1	0	0	1
+2	ivory	rms	A	arctic_a0051_rms	7	1.362	1.802	[0.631261, 0.340661, 0.067778]	1	2	0	1
+0	color	rms	A	arctic_a0051_rms	8	1.802	2.2720001	[0.067778, 0.318008, 0.171671]	1	1	0	1
+0	.	rms	A	arctic_a0051_rms	9	2.2720001	2.5120001		0	0	0	0
+0	faintly	rms	A	arctic_a0051_rms	10	2.5120001	2.9519999	[0.482824, 0.207201]	1	1	1	0
+0	tinted	rms	A	arctic_a0051_rms	11	2.9519999	3.5120001	[0.519227, 0.08601]	1	0	1	1
+0	with	rms	A	arctic_a0051_rms	12	3.5120001	3.7320001	[0.05176]	0	0	0	0
+1	yellow	rms	A	arctic_a0051_rms	13	3.7320001	4.132	[0.201203, 0.381545]	1	1	1	2
+0	.	rms	A	arctic_a0051_rms	14	4.132	0.0		0	0	0	0
+0	.	slt	A	arctic_a0051_slt	0	0.0	0.1495		0	0	0	0
+0	The	slt	A	arctic_a0051_slt	1	0.1495	0.237	[0.070646]	0	0	0	0
+2	lace	slt	A	arctic_a0051_slt	2	0.237	0.67449999	[0.070646, 0.833025]	1	2	2	1
+0	was	slt	A	arctic_a0051_slt	3	0.67449999	0.8495	[0.076336]	0	0	0	0
+0	of	slt	A	arctic_a0051_slt	4	0.8495	0.9745	[0.177537]	0	0	0	0
+0	a	slt	A	arctic_a0051_slt	5	0.9745	1.0057499	[0.155143]	0	0	0	0
+0	delicate	slt	A	arctic_a0051_slt	6	1.0057499	1.4995	[0.402435, 0.400185, 0.251908]	1	1	1	0
+2	ivory	slt	A	arctic_a0051_slt	7	1.4995	1.85575	[0.9, 0.23608, 0.173108]	1	0	1	2
+0	color	slt	A	arctic_a0051_slt	8	1.85575	2.4619999	[0.25464, 0.514071]	1	0	0	1
+0	faintly	slt	A	arctic_a0051_slt	9	2.4619999	2.937	[0.583852, 0.241452]	1	0	0	0
+0	tinted	slt	A	arctic_a0051_slt	10	2.937	3.2869999	[0.146025, 0.175641]	0	0	0	1
+0	with	slt	A	arctic_a0051_slt	11	3.2869999	3.45575	[0.239838]	0	0	0	0
+2	yellow	slt	A	arctic_a0051_slt	12	3.45575	3.90575	[0.324426, 0.593761]	1	0	1	1
+0	.	slt	A	arctic_a0051_slt	13	3.90575	0.0		0	0	0	0
+0	.	rms	A	arctic_a0052_rms	0	0.0	0.092		0	0	0	0
+0	It	rms	A	arctic_a0052_rms	1	0.092	0.20200001	[0.740871]	1	0	0	0
+0	was	rms	A	arctic_a0052_rms	2	0.20200001	0.412	[0.380009]	0	0	0	0
+0	a	rms	A	arctic_a0052_rms	3	0.412	0.442	[0.211739]	0	0	0	0
+2	curious	rms	A	arctic_a0052_rms	4	0.442	1.012	[0.211739, 0.311754, 0.489089, 0.359076]	1	2	1	2
+1	coincidence	rms	A	arctic_a0052_rms	5	1.012	1.872	[0.9, 0.16191, 0.159561, 0.509818]	1	1	1	2
+0	.	rms	A	arctic_a0052_rms	6	1.872	0.0		0	0	0	0
+0	.	slt	A	arctic_a0052_slt	0	0.0	0.19325		0	0	0	0
+0	It	slt	A	arctic_a0052_slt	1	0.19325	0.29324999	[0.709894]	1	1	0	0
+0	was	slt	A	arctic_a0052_slt	2	0.29324999	0.51824999	[0.164384]	0	0	0	0
+0	a	slt	A	arctic_a0052_slt	3	0.51824999	0.55575001	[0.191299]	0	0	0	0
+1	curious	slt	A	arctic_a0052_slt	4	0.55575001	1.1245	[0.125371, 0.943495, 0.389197]	1	1	2	1
+2	coincidence	slt	A	arctic_a0052_slt	5	1.1245	2.01825	[0.47845, 0.273394, 0.23197, 0.32464]	1	1	0	2
+0	.	slt	A	arctic_a0052_slt	6	2.01825	0.0		0	0	0	0
+0	.	rms	A	arctic_a0053_rms	0	0.0	0.071999997		0	0	0	0
+2	Suddenly	rms	A	arctic_a0053_rms	1	0.071999997	0.59200001	[0.359649, 0.108502, 0.552897]	1	1	0	2
+0	his	rms	A	arctic_a0053_rms	2	0.59200001	0.81199998	[0.152277]	0	0	0	0
+1	fingers	rms	A	arctic_a0053_rms	3	0.81199998	1.1619999	[0.230616, 0.564867]	1	0	1	1
+1	closed	rms	A	arctic_a0053_rms	4	1.1619999	1.762	[1.125972]	1	0	2	2
+0	tightly	rms	A	arctic_a0053_rms	5	1.762	2.2019999	[0.672628, 0.514541]	1	0	1	1
+0	over	rms	A	arctic_a0053_rms	6	2.2019999	2.372	[0.262966, 0.128289]	0	0	0	0
+0	the	rms	A	arctic_a0053_rms	7	2.372	2.4820001	[0.343096]	0	0	0	0
+1	handkerchief	rms	A	arctic_a0053_rms	8	2.4820001	3.2520001	[0.408717, 0.284381, 0.206198]	1	0	1	2
+0	.	rms	A	arctic_a0053_rms	9	3.2520001	0.0		0	0	0	0
+0	.	slt	A	arctic_a0053_slt	0	0.0	0.06825		0	0	0	0
+2	Suddenly	slt	A	arctic_a0053_slt	1	0.06825	0.55575001	[0.9, 0.077633, 0.959432]	1	1	1	0
+0	his	slt	A	arctic_a0053_slt	2	0.55575001	0.76824999	[0.227948]	0	0	0	0
+0	fingers	slt	A	arctic_a0053_slt	3	0.76824999	1.187	[0.374392, 0.823189]	1	1	1	1
+0	closed	slt	A	arctic_a0053_slt	4	1.187	1.612	[0.985612]	1	1	0	0
+0	tightly	slt	A	arctic_a0053_slt	5	1.612	2.01825	[0.999268, 0.52573]	1	1	1	1
+0	over	slt	A	arctic_a0053_slt	6	2.01825	2.2119999	[0.409116, 0.293255]	0	0	0	0
+0	the	slt	A	arctic_a0053_slt	7	2.2119999	2.312	[0.205633]	0	0	0	0
+0	handkerchief	slt	A	arctic_a0053_slt	8	2.312	3.0495	[0.273295, 0.145276, 0.193404]	1	0	1	2
+0	.	slt	A	arctic_a0053_slt	9	3.0495	0.0		0	0	0	0
+0	.	rms	A	arctic_a0054_rms	0	0.0	0.102		0	0	0	0
+0	There	rms	A	arctic_a0054_rms	1	0.102	0.30199999	[0.416619]	1	0	0	0
+0	was	rms	A	arctic_a0054_rms	2	0.30199999	0.51200002	[0.180492]	0	0	0	0
+2	nothing	rms	A	arctic_a0054_rms	3	0.51200002	0.89200002	[0.643752, 0.247334]	1	1	2	2
+0	on	rms	A	arctic_a0054_rms	4	0.89200002	1.052	[0.348151]	1	0	0	0
+0	the	rms	A	arctic_a0054_rms	5	1.052	1.112	[0.168294]	0	0	0	0
+2	rock	rms	A	arctic_a0054_rms	6	1.112	1.582	[0.168294, 0.9]	1	1	1	2
+0	.	rms	A	arctic_a0054_rms	7	1.582	0.0		0	0	0	0
+0	.	slt	A	arctic_a0054_slt	0	0.0	0.162		0	0	0	0
+0	There	slt	A	arctic_a0054_slt	1	0.162	0.26824999	[0.05522]	0	0	0	0
+0	was	slt	A	arctic_a0054_slt	2	0.26824999	0.4745	[0.251285]	0	0	0	0
+2	nothing	slt	A	arctic_a0054_slt	3	0.4745	0.86825001	[0.348629, 0.420295]	0	2	2	1
+0	on	slt	A	arctic_a0054_slt	4	0.86825001	1.0682499	[0.767028]	1	0	0	0
+0	the	slt	A	arctic_a0054_slt	5	1.0682499	1.137	[0.065908]	0	0	0	0
+0	rock	slt	A	arctic_a0054_slt	6	1.137	1.587	[0.900718]	1	1	1	2
+0	.	slt	A	arctic_a0054_slt	7	1.587	0.0		0	0	0	0
+0	.	rms	A	arctic_a0055_rms	0	0.0	0.052000001		0	0	0	0
+2	Philip	rms	A	arctic_a0055_rms	1	0.052000001	0.46200001	[0.13277, 0.0965]	1	0	0	2
+0	stood	rms	A	arctic_a0055_rms	2	0.46200001	0.792	[0.707709]	1	1	0	0
+2	undecided	rms	A	arctic_a0055_rms	3	0.792	1.602	[0.342933, 0.195368, 0.599113, 0.184679]	1	0	1	2
+0	.	rms	A	arctic_a0055_rms	4	1.602	1.692		0	0	0	0
+0	his	rms	A	arctic_a0055_rms	5	1.692	1.9220001	[0.20233]	0	0	0	0
+0	ears	rms	A	arctic_a0055_rms	6	1.9220001	2.302	[0.360372]	1	0	0	2
+2	strained	rms	A	arctic_a0055_rms	7	2.302	2.832	[0.950265]	1	2	1	2
+0	to	rms	A	arctic_a0055_rms	8	2.832	2.902	[0.064769]	0	0	0	0
+0	catch	rms	A	arctic_a0055_rms	9	2.902	3.2720001	[0.064769, 0.301658]	1	0	1	1
+0	the	rms	A	arctic_a0055_rms	10	3.2720001	3.372	[0.033302]	0	0	0	0
+0	slightest	rms	A	arctic_a0055_rms	11	3.372	3.7920001	[0.033302, 0.399306, 0.094744]	1	1	0	1
+2	sound	rms	A	arctic_a0055_rms	12	3.7920001	4.3720002	[0.636421]	1	1	0	2
+0	.	rms	A	arctic_a0055_rms	13	4.3720002	0.0		0	0	0	0
+0	.	slt	A	arctic_a0055_slt	0	0.0	0.11825		0	0	0	0
+1	Philip	slt	A	arctic_a0055_slt	1	0.11825	0.49950001	[0.120962, 0.125139]	1	0	1	0
+0	stood	slt	A	arctic_a0055_slt	2	0.49950001	0.85575002	[0.587106]	0	0	1	0
+2	undecided	slt	A	arctic_a0055_slt	3	0.85575002	1.5994999	[0.804302, 0.130237, 0.911863, 0.376431]	1	0	1	2
+0	his	slt	A	arctic_a0055_slt	4	1.5994999	1.8745	[0.088195]	0	0	0	0
+0	ears	slt	A	arctic_a0055_slt	5	1.8745	2.0994999	[0.383432]	1	0	0	1
+1	strained	slt	A	arctic_a0055_slt	6	2.0994999	2.58075	[0.616044]	1	1	1	2
+0	to	slt	A	arctic_a0055_slt	7	2.58075	2.6619999	[0.05324]	0	0	0	0
+0	catch	slt	A	arctic_a0055_slt	8	2.6619999	2.9807501	[0.05324, 0.220512]	1	0	0	1
+0	the	slt	A	arctic_a0055_slt	9	2.9807501	3.062	[0.05941]	0	0	0	0
+0	slightest	slt	A	arctic_a0055_slt	10	3.062	3.5120001	[0.513574, 0.120072]	1	1	0	1
+2	sound	slt	A	arctic_a0055_slt	11	3.5120001	4.0995002	[0.860409]	1	1	0	1
+0	.	slt	A	arctic_a0055_slt	12	4.0995002	0.0		0	0	0	0
+0	.	rms	A	arctic_a0056_rms	0	0.0	0.071999997		0	0	0	0
+2	Pearce's	rms	A	arctic_a0056_rms	1	0.071999997	0.722	[0.31906, 0.667801]	1	2	2	1
+0	little	rms	A	arctic_a0056_rms	2	0.722	1.122	[0.03831, 0.082767]	0	0	0	0
+1	eyes	rms	A	arctic_a0056_rms	3	1.122	1.392		0	1	0	2
+0	were	rms	A	arctic_a0056_rms	4	1.392	1.502	[0.170191]	0	0	0	0
+0	fixed	rms	A	arctic_a0056_rms	5	1.502	1.872	[0.143149]	0	1	1	2
+0	on	rms	A	arctic_a0056_rms	6	1.872	2.0320001	[0.365603]	1	0	0	0
+0	him	rms	A	arctic_a0056_rms	7	2.0320001	2.1719999	[0.137981]	0	0	0	0
+0	shrewdly	rms	A	arctic_a0056_rms	8	2.1719999	2.7720001	[0.545567]	1	0	1	2
+0	.	rms	A	arctic_a0056_rms	9	2.7720001	0.0		0	0	0	0
+0	.	slt	A	arctic_a0056_slt	0	0.0	0.18075		0	0	0	0
+2	Pearce's	slt	A	arctic_a0056_slt	1	0.18075	0.65574998	[0.039099, 0.424021]	1	1	1	1
+0	little	slt	A	arctic_a0056_slt	2	0.65574998	0.88700002	[0.047618, 0.12392]	0	0	0	0
+0	eyes	slt	A	arctic_a0056_slt	3	0.88700002	1.262	[0.9]	1	0	1	2
+0	were	slt	A	arctic_a0056_slt	4	1.262	1.3745	[0.070752]	0	0	0	0
+2	fixed	slt	A	arctic_a0056_slt	5	1.3745	1.7557499	[0.220047]	0	0	1	1
+0	on	slt	A	arctic_a0056_slt	6	1.7557499	1.90575	[0.261645]	1	0	0	0
+0	him	slt	A	arctic_a0056_slt	7	1.90575	2.0682499	[0.025939]	0	0	0	0
+0	shrewdly	slt	A	arctic_a0056_slt	8	2.0682499	2.7495	[0.160591, 0.201988]	1	1	1	2
+0	.	slt	A	arctic_a0056_slt	9	2.7495	0.0		0	0	0	0
+0	.	rms	A	arctic_a0057_rms	0	0.0	0.112		0	0	0	0
+0	I	rms	A	arctic_a0057_rms	1	0.112	0.242	[0.45393]	1	0	0	0
+0	have	rms	A	arctic_a0057_rms	2	0.242	0.42199999	[0.233819]	0	0	0	0
+2	no	rms	A	arctic_a0057_rms	3	0.42199999	0.68199998	[0.924998]	1	0	2	0
+2	idea	rms	A	arctic_a0057_rms	4	0.68199998	1.262	[0.9, 0.913964, 0.494353]	1	2	1	2
+0	replied	rms	A	arctic_a0057_rms	5	1.262	1.802	[0.025243, 0.939209]	1	0	0	1
+1	Philip	rms	A	arctic_a0057_rms	6	1.802	2.2520001	[0.116879, 0.083918]	0	1	0	2
+0	.	rms	A	arctic_a0057_rms	7	2.2520001	0.0		0	0	0	0
+0	.	slt	A	arctic_a0057_slt	0	0.0	0.0		0	0	0	0
+0	.	slt	A	arctic_a0057_slt	1	0.0	0.20575		0	0	0	0
+0	I	slt	A	arctic_a0057_slt	2	0.20575	0.29949999	[0.443968]	1	2	0	0
+2	have	slt	A	arctic_a0057_slt	3	0.29949999	0.49950001	[0.301553]	0	0	0	0
+0	no	slt	A	arctic_a0057_slt	4	0.49950001	0.662	[0.371883]	0	0	1	0
+2	idea	slt	A	arctic_a0057_slt	5	0.662	1.1245	[0.905951, 0.306794, 0.571482]	1	1	1	2
+0	replied	slt	A	arctic_a0057_slt	6	1.1245	1.5745	[0.039515, 0.470929]	1	0	0	0
+2	Philip	slt	A	arctic_a0057_slt	7	1.5745	2.01825	[0.069589, 0.063221]	0	0	1	1
+0	.	slt	A	arctic_a0057_slt	8	2.01825	0.0		0	0	0	0
+0	.	slt	A	arctic_a0057_slt	9	0.0	0.0		0	0	0	0
+0	.	rms	A	arctic_a0058_rms	0	0.0	0.112		0	0	0	0
+0	I	rms	A	arctic_a0058_rms	1	0.112	0.212	[0.398823]	0	0	0	0
+0	came	rms	A	arctic_a0058_rms	2	0.212	0.51200002	[0.585502]	1	0	0	1
+0	for	rms	A	arctic_a0058_rms	3	0.51200002	0.722	[0.019098]	0	0	0	0
+1	information	rms	A	arctic_a0058_rms	4	0.722	1.452	[0.161779, 0.169875, 0.497732, 0.059104]	1	1	1	2
+0	more	rms	A	arctic_a0058_rms	5	1.452	1.7920001	[0.540511]	1	2	0	0
+0	out	rms	A	arctic_a0058_rms	6	1.7920001	1.892	[0.240831, 0.100831]	0	0	0	0
+0	of	rms	A	arctic_a0058_rms	7	1.892	1.982	[0.100831]	0	0	0	0
+2	curiosity	rms	A	arctic_a0058_rms	8	1.982	2.882	[0.043742, 0.235226, 0.90679, 0.058087, 0.403627]	1	1	1	2
+0	than	rms	A	arctic_a0058_rms	9	2.882	3.152	[0.465813]	1	0	0	0
+0	anything	rms	A	arctic_a0058_rms	10	3.152	3.582	[0.218015, 0.202412, 0.093065]	0	0	0	1
+0	else	rms	A	arctic_a0058_rms	11	3.582	4.052	[0.232069]	1	0	1	1
+0	.	rms	A	arctic_a0058_rms	12	4.052	0.0		0	0	0	0
+0	.	slt	A	arctic_a0058_slt	0	0.0	0.18700001		0	0	0	0
+0	I	slt	A	arctic_a0058_slt	1	0.18700001	0.24325	[0.161966]	0	0	0	0
+0	came	slt	A	arctic_a0058_slt	2	0.24325	0.537	[0.594984]	1	0	1	1
+0	for	slt	A	arctic_a0058_slt	3	0.537	0.69325	[0.077625]	0	0	0	0
+1	information	slt	A	arctic_a0058_slt	4	0.69325	1.362	[0.67768, 0.091431, 0.445518, 0.092772]	1	1	2	2
+0	more	slt	A	arctic_a0058_slt	5	1.362	1.59325	[0.299145]	0	0	0	0
+0	out	slt	A	arctic_a0058_slt	6	1.59325	1.687	[0.49509]	1	0	0	0
+0	of	slt	A	arctic_a0058_slt	7	1.687	1.80575	[0.139216]	0	0	0	0
+2	curiosity	slt	A	arctic_a0058_slt	8	1.80575	2.5369999	[0.065419, 0.232742, 0.900895, 0.073724, 0.300881]	1	2	1	1
+0	than	slt	A	arctic_a0058_slt	9	2.5369999	2.7119999	[0.061151]	0	0	0	0
+0	anything	slt	A	arctic_a0058_slt	10	2.7119999	3.09325	[0.199942, 0.163703, 0.045369]	1	0	0	0
+0	else	slt	A	arctic_a0058_slt	11	3.09325	3.487	[0.270298]	1	0	0	1
+0	.	slt	A	arctic_a0058_slt	12	3.487	0.0		0	0	0	0
+0	.	rms	A	arctic_a0059_rms	0	0.0	0.071999997		0	0	0	0
+0	His	rms	A	arctic_a0059_rms	1	0.071999997	0.292	[0.253556]	1	0	0	0
+1	immaculate	rms	A	arctic_a0059_rms	2	0.292	0.87199998	[0.157991, 0.953976, 0.134065, 0.162618]	1	1	1	0
+2	appearance	rms	A	arctic_a0059_rms	3	0.87199998	1.392	[0.223087, 0.257794]	1	0	1	2
+0	was	rms	A	arctic_a0059_rms	4	1.392	1.562	[0.09034]	0	0	0	0
+2	gone	rms	A	arctic_a0059_rms	5	1.562	2.0120001	[0.883996]	1	2	1	2
+0	.	rms	A	arctic_a0059_rms	6	2.0120001	0.0		0	0	0	0
+0	.	slt	A	arctic_a0059_slt	0	0.0	0.162		0	0	0	0
+0	His	slt	A	arctic_a0059_slt	1	0.162	0.37450001	[0.123255]	0	0	0	0
+2	immaculate	slt	A	arctic_a0059_slt	2	0.37450001	0.98075002	[0.141279, 0.900925, 0.280136, 0.337507]	1	1	1	1
+0	appearance	slt	A	arctic_a0059_slt	3	0.98075002	1.48075	[0.166322, 0.164548, 0.082525]	0	0	1	2
+0	was	slt	A	arctic_a0059_slt	4	1.48075	1.6495	[0.056428]	0	0	0	0
+2	gone	slt	A	arctic_a0059_slt	5	1.6495	2.1682501	[0.881485]	1	0	1	2
+0	.	slt	A	arctic_a0059_slt	6	2.1682501	0.0		0	0	0	0
+0	.	rms	A	arctic_a0060_rms	0	0.0	0.102		0	0	0	0
+2	Anyway	rms	A	arctic_a0060_rms	1	0.102	0.67199999	[1.017486, 0.760856, 0.635459]	1	2	2	1
+0	no	rms	A	arctic_a0060_rms	2	0.67199999	0.84200001	[0.433265]	0	0	0	0
+0	one	rms	A	arctic_a0060_rms	3	0.84200001	0.99199998	[0.182803]	0	0	0	0
+2	saw	rms	A	arctic_a0060_rms	4	0.99199998	1.272	[0.725521]	1	0	1	1
+0	her	rms	A	arctic_a0060_rms	5	1.272	1.402	[0.159639]	0	0	0	0
+0	like	rms	A	arctic_a0060_rms	6	1.402	1.712	[0.202295]	0	1	0	0
+2	that	rms	A	arctic_a0060_rms	7	1.712	2.092	[0.525746]	1	1	1	1
+0	.	rms	A	arctic_a0060_rms	8	2.092	0.0		0	0	0	0
+0	.	slt	A	arctic_a0060_slt	0	0.0	0.20575		0	0	0	0
+2	Anyway	slt	A	arctic_a0060_slt	1	0.20575	0.787	[0.9, 0.153088, 0.809052]	1	1	2	1
+0	no	slt	A	arctic_a0060_slt	2	0.787	1.01825	[0.254579]	0	0	0	0
+0	one	slt	A	arctic_a0060_slt	3	1.01825	1.2244999	[0.2744]	0	0	0	0
+1	saw	slt	A	arctic_a0060_slt	4	1.2244999	1.487	[0.837909]	1	0	1	2
+0	her	slt	A	arctic_a0060_slt	5	1.487	1.60575	[0.120071]	0	0	0	0
+0	like	slt	A	arctic_a0060_slt	6	1.60575	1.8807499	[0.164827]	0	0	0	0
+0	that	slt	A	arctic_a0060_slt	7	1.8807499	2.20575	[0.799519]	1	0	1	2
+0	.	slt	A	arctic_a0060_slt	8	2.20575	0.0		0	0	0	0
+0	.	rms	A	arctic_a0061_rms	0	0.0	0.032000002		0	0	0	0
+0	Philip	rms	A	arctic_a0061_rms	1	0.032000002	0.50199997	[0.228821, 0.104453]	1	1	1	1
+0	snatched	rms	A	arctic_a0061_rms	2	0.50199997	0.98199999	[0.780578]	1	1	1	2
+0	at	rms	A	arctic_a0061_rms	3	0.98199999	1.102	[0.344008]	0	0	0	0
+0	the	rms	A	arctic_a0061_rms	4	1.102	1.1619999	[0.043591]	0	0	0	0
+2	letter	rms	A	arctic_a0061_rms	5	1.1619999	1.482	[0.043591, 0.43544, 0.328673]	1	0	1	2
+0	which	rms	A	arctic_a0061_rms	6	1.482	1.712	[0.100078]	0	0	0	0
+0	Gregson	rms	A	arctic_a0061_rms	7	1.712	2.2420001	[0.247562, 0.105492]	1	2	1	2
+0	held	rms	A	arctic_a0061_rms	8	2.2420001	2.4820001	[0.147367]	0	1	0	0
+2	out	rms	A	arctic_a0061_rms	9	2.4820001	2.6819999	[0.900977]	1	0	1	1
+0	to	rms	A	arctic_a0061_rms	10	2.6819999	2.842	[0.093308]	0	0	0	0
+0	him	rms	A	arctic_a0061_rms	11	2.842	3.1719999	[0.211447]	1	0	0	1
+0	.	rms	A	arctic_a0061_rms	12	3.1719999	0.0		0	0	0	0
+0	.	slt	A	arctic_a0061_slt	0	0.0	0.0		0	0	0	0
+0	.	slt	A	arctic_a0061_slt	1	0.0	0.162		0	0	0	0
+0	Philip	slt	A	arctic_a0061_slt	2	0.162	0.49950001	[0.184221, 0.24356]	0	0	1	0
+2	snatched	slt	A	arctic_a0061_slt	3	0.49950001	0.9745	[0.935123]	1	2	1	2
+0	at	slt	A	arctic_a0061_slt	4	0.9745	1.0682499	[0.123756]	0	0	0	0
+0	the	slt	A	arctic_a0061_slt	5	1.0682499	1.15575	[0.129932]	0	0	0	0
+2	letter	slt	A	arctic_a0061_slt	6	1.15575	1.48075	[0.36539, 0.178549]	1	1	1	2
+0	which	slt	A	arctic_a0061_slt	7	1.48075	1.6932499	[0.069245]	0	0	0	0
+0	Gregson	slt	A	arctic_a0061_slt	8	1.6932499	2.1682501	[0.389214, 0.11934]	1	1	1	1
+0	held	slt	A	arctic_a0061_slt	9	2.1682501	2.3745	[0.03666]	0	1	0	0
+0	out	slt	A	arctic_a0061_slt	10	2.3745	2.5495	[0.403605]	1	1	0	1
+0	to	slt	A	arctic_a0061_slt	11	2.5495	2.6682501	[0.052513]	0	0	0	0
+0	him	slt	A	arctic_a0061_slt	12	2.6682501	2.9182501	[0.197799]	1	0	0	1
+0	.	slt	A	arctic_a0061_slt	13	2.9182501	0.0		0	0	0	0
+0	.	rms	A	arctic_a0062_rms	0	0.0	0.102		0	0	0	0
+0	The	rms	A	arctic_a0062_rms	1	0.102	0.30199999	[0.048667]	0	0	0	0
+0	men	rms	A	arctic_a0062_rms	2	0.30199999	0.53200001	[0.048667, 1.044875]	1	0	1	0
+2	stared	rms	A	arctic_a0062_rms	3	0.53200001	1.122	[0.726597]	1	2	2	2
+0	into	rms	A	arctic_a0062_rms	4	1.122	1.452	[0.177899, 0.107307]	0	0	0	0
+0	each	rms	A	arctic_a0062_rms	5	1.452	1.632	[0.154713]	0	0	0	0
+0	other's	rms	A	arctic_a0062_rms	6	1.632	2.0320001	[0.422628, 0.257072]	1	0	0	1
+1	face	rms	A	arctic_a0062_rms	7	2.0320001	2.562	[0.81019]	1	0	1	2
+0	.	rms	A	arctic_a0062_rms	8	2.562	0.0		0	0	0	0
+0	.	slt	A	arctic_a0062_slt	0	0.0	0.18700001		0	0	0	0
+0	The	slt	A	arctic_a0062_slt	1	0.18700001	0.30575001	[0.121522]	0	0	0	0
+2	men	slt	A	arctic_a0062_slt	2	0.30575001	0.56825	[0.602393]	1	0	0	1
+1	stared	slt	A	arctic_a0062_slt	3	0.56825	0.98699999	[0.9]	1	2	2	2
+0	into	slt	A	arctic_a0062_slt	4	0.98699999	1.2745	[0.279516, 0.170083]	0	0	0	0
+0	each	slt	A	arctic_a0062_slt	5	1.2745	1.4495	[0.177408]	0	1	0	1
+0	other's	slt	A	arctic_a0062_slt	6	1.4495	1.79325	[0.309499, 0.145174]	1	1	0	0
+2	face	slt	A	arctic_a0062_slt	7	1.79325	2.2432499	[0.49066]	1	1	0	2
+0	.	slt	A	arctic_a0062_slt	8	2.2432499	0.0		0	0	0	0
+0	.	rms	A	arctic_a0063_rms	0	0.0	0.071999997		0	0	0	0
+2	Yes	rms	A	arctic_a0063_rms	1	0.071999997	0.55199999	[0.858071]	1	2	2	2
+0	it	rms	A	arctic_a0063_rms	2	0.55199999	0.67199999	[0.118589]	0	0	0	0
+0	was	rms	A	arctic_a0063_rms	3	0.67199999	0.86199999	[0.083528]	0	0	0	0
+0	a	rms	A	arctic_a0063_rms	4	0.86199999	0.89200002	[0.119137]	0	0	0	0
+2	man	rms	A	arctic_a0063_rms	5	0.89200002	1.322	[0.119137, 1.027716]	1	1	2	2
+0	who	rms	A	arctic_a0063_rms	6	1.322	1.492	[0.128287]	0	1	0	0
+0	asked	rms	A	arctic_a0063_rms	7	1.492	2.0120001	[0.324848]	1	2	1	1
+0	.	rms	A	arctic_a0063_rms	8	2.0120001	2.1719999		0	0	0	0
+0	a	rms	A	arctic_a0063_rms	9	2.1719999	2.2320001	[0.026825]	0	0	0	0
+2	stranger	rms	A	arctic_a0063_rms	10	2.2320001	2.7920001	[0.026825, 0.325179, 0.218158]	1	1	0	2
+0	.	rms	A	arctic_a0063_rms	11	2.7920001	0.0		0	0	0	0
+0	.	slt	A	arctic_a0063_slt	0	0.0	0.0		0	0	0	0
+0	.	slt	A	arctic_a0063_slt	1	0.0	0.162		0	0	0	0
+2	Yes	slt	A	arctic_a0063_slt	2	0.162	0.58700001	[0.929597, 0.009633]	1	2	2	2
+0	it	slt	A	arctic_a0063_slt	3	0.58700001	0.69950002	[0.009633]	0	0	0	0
+0	was	slt	A	arctic_a0063_slt	4	0.69950002	0.89324999	[0.13659]	1	0	0	0
+0	a	slt	A	arctic_a0063_slt	5	0.89324999	0.93699998	[0.05946]	0	0	0	0
+2	man	slt	A	arctic_a0063_slt	6	0.93699998	1.26825	[0.687724]	1	1	2	2
+0	who	slt	A	arctic_a0063_slt	7	1.26825	1.41825	[0.082442]	0	1	0	0
+1	asked	slt	A	arctic_a0063_slt	8	1.41825	1.85575	[0.491733]	1	1	0	2
+0	.	slt	A	arctic_a0063_slt	9	1.85575	1.99325		0	0	0	0
+0	a	slt	A	arctic_a0063_slt	10	1.99325	2.03075	[0.061543]	0	0	0	0
+2	stranger	slt	A	arctic_a0063_slt	11	2.03075	2.737	[0.244969, 0.239749]	1	1	1	2
+0	.	slt	A	arctic_a0063_slt	12	2.737	0.0		0	0	0	0
+0	.	rms	A	arctic_a0064_rms	0	0.0	0.092		0	0	0	0
+0	The	rms	A	arctic_a0064_rms	1	0.092	0.212	[0.035052]	0	0	0	0
+2	fourth	rms	A	arctic_a0064_rms	2	0.212	0.602	[0.035052, 0.450138]	1	2	1	1
+0	and	rms	A	arctic_a0064_rms	3	0.602	0.73199999	[0.146313]	0	0	0	0
+2	fifth	rms	A	arctic_a0064_rms	4	0.73199999	1.022	[0.336911]	0	2	1	1
+0	days	rms	A	arctic_a0064_rms	5	1.022	1.472	[1.206818]	1	2	2	2
+1	passed	rms	A	arctic_a0064_rms	6	1.472	1.962	[0.643778]	1	0	0	1
+0	without	rms	A	arctic_a0064_rms	7	1.962	2.332	[0.028489, 0.496752]	1	0	0	0
+0	any	rms	A	arctic_a0064_rms	8	2.332	2.5320001	[0.252991, 0.332611]	1	0	1	1
+2	developments	rms	A	arctic_a0064_rms	9	2.5320001	3.4419999	[0.068304, 0.172427, 0.052556, 0.192447]	1	0	0	2
+0	.	rms	A	arctic_a0064_rms	10	3.4419999	0.0		0	0	0	0
+0	.	slt	A	arctic_a0064_slt	0	0.0	0.14325		0	0	0	0
+0	The	slt	A	arctic_a0064_slt	1	0.14325	0.24325	[0.059786]	0	0	0	0
+2	fourth	slt	A	arctic_a0064_slt	2	0.24325	0.5995	[0.340801]	1	1	1	1
+0	and	slt	A	arctic_a0064_slt	3	0.5995	0.7245	[0.178914]	0	0	0	0
+2	fifth	slt	A	arctic_a0064_slt	4	0.7245	0.96824998	[0.294712]	0	1	1	1
+0	.	slt	A	arctic_a0064_slt	5	0.96824998	1.0369999		0	0	0	0
+0	days	slt	A	arctic_a0064_slt	6	1.0369999	1.3807499	[0.719708]	1	0	1	2
+0	passed	slt	A	arctic_a0064_slt	7	1.3807499	1.8182499	[0.914091]	1	1	1	1
+0	without	slt	A	arctic_a0064_slt	8	1.8182499	2.1494999	[0.042681, 0.611033]	1	0	0	0
+0	any	slt	A	arctic_a0064_slt	9	2.1494999	2.3682499	[0.381109, 0.130241]	0	0	0	0
+2	developments	slt	A	arctic_a0064_slt	10	2.3682499	3.14325	[0.072627, 0.397909, 0.018936, 0.054446]	1	0	1	2
+0	.	slt	A	arctic_a0064_slt	11	3.14325	0.0		0	0	0	0
+0	.	rms	A	arctic_a0065_rms	0	0.0	0.102		0	0	0	0
+0	They	rms	A	arctic_a0065_rms	1	0.102	0.34200001	[0.533085]	0	0	0	0
+2	closed	rms	A	arctic_a0065_rms	2	0.34200001	0.84200001	[1.268414]	1	0	1	1
+0	now	rms	A	arctic_a0065_rms	3	0.84200001	1.2920001	[0.858959]	1	0	1	0
+0	until	rms	A	arctic_a0065_rms	4	1.2920001	1.652	[0.216857, 0.247595]	0	0	0	0
+0	his	rms	A	arctic_a0065_rms	5	1.652	1.842	[0.263929]	0	0	0	0
+1	fingers	rms	A	arctic_a0065_rms	6	1.842	2.2320001	[0.63973, 0.549817]	1	0	2	2
+0	were	rms	A	arctic_a0065_rms	7	2.2320001	2.352	[0.365401]	0	0	0	0
+0	like	rms	A	arctic_a0065_rms	8	2.352	2.632	[0.895323]	1	0	0	0
+2	cords	rms	A	arctic_a0065_rms	9	2.632	3.082	[0.604323]	0	1	1	2
+0	of	rms	A	arctic_a0065_rms	10	3.082	3.2019999	[0.190197]	0	1	0	0
+2	steel	rms	A	arctic_a0065_rms	11	3.2019999	3.7420001	[0.758891]	1	1	1	2
+0	.	rms	A	arctic_a0065_rms	12	3.7420001	0.0		0	0	0	0
+0	.	slt	A	arctic_a0065_slt	0	0.0	0.15575001		0	0	0	0
+0	They	slt	A	arctic_a0065_slt	1	0.15575001	0.29324999	[0.272088]	0	0	0	0
+2	closed	slt	A	arctic_a0065_slt	2	0.29324999	0.75575	[0.9]	1	1	1	2
+0	now	slt	A	arctic_a0065_slt	3	0.75575	1.062	[0.831484]	1	0	1	0
+0	until	slt	A	arctic_a0065_slt	4	1.062	1.35575	[0.059089, 0.043955]	0	0	0	0
+0	his	slt	A	arctic_a0065_slt	5	1.35575	1.5682499	[0.060507]	0	0	0	0
+2	fingers	slt	A	arctic_a0065_slt	6	1.5682499	1.95575	[0.089411, 0.378816]	1	1	1	2
+0	were	slt	A	arctic_a0065_slt	7	1.95575	2.0432501	[0.065326]	0	0	0	0
+0	like	slt	A	arctic_a0065_slt	8	2.0432501	2.2869999	[0.212398]	1	0	0	0
+0	cords	slt	A	arctic_a0065_slt	9	2.2869999	2.6682501	[0.166266, 0.04505]	0	1	1	2
+0	of	slt	A	arctic_a0065_slt	10	2.6682501	2.7495	[0.04505]	0	0	0	0
+2	steel	slt	A	arctic_a0065_slt	11	2.7495	3.2307501	[0.373738]	1	0	1	2
+0	.	slt	A	arctic_a0065_slt	12	3.2307501	0.0		0	0	0	0
+0	.	rms	A	arctic_a0066_rms	0	0.0	0.052000001		0	0	0	0
+0	He	rms	A	arctic_a0066_rms	1	0.052000001	0.20200001	[0.30752]	0	0	0	0
+0	saw	rms	A	arctic_a0066_rms	2	0.20200001	0.472	[0.996539]	1	0	1	2
+0	Jeanne	rms	A	arctic_a0066_rms	3	0.472	0.852	[0.934953]	1	0	1	1
+2	falter	rms	A	arctic_a0066_rms	4	0.852	1.352	[0.786637, 0.18138]	1	1	1	2
+0	for	rms	A	arctic_a0066_rms	5	1.352	1.612	[0.025817]	0	0	0	0
+0	a	rms	A	arctic_a0066_rms	6	1.612	1.642	[0.228196]	0	0	0	0
+1	moment	rms	A	arctic_a0066_rms	7	1.642	2.1619999	[0.395713, 0.061545]	1	1	1	2
+0	.	rms	A	arctic_a0066_rms	8	2.1619999	0.0		0	0	0	0
+0	.	slt	A	arctic_a0066_slt	0	0.0	0.0		0	0	0	0
+0	.	slt	A	arctic_a0066_slt	1	0.0	0.162		0	0	0	0
+0	He	slt	A	arctic_a0066_slt	2	0.162	0.33074999	[0.185541]	0	0	0	0
+0	saw	slt	A	arctic_a0066_slt	3	0.33074999	0.60575002	[0.9]	1	0	1	0
+0	Jeanne	slt	A	arctic_a0066_slt	4	0.60575002	1.012	[0.59471]	0	2	1	2
+2	falter	slt	A	arctic_a0066_slt	5	1.012	1.45575	[0.52619, 0.144977]	1	1	1	2
+0	for	slt	A	arctic_a0066_slt	6	1.45575	1.6995	[0.024175, 0.034989]	0	0	0	0
+0	a	slt	A	arctic_a0066_slt	7	1.6995	1.71825	[0.034989]	0	0	0	0
+0	moment	slt	A	arctic_a0066_slt	8	1.71825	2.2557499	[0.034989, 0.215508, 0.102929]	1	1	1	1
+0	.	slt	A	arctic_a0066_slt	9	2.2557499	0.0		0	0	0	0
+0	.	rms	A	arctic_a0067_rms	0	0.0	0.082000002		0	0	0	0
+2	Surely	rms	A	arctic_a0067_rms	1	0.082000002	0.62199998	[0.027904, 0.449497]	1	1	1	2
+0	I	rms	A	arctic_a0067_rms	2	0.62199998	0.722	[0.487275]	1	0	0	0
+0	will	rms	A	arctic_a0067_rms	3	0.722	0.92199999	[0.072086]	0	0	0	0
+2	excuse	rms	A	arctic_a0067_rms	4	0.92199999	1.452	[0.15309, 0.436869]	1	0	2	2
+0	you	rms	A	arctic_a0067_rms	5	1.452	1.642	[0.096323]	0	0	1	0
+0	she	rms	A	arctic_a0067_rms	6	1.642	1.842	[0.09914]	0	0	0	0
+0	cried	rms	A	arctic_a0067_rms	7	1.842	2.372	[0.948803]	1	1	1	2
+0	.	rms	A	arctic_a0067_rms	8	2.372	0.0		0	0	0	0
+0	.	slt	A	arctic_a0067_slt	0	0.0	0.1495		0	0	0	0
+2	Surely	slt	A	arctic_a0067_slt	1	0.1495	0.66825002	[0.075305, 0.384658]	0	0	1	1
+0	I	slt	A	arctic_a0067_slt	2	0.66825002	0.787	[0.910416]	1	0	0	0
+0	will	slt	A	arctic_a0067_slt	3	0.787	0.96200001	[0.166454, 0.077274]	0	0	0	0
+1	excuse	slt	A	arctic_a0067_slt	4	0.96200001	1.43075	[0.077274, 0.605028]	1	1	1	2
+0	you	slt	A	arctic_a0067_slt	5	1.43075	1.64325	[0.295788]	0	1	0	0
+0	she	slt	A	arctic_a0067_slt	6	1.64325	1.8494999	[0.031613]	0	0	0	0
+1	cried	slt	A	arctic_a0067_slt	7	1.8494999	2.362	[0.031613, 0.903261]	1	0	1	1
+0	.	slt	A	arctic_a0067_slt	8	2.362	0.0		0	0	0	0
+0	.	rms	A	arctic_a0068_rms	0	0.0	0.102		0	0	0	0
+0	In	rms	A	arctic_a0068_rms	1	0.102	0.212	[0.593506]	1	0	0	0
+0	a	rms	A	arctic_a0068_rms	2	0.212	0.252	[0.29923]	0	0	0	0
+2	flash	rms	A	arctic_a0068_rms	3	0.252	0.84200001	[0.29923, 1.114793]	1	2	1	2
+1	Philip	rms	A	arctic_a0068_rms	4	0.84200001	1.212	[0.02541, 0.079755]	1	0	0	1
+1	followed	rms	A	arctic_a0068_rms	5	1.212	1.632	[0.063591, 0.288259]	1	0	1	1
+1	its	rms	A	arctic_a0068_rms	6	1.632	1.862	[0.273513]	0	0	0	0
+2	direction	rms	A	arctic_a0068_rms	7	1.862	2.4619999	[0.502502, 0.694228, 0.206365]	1	1	1	2
+0	.	rms	A	arctic_a0068_rms	8	2.4619999	0.0		0	0	0	0
+0	.	slt	A	arctic_a0068_slt	0	0.0	0.19325		0	0	0	0
+0	In	slt	A	arctic_a0068_slt	1	0.19325	0.29949999	[0.0931]	1	0	0	0
+0	a	slt	A	arctic_a0068_slt	2	0.29949999	0.34325001	[0.07574]	0	0	0	0
+2	flash	slt	A	arctic_a0068_slt	3	0.34325001	0.83074999	[1.06199]	1	2	2	2
+0	Philip	slt	A	arctic_a0068_slt	4	0.83074999	1.187	[0.040512, 0.040205]	0	1	0	0
+0	followed	slt	A	arctic_a0068_slt	5	1.187	1.5745	[0.330709, 0.03961]	1	1	1	2
+0	its	slt	A	arctic_a0068_slt	6	1.5745	1.7745	[0.036393]	0	0	0	0
+0	direction	slt	A	arctic_a0068_slt	7	1.7745	2.4619999	[0.112787, 0.260904, 0.046779]	1	1	0	2
+0	.	slt	A	arctic_a0068_slt	8	2.4619999	0.0		0	0	0	0
+0	.	rms	A	arctic_a0069_rms	0	0.0	0.102		0	0	0	0
+0	It	rms	A	arctic_a0069_rms	1	0.102	0.212	[0.392837]	0	0	0	0
+0	was	rms	A	arctic_a0069_rms	2	0.212	0.50199997	[0.595915]	1	0	1	0
+0	his	rms	A	arctic_a0069_rms	3	0.50199997	0.64200002	[0.145763]	0	0	0	0
+2	intention	rms	A	arctic_a0069_rms	4	0.64200002	1.182	[0.124004, 0.251219, 0.105007]	1	2	1	2
+0	to	rms	A	arctic_a0069_rms	5	1.182	1.332	[0.021404]	0	0	0	0
+0	return	rms	A	arctic_a0069_rms	6	1.332	1.842	[0.021404, 0.025947, 1.007029]	1	1	1	2
+0	to	rms	A	arctic_a0069_rms	7	1.842	2.062	[0.177425]	0	0	0	0
+1	Eileen	rms	A	arctic_a0069_rms	8	2.062	2.602	[0.469844, 0.970157]	1	2	1	2
+0	and	rms	A	arctic_a0069_rms	9	2.602	2.812	[0.351704]	0	0	0	0
+0	her	rms	A	arctic_a0069_rms	10	2.812	2.9219999	[0.146353]	0	0	0	0
+1	father	rms	A	arctic_a0069_rms	11	2.9219999	3.4119999	[0.928755, 0.256688]	1	1	1	2
+0	.	rms	A	arctic_a0069_rms	12	3.4119999	0.0		0	0	0	0
+0	.	slt	A	arctic_a0069_slt	0	0.0	0.19949999		0	0	0	0
+0	It	slt	A	arctic_a0069_slt	1	0.19949999	0.27450001	[0.229726]	1	0	0	0
+0	was	slt	A	arctic_a0069_slt	2	0.27450001	0.46200001	[0.196959]	0	0	0	0
+0	his	slt	A	arctic_a0069_slt	3	0.46200001	0.67449999	[0.21432]	0	0	0	0
+1	intention	slt	A	arctic_a0069_slt	4	0.67449999	1.20575	[0.189406, 0.498137, 0.186068]	1	1	1	2
+0	to	slt	A	arctic_a0069_slt	5	1.20575	1.34325	[0.088994]	0	0	0	0
+0	return	slt	A	arctic_a0069_slt	6	1.34325	1.7745	[0.154576, 0.425518]	1	0	1	2
+0	to	slt	A	arctic_a0069_slt	7	1.7745	1.93075	[0.15825]	0	0	0	0
+2	Eileen	slt	A	arctic_a0069_slt	8	1.93075	2.33075	[0.483828, 0.35874]	1	0	0	1
+0	and	slt	A	arctic_a0069_slt	9	2.33075	2.4182501	[0.122192]	0	0	0	0
+0	her	slt	A	arctic_a0069_slt	10	2.4182501	2.5244999	[0.07511]	0	0	0	0
+2	father	slt	A	arctic_a0069_slt	11	2.5244999	3.1307499	[0.9, 0.653208]	1	0	1	1
+0	.	slt	A	arctic_a0069_slt	12	3.1307499	0.0		0	0	0	0
+0	.	rms	A	arctic_a0070_rms	0	0.0	0.061999999		0	0	0	0
+0	He	rms	A	arctic_a0070_rms	1	0.061999999	0.192	[0.336601]	0	0	0	0
+0	would	rms	A	arctic_a0070_rms	2	0.192	0.36199999	[0.483869]	0	0	0	0
+1	first	rms	A	arctic_a0070_rms	3	0.36199999	0.75199997	[0.92339]	1	0	1	1
+0	hunt	rms	A	arctic_a0070_rms	4	0.75199997	0.98199999	[0.234038]	0	1	1	0
+0	up	rms	A	arctic_a0070_rms	5	0.98199999	1.102	[0.442092]	1	1	1	0
+2	Gregson	rms	A	arctic_a0070_rms	6	1.102	1.682	[0.313086, 0.198129]	0	2	1	2
+0	and	rms	A	arctic_a0070_rms	7	1.682	1.882	[0.18688]	0	0	0	0
+1	begin	rms	A	arctic_a0070_rms	8	1.882	2.2019999	[0.604829, 0.391055]	1	0	1	1
+0	his	rms	A	arctic_a0070_rms	9	2.2019999	2.372	[0.098931]	0	0	0	0
+0	work	rms	A	arctic_a0070_rms	10	2.372	2.6619999	[0.38754]	1	0	0	1
+0	there	rms	A	arctic_a0070_rms	11	2.6619999	3.052	[0.432219]	1	0	1	2
+0	.	rms	A	arctic_a0070_rms	12	3.052	0.0		0	0	0	0
+0	.	slt	A	arctic_a0070_slt	0	0.0	0.1245		0	0	0	0
+0	He	slt	A	arctic_a0070_slt	1	0.1245	0.27450001	[0.289249]	1	0	0	0
+0	would	slt	A	arctic_a0070_slt	2	0.27450001	0.43700001	[0.191631]	0	0	0	0
+2	first	slt	A	arctic_a0070_slt	3	0.43700001	0.83700001	[0.929089]	1	2	2	1
+0	hunt	slt	A	arctic_a0070_slt	4	0.83700001	1.09325	[0.266877]	0	0	1	0
+0	up	slt	A	arctic_a0070_slt	5	1.09325	1.2244999	[0.457779]	0	0	1	0
+0	.	slt	A	arctic_a0070_slt	6	1.2244999	1.262		0	0	0	0
+1	Gregson	slt	A	arctic_a0070_slt	7	1.262	1.70575	[0.573623, 0.086604]	1	2	1	2
+0	and	slt	A	arctic_a0070_slt	8	1.70575	1.85575	[0.190392]	1	0	0	0
+0	begin	slt	A	arctic_a0070_slt	9	1.85575	2.1245	[0.147816, 0.128212]	0	1	0	1
+0	his	slt	A	arctic_a0070_slt	10	2.1245	2.2995	[0.041143]	0	0	0	0
+0	work	slt	A	arctic_a0070_slt	11	2.2995	2.5369999	[0.272117]	0	0	0	1
+1	there	slt	A	arctic_a0070_slt	12	2.5369999	2.9744999	[0.548621]	1	0	0	2
+0	.	slt	A	arctic_a0070_slt	13	2.9744999	0.0		0	0	0	0
+0	.	rms	A	arctic_a0071_rms	0	0.0	0.082000002		0	0	0	0
+1	What	rms	A	arctic_a0071_rms	1	0.082000002	0.30199999	[0.698292]	1	2	1	1
+0	was	rms	A	arctic_a0071_rms	2	0.30199999	0.49200001	[0.19033]	0	0	0	0
+0	the	rms	A	arctic_a0071_rms	3	0.49200001	0.75199997	[0.292949]	0	0	0	0
+2	object	rms	A	arctic_a0071_rms	4	0.75199997	1.2819999	[0.365902]	0	2	1	2
+0	of	rms	A	arctic_a0071_rms	5	1.2819999	1.4119999	[0.210397]	0	0	0	0
+0	your	rms	A	arctic_a0071_rms	6	1.4119999	1.5319999	[0.081618]	0	0	0	0
+0	little	rms	A	arctic_a0071_rms	7	1.5319999	1.772	[0.080009, 0.0242]	0	0	0	1
+1	sensation	rms	A	arctic_a0071_rms	8	1.772	2.4719999	[0.028183, 0.253768, 0.04131]	1	1	1	2
+0	.	rms	A	arctic_a0071_rms	9	2.4719999	0.0		0	0	0	0
+0	.	slt	A	arctic_a0071_slt	0	0.0	0.19325		0	0	0	0
+1	What	slt	A	arctic_a0071_slt	1	0.19325	0.43075001	[0.357945]	1	1	1	0
+0	was	slt	A	arctic_a0071_slt	2	0.43075001	0.5995	[0.16412]	0	0	0	0
+0	the	slt	A	arctic_a0071_slt	3	0.5995	0.71824998	[0.356189]	0	0	0	0
+2	object	slt	A	arctic_a0071_slt	4	0.71824998	1.18075	[0.9, 0.216588]	1	1	1	2
+0	of	slt	A	arctic_a0071_slt	5	1.18075	1.2869999	[0.061782]	0	0	0	0
+0	your	slt	A	arctic_a0071_slt	6	1.2869999	1.3807499	[0.037655]	0	0	0	0
+0	little	slt	A	arctic_a0071_slt	7	1.3807499	1.65575	[0.103585, 0.037826]	1	0	0	1
+0	sensation	slt	A	arctic_a0071_slt	8	1.65575	2.4995	[0.098386, 0.273411, 0.09049]	1	1	0	2
+0	.	slt	A	arctic_a0071_slt	9	2.4995	0.0		0	0	0	0
+0	.	rms	A	arctic_a0072_rms	0	0.0	0.071999997		0	0	0	0
+0	But	rms	A	arctic_a0072_rms	1	0.071999997	0.28200001	[0.693165]	1	0	0	0
+2	who	rms	A	arctic_a0072_rms	2	0.28200001	0.37200001	[0.333148]	0	1	2	1
+0	was	rms	A	arctic_a0072_rms	3	0.37200001	0.61199999	[0.15697]	0	0	0	0
+0	Eileen's	rms	A	arctic_a0072_rms	4	0.61199999	1.062	[0.9, 0.42592]	1	1	1	2
+0	double	rms	A	arctic_a0072_rms	5	1.062	1.442	[0.636931, 0.018591]	1	0	0	1
+0	.	rms	A	arctic_a0072_rms	6	1.442	0.0		0	0	0	0
+0	.	slt	A	arctic_a0072_slt	0	0.0	0.0		0	0	0	0
+0	.	slt	A	arctic_a0072_slt	1	0.0	0.18075		0	0	0	0
+2	But	slt	A	arctic_a0072_slt	2	0.18075	0.36825001	[0.543611]	0	0	1	0
+1	who	slt	A	arctic_a0072_slt	3	0.36825001	0.63075	[0.745414]	1	2	1	1
+0	was	slt	A	arctic_a0072_slt	4	0.63075	0.84324998	[0.211285]	0	0	0	0
+1	Eileen's	slt	A	arctic_a0072_slt	5	0.84324998	1.36825	[0.900912, 0.351363]	1	0	1	2
+1	double	slt	A	arctic_a0072_slt	6	1.36825	1.7995	[0.58403, 0.168804]	1	0	0	1
+0	.	slt	A	arctic_a0072_slt	7	1.7995	0.0		0	0	0	0
+0	.	rms	A	arctic_a0073_rms	0	0.0	0.102		0	0	0	0
+0	The	rms	A	arctic_a0073_rms	1	0.102	0.28200001	[0.190677]	1	0	0	0
+1	promoter's	rms	A	arctic_a0073_rms	2	0.28200001	0.83200002	[0.190677, 0.03291, 0.727744, 0.443613]	1	2	1	0
+2	eyes	rms	A	arctic_a0073_rms	3	0.83200002	1.152	[0.900962]	1	1	1	1
+0	were	rms	A	arctic_a0073_rms	4	1.152	1.2819999	[0.180009]	0	0	0	0
+2	heavy	rms	A	arctic_a0073_rms	5	1.2819999	1.7819999	[0.459421, 0.846932]	1	2	1	2
+0	with	rms	A	arctic_a0073_rms	6	1.7819999	2.0420001	[0.139663]	0	0	0	0
+0	little	rms	A	arctic_a0073_rms	7	2.0420001	2.2720001	[0.029557, 0.030044]	0	0	0	1
+1	puffy	rms	A	arctic_a0073_rms	8	2.2720001	2.612	[0.141077, 0.193066]	0	0	0	1
+2	bags	rms	A	arctic_a0073_rms	9	2.612	3.082	[0.662781]	1	0	0	2
+2	under	rms	A	arctic_a0073_rms	10	3.082	3.332	[0.203651, 0.201105]	1	0	0	0
+1	them	rms	A	arctic_a0073_rms	11	3.332	3.632	[0.086066]	0	0	0	1
+0	.	rms	A	arctic_a0073_rms	12	3.632	0.0		0	0	0	0
+0	.	slt	A	arctic_a0073_slt	0	0.0	0.0		0	0	0	0
+0	.	slt	A	arctic_a0073_slt	1	0.0	0.16824999		0	0	0	0
+0	The	slt	A	arctic_a0073_slt	2	0.16824999	0.24325	[0.077715]	1	0	0	0
+0	promoter's	slt	A	arctic_a0073_slt	3	0.24325	0.81199998	[0.077715, 0.049751, 0.354435, 0.644398]	1	0	1	1
+0	eyes	slt	A	arctic_a0073_slt	4	0.81199998	1.09325	[0.9]	1	1	1	2
+0	were	slt	A	arctic_a0073_slt	5	1.09325	1.20575	[0.163904]	0	1	0	0
+2	heavy	slt	A	arctic_a0073_slt	6	1.20575	1.6745	[0.548872, 0.3665]	1	2	1	1
+0	with	slt	A	arctic_a0073_slt	7	1.6745	1.89325	[0.04544]	0	0	0	0
+0	little	slt	A	arctic_a0073_slt	8	1.89325	2.1307499	[0.102919, 0.062884]	1	0	0	1
+0	puffy	slt	A	arctic_a0073_slt	9	2.1307499	2.4744999	[0.141646, 0.199461]	0	0	1	1
+1	bags	slt	A	arctic_a0073_slt	10	2.4744999	2.8745	[0.729954]	1	0	1	2
+0	under	slt	A	arctic_a0073_slt	11	2.8745	3.1307499	[0.107099, 0.08881]	0	0	0	0
+0	them	slt	A	arctic_a0073_slt	12	3.1307499	3.437	[0.221246]	1	0	0	0
+0	.	slt	A	arctic_a0073_slt	13	3.437	0.0		0	0	0	0
+0	.	rms	A	arctic_a0074_rms	0	0.0	0.102		0	0	0	0
+0	And	rms	A	arctic_a0074_rms	1	0.102	0.33199999	[0.930797]	1	1	1	0
+2	now	rms	A	arctic_a0074_rms	2	0.33199999	0.76200002	[1.101177]	1	2	1	1
+0	down	rms	A	arctic_a0074_rms	3	0.76200002	1.082	[0.866169]	1	1	1	0
+2	there	rms	A	arctic_a0074_rms	4	1.082	1.472	[0.271232]	0	2	1	1
+2	Eileen	rms	A	arctic_a0074_rms	5	1.472	1.892	[0.495826, 0.385467]	1	1	0	2
+0	was	rms	A	arctic_a0074_rms	6	1.892	2.052	[0.106114]	0	0	0	0
+2	waiting	rms	A	arctic_a0074_rms	7	2.052	2.392	[0.284509, 0.124936]	1	0	1	2
+0	for	rms	A	arctic_a0074_rms	8	2.392	2.6919999	[0.448249]	1	0	1	2
+2	him	rms	A	arctic_a0074_rms	9	2.6919999	2.9519999	[0.218588]	0	0	0	1
+0	.	rms	A	arctic_a0074_rms	10	2.9519999	0.0		0	0	0	0
+0	.	slt	A	arctic_a0074_slt	0	0.0	0.18075		0	0	0	0
+0	And	slt	A	arctic_a0074_slt	1	0.18075	0.32449999	[0.102231]	0	0	0	0
+2	now	slt	A	arctic_a0074_slt	2	0.32449999	0.76200002	[1.226949]	1	2	2	2
+0	.	slt	A	arctic_a0074_slt	3	0.76200002	0.88075		0	0	0	0
+0	down	slt	A	arctic_a0074_slt	4	0.88075	1.1619999	[0.523745]	1	0	1	0
+2	there	slt	A	arctic_a0074_slt	5	1.1619999	1.5745	[0.414315]	0	2	1	2
+0	.	slt	A	arctic_a0074_slt	6	1.5745	1.7244999		0	0	0	0
+0	Eileen	slt	A	arctic_a0074_slt	7	1.7244999	2.08075	[0.261315, 0.103806]	1	1	1	1
+0	was	slt	A	arctic_a0074_slt	8	2.08075	2.26825	[0.030574]	0	0	0	0
+0	waiting	slt	A	arctic_a0074_slt	9	2.26825	2.5869999	[0.185333, 0.03431]	1	0	0	2
+0	for	slt	A	arctic_a0074_slt	10	2.5869999	2.7995	[0.075548]	1	0	0	0
+0	him	slt	A	arctic_a0074_slt	11	2.7995	2.9995	[0.071551]	1	1	0	1
+0	.	slt	A	arctic_a0074_slt	12	2.9995	0.0		0	0	0	0
+0	.	rms	A	arctic_a0075_rms	0	0.0	0.071999997		0	0	0	0
+0	There	rms	A	arctic_a0075_rms	1	0.071999997	0.242	[0.279477]	0	0	0	0
+0	has	rms	A	arctic_a0075_rms	2	0.242	0.43200001	[0.818616]	1	0	0	0
+0	been	rms	A	arctic_a0075_rms	3	0.43200001	0.63200003	[0.665473]	0	0	0	0
+0	a	rms	A	arctic_a0075_rms	4	0.63200003	0.662	[0.344104]	0	0	0	0
+2	change	rms	A	arctic_a0075_rms	5	0.662	1.242	[1.114419]	1	2	2	2
+0	she	rms	A	arctic_a0075_rms	6	1.242	1.492	[0.354314]	0	0	0	0
+1	interrupted	rms	A	arctic_a0075_rms	7	1.492	2.062	[0.388107, 0.546191, 0.768832, 0.232289]	1	1	0	2
+0	him	rms	A	arctic_a0075_rms	8	2.062	2.332	[0.239344]	0	0	0	1
+0	.	rms	A	arctic_a0075_rms	9	2.332	0.0		0	0	0	0
+0	.	slt	A	arctic_a0075_slt	0	0.0	0.16824999		0	0	0	0
+1	There	slt	A	arctic_a0075_slt	1	0.16824999	0.27450001	[0.161294]	1	0	0	0
+0	has	slt	A	arctic_a0075_slt	2	0.27450001	0.46825001	[0.073969]	0	0	0	0
+0	been	slt	A	arctic_a0075_slt	3	0.46825001	0.63700002	[0.376282]	1	0	0	0
+0	a	slt	A	arctic_a0075_slt	4	0.63700002	0.68699998	[0.173214]	0	0	0	0
+2	change	slt	A	arctic_a0075_slt	5	0.68699998	1.3182499	[1.166141]	1	2	2	2
+0	she	slt	A	arctic_a0075_slt	6	1.3182499	1.562	[0.170777]	1	0	0	0
+2	interrupted	slt	A	arctic_a0075_slt	7	1.562	2.0869999	[0.084192, 0.391402, 0.179188, 0.083417]	1	2	1	2
+1	him	slt	A	arctic_a0075_slt	8	2.0869999	2.2744999	[0.278345]	1	0	0	1
+0	.	slt	A	arctic_a0075_slt	9	2.2744999	0.0		0	0	0	0
+0	.	rms	A	arctic_a0076_rms	0	0.0	0.032000002		0	0	0	0
+0	The	rms	A	arctic_a0076_rms	1	0.032000002	0.23199999	[0.157579]	0	0	0	0
+0	gray	rms	A	arctic_a0076_rms	2	0.23199999	0.542	[0.683356]	1	0	0	0
+2	eyes	rms	A	arctic_a0076_rms	3	0.542	0.80199999		0	0	0	1
+2	faltered	rms	A	arctic_a0076_rms	4	0.80199999	1.442	[0.540382, 0.478658]	1	2	1	2
+0	the	rms	A	arctic_a0076_rms	5	1.442	1.572	[0.026743]	0	0	0	0
+1	flush	rms	A	arctic_a0076_rms	6	1.572	1.952	[0.026743, 0.237965]	1	1	0	1
+2	deepened	rms	A	arctic_a0076_rms	7	1.952	2.4419999	[0.12899, 0.164437]	1	0	0	2
+0	.	rms	A	arctic_a0076_rms	8	2.4419999	0.0		0	0	0	0
+0	.	slt	A	arctic_a0076_slt	0	0.0	0.16824999		0	0	0	0
+0	The	slt	A	arctic_a0076_slt	1	0.16824999	0.26199999	[0.128663]	0	0	0	0
+0	gray	slt	A	arctic_a0076_slt	2	0.26199999	0.54325002	[0.488071]	0	0	1	0
+0	eyes	slt	A	arctic_a0076_slt	3	0.54325002	0.81825	[0.901135]	1	0	1	1
+2	faltered	slt	A	arctic_a0076_slt	4	0.81825	1.43075	[0.406851, 0.333758]	0	1	1	2
+0	.	slt	A	arctic_a0076_slt	5	1.43075	1.5994999		0	0	0	0
+0	the	slt	A	arctic_a0076_slt	6	1.5994999	1.6745	[0.018146]	0	0	0	0
+0	flush	slt	A	arctic_a0076_slt	7	1.6745	2.0682499	[0.018146, 0.288371]	1	1	1	1
+2	deepened	slt	A	arctic_a0076_slt	8	2.0682499	2.612	[0.145811, 0.102998]	0	1	1	2
+0	.	slt	A	arctic_a0076_slt	9	2.612	0.0		0	0	0	0
+0	.	rms	A	arctic_a0077_rms	0	0.0	0.092		0	0	0	0
+0	It	rms	A	arctic_a0077_rms	1	0.092	0.20200001	[0.323773]	0	0	0	0
+0	is	rms	A	arctic_a0077_rms	2	0.20200001	0.322	[0.615216]	1	0	0	0
+0	the	rms	A	arctic_a0077_rms	3	0.322	0.412	[0.084434]	0	0	0	0
+2	fire	rms	A	arctic_a0077_rms	4	0.412	0.93199998	[0.084434, 1.206769, 0.847956]	1	2	2	2
+2	partly	rms	A	arctic_a0077_rms	5	0.93199998	1.492	[0.349148]	0	2	1	1
+0	.	rms	A	arctic_a0077_rms	6	1.492	1.562		0	0	0	0
+0	she	rms	A	arctic_a0077_rms	7	1.562	1.772	[0.170157]	0	0	0	0
+0	said	rms	A	arctic_a0077_rms	8	1.772	2.1719999	[0.588421]	1	0	1	1
+0	.	rms	A	arctic_a0077_rms	9	2.1719999	0.0		0	0	0	0
+0	.	slt	A	arctic_a0077_slt	0	0.0	0.19325		0	0	0	0
+0	It	slt	A	arctic_a0077_slt	1	0.19325	0.29949999	[0.165733]	1	0	0	0
+0	is	slt	A	arctic_a0077_slt	2	0.29949999	0.4745	[0.119463]	0	0	0	0
+0	the	slt	A	arctic_a0077_slt	3	0.4745	0.56199998	[0.046842]	0	0	0	0
+2	fire	slt	A	arctic_a0077_slt	4	0.56199998	1.05575	[0.807, 1.00564]	1	1	2	2
+0	.	slt	A	arctic_a0077_slt	5	1.05575	1.1619999		0	0	0	0
+1	partly	slt	A	arctic_a0077_slt	6	1.1619999	1.65575	[0.122099, 0.20906]	1	2	1	2
+0	.	slt	A	arctic_a0077_slt	7	1.65575	1.762		0	0	0	0
+0	she	slt	A	arctic_a0077_slt	8	1.762	1.9432499	[0.035334]	0	0	0	0
+0	said	slt	A	arctic_a0077_slt	9	1.9432499	2.3745	[0.321347]	1	0	1	1
+0	.	slt	A	arctic_a0077_slt	10	2.3745	0.0		0	0	0	0
+0	.	rms	A	arctic_a0078_rms	0	0.0	0.082000002		0	0	0	0
+2	Then	rms	A	arctic_a0078_rms	1	0.082000002	0.56199998	[1.047694]	1	1	2	1
+0	and	rms	A	arctic_a0078_rms	2	0.56199998	0.84200001	[0.134108]	0	0	0	0
+0	at	rms	A	arctic_a0078_rms	3	0.84200001	0.92199999	[0.099291]	0	1	0	0
+2	supper	rms	A	arctic_a0078_rms	4	0.92199999	1.382	[0.248612, 0.43249]	1	1	2	2
+0	he	rms	A	arctic_a0078_rms	5	1.382	1.5420001	[0.049679]	0	0	0	0
+0	tried	rms	A	arctic_a0078_rms	6	1.5420001	1.882	[0.440158]	1	2	1	1
+0	to	rms	A	arctic_a0078_rms	7	1.882	1.942	[0.059242]	0	0	0	0
+1	fathom	rms	A	arctic_a0078_rms	8	1.942	2.4519999	[0.439255, 0.025398]	1	0	1	2
+0	her	rms	A	arctic_a0078_rms	9	2.4519999	2.6919999	[0.227614]	1	0	0	1
+0	.	rms	A	arctic_a0078_rms	10	2.6919999	0.0		0	0	0	0
+0	.	slt	A	arctic_a0078_slt	0	0.0	0.162		0	0	0	0
+2	Then	slt	A	arctic_a0078_slt	1	0.162	0.56825	[1.018947]	1	1	2	1
+0	.	slt	A	arctic_a0078_slt	2	0.56825	0.73699999		0	0	0	0
+0	and	slt	A	arctic_a0078_slt	3	0.73699999	0.91825002	[0.282437]	1	0	0	0
+0	at	slt	A	arctic_a0078_slt	4	0.91825002	1.01825	[0.285474]	0	0	0	0
+0	supper	slt	A	arctic_a0078_slt	5	1.01825	1.4995	[0.603866, 0.562152]	1	1	2	2
+0	he	slt	A	arctic_a0078_slt	6	1.4995	1.71825	[0.176828]	0	0	0	0
+0	tried	slt	A	arctic_a0078_slt	7	1.71825	1.99325	[0.9]	1	0	1	1
+0	to	slt	A	arctic_a0078_slt	8	1.99325	2.0869999	[0.036407]	0	0	0	0
+1	fathom	slt	A	arctic_a0078_slt	9	2.0869999	2.5120001	[0.72354, 0.070313]	1	0	1	2
+0	her	slt	A	arctic_a0078_slt	10	2.5120001	2.8182499	[0.457276]	1	0	0	1
+0	.	slt	A	arctic_a0078_slt	11	2.8182499	0.0		0	0	0	0
+0	.	rms	A	arctic_a0079_rms	0	0.0	0.102		0	0	0	0
+0	It	rms	A	arctic_a0079_rms	1	0.102	0.20200001	[0.407029]	1	0	0	0
+0	was	rms	A	arctic_a0079_rms	2	0.20200001	0.42199999	[0.134972, 0.078875]	0	0	0	0
+0	a	rms	A	arctic_a0079_rms	3	0.42199999	0.45199999	[0.078875]	0	0	0	0
+0	large	rms	A	arctic_a0079_rms	4	0.45199999	0.852	[0.078875, 0.406474]	1	2	2	1
+2	canoe	rms	A	arctic_a0079_rms	5	0.852	1.362	[0.21175, 0.953976]	1	1	1	2
+0	.	rms	A	arctic_a0079_rms	6	1.362	0.0		0	0	0	0
+0	.	slt	A	arctic_a0079_slt	0	0.0	0.19949999		0	0	0	0
+0	It	slt	A	arctic_a0079_slt	1	0.19949999	0.29949999	[0.836024]	1	0	0	0
+0	was	slt	A	arctic_a0079_slt	2	0.29949999	0.52450001	[0.165757]	0	0	0	0
+0	a	slt	A	arctic_a0079_slt	3	0.52450001	0.55575001	[0.199407]	0	0	0	0
+0	large	slt	A	arctic_a0079_slt	4	0.55575001	0.98075002	[0.824161]	1	2	2	2
+0	.	slt	A	arctic_a0079_slt	5	0.98075002	1.0057499		0	0	0	0
+2	canoe	slt	A	arctic_a0079_slt	6	1.0057499	1.437	[0.114915, 0.908074]	1	1	0	2
+0	.	slt	A	arctic_a0079_slt	7	1.437	0.0		0	0	0	0
+0	.	rms	A	arctic_a0080_rms	0	0.0	0.092		0	0	0	0
+0	What	rms	A	arctic_a0080_rms	1	0.092	0.26199999	[0.485137]	1	0	0	0
+0	if	rms	A	arctic_a0080_rms	2	0.26199999	0.39199999	[0.464346]	0	0	0	0
+0	Jeanne	rms	A	arctic_a0080_rms	3	0.39199999	0.74199998	[0.809902]	1	2	1	2
+2	failed	rms	A	arctic_a0080_rms	4	0.74199998	1.142	[0.997169]	1	0	1	2
+1	him	rms	A	arctic_a0080_rms	5	1.142	1.452	[0.212147]	0	0	0	1
+0	.	rms	A	arctic_a0080_rms	6	1.452	0.0		0	0	0	0
+0	.	slt	A	arctic_a0080_slt	0	0.0	0.0		0	0	0	0
+0	.	slt	A	arctic_a0080_slt	1	0.0	0.212		0	0	0	0
+0	What	slt	A	arctic_a0080_slt	2	0.212	0.39950001	[0.684584]	1	2	1	0
+0	if	slt	A	arctic_a0080_slt	3	0.39950001	0.56199998	[0.67195]	1	0	0	0
+0	Jeanne	slt	A	arctic_a0080_slt	4	0.56199998	0.95574999	[0.900693]	1	1	1	2
+2	failed	slt	A	arctic_a0080_slt	5	0.95574999	1.3995	[0.897239]	1	1	1	2
+0	him	slt	A	arctic_a0080_slt	6	1.3995	1.6307499	[0.452574]	0	0	0	1
+0	.	slt	A	arctic_a0080_slt	7	1.6307499	0.0		0	0	0	0
+0	.	rms	A	arctic_a0081_rms	0	0.0	0.092		0	0	0	0
+0	What	rms	A	arctic_a0081_rms	1	0.092	0.26199999	[0.441189]	0	0	1	0
+0	if	rms	A	arctic_a0081_rms	2	0.26199999	0.37200001	[0.542223]	1	0	0	0
+0	she	rms	A	arctic_a0081_rms	3	0.37200001	0.58200002	[0.309822]	0	0	1	2
+0	did	rms	A	arctic_a0081_rms	4	0.58200002	0.74199998	[0.249322]	0	2	0	0
+2	not	rms	A	arctic_a0081_rms	5	0.74199998	0.96200001	[0.748763]	1	2	2	2
+2	come	rms	A	arctic_a0081_rms	6	0.96200001	1.222	[0.267074]	0	1	0	2
+0	to	rms	A	arctic_a0081_rms	7	1.222	1.382	[0.122104]	0	0	0	0
+0	the	rms	A	arctic_a0081_rms	8	1.382	1.472	[0.239702]	0	0	0	0
+1	rock	rms	A	arctic_a0081_rms	9	1.472	1.932	[0.9]	1	1	2	2
+0	.	rms	A	arctic_a0081_rms	10	1.932	0.0		0	0	0	0
+0	.	slt	A	arctic_a0081_slt	0	0.0	0.0		0	0	0	0
+0	.	slt	A	arctic_a0081_slt	1	0.0	0.18700001		0	0	0	0
+0	What	slt	A	arctic_a0081_slt	2	0.18700001	0.35574999	[0.388776]	1	0	1	0
+0	if	slt	A	arctic_a0081_slt	3	0.35574999	0.44325	[0.333421]	0	0	0	0
+0	she	slt	A	arctic_a0081_slt	4	0.44325	0.67449999	[0.384519]	0	0	0	0
+0	did	slt	A	arctic_a0081_slt	5	0.67449999	0.84324998	[0.404887]	0	1	0	0
+2	not	slt	A	arctic_a0081_slt	6	0.84324998	1.0994999	[0.804879]	1	1	1	1
+0	come	slt	A	arctic_a0081_slt	7	1.0994999	1.4119999	[0.332003]	0	0	0	2
+0	to	slt	A	arctic_a0081_slt	8	1.4119999	1.53075	[0.154578]	0	0	0	0
+0	the	slt	A	arctic_a0081_slt	9	1.53075	1.6307499	[0.11268]	0	0	0	0
+0	rock	slt	A	arctic_a0081_slt	10	1.6307499	2.1182499	[0.11268, 0.905167]	1	1	1	2
+0	.	slt	A	arctic_a0081_slt	11	2.1182499	0.0		0	0	0	0
+0	.	rms	A	arctic_a0082_rms	0	0.0	0.032000002		0	0	0	0
+0	His	rms	A	arctic_a0082_rms	1	0.032000002	0.31200001	[0.308196]	0	0	0	0
+1	face	rms	A	arctic_a0082_rms	2	0.31200001	0.63200003	[0.76768]	1	1	1	2
+0	was	rms	A	arctic_a0082_rms	3	0.63200003	0.73199999	[0.178484]	0	0	0	0
+2	streaming	rms	A	arctic_a0082_rms	4	0.73199999	1.232	[0.305654, 0.433394]	1	1	1	2
+0	with	rms	A	arctic_a0082_rms	5	1.232	1.392	[0.060998]	0	0	0	0
+1	blood	rms	A	arctic_a0082_rms	6	1.392	1.862	[1.109985]	1	1	2	2
+0	.	rms	A	arctic_a0082_rms	7	1.862	0.0		0	0	0	0
+0	.	slt	A	arctic_a0082_slt	0	0.0	0.1495		0	0	0	0
+0	His	slt	A	arctic_a0082_slt	1	0.1495	0.38699999	[0.055816]	0	0	0	0
+2	face	slt	A	arctic_a0082_slt	2	0.38699999	0.7245	[0.926758]	1	1	2	2
+0	was	slt	A	arctic_a0082_slt	3	0.7245	0.84324998	[0.062678]	0	0	0	0
+1	streaming	slt	A	arctic_a0082_slt	4	0.84324998	1.387	[0.258807, 0.175084]	1	1	1	2
+0	with	slt	A	arctic_a0082_slt	5	1.387	1.5682499	[0.047349]	0	0	0	0
+2	blood	slt	A	arctic_a0082_slt	6	1.5682499	2.0495	[0.645782]	1	1	1	2
+0	.	slt	A	arctic_a0082_slt	7	2.0495	0.0		0	0	0	0
+0	.	rms	A	arctic_a0083_rms	0	0.0	0.102		0	0	0	0
+0	A	rms	A	arctic_a0083_rms	1	0.102	0.17200001	[0.178779]	0	0	0	0
+1	shadow	rms	A	arctic_a0083_rms	2	0.17200001	0.542	[0.971159, 0.373621]	1	1	2	2
+0	was	rms	A	arctic_a0083_rms	3	0.542	0.74199998	[0.070928]	0	0	0	0
+0	creeping	rms	A	arctic_a0083_rms	4	0.74199998	1.192	[0.298151, 0.09745]	1	1	2	2
+0	over	rms	A	arctic_a0083_rms	5	1.192	1.4220001	[0.261351, 0.308799]	0	0	0	0
+2	Pierre's	rms	A	arctic_a0083_rms	6	1.4220001	2.0120001	[0.399145, 0.403644]	1	1	1	2
+2	eyes	rms	A	arctic_a0083_rms	7	2.0120001	2.582	[0.907018]	1	0	0	2
+0	.	rms	A	arctic_a0083_rms	8	2.582	0.0		0	0	0	0
+0	.	slt	A	arctic_a0083_slt	0	0.0	0.19949999		0	0	0	0
+0	A	slt	A	arctic_a0083_slt	1	0.19949999	0.26199999	[0.145151]	0	0	0	0
+2	shadow	slt	A	arctic_a0083_slt	2	0.26199999	0.7245	[0.753865, 0.439334]	1	2	1	1
+0	was	slt	A	arctic_a0083_slt	3	0.7245	0.94950002	[0.07915]	0	0	0	0
+0	creeping	slt	A	arctic_a0083_slt	4	0.94950002	1.40575	[0.158015, 0.123638]	1	1	1	1
+0	over	slt	A	arctic_a0083_slt	5	1.40575	1.6307499	[0.068015, 0.094232]	1	0	0	0
+1	Pierre's	slt	A	arctic_a0083_slt	6	1.6307499	2.0994999	[0.101494, 0.047411]	1	2	0	2
+2	eyes	slt	A	arctic_a0083_slt	7	2.0994999	2.6307499	[0.905861]	1	0	0	1
+0	.	slt	A	arctic_a0083_slt	8	2.6307499	0.0		0	0	0	0
+0	.	rms	A	arctic_a0084_rms	0	0.0	0.032000002		0	0	0	0
+1	Scarcely	rms	A	arctic_a0084_rms	1	0.032000002	0.662	[0.111883, 0.165032]	1	0	1	2
+0	had	rms	A	arctic_a0084_rms	2	0.662	0.83200002	[0.205702]	0	0	0	0
+0	he	rms	A	arctic_a0084_rms	3	0.83200002	0.93199998	[0.269183]	1	0	0	0
+0	uttered	rms	A	arctic_a0084_rms	4	0.93199998	1.1720001	[0.265546, 0.165434]	1	1	1	0
+0	the	rms	A	arctic_a0084_rms	5	1.1720001	1.232	[0.083669]	0	1	0	0
+2	name	rms	A	arctic_a0084_rms	6	1.232	1.7819999	[0.083669, 0.508154]	1	1	1	2
+0	when	rms	A	arctic_a0084_rms	7	1.7819999	1.9119999	[0.053118]	0	0	0	0
+2	Pierre's	rms	A	arctic_a0084_rms	8	1.9119999	2.362	[0.173857, 0.113837]	1	0	0	1
+1	closing	rms	A	arctic_a0084_rms	9	2.362	2.842	[0.21283, 0.102124]	1	0	0	1
+2	eyes	rms	A	arctic_a0084_rms	10	2.842	3.332	[1.040583]	1	0	0	1
+1	shot	rms	A	arctic_a0084_rms	11	3.332	3.612	[0.344644]	1	1	1	0
+1	open	rms	A	arctic_a0084_rms	12	3.612	4.0320001	[0.294152, 0.17593]	0	1	0	2
+0	.	rms	A	arctic_a0084_rms	13	4.0320001	0.0		0	0	0	0
+0	.	slt	A	arctic_a0084_slt	0	0.0	0.024499999		0	0	0	0
+2	Scarcely	slt	A	arctic_a0084_slt	1	0.024499999	0.68075001	[0.313478, 0.993069]	1	2	1	1
+0	had	slt	A	arctic_a0084_slt	2	0.68075001	0.8495	[0.353622]	0	0	0	0
+0	he	slt	A	arctic_a0084_slt	3	0.8495	0.99949998	[0.703487]	0	0	0	0
+0	uttered	slt	A	arctic_a0084_slt	4	0.99949998	1.30575	[0.9, 0.437635]	1	0	1	2
+0	the	slt	A	arctic_a0084_slt	5	1.30575	1.3995	[0.139932]	0	0	0	0
+2	name	slt	A	arctic_a0084_slt	6	1.3995	1.73075	[0.65743]	1	1	1	2
+0	when	slt	A	arctic_a0084_slt	7	1.73075	1.887	[0.106943]	0	0	0	0
+1	Pierre's	slt	A	arctic_a0084_slt	8	1.887	2.3182499	[0.248239, 0.069932]	1	0	0	2
+1	closing	slt	A	arctic_a0084_slt	9	2.3182499	2.7620001	[0.643408, 0.146748]	1	0	0	1
+2	eyes	slt	A	arctic_a0084_slt	10	2.7620001	2.9807501	[1.099639]	1	0	0	2
+1	shot	slt	A	arctic_a0084_slt	11	2.9807501	3.3870001	[0.968877]	1	1	0	0
+1	open	slt	A	arctic_a0084_slt	12	3.3870001	3.7869999	[0.376114, 0.155892]	0	1	0	2
+0	.	slt	A	arctic_a0084_slt	13	3.7869999	0.0		0	0	0	0
+0	.	rms	A	arctic_a0085_rms	0	0.0	0.102		0	0	0	0
+0	A	rms	A	arctic_a0085_rms	1	0.102	0.17200001	[0.567148]	1	0	0	0
+1	trickle	rms	A	arctic_a0085_rms	2	0.17200001	0.64200002	[0.04095, 0.073683]	0	1	1	1
+0	of	rms	A	arctic_a0085_rms	3	0.64200002	0.73199999	[0.194775]	0	0	0	0
+2	fresh	rms	A	arctic_a0085_rms	4	0.73199999	1.072	[0.535831]	1	0	0	1
+1	blood	rms	A	arctic_a0085_rms	5	1.072	1.582	[0.807368]	1	2	1	2
+0	ran	rms	A	arctic_a0085_rms	6	1.582	1.952	[0.779157]	1	0	0	1
+0	over	rms	A	arctic_a0085_rms	7	1.952	2.2019999	[0.637099]	0	1	0	0
+0	his	rms	A	arctic_a0085_rms	8	2.2019999	2.372	[0.074649]	0	1	0	0
+2	face	rms	A	arctic_a0085_rms	9	2.372	2.892	[0.952169]	1	1	1	2
+0	.	rms	A	arctic_a0085_rms	10	2.892	0.0		0	0	0	0
+0	.	slt	A	arctic_a0085_slt	0	0.0	0.19949999		0	0	0	0
+0	A	slt	A	arctic_a0085_slt	1	0.19949999	0.25575	[0.268258]	1	0	0	0
+1	trickle	slt	A	arctic_a0085_slt	2	0.25575	0.73075002	[0.2123, 0.337877]	1	2	1	1
+0	of	slt	A	arctic_a0085_slt	3	0.73075002	0.79325002	[0.165312]	0	0	0	0
+1	fresh	slt	A	arctic_a0085_slt	4	0.79325002	1.1619999	[0.364832]	0	1	1	1
+0	.	slt	A	arctic_a0085_slt	5	1.1619999	1.20575		0	0	0	0
+2	blood	slt	A	arctic_a0085_slt	6	1.20575	1.5057499	[0.9]	1	2	1	2
+0	ran	slt	A	arctic_a0085_slt	7	1.5057499	1.74325	[0.555436]	0	0	0	0
+0	over	slt	A	arctic_a0085_slt	8	1.74325	1.987	[0.244542, 0.149564]	0	0	0	1
+0	his	slt	A	arctic_a0085_slt	9	1.987	2.2119999	[0.064035]	0	0	0	0
+2	face	slt	A	arctic_a0085_slt	10	2.2119999	2.6807499	[0.554739]	1	0	1	2
+0	.	slt	A	arctic_a0085_slt	11	2.6807499	0.0		0	0	0	0
+0	.	rms	A	arctic_a0086_rms	0	0.0	0.102		0	0	0	0
+0	Death	rms	A	arctic_a0086_rms	1	0.102	0.40200001	[0.951772]	1	0	1	2
+0	had	rms	A	arctic_a0086_rms	2	0.40200001	0.542	[0.192888]	0	0	0	0
+2	come	rms	A	arctic_a0086_rms	3	0.542	0.84200001	[0.234522]	1	0	0	2
+0	with	rms	A	arctic_a0086_rms	4	0.84200001	1.002	[0.091052]	0	0	0	0
+0	terrible	rms	A	arctic_a0086_rms	5	1.002	1.452	[0.138198, 0.050115, 0.016579]	1	2	1	2
+1	suddenness	rms	A	arctic_a0086_rms	6	1.452	2.2720001	[0.356262, 0.010809, 0.199722]	1	1	0	2
+0	.	rms	A	arctic_a0086_rms	7	2.2720001	0.0		0	0	0	0
+0	.	slt	A	arctic_a0086_slt	0	0.0	0.18700001		0	0	0	0
+0	Death	slt	A	arctic_a0086_slt	1	0.18700001	0.44949999	[0.908004]	1	1	1	1
+0	had	slt	A	arctic_a0086_slt	2	0.44949999	0.60575002	[0.126772]	0	0	0	0
+0	come	slt	A	arctic_a0086_slt	3	0.60575002	0.96824998	[0.858959]	1	0	1	1
+0	with	slt	A	arctic_a0086_slt	4	0.96824998	1.137	[0.054951]	0	0	0	0
+2	terrible	slt	A	arctic_a0086_slt	5	1.137	1.6245	[0.138126, 0.118619, 0.047265]	1	1	1	2
+1	suddenness	slt	A	arctic_a0086_slt	6	1.6245	2.4182501	[0.623571, 0.022875, 0.219704]	1	1	0	1
+0	.	slt	A	arctic_a0086_slt	7	2.4182501	0.0		0	0	0	0
+0	.	rms	A	arctic_a0087_rms	0	0.0	0.061999999		0	0	0	0
+0	Philip	rms	A	arctic_a0087_rms	1	0.061999999	0.472	[0.420297, 0.173802]	1	0	1	0
+0	bent	rms	A	arctic_a0087_rms	2	0.472	0.68199998	[0.944327]	1	1	0	0
+1	lower	rms	A	arctic_a0087_rms	3	0.68199998	1.152	[0.774385, 0.784377]	1	1	1	1
+0	and	rms	A	arctic_a0087_rms	4	1.152	1.302	[0.125122]	0	0	0	0
+0	stared	rms	A	arctic_a0087_rms	5	1.302	1.712	[0.550105]	1	0	1	1
+0	into	rms	A	arctic_a0087_rms	6	1.712	1.902	[0.384706, 0.049657]	0	0	0	0
+0	the	rms	A	arctic_a0087_rms	7	1.902	1.982	[0.417565]	0	0	0	0
+2	face	rms	A	arctic_a0087_rms	8	1.982	2.4119999	[0.719647, 0.055646]	1	2	1	1
+0	of	rms	A	arctic_a0087_rms	9	2.4119999	2.4820001	[0.055646]	0	0	0	0
+0	the	rms	A	arctic_a0087_rms	10	2.4820001	2.572	[0.190515]	0	0	0	0
+1	dead	rms	A	arctic_a0087_rms	11	2.572	2.832	[0.190515, 0.831334]	1	0	1	1
+1	man	rms	A	arctic_a0087_rms	12	2.832	3.1819999	[0.795404]	1	0	0	2
+0	.	rms	A	arctic_a0087_rms	13	3.1819999	0.0		0	0	0	0
+0	.	slt	A	arctic_a0087_slt	0	0.0	0.10575		0	0	0	0
+1	Philip	slt	A	arctic_a0087_slt	1	0.10575	0.48074999	[0.117077, 0.219859]	0	0	1	0
+0	bent	slt	A	arctic_a0087_slt	2	0.48074999	0.77450001	[0.336576]	0	2	0	0
+0	lower	slt	A	arctic_a0087_slt	3	0.77450001	1.2995	[0.901338, 0.68368]	1	1	2	2
+0	and	slt	A	arctic_a0087_slt	4	1.2995	1.4744999	[0.062014]	0	0	0	0
+0	stared	slt	A	arctic_a0087_slt	5	1.4744999	1.837	[0.408323]	1	2	0	1
+0	into	slt	A	arctic_a0087_slt	6	1.837	2.0682499	[0.184358, 0.039927]	0	0	0	0
+0	the	slt	A	arctic_a0087_slt	7	2.0682499	2.1494999	[0.099037]	0	0	0	0
+2	face	slt	A	arctic_a0087_slt	8	2.1494999	2.53075	[0.481486]	1	1	0	1
+0	of	slt	A	arctic_a0087_slt	9	2.53075	2.6307499	[0.044471]	0	0	0	0
+0	the	slt	A	arctic_a0087_slt	10	2.6307499	2.71825	[0.104734]	0	0	0	0
+1	dead	slt	A	arctic_a0087_slt	11	2.71825	3.0057499	[0.465704]	0	0	1	2
+1	man	slt	A	arctic_a0087_slt	12	3.0057499	3.4495001	[0.740433]	1	0	0	2
+0	.	slt	A	arctic_a0087_slt	13	3.4495001	0.0		0	0	0	0
+0	.	rms	A	arctic_a0088_rms	0	0.0	0.071999997		0	0	0	0
+0	He	rms	A	arctic_a0088_rms	1	0.071999997	0.23199999	[0.142705]	0	0	0	0
+2	made	rms	A	arctic_a0088_rms	2	0.23199999	0.472	[0.946478]	1	0	1	0
+1	sure	rms	A	arctic_a0088_rms	3	0.472	0.83200002	[0.069328]	0	0	1	2
+0	that	rms	A	arctic_a0088_rms	4	0.83200002	1.002	[0.01714]	0	0	0	0
+0	the	rms	A	arctic_a0088_rms	5	1.002	1.062	[0.027236]	0	0	0	0
+2	magazine	rms	A	arctic_a0088_rms	6	1.062	1.652	[0.027236, 0.228327, 0.116246, 0.10487]	1	0	1	2
+0	was	rms	A	arctic_a0088_rms	7	1.652	1.802	[0.029094]	0	0	0	0
+2	loaded	rms	A	arctic_a0088_rms	8	1.802	2.332	[0.25009, 0.175164]	1	1	1	2
+0	and	rms	A	arctic_a0088_rms	9	2.332	2.612	[0.179883]	1	0	0	0
+0	resumed	rms	A	arctic_a0088_rms	10	2.612	3.082	[0.016235, 0.145142]	1	0	0	2
+0	his	rms	A	arctic_a0088_rms	11	3.082	3.2420001	[0.071595]	0	0	0	0
+2	paddling	rms	A	arctic_a0088_rms	12	3.2420001	3.802	[0.227333, 0.017205, 0.163599]	1	0	1	2
+0	.	rms	A	arctic_a0088_rms	13	3.802	0.0		0	0	0	0
+0	.	slt	A	arctic_a0088_slt	0	0.0	0.14325		0	0	0	0
+1	He	slt	A	arctic_a0088_slt	1	0.14325	0.27450001	[0.163346]	0	0	0	0
+0	made	slt	A	arctic_a0088_slt	2	0.27450001	0.50575	[0.282661]	0	0	0	0
+0	sure	slt	A	arctic_a0088_slt	3	0.50575	0.83074999	[0.665519]	1	2	2	1
+0	that	slt	A	arctic_a0088_slt	4	0.83074999	0.98699999	[0.114022]	0	0	0	0
+0	the	slt	A	arctic_a0088_slt	5	0.98699999	1.062	[0.106311]	0	0	0	0
+2	magazine	slt	A	arctic_a0088_slt	6	1.062	1.61825	[0.904633, 0.076616, 0.22522]	1	0	1	2
+0	was	slt	A	arctic_a0088_slt	7	1.61825	1.7869999	[0.039994]	0	0	0	0
+1	loaded	slt	A	arctic_a0088_slt	8	1.7869999	2.362	[0.370031, 0.287018]	1	1	1	2
+0	and	slt	A	arctic_a0088_slt	9	2.362	2.53075	[0.122559]	0	0	0	0
+2	resumed	slt	A	arctic_a0088_slt	10	2.53075	2.95575	[0.060512, 0.20402]	1	0	0	1
+0	his	slt	A	arctic_a0088_slt	11	2.95575	3.0994999	[0.039626]	0	0	0	0
+2	paddling	slt	A	arctic_a0088_slt	12	3.0994999	3.6682501	[0.9, 0.023821, 0.088238]	1	1	1	2
+0	.	slt	A	arctic_a0088_slt	13	3.6682501	0.0		0	0	0	0
+0	.	rms	A	arctic_a0089_rms	0	0.0	0.0		0	0	0	0
+0	.	rms	A	arctic_a0089_rms	1	0.0	0.122		0	0	0	0
+0	The	rms	A	arctic_a0089_rms	2	0.122	0.20200001	[0.05237]	0	0	0	0
+0	nightglow	rms	A	arctic_a0089_rms	3	0.20200001	0.792	[0.05237, 1.070528, 0.298291]	1	1	1	2
+0	was	rms	A	arctic_a0089_rms	4	0.792	1.102	[0.071246]	0	0	0	0
+2	treacherous	rms	A	arctic_a0089_rms	5	1.102	1.682	[0.031236, 0.198371, 0.007538]	1	1	1	2
+0	to	rms	A	arctic_a0089_rms	6	1.682	1.7819999	[0.030461]	0	0	0	0
+1	shoot	rms	A	arctic_a0089_rms	7	1.7819999	2.082	[0.030461, 0.170279]	0	1	1	2
+0	by	rms	A	arctic_a0089_rms	8	2.082	2.4820001	[0.318424]	1	0	0	0
+0	.	rms	A	arctic_a0089_rms	9	2.4820001	0.0		0	0	0	0
+0	.	slt	A	arctic_a0089_slt	0	0.0	0.15575001		0	0	0	0
+0	The	slt	A	arctic_a0089_slt	1	0.15575001	0.24950001	[0.081953]	0	0	0	0
+2	nightglow	slt	A	arctic_a0089_slt	2	0.24950001	0.76824999	[0.934554, 0.435707]	1	1	1	2
+0	was	slt	A	arctic_a0089_slt	3	0.76824999	0.99325001	[0.087251]	0	0	0	0
+2	treacherous	slt	A	arctic_a0089_slt	4	0.99325001	1.59325	[0.212826, 0.554732, 0.096061]	1	2	1	2
+0	to	slt	A	arctic_a0089_slt	5	1.59325	1.737	[0.063231]	0	0	0	0
+2	shoot	slt	A	arctic_a0089_slt	6	1.737	2.0869999	[0.22564]	0	1	1	2
+0	by	slt	A	arctic_a0089_slt	7	2.0869999	2.4307499	[0.713649]	1	0	0	0
+0	.	slt	A	arctic_a0089_slt	8	2.4307499	0.0		0	0	0	0
+0	.	rms	A	arctic_a0090_rms	0	0.0	0.102		0	0	0	0
+0	The	rms	A	arctic_a0090_rms	1	0.102	0.252	[0.159403]	0	0	0	0
+0	singing	rms	A	arctic_a0090_rms	2	0.252	0.662	[0.331526, 0.279679]	1	0	1	1
+0	voice	rms	A	arctic_a0090_rms	3	0.662	1.1720001	[1.086087]	1	0	1	2
+2	approached	rms	A	arctic_a0090_rms	4	1.1720001	1.742	[0.15805, 0.335466]	1	2	0	1
+2	rapidly	rms	A	arctic_a0090_rms	5	1.742	2.4519999	[0.533017, 0.134238, 0.223438]	1	2	0	2
+0	.	rms	A	arctic_a0090_rms	6	2.4519999	0.0		0	0	0	0
+0	.	slt	A	arctic_a0090_slt	0	0.0	0.16824999		0	0	0	0
+0	The	slt	A	arctic_a0090_slt	1	0.16824999	0.237	[0.058834]	0	0	0	0
+1	singing	slt	A	arctic_a0090_slt	2	0.237	0.68075001	[0.058834, 0.199927, 0.82307]	1	0	1	0
+2	voice	slt	A	arctic_a0090_slt	3	0.68075001	1.0057499	[0.9, 0.08794]	1	0	1	2
+0	approached	slt	A	arctic_a0090_slt	4	1.0057499	1.5057499	[0.08794, 0.387955]	1	1	0	1
+0	rapidly	slt	A	arctic_a0090_slt	5	1.5057499	2.1182499	[0.373686, 0.12619, 0.275309]	1	1	0	2
+0	.	slt	A	arctic_a0090_slt	6	2.1182499	0.0		0	0	0	0
+0	.	rms	A	arctic_a0091_rms	0	0.0	0.052000001		0	0	0	0
+0	His	rms	A	arctic_a0091_rms	1	0.052000001	0.27200001	[0.173983]	0	0	0	0
+0	blood	rms	A	arctic_a0091_rms	2	0.27200001	0.59200001	[0.646782]	1	0	1	1
+0	grew	rms	A	arctic_a0091_rms	3	0.59200001	0.912	[0.303423]	0	0	0	0
+2	hot	rms	A	arctic_a0091_rms	4	0.912	1.332	[0.777224]	1	2	1	2
+0	with	rms	A	arctic_a0091_rms	5	1.332	1.592	[0.055095]	0	0	0	0
+0	rage	rms	A	arctic_a0091_rms	6	1.592	2.062	[0.90468]	1	0	1	1
+0	at	rms	A	arctic_a0091_rms	7	2.062	2.2320001	[0.430376]	0	0	0	0
+0	the	rms	A	arctic_a0091_rms	8	2.2320001	2.2920001	[0.077081]	0	0	0	0
+0	thought	rms	A	arctic_a0091_rms	9	2.2920001	2.7219999	[0.077081, 0.684123]	1	0	1	2
+0	.	rms	A	arctic_a0091_rms	10	2.7219999	0.0		0	0	0	0
+0	.	slt	A	arctic_a0091_slt	0	0.0	0.0		0	0	0	0
+0	.	slt	A	arctic_a0091_slt	1	0.0	0.15575001		0	0	0	0
+0	His	slt	A	arctic_a0091_slt	2	0.15575001	0.33700001	[0.049676]	0	0	0	0
+2	blood	slt	A	arctic_a0091_slt	3	0.33700001	0.5995	[0.637458]	1	2	2	1
+0	grew	slt	A	arctic_a0091_slt	4	0.5995	0.82450002	[0.267174]	0	0	0	0
+2	hot	slt	A	arctic_a0091_slt	5	0.82450002	1.0369999	[0.665324]	1	1	2	2
+0	with	slt	A	arctic_a0091_slt	6	1.0369999	1.24325	[0.092891]	0	0	0	0
+2	rage	slt	A	arctic_a0091_slt	7	1.24325	1.58075	[0.646087]	1	1	0	2
+0	at	slt	A	arctic_a0091_slt	8	1.58075	1.687	[0.063757]	0	0	0	0
+0	the	slt	A	arctic_a0091_slt	9	1.687	1.737	[0.034196]	0	0	0	0
+1	thought	slt	A	arctic_a0091_slt	10	1.737	2.1307499	[0.940143]	1	0	2	2
+0	.	slt	A	arctic_a0091_slt	11	2.1307499	0.0		0	0	0	0
+0	.	rms	A	arctic_a0092_rms	0	0.0	0.052000001		0	0	0	0
+1	He	rms	A	arctic_a0092_rms	1	0.052000001	0.182	[0.05746]	0	0	0	0
+0	went	rms	A	arctic_a0092_rms	2	0.182	0.43200001	[0.421977]	0	1	0	0
+0	down	rms	A	arctic_a0092_rms	3	0.43200001	0.83200002	[0.9]	1	1	1	2
+0	in	rms	A	arctic_a0092_rms	4	0.83200002	0.94199997	[0.254503]	0	0	0	0
+2	midstream	rms	A	arctic_a0092_rms	5	0.94199997	1.652	[0.080272, 0.311692]	1	0	1	2
+0	searching	rms	A	arctic_a0092_rms	6	1.652	2.132	[0.136013, 0.074278]	0	0	0	1
+0	the	rms	A	arctic_a0092_rms	7	2.132	2.1919999	[0.039555]	0	0	0	0
+1	shadows	rms	A	arctic_a0092_rms	8	2.1919999	2.852	[0.039555, 0.268738, 0.228145]	1	0	1	2
+0	of	rms	A	arctic_a0092_rms	9	2.852	3.0320001	[0.06871]	0	0	0	0
+0	both	rms	A	arctic_a0092_rms	10	3.0320001	3.332	[0.538768]	1	0	1	1
+2	shores	rms	A	arctic_a0092_rms	11	3.332	3.9920001	[0.059267]	0	1	1	2
+0	.	rms	A	arctic_a0092_rms	12	3.9920001	0.0		0	0	0	0
+0	.	slt	A	arctic_a0092_slt	0	0.0	0.13699999		0	0	0	0
+0	He	slt	A	arctic_a0092_slt	1	0.13699999	0.27450001	[0.145486]	0	0	0	0
+1	went	slt	A	arctic_a0092_slt	2	0.27450001	0.52450001	[0.359864]	0	1	0	0
+0	down	slt	A	arctic_a0092_slt	3	0.52450001	0.79325002	[0.919047]	1	1	1	2
+0	in	slt	A	arctic_a0092_slt	4	0.79325002	0.88700002	[0.088452]	0	0	0	0
+2	midstream	slt	A	arctic_a0092_slt	5	0.88700002	1.5994999	[0.107572, 0.317818]	1	0	1	2
+0	.	slt	A	arctic_a0092_slt	6	1.5994999	1.712		0	0	0	0
+1	searching	slt	A	arctic_a0092_slt	7	1.712	2.1682501	[0.214678, 0.108043]	1	0	0	0
+0	the	slt	A	arctic_a0092_slt	8	2.1682501	2.21825	[0.058548]	0	0	0	0
+2	shadows	slt	A	arctic_a0092_slt	9	2.21825	2.687	[0.815667, 0.116391]	1	0	1	2
+0	of	slt	A	arctic_a0092_slt	10	2.687	2.7744999	[0.117234]	0	0	0	0
+0	both	slt	A	arctic_a0092_slt	11	2.7744999	3.03075	[0.216154]	1	0	0	0
+2	shores	slt	A	arctic_a0092_slt	12	3.03075	3.6182499	[0.244849]	1	0	0	2
+0	.	slt	A	arctic_a0092_slt	13	3.6182499	0.0		0	0	0	0
+0	.	rms	A	arctic_a0093_rms	0	0.0	0.071999997		0	0	0	0
+0	For	rms	A	arctic_a0093_rms	1	0.071999997	0.36199999	[0.040102]	0	0	0	0
+0	a	rms	A	arctic_a0093_rms	2	0.36199999	0.39199999	[0.207878]	1	0	0	0
+2	full	rms	A	arctic_a0093_rms	3	0.39199999	0.70200002	[0.207878, 0.0361]	1	0	1	1
+0	minute	rms	A	arctic_a0093_rms	4	0.70200002	1.052	[0.564805, 0.315544]	1	0	1	2
+0	he	rms	A	arctic_a0093_rms	5	1.052	1.202	[0.195441]	0	0	0	0
+1	crouched	rms	A	arctic_a0093_rms	6	1.202	1.752	[0.901421]	1	1	1	2
+0	and	rms	A	arctic_a0093_rms	7	1.752	1.872	[0.241065]	0	0	0	0
+1	listened	rms	A	arctic_a0093_rms	8	1.872	2.4319999	[0.171346, 0.16972]	1	2	1	2
+0	.	rms	A	arctic_a0093_rms	9	2.4319999	0.0		0	0	0	0
+0	.	slt	A	arctic_a0093_slt	0	0.0	0.112		0	0	0	0
+0	For	slt	A	arctic_a0093_slt	1	0.112	0.34325001	[0.029674]	0	0	0	0
+0	a	slt	A	arctic_a0093_slt	2	0.34325001	0.37450001	[0.084718]	0	0	0	0
+2	full	slt	A	arctic_a0093_slt	3	0.37450001	0.662	[0.254661]	1	1	2	1
+0	minute	slt	A	arctic_a0093_slt	4	0.662	0.98075002	[0.180702, 0.110374]	0	1	0	2
+0	he	slt	A	arctic_a0093_slt	5	0.98075002	1.137	[0.062221]	0	0	0	0
+1	crouched	slt	A	arctic_a0093_slt	6	1.137	1.64325	[0.999149]	1	1	1	2
+0	and	slt	A	arctic_a0093_slt	7	1.64325	1.78075	[0.088423]	0	0	0	0
+1	listened	slt	A	arctic_a0093_slt	8	1.78075	2.3057499	[0.045295, 0.082202]	1	1	1	2
+0	.	slt	A	arctic_a0093_slt	9	2.3057499	0.0		0	0	0	0
+0	.	rms	A	arctic_a0094_rms	0	0.0	0.052000001		0	0	0	0
+0	He	rms	A	arctic_a0094_rms	1	0.052000001	0.23199999	[0.276196]	0	0	0	0
+0	had	rms	A	arctic_a0094_rms	2	0.23199999	0.442	[1.163701]	1	0	0	0
+2	barely	rms	A	arctic_a0094_rms	3	0.442	0.92199999	[0.546259, 0.927437]	1	0	1	1
+1	entered	rms	A	arctic_a0094_rms	4	0.92199999	1.352	[0.622372, 0.248132]	0	2	1	2
+0	this	rms	A	arctic_a0094_rms	5	1.352	1.812	[0.242282]	1	0	0	0
+1	when	rms	A	arctic_a0094_rms	6	1.812	2.072	[0.085645]	0	0	0	0
+0	he	rms	A	arctic_a0094_rms	7	2.072	2.1719999	[0.309831]	0	0	0	0
+2	saw	rms	A	arctic_a0094_rms	8	2.1719999	2.5320001	[1.133251]	1	0	1	1
+0	the	rms	A	arctic_a0094_rms	9	2.5320001	2.642	[0.074888]	0	0	0	0
+1	glow	rms	A	arctic_a0094_rms	10	2.642	3.102	[0.074888, 0.9]	1	1	1	1
+0	of	rms	A	arctic_a0094_rms	11	3.102	3.2820001		0	0	0	0
+0	a	rms	A	arctic_a0094_rms	12	3.2820001	3.322	[0.193461]	0	0	0	0
+2	fire	rms	A	arctic_a0094_rms	13	3.322	3.842	[0.860488, 0.538111]	1	1	1	2
+0	.	rms	A	arctic_a0094_rms	14	3.842	0.0		0	0	0	0
+0	.	slt	A	arctic_a0094_slt	0	0.0	0.1245		0	0	0	0
+0	He	slt	A	arctic_a0094_slt	1	0.1245	0.27450001	[0.164287]	1	0	0	0
+0	had	slt	A	arctic_a0094_slt	2	0.27450001	0.44325	[0.120148]	0	0	0	0
+2	barely	slt	A	arctic_a0094_slt	3	0.44325	0.85575002	[0.482898, 0.9]	1	1	1	0
+0	entered	slt	A	arctic_a0094_slt	4	0.85575002	1.20575	[0.512129, 0.150009]	0	1	1	2
+0	this	slt	A	arctic_a0094_slt	5	1.20575	1.4744999	[0.366397]	1	0	0	0
+1	when	slt	A	arctic_a0094_slt	6	1.4744999	1.612	[0.087578]	0	0	0	0
+0	he	slt	A	arctic_a0094_slt	7	1.612	1.712	[0.098099]	0	0	0	0
+0	saw	slt	A	arctic_a0094_slt	8	1.712	1.96825	[0.791229]	1	0	1	1
+0	the	slt	A	arctic_a0094_slt	9	1.96825	2.0682499	[0.133669]	0	0	0	0
+2	glow	slt	A	arctic_a0094_slt	10	2.0682499	2.4245	[0.133669, 0.710317, 0.040111]	1	0	1	2
+0	of	slt	A	arctic_a0094_slt	11	2.4245	2.5244999	[0.040111]	0	0	0	0
+0	a	slt	A	arctic_a0094_slt	12	2.5244999	2.5682499	[0.099674]	0	0	0	0
+2	fire	slt	A	arctic_a0094_slt	13	2.5682499	3.14325	[0.855989, 0.735551]	1	1	1	2
+0	.	slt	A	arctic_a0094_slt	14	3.14325	0.0		0	0	0	0
+0	.	rms	A	arctic_a0095_rms	0	0.0	0.102		0	0	0	0
+0	A	rms	A	arctic_a0095_rms	1	0.102	0.152	[0.219529]	0	0	0	0
+0	big	rms	A	arctic_a0095_rms	2	0.152	0.49200001	[1.233259]	1	1	1	1
+1	canvas	rms	A	arctic_a0095_rms	3	0.49200001	1.072	[0.520411, 0.228418]	0	0	1	1
+2	tent	rms	A	arctic_a0095_rms	4	1.072	1.492	[0.386388]	1	2	1	2
+0	was	rms	A	arctic_a0095_rms	5	1.492	1.712	[0.147961]	0	0	0	0
+0	the	rms	A	arctic_a0095_rms	6	1.712	1.7920001	[0.078885]	0	0	0	0
+1	first	rms	A	arctic_a0095_rms	7	1.7920001	2.1919999	[0.078885, 0.679687]	1	0	1	1
+1	thing	rms	A	arctic_a0095_rms	8	2.1919999	2.4319999	[0.29454]	0	0	1	2
+0	to	rms	A	arctic_a0095_rms	9	2.4319999	2.552	[0.05292]	0	0	0	0
+0	come	rms	A	arctic_a0095_rms	10	2.552	2.882	[0.05292, 0.205615]	1	1	1	2
+0	within	rms	A	arctic_a0095_rms	11	2.882	3.1919999	[0.05747, 0.144166]	1	0	0	0
+0	his	rms	A	arctic_a0095_rms	12	3.1919999	3.4219999	[0.150587]	0	0	0	0
+0	vision	rms	A	arctic_a0095_rms	13	3.4219999	3.852	[0.304988, 0.011473]	1	0	0	2
+0	.	rms	A	arctic_a0095_rms	14	3.852	0.0		0	0	0	0
+0	.	slt	A	arctic_a0095_slt	0	0.0	0.19949999		0	0	0	0
+0	A	slt	A	arctic_a0095_slt	1	0.19949999	0.26824999	[0.361827]	0	0	0	0
+2	big	slt	A	arctic_a0095_slt	2	0.26824999	0.51200002	[0.821718]	1	1	1	1
+1	canvas	slt	A	arctic_a0095_slt	3	0.51200002	1.01825	[0.906331, 0.28474]	1	0	1	1
+2	tent	slt	A	arctic_a0095_slt	4	1.01825	1.2869999	[0.764725]	1	0	2	2
+0	was	slt	A	arctic_a0095_slt	5	1.2869999	1.487	[0.111059]	0	0	0	0
+0	the	slt	A	arctic_a0095_slt	6	1.487	1.5745	[0.15114]	0	0	0	0
+1	first	slt	A	arctic_a0095_slt	7	1.5745	1.9119999	[0.653658]	1	0	1	1
+1	thing	slt	A	arctic_a0095_slt	8	1.9119999	2.1307499	[0.416912]	0	0	1	2
+0	to	slt	A	arctic_a0095_slt	9	2.1307499	2.237	[0.064839]	0	0	0	0
+0	come	slt	A	arctic_a0095_slt	10	2.237	2.4807501	[0.357657]	1	0	1	1
+0	within	slt	A	arctic_a0095_slt	11	2.4807501	2.7932501	[0.093121, 0.28011]	1	0	0	0
+0	his	slt	A	arctic_a0095_slt	12	2.7932501	2.96825	[0.083846]	0	0	0	0
+0	vision	slt	A	arctic_a0095_slt	13	2.96825	3.3807499	[0.414165, 0.155414]	1	0	1	2
+0	.	slt	A	arctic_a0095_slt	14	3.3807499	0.0		0	0	0	0
+0	.	rms	A	arctic_a0096_rms	0	0.0	0.071999997		0	0	0	0
+2	Perhaps	rms	A	arctic_a0096_rms	1	0.071999997	0.662	[0.281021, 0.783924]	1	2	0	1
+0	she	rms	A	arctic_a0096_rms	2	0.662	0.90200001	[0.357897]	0	0	0	0
+0	had	rms	A	arctic_a0096_rms	3	0.90200001	1.0319999	[0.306911]	0	0	0	0
+1	already	rms	A	arctic_a0096_rms	4	1.0319999	1.462	[0.864579, 0.066779, 0.501276]	1	0	0	0
+1	met	rms	A	arctic_a0096_rms	5	1.462	1.742	[0.516812]	1	0	1	1
+0	her	rms	A	arctic_a0096_rms	6	1.742	1.892	[0.367348]	0	0	0	0
+2	fate	rms	A	arctic_a0096_rms	7	1.892	2.372	[0.823487]	1	2	1	2
+0	a	rms	A	arctic_a0096_rms	8	2.372	2.402	[0.049746]	0	0	0	0
+0	little	rms	A	arctic_a0096_rms	9	2.402	2.7119999	[0.049746, 0.049953, 0.076971]	0	0	0	0
+2	deeper	rms	A	arctic_a0096_rms	10	2.7119999	3.142	[0.275541]	0	1	1	1
+0	in	rms	A	arctic_a0096_rms	11	3.142	3.2720001	[0.075603]	0	0	0	0
+0	the	rms	A	arctic_a0096_rms	12	3.2720001	3.332	[0.076655]	0	0	0	0
+2	forest	rms	A	arctic_a0096_rms	13	3.332	4.0320001	[0.076655, 0.580457, 0.141655]	1	1	1	1
+0	.	rms	A	arctic_a0096_rms	14	4.0320001	0.0		0	0	0	0
+0	.	slt	A	arctic_a0096_slt	0	0.0	0.18075		0	0	0	0
+2	Perhaps	slt	A	arctic_a0096_slt	1	0.18075	0.53074998	[0.096082, 0.921966]	1	1	1	1
+0	she	slt	A	arctic_a0096_slt	2	0.53074998	0.70574999	[0.202063]	0	0	0	0
+0	had	slt	A	arctic_a0096_slt	3	0.70574999	0.83074999	[0.151473]	0	0	0	0
+1	already	slt	A	arctic_a0096_slt	4	0.83074999	1.15575	[0.315601, 0.10947, 0.109694]	1	0	0	1
+0	met	slt	A	arctic_a0096_slt	5	1.15575	1.3807499	[0.34947]	1	0	1	1
+0	her	slt	A	arctic_a0096_slt	6	1.3807499	1.512	[0.065753]	0	0	0	0
+2	fate	slt	A	arctic_a0096_slt	7	1.512	1.84325	[0.54362]	1	2	0	2
+0	a	slt	A	arctic_a0096_slt	8	1.84325	1.8745	[0.050979]	0	0	0	0
+0	little	slt	A	arctic_a0096_slt	9	1.8745	2.1494999	[0.122036, 0.069548]	1	0	0	1
+1	deeper	slt	A	arctic_a0096_slt	10	2.1494999	2.46825	[0.176366, 0.111113]	1	1	0	1
+0	in	slt	A	arctic_a0096_slt	11	2.46825	2.5682499	[0.038761]	0	0	0	0
+0	the	slt	A	arctic_a0096_slt	12	2.5682499	2.6245	[0.050087]	0	0	0	0
+2	forest	slt	A	arctic_a0096_slt	13	2.6245	3.1932499	[0.176009, 0.025724]	1	0	0	2
+0	.	slt	A	arctic_a0096_slt	14	3.1932499	0.0		0	0	0	0
+0	.	rms	A	arctic_a0097_rms	0	0.0	0.102		0	0	0	0
+0	Then	rms	A	arctic_a0097_rms	1	0.102	0.36199999	[0.922606]	1	0	1	0
+0	you	rms	A	arctic_a0097_rms	2	0.36199999	0.472	[0.186823]	0	0	0	0
+0	can	rms	A	arctic_a0097_rms	3	0.472	0.67199999	[0.215314]	0	0	0	0
+0	arrange	rms	A	arctic_a0097_rms	4	0.67199999	1.082	[0.65265, 0.499637]	1	0	1	1
+0	yourself	rms	A	arctic_a0097_rms	5	1.082	1.452	[0.157217, 0.172568]	1	0	0	0
+2	comfortably	rms	A	arctic_a0097_rms	6	1.452	2.2520001	[0.181632, 0.075096, 0.059669, 0.198241]	1	2	1	2
+0	among	rms	A	arctic_a0097_rms	7	2.2520001	2.602	[0.113785, 0.568965]	0	1	0	0
+0	these	rms	A	arctic_a0097_rms	8	2.602	2.9119999	[0.959204]	1	0	1	2
+0	robes	rms	A	arctic_a0097_rms	9	2.9119999	3.352	[0.718957]	1	1	0	1
+0	in	rms	A	arctic_a0097_rms	10	3.352	3.4619999	[0.135443]	0	0	0	0
+0	the	rms	A	arctic_a0097_rms	11	3.4619999	3.5220001	[0.05991]	0	0	0	0
+0	bow	rms	A	arctic_a0097_rms	12	3.5220001	3.9619999	[0.05991, 0.831363]	1	0	1	2
+0	.	rms	A	arctic_a0097_rms	13	3.9619999	0.0		0	0	0	0
+0	.	slt	A	arctic_a0097_slt	0	0.0	0.18075		0	0	0	0
+0	Then	slt	A	arctic_a0097_slt	1	0.18075	0.34325001	[0.321781]	1	0	0	0
+0	you	slt	A	arctic_a0097_slt	2	0.34325001	0.44949999	[0.033076]	0	0	0	0
+0	can	slt	A	arctic_a0097_slt	3	0.44949999	0.64950001	[0.033076, 0.058312]	0	0	0	0
+1	arrange	slt	A	arctic_a0097_slt	4	0.64950001	1.0495	[0.457359, 0.375618]	1	0	1	1
+0	yourself	slt	A	arctic_a0097_slt	5	1.0495	1.462	[0.207164, 0.251252]	1	0	0	1
+2	comfortably	slt	A	arctic_a0097_slt	6	1.462	2.0495	[0.120484, 0.117693, 0.018226, 0.235184]	1	0	1	2
+0	among	slt	A	arctic_a0097_slt	7	2.0495	2.3745	[0.237928, 0.228589]	1	0	0	0
+0	these	slt	A	arctic_a0097_slt	8	2.3745	2.5745001	[0.245468]	0	0	0	0
+2	robes	slt	A	arctic_a0097_slt	9	2.5745001	2.9932499	[0.512904]	1	2	1	1
+0	in	slt	A	arctic_a0097_slt	10	2.9932499	3.1057501	[0.068845]	0	0	0	0
+0	the	slt	A	arctic_a0097_slt	11	3.1057501	3.1619999	[0.035037]	0	0	0	0
+2	bow	slt	A	arctic_a0097_slt	12	3.1619999	3.5495	[0.035037, 0.90378]	1	1	1	2
+0	.	slt	A	arctic_a0097_slt	13	3.5495	0.0		0	0	0	0
+0	.	rms	A	arctic_a0098_rms	0	0.0	0.071999997		0	0	0	0
+1	Shall	rms	A	arctic_a0098_rms	1	0.071999997	0.49200001	[0.999945]	1	1	1	2
+0	I	rms	A	arctic_a0098_rms	2	0.49200001	0.602	[0.656054]	0	0	0	0
+2	carry	rms	A	arctic_a0098_rms	3	0.602	1.0319999	[0.275147, 0.125212]	0	0	1	2
+0	you	rms	A	arctic_a0098_rms	4	1.0319999	1.372	[0.359049]	1	0	0	1
+0	.	rms	A	arctic_a0098_rms	5	1.372	0.0		0	0	0	0
+0	.	slt	A	arctic_a0098_slt	0	0.0	0.1495		0	0	0	0
+0	Shall	slt	A	arctic_a0098_slt	1	0.1495	0.48699999	[0.9]	1	2	2	0
+0	I	slt	A	arctic_a0098_slt	2	0.48699999	0.5995	[0.786536]	1	0	0	0
+2	carry	slt	A	arctic_a0098_slt	3	0.5995	0.96200001	[0.242723, 0.111338]	0	0	2	2
+0	you	slt	A	arctic_a0098_slt	4	0.96200001	1.2869999	[0.415915]	1	1	0	0
+0	.	slt	A	arctic_a0098_slt	5	1.2869999	0.0		0	0	0	0
+0	.	rms	A	arctic_a0099_rms	0	0.0	0.102		0	0	0	0
+0	A	rms	A	arctic_a0099_rms	1	0.102	0.20200001	[0.140283]	0	0	0	0
+1	maddening	rms	A	arctic_a0099_rms	2	0.20200001	0.77200001	[0.920526, 0.009949, 0.186518]	1	0	1	0
+2	joy	rms	A	arctic_a0099_rms	3	0.77200001	1.132	[0.678928]	1	0	1	2
+2	pounded	rms	A	arctic_a0099_rms	4	1.132	1.802	[0.57882, 0.216778]	1	2	1	1
+0	in	rms	A	arctic_a0099_rms	5	1.802	1.972	[0.062483]	0	0	0	0
+0	his	rms	A	arctic_a0099_rms	6	1.972	2.1619999	[0.215675]	1	0	0	0
+2	brain	rms	A	arctic_a0099_rms	7	2.1619999	2.6619999	[0.228499]	1	0	1	2
+0	.	rms	A	arctic_a0099_rms	8	2.6619999	0.0		0	0	0	0
+0	.	slt	A	arctic_a0099_slt	0	0.0	0.20575		0	0	0	0
+0	A	slt	A	arctic_a0099_slt	1	0.20575	0.25575	[0.113339]	0	0	0	0
+1	maddening	slt	A	arctic_a0099_slt	2	0.25575	0.87449998	[0.9, 0.132202, 0.098538]	1	1	1	1
+2	joy	slt	A	arctic_a0099_slt	3	0.87449998	1.21825	[0.667269]	1	0	1	2
+0	pounded	slt	A	arctic_a0099_slt	4	1.21825	1.71825	[0.593247, 0.087645]	1	1	1	1
+0	in	slt	A	arctic_a0099_slt	5	1.71825	1.84325	[0.197883]	1	0	0	0
+0	his	slt	A	arctic_a0099_slt	6	1.84325	1.9744999	[0.021636]	0	0	0	0
+0	brain	slt	A	arctic_a0099_slt	7	1.9744999	2.4307499	[0.271013]	1	1	1	2
+0	.	slt	A	arctic_a0099_slt	8	2.4307499	0.0		0	0	0	0
+0	.	rms	A	arctic_a0100_rms	0	0.0	0.071999997		0	0	0	0
+0	You	rms	A	arctic_a0100_rms	1	0.071999997	0.27200001	[0.164208]	0	0	0	0
+2	must	rms	A	arctic_a0100_rms	2	0.27200001	0.662	[0.164208, 1.26466]	1	2	1	1
+2	sleep	rms	A	arctic_a0100_rms	3	0.662	1.192	[0.801396]	1	1	2	2
+0	he	rms	A	arctic_a0100_rms	4	1.192	1.552	[0.669612]	0	0	0	0
+1	urged	rms	A	arctic_a0100_rms	5	1.552	2.102	[0.907444]	1	1	1	1
+0	.	rms	A	arctic_a0100_rms	6	2.102	0.0		0	0	0	0
+0	.	slt	A	arctic_a0100_slt	0	0.0	0.0		0	0	0	0
+0	.	slt	A	arctic_a0100_slt	1	0.0	0.1745		0	0	0	0
+2	You	slt	A	arctic_a0100_slt	2	0.1745	0.31200001	[0.048404]	0	0	0	0
+2	must	slt	A	arctic_a0100_slt	3	0.31200001	0.68699998	[0.048404, 0.921385]	1	2	2	2
+2	sleep	slt	A	arctic_a0100_slt	4	0.68699998	1.15575	[0.64125]	1	0	1	2
+0	he	slt	A	arctic_a0100_slt	5	1.15575	1.4119999	[0.267908]	0	0	0	0
+0	urged	slt	A	arctic_a0100_slt	6	1.4119999	1.90575	[0.759168]	1	1	0	1
+0	.	slt	A	arctic_a0100_slt	7	1.90575	0.0		0	0	0	0
+0	.	rms	A	arctic_b0537_rms	0	0.0	0.061999999		0	0	0	0
+1	But	rms	A	arctic_b0537_rms	1	0.061999999	0.322	[0.981854]	1	0	0	0
+0	she	rms	A	arctic_b0537_rms	2	0.322	0.64200002	[0.514742]	0	0	2	1
+0	had	rms	A	arctic_b0537_rms	3	0.64200002	0.87199998	[0.593721]	1	0	0	0
+1	become	rms	A	arctic_b0537_rms	4	0.87199998	1.452	[0.555108, 0.576754]	1	1	1	2
+0	an	rms	A	arctic_b0537_rms	5	1.452	1.622	[0.149545]	0	0	0	0
+2	automaton	rms	A	arctic_b0537_rms	6	1.622	2.632	[0.423736, 0.315892, 0.197573, 0.609097]	1	2	1	2
+0	.	rms	A	arctic_b0537_rms	7	2.632	0.0		0	0	0	0
+0	.	slt	A	arctic_b0537_slt	0	0.0	0.0		0	0	0	0
+0	.	slt	A	arctic_b0537_slt	1	0.0	0.18075		0	0	0	0
+0	But	slt	A	arctic_b0537_slt	2	0.18075	0.30575001	[0.227871]	0	0	0	0
+2	she	slt	A	arctic_b0537_slt	3	0.30575001	0.58074999	[0.956796]	1	0	1	2
+0	had	slt	A	arctic_b0537_slt	4	0.58074999	0.74325001	[0.588678]	0	0	0	0
+0	become	slt	A	arctic_b0537_slt	5	0.74325001	1.16825	[0.265896, 0.830179, 0.09875]	1	1	1	2
+0	an	slt	A	arctic_b0537_slt	6	1.16825	1.262	[0.09875]	0	0	0	0
+2	automaton	slt	A	arctic_b0537_slt	7	1.262	2.112	[0.33341, 0.9, 0.110261, 0.688822]	1	1	1	2
+0	.	slt	A	arctic_b0537_slt	8	2.112	0.0		0	0	0	0
+0	.	rms	A	arctic_b0538_rms	0	0.0	0.092		0	0	0	0
+2	At	rms	A	arctic_b0538_rms	1	0.092	0.40200001	[0.924091]	1	0	1	0
+0	the	rms	A	arctic_b0538_rms	2	0.40200001	0.50199997	[0.02828]	0	0	0	0
+1	best	rms	A	arctic_b0538_rms	3	0.50199997	1.052	[0.02828, 0.538857]	1	2	1	2
+0	they	rms	A	arctic_b0538_rms	4	1.052	1.272	[0.082474]	0	0	0	0
+0	were	rms	A	arctic_b0538_rms	5	1.272	1.4220001	[0.124427]	1	0	0	0
+2	necessary	rms	A	arctic_b0538_rms	6	1.4220001	2.152	[0.110333, 0.01225, 0.030447, 0.085709]	1	1	1	2
+1	accessories	rms	A	arctic_b0538_rms	7	2.152	3.142	[0.197693, 0.096764, 0.107485, 0.054971]	1	1	0	2
+0	.	rms	A	arctic_b0538_rms	8	3.142	0.0		0	0	0	0
+0	.	slt	A	arctic_b0538_slt	0	0.0	0.18075		0	0	0	0
+0	At	slt	A	arctic_b0538_slt	1	0.18075	0.34325001	[0.60505]	1	0	1	0
+0	the	slt	A	arctic_b0538_slt	2	0.34325001	0.44325	[0.078336]	0	0	0	0
+2	best	slt	A	arctic_b0538_slt	3	0.44325	0.92449999	[0.078336, 1.034476]	1	2	1	2
+0	.	slt	A	arctic_b0538_slt	4	0.92449999	1.062		0	0	0	0
+0	they	slt	A	arctic_b0538_slt	5	1.062	1.16825	[0.131196]	0	0	0	0
+0	were	slt	A	arctic_b0538_slt	6	1.16825	1.312	[0.12538]	0	0	0	0
+1	necessary	slt	A	arctic_b0538_slt	7	1.312	1.9995	[0.263745, 0.03866, 0.108352, 0.295981, 0.03079]	1	1	0	1
+0	accessories	slt	A	arctic_b0538_slt	8	1.9995	2.8182499	[0.03079, 0.143922, 0.11806, 0.173631]	1	1	0	2
+0	.	slt	A	arctic_b0538_slt	9	2.8182499	0.0		0	0	0	0
+0	.	rms	A	arctic_b0539_rms	0	0.0	0.092		0	0	0	0
+0	You	rms	A	arctic_b0539_rms	1	0.092	0.30199999		0	0	0	0
+0	were	rms	A	arctic_b0539_rms	2	0.30199999	0.442	[0.341237]	0	0	0	0
+0	making	rms	A	arctic_b0539_rms	3	0.442	0.88200003	[0.763133, 0.052748]	1	0	1	0
+0	them	rms	A	arctic_b0539_rms	4	0.88200003	1.102	[0.27947]	0	0	0	0
+0	talk	rms	A	arctic_b0539_rms	5	1.102	1.442	[0.59871]	1	0	0	1
+2	shop	rms	A	arctic_b0539_rms	6	1.442	2.0220001	[0.984396]	1	0	1	2
+0	Ruth	rms	A	arctic_b0539_rms	7	2.0220001	2.342	[0.414084]	1	0	0	1
+2	charged	rms	A	arctic_b0539_rms	8	2.342	2.882	[0.345884]	1	1	1	1
+0	him	rms	A	arctic_b0539_rms	9	2.882	3.122	[0.198053]	1	0	0	1
+0	.	rms	A	arctic_b0539_rms	10	3.122	0.0		0	0	0	0
+0	.	slt	A	arctic_b0539_slt	0	0.0	0.18700001		0	0	0	0
+0	You	slt	A	arctic_b0539_slt	1	0.18700001	0.29949999	[0.062405]	0	0	0	0
+0	were	slt	A	arctic_b0539_slt	2	0.29949999	0.43700001	[0.208908]	0	0	0	0
+0	making	slt	A	arctic_b0539_slt	3	0.43700001	0.83700001	[0.306033, 0.075885]	1	1	0	2
+0	them	slt	A	arctic_b0539_slt	4	0.83700001	1.0057499	[0.128344]	0	0	0	0
+2	talk	slt	A	arctic_b0539_slt	5	1.0057499	1.29325	[0.587905]	1	0	1	0
+1	shop	slt	A	arctic_b0539_slt	6	1.29325	1.84325	[0.948921]	1	0	2	2
+0	.	slt	A	arctic_b0539_slt	7	1.84325	1.962		0	0	0	0
+0	Ruth	slt	A	arctic_b0539_slt	8	1.962	2.1995001	[0.115752]	0	1	0	1
+0	charged	slt	A	arctic_b0539_slt	9	2.1995001	2.6619999	[0.347341]	1	2	0	2
+0	him	slt	A	arctic_b0539_slt	10	2.6619999	2.9245	[0.055899]	0	0	0	1
+0	.	slt	A	arctic_b0539_slt	11	2.9245	0.0		0	0	0	0
