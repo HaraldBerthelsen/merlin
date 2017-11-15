@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/CSTR-Edinburgh/merlin.svg?branch=master)](https://travis-ci.org/CSTR-Edinburgh/merlin)
+
 ## Merlin: The Neural Network (NN) based Speech Synthesis System
 
 This repository contains the Neural Network (NN) based Speech Synthesis System  
@@ -26,22 +28,23 @@ Merlin uses the following dependencies:
 - matplotlib
 - bandmat
 - theano
+- tensorflow (optional, required if you use tensorflow models)
 - sklearn, keras, h5py (optional, required if you use keras models)
 
 To install Merlin, `cd` merlin and run the below steps:
 
-- Install some tools in Merlin
+- Install some basic tools in Merlin
 ```sh
 bash tools/compile_tools.sh
 ```
 - Install python dependencies
 ```sh
+pip install numpy 
 pip install -r requirements.txt
 ```
 
-For detailed instructions, to build the toolkit: see [`INSTALL`](https://github.com/CSTR-Edinburgh/merlin/blob/master/INSTALL.md).  
-These instructions are valid for UNIX
-systems including various flavors of Linux;
+For detailed instructions, to build the toolkit: see [INSTALL](https://github.com/CSTR-Edinburgh/merlin/blob/master/INSTALL.md) and [CSTR blog post](https://cstr-edinburgh.github.io/install-merlin/).  
+These instructions are valid for UNIX systems including various flavors of Linux;
 
 
 Getting started with Merlin
@@ -55,6 +58,7 @@ Now, you can also follow Josh Meyer [blog post](http://jrmeyer.github.io/merlin/
 
 For a more in-depth tutorial about building voices with Merlin, you can check out:
 
+- [Deep Learning for Text-to-Speech Synthesis, using the Merlin toolkit (Interspeech 2017 tutorial)](http://www.speech.zone/courses/one-off/merlin-interspeech2017)
 - [Arctic voices](https://cstr-edinburgh.github.io/merlin/getting-started/slt-arctic-voice)
 - [Build your own voice](https://cstr-edinburgh.github.io/merlin/getting-started/build-own-voice)
 

@@ -2,11 +2,14 @@
 
 To manipulate source speaker's voice to sound like target without changing language content. 
 
+## Install Merlin
+
+Before proceeding any further, you first [install Merlin](https://github.com/CSTR-Edinburgh/merlin#installation) and then run the below steps.
+
 ## Dependency tools
 
 Along with Merlin, we need to install few other speech tools in order to run voice conversion. 
 - [speech tools](http://www.cstr.ed.ac.uk/downloads/festival/2.4/speech_tools-2.4-release.tar.gz)
-- [festival](http://www.cstr.ed.ac.uk/downloads/festival/2.4/festival-2.4-release.tar.gz)
 - [festvox](http://festvox.org/festvox-2.7/festvox-2.7.0-release.tar.gz)
 
 ```sh
@@ -14,9 +17,26 @@ bash merlin/tools/compile_other_speech_tools.sh
 ```
 
 All these tools are required for only one task i.e., dynamic time warping (DTW) to create parallel data. 
-You can check this [tutorial](http://speech.zone/exercises/dtw-in-python) for DTW implementation. 
+You can check this [tutorial](http://speech.zone/exercises/dtw-in-python) for DTW implementation.
 
+As an alternative, [fastdtw](https://github.com/CSTR-Edinburgh/merlin/blob/master/misc/scripts/voice_conversion/dtw_aligner.py) from python bindings can also be used.  
+Please check [step 3](https://github.com/CSTR-Edinburgh/merlin/blob/master/egs/voice_conversion/s1/README.md#align-source-features-with-target) for its usage.
+ 
 To convert source voice to target voice, `cd egs/voice_conversion/s1` and follow the below steps:
+
+## Voice conversion challenge 2016 data
+
+Now, you can run Merlin voice conversion using VC2016 data. 
+
+To download the data:
+```sh
+./scripts/download_vcc2016_data.sh
+```
+
+To run voice conversion between any source-target pair, give the speaker names as arguments:
+```sh
+./run_vcc2016_benchmark.sh [SOURCE_SPEAKER] [TARGET_SPEAKER]
+```
 
 ## Demo data
 
@@ -55,13 +75,21 @@ You have to run this script twice, for speakerA and speakerB
 
 ## Align source features with target
 
-For voice conversion, we require parallel sentences for training. For this, we use dynamic-time-warping 
+For voice conversion, we require parallel sentences for training. For this, we use dynamic-time-warping from Festvox 
 to align source features with target. 
 
 To align source features with target
 ```sh
 ./03_align_src_with_target.sh <path_to_src_feat_dir> <path_to_tgt_feat_dir> <path_to_src_align_dir>
 ```
+
+Alternatively, [fastdtw](https://github.com/CSTR-Edinburgh/merlin/blob/master/misc/scripts/voice_conversion/dtw_aligner.py) from python bindings can also be used.  
+
+```bash
+pip install fastdtw
+```
+
+To use fastdtw, replace `dtw_aligner_festvox.py` with `dtw_aligner.py` at line number 60 in `03_align_src_with_target.sh`.
 
 ## Prepare config files
 
