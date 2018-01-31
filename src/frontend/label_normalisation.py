@@ -204,6 +204,7 @@ class HTSLabelNormalisation(LabelNormalisation):
             if len(line) < 1:
                 continue
             temp_list = re.split('\s+', line)
+            # print(temp_list)
             start_time = int(temp_list[0])
             end_time = int(temp_list[1])
             
@@ -212,7 +213,9 @@ class HTSLabelNormalisation(LabelNormalisation):
             state_index = full_label[full_label_length + 1]
             state_index = int(state_index) - 1
 
-            prominence = int(temp_list[3])
+            #prominence = int(temp_list[3])
+            m = re.search("K:([0-9]*)", full_label)
+            prominence = int(m.group(1))
 
             frame_number = int((end_time - start_time)/50000)
             

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 if test "$#" -ne 1; then
-    echo "Usage: ./scripts/prepare_config_files_for_synthesis.sh conf/global_settings.cfg"
+    echo "Usage: ./scripts/prepare_config_files_for_synthesis_promark.sh conf/global_settings.cfg"
     exit 1
 fi
 
@@ -21,6 +21,85 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
   fi
   SED=gsed
 fi
+
+#########################################
+######## prominence config file ###########
+#########################################
+
+prominence_config_file=conf/test_prom_synth_${Voice}.conf
+
+# Start with a general recipe...
+cp -f $MerlinDir/misc/recipes/prominence_demo.conf $prominence_config_file
+
+# ... and modify it:
+
+$SED -i s#'Merlin:.*'#'Merlin: '$MerlinDir# $prominence_config_file
+$SED -i s#'TOPLEVEL:.*'#'TOPLEVEL: '${WorkDir}# $prominence_config_file
+$SED -i s#'work:.*'#'work: %(TOPLEVEL)s/experiments/'${Voice}'/prominence_model'# $prominence_config_file
+
+$SED -i s#'file_id_list:.*'#'file_id_list: %(data)s/'${FileIDList}# $prominence_config_file
+$SED -i s#'test_id_list\s*:.*'#'test_id_list: %(TOPLEVEL)s/experiments/'${Voice}'/test_synthesis/test_id_list.scp'# $prominence_config_file
+
+
+# [Labels]
+$SED -i s#'label_type:.*'#'label_type: '${Labels}# $prominence_config_file
+$SED -i s#'label_align\s*:.*'#'label_align: %(TOPLEVEL)s/experiments/'${Voice}'/test_synthesis/prompt-lab'# $prominence_config_file
+$SED -i s#'question_file_name\s*:.*'#'question_file_name: %(Merlin)s/misc/questions/'${QuestionFile}# $prominence_config_file
+
+
+# [Outputs]
+
+if [ "$Labels" == "state_align" ]
+then
+    $SED -i s#'prom\s*:.*'#'prominence: 5'# $prominence_config_file
+elif [ "$Labels" == "phone_align" ]
+then
+    $SED -i s#'prom\s*:.*'#'prominence: 1'# $prominence_config_file
+else
+    echo "These labels ($Labels) are not supported as of now...please use state_align or phone_align!!"
+fi
+
+
+# [Waveform]
+
+$SED -i s#'test_synth_dir\s*:.*'#'test_synth_dir: %(TOPLEVEL)s/experiments/'${Voice}'/test_synthesis/gen-lab'# $prominence_config_file
+
+
+# [Architecture]
+
+$SED -i s#'switch_to_tensorflow\s*:.*'#'switch_to_tensorflow: True'# $prominence_config_file
+
+if [ "$Voice" == "slt_arctic_demo" ]
+then
+    $SED -i s#'hidden_layer_size\s*:.*'#'hidden_layer_size: [512, 512, 512, 512]'# $prominence_config_file
+    $SED -i s#'hidden_layer_type\s*:.*'#'hidden_layer_type: ['\''TANH'\'', '\''TANH'\'', '\''TANH'\'', '\''TANH'\'']'# $prominence_config_file
+    $SED -i s#'model_file_name\s*:.*'#'model_file_name: feed_forward_4_tanh'# $prominence_config_file
+fi
+
+
+# [Data]
+$SED -i s#'train_file_number\s*:.*'#'train_file_number: '${Train}# $prominence_config_file
+$SED -i s#'valid_file_number\s*:.*'#'valid_file_number: '${Valid}# $prominence_config_file
+$SED -i s#'test_file_number\s*:.*'#'test_file_number: '${Test}# $prominence_config_file
+
+
+# [Processes]
+
+$SED -i s#'ProminenceModel\s*:.*'#'ProminenceModel: True'# $prominence_config_file
+$SED -i s#'GenTestList\s*:.*'#'GenTestList: True'# $prominence_config_file
+
+$SED -i s#'NORMLAB\s*:.*'#'NORMLAB: True'# $prominence_config_file
+$SED -i s#'MAKEPROM\s*:.*'#'MAKEPROM: True'# $prominence_config_file
+$SED -i s#'MAKEDUR\s*:.*'#'MAKEDUR: False'# $prominence_config_file
+$SED -i s#'MAKECMP\s*:.*'#'MAKECMP: False'# $prominence_config_file
+$SED -i s#'NORMCMP\s*:.*'#'NORMCMP: False'# $prominence_config_file
+$SED -i s#'TRAINDNN\s*:.*'#'TRAINDNN: False'# $prominence_config_file
+$SED -i s#'CALMCD\s*:.*'#'CALMCD: False'# $prominence_config_file
+
+$SED -i s#'DNNGEN\s*:.*'#'DNNGEN: True'# $prominence_config_file
+
+echo "Prominence configuration settings stored in $prominence_config_file"
+
 
 
 #########################################

@@ -237,7 +237,9 @@ class HTSLabelModification(object):
             state_index = full_label[full_label_length + 1]
             state_index = int(state_index) - 1
 
-            prominence = int(temp_list[3])
+            #prominence = int(temp_list[3])
+            m = re.search("K:([0-9]*)", full_label)
+            prominence = int(m.group(1))
 
 
             label_binary_flag = self.check_silence_pattern(full_label)

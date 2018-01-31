@@ -59,6 +59,8 @@ fi
 
 # [Architecture]
 
+$SED -i s#'switch_to_tensorflow\s*:.*'#'switch_to_tensorflow: True'# $duration_config_file
+
 if [ "$Voice" == "slt_arctic_demo" ]
 then
     $SED -i s#'hidden_layer_size\s*:.*'#'hidden_layer_size: [512, 512, 512, 512]'# $duration_config_file
@@ -167,6 +169,8 @@ else
 fi
 
 # [Architecture]
+$SED -i s#'switch_to_tensorflow\s*:.*'#'switch_to_tensorflow: True'# $acoustic_config_file
+
 if [ "$Voice" == "slt_arctic_demo" ]
 then
     $SED -i s#'hidden_layer_size\s*:.*'#'hidden_layer_size: [512, 512, 512, 512]'# $acoustic_config_file

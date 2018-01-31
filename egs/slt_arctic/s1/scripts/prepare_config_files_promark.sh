@@ -1,7 +1,7 @@
 #!/bin/bash
 
 if test "$#" -ne 1; then
-    echo "Usage: ./scripts/prepare_config_files_for_synthesis.sh conf/global_settings.cfg"
+    echo "Usage: ./scripts/prepare_config_files_promark.sh conf/global_settings.cfg"
     exit 1
 fi
 
@@ -22,12 +22,68 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
   SED=gsed
 fi
 
+#########################################
+######## prominence config file ###########
+#########################################
+
+prominence_config_file=conf/prominence_${Voice}.conf
+
+# Start with a general recipe...
+cp -f $MerlinDir/misc/recipes/prominence_demo.conf $prominence_config_file
+
+# ... and modify it:
+
+$SED -i s#'Merlin:.*'#'Merlin: '$MerlinDir# $prominence_config_file
+$SED -i s#'TOPLEVEL:.*'#'TOPLEVEL: '${WorkDir}# $prominence_config_file
+$SED -i s#'work:.*'#'work: %(TOPLEVEL)s/experiments/'${Voice}'/prominence_model'# $prominence_config_file
+
+$SED -i s#'file_id_list:.*'#'file_id_list: %(data)s/'${FileIDList}# $prominence_config_file
+
+# [Labels]
+$SED -i s#'label_type:.*'#'label_type: '${Labels}# $prominence_config_file
+$SED -i s#'label_align:.*'#'label_align: %(TOPLEVEL)s/experiments/'${Voice}'/prominence_model/data/label_'${Labels}# $prominence_config_file
+$SED -i s#'question_file_name:.*'#'question_file_name: %(Merlin)s/misc/questions/'${QuestionFilePromNet}# $prominence_config_file
+
+
+# [Outputs]
+if [ "$Labels" == "state_align" ]
+then
+    $SED -i s#'prom\s*:.*'#'prominence: 5'# $prominence_config_file
+elif [ "$Labels" == "phone_align" ]
+then
+    $SED -i s#'prom\s*:.*'#'prominence: 1'# $prominence_config_file
+else
+    echo "These labels ($Labels) are not supported as of now...please use state_align or phone_align!!"
+fi
+
+
+# [Architecture]
+
+$SED -i s#'switch_to_tensorflow\s*:.*'#'switch_to_tensorflow: True'# $prominence_config_file
+
+if [ "$Voice" == "slt_arctic_demo" ]
+then
+    $SED -i s#'hidden_layer_size\s*:.*'#'hidden_layer_size: [512, 512, 512, 512]'# $prominence_config_file
+    $SED -i s#'hidden_layer_type\s*:.*'#'hidden_layer_type: ['\''TANH'\'', '\''TANH'\'', '\''TANH'\'', '\''TANH'\'']'# $prominence_config_file
+    $SED -i s#'model_file_name\s*:.*'#'model_file_name: feed_forward_4_tanh'# $prominence_config_file
+fi
+
+
+# [Data]
+$SED -i s#'train_file_number\s*:.*'#'train_file_number: '${Train}# $prominence_config_file
+$SED -i s#'valid_file_number\s*:.*'#'valid_file_number: '${Valid}# $prominence_config_file
+$SED -i s#'test_file_number\s*:.*'#'test_file_number: '${Test}# $prominence_config_file
+
+echo "Prominence configuration settings stored in $prominence_config_file"
+
+
+
 
 #########################################
 ######## duration config file ###########
 #########################################
 
-duration_config_file=conf/test_dur_synth_${Voice}.conf
+duration_config_file=conf/duration_${Voice}.conf
 
 # Start with a general recipe...
 cp -f $MerlinDir/misc/recipes/duration_demo.conf $duration_config_file
@@ -39,17 +95,14 @@ $SED -i s#'TOPLEVEL:.*'#'TOPLEVEL: '${WorkDir}# $duration_config_file
 $SED -i s#'work:.*'#'work: %(TOPLEVEL)s/experiments/'${Voice}'/duration_model'# $duration_config_file
 
 $SED -i s#'file_id_list:.*'#'file_id_list: %(data)s/'${FileIDList}# $duration_config_file
-$SED -i s#'test_id_list\s*:.*'#'test_id_list: %(TOPLEVEL)s/experiments/'${Voice}'/test_synthesis/test_id_list.scp'# $duration_config_file
-
 
 # [Labels]
 $SED -i s#'label_type:.*'#'label_type: '${Labels}# $duration_config_file
-$SED -i s#'label_align\s*:.*'#'label_align: %(TOPLEVEL)s/experiments/'${Voice}'/test_synthesis/prompt-lab'# $duration_config_file
-$SED -i s#'question_file_name\s*:.*'#'question_file_name: %(Merlin)s/misc/questions/'${QuestionFile}# $duration_config_file
+$SED -i s#'label_align:.*'#'label_align: %(TOPLEVEL)s/experiments/'${Voice}'/duration_model/data/label_'${Labels}# $duration_config_file
+$SED -i s#'question_file_name:.*'#'question_file_name: %(Merlin)s/misc/questions/'${QuestionFile}# $duration_config_file
 
 
 # [Outputs]
-
 if [ "$Labels" == "state_align" ]
 then
     $SED -i s#'dur\s*:.*'#'dur: 5'# $duration_config_file
@@ -59,11 +112,6 @@ then
 else
     echo "These labels ($Labels) are not supported as of now...please use state_align or phone_align!!"
 fi
-
-
-# [Waveform]
-
-$SED -i s#'test_synth_dir\s*:.*'#'test_synth_dir: %(TOPLEVEL)s/experiments/'${Voice}'/test_synthesis/gen-lab'# $duration_config_file
 
 
 # [Architecture]
@@ -83,23 +131,8 @@ $SED -i s#'train_file_number\s*:.*'#'train_file_number: '${Train}# $duration_con
 $SED -i s#'valid_file_number\s*:.*'#'valid_file_number: '${Valid}# $duration_config_file
 $SED -i s#'test_file_number\s*:.*'#'test_file_number: '${Test}# $duration_config_file
 
-
-# [Processes]
-
-$SED -i s#'DurationModel\s*:.*'#'DurationModel: True'# $duration_config_file
-$SED -i s#'GenTestList\s*:.*'#'GenTestList: True'# $duration_config_file
-
-$SED -i s#'NORMLAB\s*:.*'#'NORMLAB: True'# $duration_config_file
-
-$SED -i s#'MAKEDUR\s*:.*'#'MAKEDUR: False'# $duration_config_file
-$SED -i s#'MAKECMP\s*:.*'#'MAKECMP: False'# $duration_config_file
-$SED -i s#'NORMCMP\s*:.*'#'NORMCMP: False'# $duration_config_file
-$SED -i s#'TRAINDNN\s*:.*'#'TRAINDNN: False'# $duration_config_file
-$SED -i s#'CALMCD\s*:.*'#'CALMCD: False'# $duration_config_file
-
-$SED -i s#'DNNGEN\s*:.*'#'DNNGEN: True'# $duration_config_file
-
 echo "Duration configuration settings stored in $duration_config_file"
+
 
 
 
@@ -107,33 +140,32 @@ echo "Duration configuration settings stored in $duration_config_file"
 ######## acoustic config file ###########
 #########################################
 
-acoustic_config_file=conf/test_synth_${Voice}.conf
+acoustic_config_file=conf/acoustic_${Voice}.conf
 
 # Start with a general recipe...
 cp -f $MerlinDir/misc/recipes/acoustic_demo.conf $acoustic_config_file
 
 # ... and modify it:
 
-$SED -i s#'Merlin\s*:.*'#'Merlin: '$MerlinDir# $acoustic_config_file
-$SED -i s#'TOPLEVEL\s*:.*'#'TOPLEVEL: '${WorkDir}# $acoustic_config_file
-$SED -i s#'work\s*:.*'#'work: %(TOPLEVEL)s/experiments/'${Voice}'/acoustic_model'# $acoustic_config_file
+$SED -i s#'Merlin:.*'#'Merlin: '$MerlinDir# $acoustic_config_file
+$SED -i s#'TOPLEVEL:.*'#'TOPLEVEL: '${WorkDir}# $acoustic_config_file
+$SED -i s#'work:.*'#'work: %(TOPLEVEL)s/experiments/'${Voice}'/acoustic_model'# $acoustic_config_file
 
-$SED -i s#'file_id_list\s*:.*'#'file_id_list: %(data)s/'${FileIDList}# $acoustic_config_file
-$SED -i s#'test_id_list\s*:.*'#'test_id_list: %(TOPLEVEL)s/experiments/'${Voice}'/test_synthesis/test_id_list.scp'# $acoustic_config_file
+$SED -i s#'file_id_list:.*'#'file_id_list: %(data)s/'${FileIDList}# $acoustic_config_file
 
 
 # [Labels]
 
-$SED -i s#'enforce_silence\s*:.*'#'enforce_silence: True'# $acoustic_config_file
-$SED -i s#'label_type\s*:.*'#'label_type: '${Labels}# $acoustic_config_file
-$SED -i s#'label_align\s*:.*'#'label_align: %(TOPLEVEL)s/experiments/'${Voice}'/test_synthesis/gen-lab'# $acoustic_config_file
-$SED -i s#'question_file_name\s*:.*'#'question_file_name: %(Merlin)s/misc/questions/'${QuestionFile}# $acoustic_config_file
+$SED -i s#'label_type:.*'#'label_type: '${Labels}# $acoustic_config_file
+$SED -i s#'label_align:.*'#'label_align: %(TOPLEVEL)s/experiments/'${Voice}'/acoustic_model/data/label_'${Labels}# $acoustic_config_file
+$SED -i s#'question_file_name:.*'#'question_file_name: %(Merlin)s/misc/questions/'${QuestionFile}# $acoustic_config_file
+
 if [ "$Labels" == "state_align" ]
 then
-    $SED -i s#'subphone_feats\s*:.*'#'subphone_feats: full'# $acoustic_config_file
+    $SED -i s#'subphone_feats:.*'#'subphone_feats: full'# $acoustic_config_file
 elif [ "$Labels" == "phone_align" ]
 then
-    $SED -i s#'subphone_feats\s*:.*'#'subphone_feats: coarse_coding'# $acoustic_config_file
+    $SED -i s#'subphone_feats:.*'#'subphone_feats: coarse_coding'# $acoustic_config_file
 else
     echo "These labels ($Labels) are not supported as of now...please use state_align or phone_align!!"
 fi
@@ -169,9 +201,6 @@ $SED -i s#'dlf0\s*:.*'#'dlf0: 3'# $acoustic_config_file
 
 
 # [Waveform]
-
-$SED -i s#'test_synth_dir\s*:.*'#'test_synth_dir: %(TOPLEVEL)s/experiments/'${Voice}'/test_synthesis/wav'# $acoustic_config_file
-
 $SED -i s#'vocoder_type\s*:.*'#'vocoder_type: '${Vocoder}# $acoustic_config_file
 
 $SED -i s#'samplerate\s*:.*'#'samplerate: '${SamplingFreq}# $acoustic_config_file
@@ -196,9 +225,7 @@ else
     echo "This sampling frequency ($SamplingFreq) never tested before...please configure yourself!!"
 fi
 
-
 # [Architecture]
-
 $SED -i s#'switch_to_tensorflow\s*:.*'#'switch_to_tensorflow: True'# $acoustic_config_file
 
 if [ "$Voice" == "slt_arctic_demo" ]
@@ -213,17 +240,6 @@ fi
 $SED -i s#'train_file_number\s*:.*'#'train_file_number: '${Train}# $acoustic_config_file
 $SED -i s#'valid_file_number\s*:.*'#'valid_file_number: '${Valid}# $acoustic_config_file
 $SED -i s#'test_file_number\s*:.*'#'test_file_number: '${Test}# $acoustic_config_file
-
-
-# [Processes]
-
-$SED -i s#'AcousticModel\s*:.*'#'AcousticModel: True'# $acoustic_config_file
-$SED -i s#'GenTestList\s*:.*'#'GenTestList: True'# $acoustic_config_file
-
-$SED -i s#'MAKECMP\s*:.*'#'MAKECMP: False'# $acoustic_config_file
-$SED -i s#'NORMCMP\s*:.*'#'NORMCMP: False'# $acoustic_config_file
-$SED -i s#'TRAINDNN\s*:.*'#'TRAINDNN: False'# $acoustic_config_file
-$SED -i s#'CALMCD\s*:.*'#'CALMCD: False'# $acoustic_config_file
 
 
 echo "Acoustic configuration settings stored in $acoustic_config_file"
