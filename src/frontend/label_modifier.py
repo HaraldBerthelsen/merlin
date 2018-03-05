@@ -296,7 +296,7 @@ class HTSLabelModification(object):
             end_time = int(temp_list[1])
             
             full_label = temp_list[2]
-
+            
             label_binary_flag = self.check_silence_pattern(full_label)
           
             if label_binary_flag == 1:
@@ -314,3 +314,4 @@ class HTSLabelModification(object):
      
         logger.debug('modifed label with predicted prominence of %d frames x %d features' % prom_features.shape )
     
+

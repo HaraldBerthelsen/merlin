@@ -78,6 +78,12 @@ if {$csvformat == "demo"} {
     #tobi features
     set promindex 8
 	readpromarkdata promark/tagger_slt.csv
+} elseif {$csvformat == "adbks"} {
+    #For the tagger_audiobooks.csv file
+    set wordindex 2
+    set fileindex 3
+    set promindex 6
+	readpromarkdata promark/tagger_audiobooks.csv
     #HB: build a hash of mappings from tobi to numeral values
     #set tobimap(!H*) 7
     #set tobimap(H*) 6
@@ -93,7 +99,7 @@ if {$csvformat == "demo"} {
 }
 
 set outdir [lindex $argv 1]
-# experiments/slt_arctic_demo_promark/duration_model/data/label_phone_align/
+ experiments/slt_arctic_demo_promark/duration_model/data/label_phone_align/
 
 puts outdir=$outdir
 

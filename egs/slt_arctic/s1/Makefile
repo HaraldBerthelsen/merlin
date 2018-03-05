@@ -40,3 +40,9 @@ full_tobi:
 
 zip:
 	cd ../../..;rm pm.zip; zip -r pm.zip egs/slt_arctic/s1/*.tcl egs/slt_arctic/s1/*promark.sh egs/slt_arctic/s1/Makefile egs/slt_arctic/s1/promark egs/slt_arctic/s1/conf/*promark*.conf misc/questions/*promark*.hed
+
+adbks:
+	tclsh alignpromark.tcl adbks experiments/audiobooks_promark/prominence_model/data/label_state_align experiments/audiobooks_promark/duration_model/data/label_state_align/*.lab
+	tclsh alignpromark.tcl adbks experiments/audiobooks_promark/acoustic_model/data/label_state_align experiments/audiobooks_promark/acoustic_model/data/label_state_align/*.lab
+	tclsh alignpromark.tcl adbks experiments/audiobooks_promark/test_synthesis/prompt-lab experiments/audiobooks_promark/test_synthesis/prompt-lab/*.lab
+#	tclsh alignpromark.tcl adbks experiments/audiobooks_promark/test_synthesis/gen-lab experiments/slt_arctic_demo/test_synthesis/gen-lab/*.lab

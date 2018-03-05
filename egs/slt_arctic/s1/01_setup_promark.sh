@@ -70,6 +70,8 @@ if [[ ! -d ${data_dir} ]] || [[ -n "$do_unzip" ]]; then
 fi
 echo "data is ready!"
 
+
+
 #ZM copy prominence tags to full context labels using alignpromark.tcl 
 if [ "$voice_name" == "slt_arctic_demo_promark" ]
 	then make demo

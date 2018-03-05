@@ -155,9 +155,10 @@ class HTSLabelNormalisation(LabelNormalisation):
     
     def extract_prom_features(self, in_file_name, out_file_name=None, label_type="state_align", feature_type=None, unit_size=None, feat_size=None):
         logger = logging.getLogger("prom")
-  
-        #if label_type=="phone_align":
-        #    A = self.extract_prom_from_phone_alignment_labels(in_file_name, feature_type, unit_size, feat_size)
+        #ZM modif for phone_align extraction uncommented lines follow
+        if label_type=="phone_align":
+            A = self.extract_prom_from_phone_alignment_labels(in_file_name, feature_type, unit_size, feat_size)
+        #ZM end of uncommented lines
         if label_type=="state_align":
             A = self.extract_prom_from_state_alignment_labels(in_file_name, feature_type, unit_size, feat_size)
         else:
@@ -186,7 +187,7 @@ class HTSLabelNormalisation(LabelNormalisation):
                 current_prom_array = numpy.zeros((prom_dim, 1))
             elif unit_size=="phoneme":
                 prom_feature_matrix = numpy.empty((100000, 1))
-
+  
         fid = open(file_name)
         utt_labels = fid.readlines()
         fid.close()
@@ -216,7 +217,7 @@ class HTSLabelNormalisation(LabelNormalisation):
             #prominence = int(temp_list[3])
             m = re.search("K:([0-9]*)", full_label)
             prominence = int(m.group(1))
-
+      
             frame_number = int((end_time - start_time)/50000)
             
             #if state_index == 1:
@@ -227,7 +228,7 @@ class HTSLabelNormalisation(LabelNormalisation):
             #        temp_list = re.split('\s+', line)
             #        phone_duration += int((int(temp_list[1]) - int(temp_list[0]))/50000)
 
-            if feature_type == "binary":
+            if feature_type   == "binary":
                 current_block_array = numpy.zeros((frame_number, 1))
                 if unit_size == "state":
                     current_block_array[-1] = 1
@@ -240,9 +241,9 @@ class HTSLabelNormalisation(LabelNormalisation):
             elif feature_type == "numerical":
                 if unit_size == "state":
                     #current_dur_array[current_index%5] = frame_number 
-                    current_prom_array[current_index%5] = prominence 
+                    current_prom_array[current_index%5] = prominence
                     if feat_size == "phoneme" and state_index == state_number:
-                        current_block_array =  current_prom_array.transpose() 
+                        current_block_array =  current_prom_array.transpose()
                     if feat_size == "frame":
                         current_block_array = numpy.tile(current_dur_array.transpose(), (frame_number, 1))
                 elif unit_size == "phoneme":
@@ -274,7 +275,7 @@ class HTSLabelNormalisation(LabelNormalisation):
         elif feature_type=="numerical":
             if unit_size=="phoneme":
                 prom_feature_matrix = numpy.empty((100000, 1))
-
+                
         fid = open(file_name)
         utt_labels = fid.readlines()
         fid.close()
@@ -284,6 +285,7 @@ class HTSLabelNormalisation(LabelNormalisation):
 		
         current_index = 0
         prom_feature_index = 0
+        
         for line in utt_labels:
             line = line.strip()
             
@@ -294,11 +296,18 @@ class HTSLabelNormalisation(LabelNormalisation):
             end_time = int(temp_list[1])
             
             full_label = temp_list[2]
+            #ZM: added for phone_align prom extraction
+            m = re.search("K:([0-9]*)", full_label)
+            prominence = int(m.group(1))
+            #end ZM
 
+            
             frame_number = int((end_time - start_time)/50000)
             
-            phone_duration = frame_number
-                
+            #ZM
+            #phone_duration = frame_number
+            #end ZM
+            
             if feature_type == "binary":
                 current_block_array = numpy.zeros((frame_number, 1))
                 if unit_size == "phoneme":
@@ -308,23 +317,39 @@ class HTSLabelNormalisation(LabelNormalisation):
                     sys.exit(1)
             elif feature_type == "numerical":
                 if unit_size == "phoneme":
-                    current_block_array = numpy.array([phone_duration])
-            
-            ### writing into dur_feature_matrix ### 
+                    #ZM
+                    #current_block_array = numpy.array([phone_duration])
+                    current_block_array = numpy.array([prominence])
+                    #ZM
+
+        
+            ### writing into dur_feature_matrix ###
+            #ZM
+            #if feat_size == "frame":
+            #   dur_feature_matrix[dur_feature_index:dur_feature_index+frame_number,] = current_block_array
+            #   dur_feature_index = dur_feature_index + frame_number
             if feat_size == "frame":
-                dur_feature_matrix[dur_feature_index:dur_feature_index+frame_number,] = current_block_array
-                dur_feature_index = dur_feature_index + frame_number
-            elif feat_size == "phoneme": 
-                dur_feature_matrix[dur_feature_index:dur_feature_index+1,] = current_block_array
-                dur_feature_index = dur_feature_index + 1
+                prom_feature_matrix[prom_feature_index:prom_feature_index+frame_number,] = current_block_array
+                prom_feature_index = prom_feature_index + frame_number
+            #elif feat_size == "phoneme":
+                #dur_feature_matrix[dur_feature_index:dur_feature_index+1,] = current_block_array
+                #dur_feature_index = dur_feature_index + 1
+            elif feat_size == "phoneme":
+                prom_feature_matrix[prom_feature_index:prom_feature_index+1,] = current_block_array
+                prom_feature_index = prom_feature_index + 1
+                print prom_feature_matrix 
 
             current_index += 1
 
-        dur_feature_matrix = dur_feature_matrix[0:dur_feature_index,]
-        logger.debug('made duration matrix of %d frames x %d features' % dur_feature_matrix.shape )
-        return  dur_feature_matrix
+        prom_feature_matrix = prom_feature_matrix[0:prom_feature_index,]
+        print('made prominence matrix of %d frames x %d features' % prom_feature_matrix.shape )
+        logger.debug('made prominence matrix of %d frames x %d features' % prom_feature_matrix.shape )
+        return  prom_feature_matrix
 
-
+        #ZM
+        #dur_feature_matrix = dur_feature_matrix[0:dur_feature_index,]
+        #logger.debug('made duration matrix of %d frames x %d features' % dur_feature_matrix.shape )
+        #return  dur_feature_matrix
 
 
     def prepare_dur_data(self, ori_file_list, output_file_list, label_type="state_align", feature_type=None, unit_size=None, feat_size=None):
