@@ -125,7 +125,10 @@ class HTSLabelNormalisation(LabelNormalisation):
         print("utt_number = %d" % utt_number)
 
         if utt_number != len(output_file_list):
-            print   "the number of input and output files should be the same!\n";
+            print("label_normalisation.py prepare_prom_data: the number of input and output files should be the same!\n");
+            print("len(ori_file_list) = %d, len(output_file_list) = %d" % (len(ori_file_list), len(output_file_list)))
+            print(ori_file_list)
+            print(output_file_list)
             sys.exit(1)
                
         ### set default feature type to numerical, if not assigned ###
@@ -159,10 +162,11 @@ class HTSLabelNormalisation(LabelNormalisation):
         if label_type=="phone_align":
             A = self.extract_prom_from_phone_alignment_labels(in_file_name, feature_type, unit_size, feat_size)
         #ZM end of uncommented lines
-        if label_type=="state_align":
+        #HB if label_type=="state_align":
+        elif label_type=="state_align":
             A = self.extract_prom_from_state_alignment_labels(in_file_name, feature_type, unit_size, feat_size)
         else:
-            logger.critical("we don't support %s labels as of now!!" % (label_type))
+            logger.critical("label_normalisation.py extract_prom_features: we don't support %s labels as of now!!" % (label_type))
             sys.exit(1)
 
         if out_file_name:
@@ -337,7 +341,7 @@ class HTSLabelNormalisation(LabelNormalisation):
             elif feat_size == "phoneme":
                 prom_feature_matrix[prom_feature_index:prom_feature_index+1,] = current_block_array
                 prom_feature_index = prom_feature_index + 1
-                print prom_feature_matrix 
+                #HB print prom_feature_matrix 
 
             current_index += 1
 
@@ -682,7 +686,7 @@ class HTSLabelNormalisation(LabelNormalisation):
                         pass
 
                     else:
-                        sys.exit('unknown subphone_feats type')
+                        sys.exit('unknown subphone_feats type: %s' % self.subphone_feats)
 
                 label_feature_matrix[label_feature_index:label_feature_index+frame_number,] = current_block_binary_array
                 label_feature_index = label_feature_index + frame_number
@@ -772,6 +776,8 @@ class HTSLabelNormalisation(LabelNormalisation):
                 else:
                     for i in range(state_number - 1):
                         line = utt_labels[current_index + i + 1].strip()
+                        #HB
+                        print("HB %d %d\n%s" % (current_index, i, line))
                         temp_list = re.split('\s+', line)
                         phone_duration += int((int(temp_list[1]) - int(temp_list[0]))/50000)
 

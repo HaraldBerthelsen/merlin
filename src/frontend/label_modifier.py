@@ -49,7 +49,7 @@ class HTSLabelModification(object):
         '''
         utt_number = len(gen_dur_list)
         if utt_number != len(in_gen_label_align_file_list):
-            print("the number of input and output files should be the same!\n");
+            print("label_modifier.py modify_duration_label: the number of input and output files should be the same!\n");
             sys.exit(1)
 
         for i in range(utt_number):
@@ -186,7 +186,7 @@ class HTSLabelModification(object):
         '''
         utt_number = len(gen_prom_list)
         if utt_number != len(in_gen_label_align_file_list):
-            print   "the number of input and output files should be the same!\n";
+            print("label_modifier.py modify_prominence_labels: the number of input and output files should be the same!\n");
             sys.exit(1)
                
         for i in xrange(utt_number):
@@ -195,7 +195,7 @@ class HTSLabelModification(object):
             elif (self.label_type=="phone_align"):
                 self.modify_prom_from_phone_alignment_labels(in_gen_label_align_file_list[i], gen_prom_list[i], gen_label_list[i])
             else:
-                logger.critical("we don't support %s labels as of now!!" % (self.label_type))
+                logger.critical("label_modifyer.py modify_prominence_labels: we don't support %s labels as of now!!" % (self.label_type))
                 sys.exit(1)
     
     def modify_prom_from_state_alignment_labels(self, label_file_name, gen_prom_file_name, gen_lab_file_name): 
@@ -239,9 +239,14 @@ class HTSLabelModification(object):
 
             #prominence = int(temp_list[3])
             m = re.search("K:([0-9]*)", full_label)
-            prominence = int(m.group(1))
-
-
+            #HB
+            if m:
+                prominence = int(m.group(1))
+            else:
+                prominence = 10 #DUMMY VALUE
+            full_label_nostate_noprom = re.sub("K:[0-9]*", "", full_label_nostate)
+            #end HB
+            
             label_binary_flag = self.check_silence_pattern(full_label)
             #label_binary_flag = 0
             if label_binary_flag == 1:
@@ -250,7 +255,8 @@ class HTSLabelModification(object):
                 #prev_end_time = prev_end_time+current_state_prom
                 current_state_prom = 0
                 #                out_fid.write(str(start_time)+' '+str(end_time)+' '+full_label+' '+str(current_state_prom)+'\n')
-                out_fid.write(str(start_time)+' '+str(end_time)+' '+full_label_nostate+'/K:'+str(current_state_prom)+'['+str(state_index)+']\n')
+                #HB out_fid.write(str(start_time)+' '+str(end_time)+' '+full_label_nostate+'/K:'+str(current_state_prom)+'['+str(state_index)+']\n')
+                out_fid.write(str(start_time)+' '+str(end_time)+' '+full_label_nostate_noprom+'/K:'+str(current_state_prom)+'['+str(state_index)+']\n')
                 
                 continue;
             else:
@@ -260,7 +266,8 @@ class HTSLabelModification(object):
                 #state_prom = int(state_prom)*5*10000
                 #out_fid.write(str(prev_end_time)+' '+str(prev_end_time+state_prom)+' '+full_label+' '+str(state_prom)+'\n')  
                 # out_fid.write(str(start_time)+' '+str(end_time)+' '+full_label+' '+str(int(state_prom))+'\n')
-                out_fid.write(str(start_time)+' '+str(end_time)+' '+full_label_nostate+'/K:'+str(state_prom)+'['+str(state_index)+']\n')
+                #HB out_fid.write(str(start_time)+' '+str(end_time)+' '+full_label_nostate+'/K:'+str(state_prom)+'['+str(state_index)+']\n')
+                out_fid.write(str(start_time)+' '+str(end_time)+' '+full_label_nostate_noprom+'/K:'+str(state_prom)+'['+str(state_index)+']\n')
 
             if state_index == state_number:
                 current_index += 1
@@ -296,18 +303,29 @@ class HTSLabelModification(object):
             end_time = int(temp_list[1])
             
             full_label = temp_list[2]
-            
+
+            #HB
+            m = re.search("K:([0-9]*)", full_label)
+            if m:
+                prominence = int(m.group(1))
+            else:
+                prominence = 10 #DUMMY VALUE
+            full_label_noprom = re.sub("K:[0-9]*", "", full_label)
+            #end HB
+           
             label_binary_flag = self.check_silence_pattern(full_label)
           
             if label_binary_flag == 1:
-                current_phone_prom = end_time - start_time
-                out_fid.write(str(prev_end_time)+' '+str(prev_end_time+current_phone_prom)+' '+full_label+'\n')
-                prev_end_time = prev_end_time+current_phone_prom
+                #HB current_phone_prom = end_time - start_time
+                #HB out_fid.write(str(prev_end_time)+' '+str(prev_end_time+current_phone_prom)+' '+full_label+'\n')
+                out_fid.write(str(start_time)+' '+str(end_time)+' '+full_label_noprom+'/K:'+str(prominence)+'\n')
+                #prev_end_time = prev_end_time+current_phone_prom
                 continue;
             else:
                 phone_prom = prom_features[current_index]
                 phone_prom = int(phone_prom)*5*10000
-                out_fid.write(str(prev_end_time)+' '+str(prev_end_time+phone_prom)+' '+full_label+'\n')
+                #HB out_fid.write(str(start_time)+' '+str(end_time)+' '+full_label+'\n')
+                out_fid.write(str(start_time)+' '+str(end_time)+' '+full_label_noprom+'/K:'+str(prominence)+'\n')
                 prev_end_time = prev_end_time+phone_prom
         
             current_index += 1
