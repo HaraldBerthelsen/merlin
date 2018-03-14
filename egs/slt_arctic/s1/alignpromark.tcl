@@ -99,11 +99,12 @@ if {$csvformat == "demo"} {
 }
 
 set outdir [lindex $argv 1]
- experiments/slt_arctic_demo_promark/duration_model/data/label_phone_align/
+#HB ?? What is this line? experiments/slt_arctic_demo_promark/duration_model/data/label_phone_align/
 
 puts outdir=$outdir
 
-#exec mkdir -p $outdir
+#HB uncommented
+exec mkdir -p $outdir
 
 # parray prom
 

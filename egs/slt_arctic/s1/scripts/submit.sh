@@ -1,5 +1,4 @@
 #!/bin/bash -e
-
 ## Generic script for submitting any Theano job to GPU
 # usage: submit.sh [scriptname.py script_arguments ... ]
 
@@ -23,8 +22,11 @@ if [ "$use_gpu_lock" = true ]; then
     
     { # try  
             python $@
+	    #hb
+	    RETURNVAL=$?
             python ${src_dir}/gpu_lock.py --free $gpu_id
     } || { # catch   
+	    RETURNVAL=1
             python ${src_dir}/gpu_lock.py --free $gpu_id
     }
     else
@@ -34,6 +36,8 @@ if [ "$use_gpu_lock" = true ]; then
         export THEANO_FLAGS
     
         python $@
+	#hb
+	RETURNVAL=$?
     fi
 else
     # Assign GPU manually...
@@ -48,3 +52,7 @@ else
     exit $RETURNVAL
 fi
 
+#hb
+#Not sure if this will always cause the calling script to exit..
+#anyway works for now - TODO remove if 05 still stops when prom works right
+exit $RETURNVAL

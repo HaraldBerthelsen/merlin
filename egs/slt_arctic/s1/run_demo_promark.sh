@@ -11,7 +11,7 @@ fi
 ### Step 2: prepare config files for acoustic, duration, prominence models and for synthesis ###
 ./02_prepare_conf_files_promark.sh conf/global_settings.cfg
 
-### Step 3a: train duration model ###
+### Step 3a: train prominence model ###
 ./03a_train_prominence_model.sh conf/prominence_slt_arctic_demo_promark.conf
 
 ### Step 3: train duration model ###
