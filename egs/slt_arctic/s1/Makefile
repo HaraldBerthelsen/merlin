@@ -7,7 +7,12 @@ demo:
 	tclsh alignpromark.tcl demo experiments/slt_arctic_demo_promark/prominence_model/data/label_state_align experiments/slt_arctic_demo_promark/duration_model/data/label_state_align/*.lab
 	tclsh alignpromark.tcl demo experiments/slt_arctic_demo_promark/acoustic_model/data/label_state_align experiments/slt_arctic_demo_promark/acoustic_model/data/label_state_align/*.lab
 	tclsh alignpromark.tcl demo experiments/slt_arctic_demo_promark/test_synthesis/prompt-lab experiments/slt_arctic_demo_promark/test_synthesis/prompt-lab/*.lab
-#	tclsh alignpromark.tcl demo experiments/slt_arctic_demo_promark/test_synthesis/gen-lab experiments/slt_arctic_demo/test_synthesis/gen-lab/*.lab
+
+demo-phone_align:
+	tclsh alignpromark.tcl demo experiments/slt_arctic_demo_promark/prominence_model/data/label_phone_align experiments/slt_arctic_demo_promark/duration_model/data/label_phone_align/*.lab
+	tclsh alignpromark.tcl demo experiments/slt_arctic_demo_promark/acoustic_model/data/label_phone_align experiments/slt_arctic_demo_promark/acoustic_model/data/label_phone_align/*.lab
+	tclsh alignpromark.tcl demo experiments/slt_arctic_demo_promark/test_synthesis/prompt-lab experiments/slt_arctic_demo_promark/test_synthesis/prompt-lab/*.lab
+
 
 full:
 	tclsh alignpromark.tcl full experiments/slt_arctic_full_promark/duration_model/data/label_state_align experiments/slt_arctic_full/duration_model/data/label_state_align/*.lab

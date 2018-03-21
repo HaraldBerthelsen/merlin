@@ -44,7 +44,8 @@ $SED -i s#'test_id_list\s*:.*'#'test_id_list: %(TOPLEVEL)s/experiments/'${Voice}
 # [Labels]
 $SED -i s#'label_type:.*'#'label_type: '${Labels}# $prominence_config_file
 $SED -i s#'label_align\s*:.*'#'label_align: %(TOPLEVEL)s/experiments/'${Voice}'/test_synthesis/prompt-lab'# $prominence_config_file
-$SED -i s#'question_file_name\s*:.*'#'question_file_name: %(Merlin)s/misc/questions/'${QuestionFile}# $prominence_config_file
+#HB $SED -i s#'question_file_name\s*:.*'#'question_file_name: %(Merlin)s/misc/questions/'${QuestionFile}# $prominence_config_file
+$SED -i s#'question_file_name\s*:.*'#'question_file_name: %(Merlin)s/misc/questions/'${QuestionFilePromNet}# $prominence_config_file
 
 
 # [Outputs]
@@ -62,7 +63,8 @@ fi
 
 # [Waveform]
 
-$SED -i s#'test_synth_dir\s*:.*'#'test_synth_dir: %(TOPLEVEL)s/experiments/'${Voice}'/test_synthesis/gen-lab'# $prominence_config_file
+#HB $SED -i s#'test_synth_dir\s*:.*'#'test_synth_dir: %(TOPLEVEL)s/experiments/'${Voice}'/test_synthesis/gen-lab'# $prominence_config_file
+$SED -i s#'test_synth_dir\s*:.*'#'test_synth_dir: %(TOPLEVEL)s/experiments/'${Voice}'/test_synthesis/gen_prominence-lab'# $prominence_config_file
 
 
 # [Architecture]
@@ -89,7 +91,8 @@ $SED -i s#'ProminenceModel\s*:.*'#'ProminenceModel: True'# $prominence_config_fi
 $SED -i s#'GenTestList\s*:.*'#'GenTestList: True'# $prominence_config_file
 
 $SED -i s#'NORMLAB\s*:.*'#'NORMLAB: True'# $prominence_config_file
-$SED -i s#'MAKEPROM\s*:.*'#'MAKEPROM: True'# $prominence_config_file
+#HB $SED -i s#'MAKEPROM\s*:.*'#'MAKEPROM: True'# $prominence_config_file
+$SED -i s#'MAKEPROM\s*:.*'#'MAKEPROM: False'# $prominence_config_file
 $SED -i s#'MAKEDUR\s*:.*'#'MAKEDUR: False'# $prominence_config_file
 $SED -i s#'MAKECMP\s*:.*'#'MAKECMP: False'# $prominence_config_file
 $SED -i s#'NORMCMP\s*:.*'#'NORMCMP: False'# $prominence_config_file
@@ -123,7 +126,8 @@ $SED -i s#'test_id_list\s*:.*'#'test_id_list: %(TOPLEVEL)s/experiments/'${Voice}
 
 # [Labels]
 $SED -i s#'label_type:.*'#'label_type: '${Labels}# $duration_config_file
-$SED -i s#'label_align\s*:.*'#'label_align: %(TOPLEVEL)s/experiments/'${Voice}'/test_synthesis/prompt-lab'# $duration_config_file
+#HB $SED -i s#'label_align\s*:.*'#'label_align: %(TOPLEVEL)s/experiments/'${Voice}'/test_synthesis/prompt-lab'# $duration_config_file
+$SED -i s#'label_align\s*:.*'#'label_align: %(TOPLEVEL)s/experiments/'${Voice}'/test_synthesis/gen_prominence-lab'# $duration_config_file
 $SED -i s#'question_file_name\s*:.*'#'question_file_name: %(Merlin)s/misc/questions/'${QuestionFile}# $duration_config_file
 
 

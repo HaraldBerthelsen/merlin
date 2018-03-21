@@ -67,6 +67,9 @@ if [[ ! -d ${data_dir} ]] || [[ -n "$do_unzip" ]]; then
     cp -r ${duration_dir}/data ${prominence_dir}/data
     mv ${data_dir}/merlin_baseline_practice/acoustic_data/ ${acoustic_dir}/data
     mv ${data_dir}/merlin_baseline_practice/test_data/ ${synthesis_dir}
+    #HB for phone_align
+    cp ${prominence_dir}/data/label_phone_align/arctic_a005[6-9].lab ${synthesis_dir}/prompt-lab/
+    cp ${prominence_dir}/data/label_phone_align/arctic_a0060.lab ${synthesis_dir}/prompt-lab/
 fi
 echo "data is ready!"
 
@@ -74,7 +77,8 @@ echo "data is ready!"
 
 #ZM copy prominence tags to full context labels using alignpromark.tcl 
 if [ "$voice_name" == "slt_arctic_demo_promark" ]
-	then make demo
+#HB for phone_align	then make demo
+	then make demo-phone_align
 elif [ "$voice_name" == "slt_arctic_full_promark" ]
 	then make full
 else
@@ -90,7 +94,9 @@ global_config_file=conf/global_settings.cfg
 echo "MerlinDir=${merlin_dir}" >  $global_config_file
 echo "WorkDir=${current_working_dir}" >>  $global_config_file
 echo "Voice=${voice_name}" >> $global_config_file
-echo "Labels=state_align" >> $global_config_file
+#HB for phone_align
+#HB echo "Labels=state_align" >> $global_config_file
+echo "Labels=phone_align" >> $global_config_file
 echo "Vocoder=WORLD" >> $global_config_file
 echo "SamplingFreq=16000" >> $global_config_file
 

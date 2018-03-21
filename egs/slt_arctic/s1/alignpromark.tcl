@@ -99,7 +99,7 @@ if {$csvformat == "demo"} {
 }
 
 set outdir [lindex $argv 1]
- experiments/slt_arctic_demo_promark/duration_model/data/label_phone_align/
+#HB experiments/slt_arctic_demo_promark/duration_model/data/label_phone_align/
 
 puts outdir=$outdir
 
