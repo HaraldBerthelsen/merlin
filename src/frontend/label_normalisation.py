@@ -125,7 +125,9 @@ class HTSLabelNormalisation(LabelNormalisation):
         print("utt_number = %d" % utt_number)
 
         if utt_number != len(output_file_list):
-            print   "the number of input and output files should be the same!\n";
+            print("label_normalisation.py prepare_prom_data: the number of input and output files should be the same!\n");
+            print("utt_number: %d" % utt_number)
+            print("len(output_file_list): %d" % len(output_file_list))
             sys.exit(1)
                
         ### set default feature type to numerical, if not assigned ###
@@ -159,10 +161,10 @@ class HTSLabelNormalisation(LabelNormalisation):
         if label_type=="phone_align":
             A = self.extract_prom_from_phone_alignment_labels(in_file_name, feature_type, unit_size, feat_size)
         #ZM end of uncommented lines
-        if label_type=="state_align":
+        elif label_type=="state_align":
             A = self.extract_prom_from_state_alignment_labels(in_file_name, feature_type, unit_size, feat_size)
         else:
-            logger.critical("we don't support %s labels as of now!!" % (label_type))
+            logger.critical("label_normalisation.py extract_prom_features: we don't support %s labels as of now!!" % (label_type))
             sys.exit(1)
 
         if out_file_name:
@@ -337,7 +339,7 @@ class HTSLabelNormalisation(LabelNormalisation):
             elif feat_size == "phoneme":
                 prom_feature_matrix[prom_feature_index:prom_feature_index+1,] = current_block_array
                 prom_feature_index = prom_feature_index + 1
-                print prom_feature_matrix 
+                #print(prom_feature_matrix)
 
             current_index += 1
 
