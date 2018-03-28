@@ -1,0 +1,1 @@
+hello:P-100%, this:P=strong is:P=reduced a test 

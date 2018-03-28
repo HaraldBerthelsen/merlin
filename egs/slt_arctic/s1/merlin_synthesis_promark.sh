@@ -7,7 +7,7 @@ fi
 
 PrintUsage () {
     echo "Please first run either demo voice or full voice!!"
-    echo "To run demo voice: ./run_demo.sh"
+    echo "To run demo voice: ./run_demo_promark.sh"
     echo "To run full voice: ./run_full_voice.sh"
 }
 
@@ -45,6 +45,9 @@ fi
 echo "Step 1: creating label files from text..."
 ./scripts/prepare_labels_from_txt_promark.sh $global_config_file
 
+
+
+
 status_step1=$?
 if [ $status_step1 -eq 1 ]; then
     echo "Step 1 not successful !!"
@@ -53,6 +56,18 @@ fi
 
 ### Step 2: synthesize speech   ###
 echo "Step 2: synthesizing speech..."
+./scripts/submit.sh ${MerlinDir}/src/run_merlin.py conf/test_prom_synth_${Voice}.conf
+
+#Modify output prom value if needed..
+python scripts/addProminenceValues_ssml.py ${testDir}/txt ${testDir}/gen_prominence-lab
+status_add_prom=$?
+if [ $status_add_prom -eq 1 ]; then
+    echo "Failed to add prominence!!"
+    exit 1
+fi
+
+
+
 ./scripts/submit.sh ${MerlinDir}/src/run_merlin.py conf/test_dur_synth_${Voice}.conf
 ./scripts/submit.sh ${MerlinDir}/src/run_merlin.py conf/test_synth_${Voice}.conf
 

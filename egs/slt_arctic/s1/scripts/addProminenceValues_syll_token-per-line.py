@@ -100,16 +100,19 @@ def addProm(txtfile):
                 sys.exit(1)
             promvalue = promvalues[i]
 
+
+        #remove existing /K:
+        pl_line_no_k = re.sub("/K:[0-9]+", "", pl_line)
             
         #add prom before state if it exists
-        m2 = re.search("^(.+)(\[[0-9]+\])$", pl_line)
+        m2 = re.search("^(.+)(\[[0-9]+\])$", pl_line_no_k)
         if m2:
             first = m2.group(1)
             last = m2.group(2)
             print("Adding syllable %d: promvalue %s to label file, symbol: %s" % (i,promvalue, symbol))
             new_pl_line = first+"/K:"+promvalue+last
         else:
-            new_pl_line = pl_line+"/K:"+promvalue
+            new_pl_line = pl_line_no_k+"/K:"+promvalue
         #print(new_pl_line)
         
         new_pl_lines.append(new_pl_line)

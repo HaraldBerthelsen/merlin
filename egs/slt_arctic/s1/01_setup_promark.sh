@@ -56,6 +56,10 @@ if [[ ! -f ${data_dir}.zip ]]; then
     fi
     do_unzip=true
 fi
+
+#HB (start from scratch)
+do_unzip=true
+
 if [[ ! -d ${data_dir} ]] || [[ -n "$do_unzip" ]]; then
     echo "unzipping files......"
     rm -fr ${data_dir}
@@ -63,10 +67,13 @@ if [[ ! -d ${data_dir} ]] || [[ -n "$do_unzip" ]]; then
     rm -fr ${acoustic_dir}/data
     rm -fr ${prominence_dir}/data
     unzip -q ${data_dir}.zip
-    mv ${data_dir}/merlin_baseline_practice/duration_data/ ${duration_dir}/data
+    #HB mv ${data_dir}/merlin_baseline_practice/duration_data/ ${duration_dir}/data
+    cp -r ${data_dir}/merlin_baseline_practice/duration_data/ ${duration_dir}/data
     cp -r ${duration_dir}/data ${prominence_dir}/data
-    mv ${data_dir}/merlin_baseline_practice/acoustic_data/ ${acoustic_dir}/data
-    mv ${data_dir}/merlin_baseline_practice/test_data/ ${synthesis_dir}
+    #HB mv ${data_dir}/merlin_baseline_practice/acoustic_data/ ${acoustic_dir}/data
+    cp -r ${data_dir}/merlin_baseline_practice/acoustic_data/ ${acoustic_dir}/data
+    #mv ${data_dir}/merlin_baseline_practice/test_data/ ${synthesis_dir}
+    cp -r ${data_dir}/merlin_baseline_practice/test_data/ ${synthesis_dir}
     #HB for phone_align
     cp ${prominence_dir}/data/label_phone_align/arctic_a005[6-9].lab ${synthesis_dir}/prompt-lab/
     cp ${prominence_dir}/data/label_phone_align/arctic_a0060.lab ${synthesis_dir}/prompt-lab/

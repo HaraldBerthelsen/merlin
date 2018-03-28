@@ -35,7 +35,17 @@ if [ -d "${txt_dir}" ]; then
         echo "Please place your new test sentences (files) in: ${txt_dir} !!"
         exit 1
     else
-        in_txt=${txt_dir}
+        #in_txt=${txt_dir}
+	#HB to be able to have prom annotation in the txt file, copy it to tmp and remove annotation
+        in_txt=${txt_dir}/tmp
+	mkdir -p ${in_txt}
+	for f in ${txt_dir}/*.txt;
+	do
+	    of=$(basename "$f")
+	    outfile=$in_txt/$of
+	    echo "$f -> $outfile"
+	    cat $f | sed 's/:P[a-z0-9=+%|-]*//g' > ${outfile}
+	done
     fi
 elif [ -f "${txt_file}" ]; then
     in_txt=${txt_file}
@@ -79,15 +89,20 @@ rm -rf ${testDir}/prompt-lab/{full,mono,tmp}
 ### for promark test:
 ### If text files are in test_synthesis/txt, look for corresponding .prom files
 ### in the same directory and add prominence values from them
-echo "adding promark prominence values"
+#echo "adding promark prominence values"
 #python scripts/addProminenceValues.py ${testDir}/txt ${testDir}/prompt-lab
-python scripts/addProminenceValues_syll_token-per-line.py ${testDir}/txt ${testDir}/prompt-lab
+#python scripts/addProminenceValues_syll_token-per-line.py ${testDir}/txt ${testDir}/prompt-lab
 
-status_add_prom=$?
-if [ $status_add_prom -eq 1 ]; then
-    echo "Failed to add prominence!!"
-    exit 1
-fi
+#HB 180327 
+#Moved to merlin_synthesis_promark.sh, because it needs to be done after prom_synth step
+#python scripts/addProminenceValues_syll_token-per-line.py ${testDir}/txt ${testDir}/gen_prominence-lab
+
+#status_add_prom=$?
+#if [ $status_add_prom -eq 1 ]; then
+#    echo "Failed to add prominence!!"
+#    exit 1
+#fi
 
 
-echo "Labels are ready in: ${testDir}/prompt-lab !!"
+#echo "Labels are ready in: ${testDir}/prompt-lab !!"
+
