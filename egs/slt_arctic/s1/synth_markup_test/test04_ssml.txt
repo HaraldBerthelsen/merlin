@@ -1,0 +1,8 @@
+<speak>
+  <emphasis level="strong">
+    hello, this
+  </emphasis>
+  <emphasis level="reduced">
+    is a test
+  </emphasis>
+</speak>

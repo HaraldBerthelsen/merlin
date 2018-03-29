@@ -39,12 +39,13 @@ if [ -d "${txt_dir}" ]; then
 	#HB to be able to have prom annotation in the txt file, copy it to tmp and remove annotation
         in_txt=${txt_dir}/tmp
 	mkdir -p ${in_txt}
+	rm ${in_txt}/*
 	for f in ${txt_dir}/*.txt;
 	do
 	    of=$(basename "$f")
 	    outfile=$in_txt/$of
 	    echo "$f -> $outfile"
-	    cat $f | sed 's/:P[a-z0-9=+%|-]*//g' > ${outfile}
+	    cat $f | sed 's/:P[a-z0-9=+%|-]*//g' | sed 's/<[^>]*>//g' | sed 's/  */ /g' > ${outfile}
 	done
     fi
 elif [ -f "${txt_file}" ]; then

@@ -1,0 +1,1 @@
+<speak> <emphasis level="+20%|-20%"> hello, </emphasis> <emphasis level="-50%"> this </emphasis> <emphasis level="reduced"> is</emphasis> a <emphasis level="200"> test </emphasis> </speak>
