@@ -40,6 +40,7 @@ if [ -d "${txt_dir}" ]; then
         in_txt=${txt_dir}/tmp
 	mkdir -p ${in_txt}
 	rm ${in_txt}/*
+	rm ${testDir}/prompt-utt/*
 	for f in ${txt_dir}/*.txt;
 	do
 	    of=$(basename "$f")

@@ -1,7 +1,7 @@
 #!/bin/bash
 
-if test "$#" -ne 1; then
-    echo "Usage: ./merlin_synthesis_promark.sh configfile"
+if test "$#" ge 1; then
+    echo "Usage: ./merlin_synthesis_promark_files.sh txtfiles.."
     exit 1
 fi
 
@@ -11,8 +11,8 @@ PrintUsage () {
     echo "To run full voice: ./run_full_voice.sh"
 }
 
-#global_config_file=conf/global_settings.cfg
-global_config_file=$1
+global_config_file=conf/global_settings.cfg
+#global_config_file=$1
 
 
 if [ ! -f  $global_config_file ]; then
@@ -41,6 +41,16 @@ if [[ ! -d "${txt_dir}" ]] && [[ ! -f "${txt_file}" ]]; then
     exit 1
 fi
 
+###
+#Copy txt files to txt_dir
+rm ${txt_dir}/*.txt
+for f in "$@";
+do
+    cp $f ${txt_dir};
+done
+	 
+#remove old wav files
+rm experiments/${Voice}/test_synthesis/wav/*.wav
 
 ### Step 1: create label files from text ###
 echo "Step 1: creating label files from text..."
