@@ -112,9 +112,11 @@ foreach file [lrange $argv 2 end] {
     set data [split [string trim [read $f]] \n]
     close $f
   	
-  	#ZM commented this line out for blizzard: "_slt" ending relevant only for arctic
+  	#ZM commented this line out for blizzard: "_slt" ending relevant only for arctic?
     #set filename [file tail [file root $file]]_slt
+    #ZM added:
     set filename [file tail [file root $file]]
+    #end ZM
     set outfile $outdir/[file tail $file]
 
     puts $filename...
