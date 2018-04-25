@@ -45,6 +45,9 @@ proc readpromarkdata {fn} {
 	    set ::prom($file,$wordnr) $maxprom
 	    set ::prom($file,$wordnr,sylprom) $sylprom
 	}
+	if {$file=="amidsummernightsdream_02_11"} {
+	    puts "prom $file $wordnr $::prom($file,$wordnr)"
+	}
     }
 }
 
@@ -149,7 +152,7 @@ foreach file [lrange $argv 2 end] {
 	    if {![info exists prom($filename,$wordnumber)]} {
 		#HB What to do if the file is not in the csv list? Now setting prominence to 0,
 		#just to be able to continue
-		puts "WARNING: missing prominece data for $filename"
+		puts "WARNING: missing prominence data for file $filename, word $wordnumber"
 		set prominence 0
 		set sylpromlist [list 0]
 	    } else {
