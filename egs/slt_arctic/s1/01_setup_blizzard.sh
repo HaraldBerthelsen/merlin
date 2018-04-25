@@ -8,7 +8,7 @@ fi
 current_working_dir=$(pwd)
 merlin_dir=$(dirname $(dirname $(dirname $current_working_dir)))
 experiments_dir=${current_working_dir}/experiments
-data_dir=${current_working_dir}/blizzard
+data_dir=${current_working_dir}/blizzard_data
 
 voice_name=$1
 voice_dir=${experiments_dir}/${voice_name}
@@ -18,7 +18,7 @@ duration_dir=${voice_dir}/duration_model
 prominence_dir=${voice_dir}/prominence_model
 synthesis_dir=${voice_dir}/test_synthesis
 
-cp -r ${data_dir} ${experiments_dir}
+cp -r ${data_dir}/blizzard ${experiments_dir}
 #mkdir -p ${experiments_dir}
 #mkdir -p ${voice_dir}
 #mkdir -p ${acoustic_dir}
