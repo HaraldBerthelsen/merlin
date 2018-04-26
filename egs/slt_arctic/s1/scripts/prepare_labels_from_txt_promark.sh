@@ -66,6 +66,7 @@ python ${frontend}/utils/genScmFile.py \
 
 ### generate utt from scheme file
 echo "generating utts from scheme file"
+#${FESTDIR}/bin/festival "(lex.select 'unilex-rpx)" -b ${testDir}/new_test_sentences.scm 
 ${FESTDIR}/bin/festival -b ${testDir}/new_test_sentences.scm 
 
 ### convert festival utt to lab
