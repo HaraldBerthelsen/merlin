@@ -86,7 +86,8 @@ if {$csvformat == "demo"} {
     set wordindex 2
     set fileindex 3
     set promindex 5
-	readpromarkdata promark/tagger_blizzard.csv
+    set outformat "sylprom"
+    readpromarkdata promark/tagger_blizzard.csv
     #HB: build a hash of mappings from tobi to numeral values
     #set tobimap(!H*) 7
     #set tobimap(H*) 6
@@ -191,7 +192,7 @@ foreach file [lrange $argv 2 end] {
 	if [regexp {(.+)(\[\d+\])$} $line match first last] {
 
 	    # state labels
-	    switch $csvformat {
+	    switch $outformat {
 		tobi {
 		    #If using HB's hash map:
 		    #lappend outdata $first/K:[string trim $tobimap($prominence)]$last
@@ -214,15 +215,26 @@ foreach file [lrange $argv 2 end] {
 	    }
 	} else {
 	    # phoneme labels
-	    if {$csvformat == "tobi"} {
+	    switch $outformat {
+		tobi {
 	    # If using HB's hash map:
 		#lappend outdata $line/K:[string trim $tobimap($prominence)]
-		lappend outdata $line/K:[string trim $prominence]
-	    } else {
-		if {$mode=="prominence_model"} {
-		    lappend outdata "$line [expr int(100*[string trim $prominence]"
-		} else {
-		    lappend outdata $line/K:[expr int(100*[string trim $prominence])]
+		    lappend outdata $line/K:[string trim $prominence]
+		}
+		sylprom {
+		    if {$mode=="prominence_model"} {
+			lappend outdata "$line [expr int(100*[string trim $sylprominence])]"
+		    } else {
+			lappend outdata $line/K:[expr int(100*[string trim $sylprominence])]
+		    }
+		}
+		
+		default {
+		    if {$mode=="prominence_model"} {
+			lappend outdata "$line [expr int(100*[string trim $prominence]"
+		    } else {
+			lappend outdata $line/K:[expr int(100*[string trim $prominence])]
+		    }
 		}
 	    }
 	}
