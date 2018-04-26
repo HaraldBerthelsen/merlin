@@ -173,6 +173,7 @@ foreach file [lrange $argv 2 end] {
 		set prominence $prom($filename,$wordnumber)
 		set sylpromlist $prom($filename,$wordnumber,sylprom)
 	    }
+	    puts $sylpromlist
 
 	    if {[llength $sylpromlist]==0} {
 		set sylprominence 0
