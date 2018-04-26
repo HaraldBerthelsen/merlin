@@ -46,7 +46,7 @@ proc readpromarkdata {fn} {
 	    set ::prom($file,$wordnr,sylprom) $sylprom
 	}
 	if {$file=="amidsummernightsdream_02_11"} {
-	    puts "prom $file $wordnr $::prom($file,$wordnr)"
+	    puts "prom $file $wordnr $word $::prom($file,$wordnr)"
 	}
     }
 }
