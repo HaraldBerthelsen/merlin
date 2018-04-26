@@ -45,9 +45,9 @@ proc readpromarkdata {fn} {
 	    set ::prom($file,$wordnr) $maxprom
 	    set ::prom($file,$wordnr,sylprom) $sylprom
 	}
-	if {$file=="amidsummernightsdream_02_11"} {
-	    puts "prom $file $wordnr $word $::prom($file,$wordnr)"
-	}
+	#if {$file=="amidsummernightsdream_02_11" || $file=="amidsummernightsdream_02_15"} {
+	#    puts "prom $file $wordnr $word $::prom($file,$wordnr)"
+	#}
     }
 }
 
@@ -128,36 +128,34 @@ foreach file [lrange $argv 2 end] {
     
     set accumword 0
     set currphrase 1
-    set wordinphrase 0
-    set prev_phraseinutt 0
     foreach line $data {
 	
 	#HB	if {![regexp {@x\+} $line]}
 	#HB ignore blizzard silences (??)
 	if {![regexp {@x\+} $line] && ![regexp {\-\#\+} $line]} {
 	    if [regexp {@(\d+)\=} $line all phraseinutt] {
-		puts "phraseinutt=$phraseinutt"
+		#puts "phraseinutt=$phraseinutt"
 	    }
-	    #HB if {$phraseinutt != $currphrase} {
-	        #incr accumword $wordinphrase
+	    #HB Maybe this works again now if silences are ignored? No but almost ..
+	    #if {$phraseinutt != $currphrase} {
+	    #    incr accumword $wordinphrase
 		#set currphrase $phraseinutt
-		#incr currphrase 1
+		##incr currphrase 1
 	    #} 
-	    
 	    #HB NOTE in the blizzard data (hts-style lab files)
 	    #The silences (#) seem to always have @1= (meaning first phrase in utt)
-	    if {$phraseinutt != $prev_phraseinutt} {
-		incr accumword $wordinphrase
-		#set currphrase $phraseinutt
-		set prev_phraseinutt $phraseinutt
-		incr currphrase 1
-		puts "currphrase: $currphrase"
+	    if {$phraseinutt > $currphrase} {
+	        incr accumword $wordinphrase
+		set currphrase $phraseinutt
 	    } 
+	    
 	    if [regexp {@(\d+)\+} $line all wordinphrase] {
-		# puts "wordinphrase=$wordinphrase"
+		#puts "wordinphrase=$wordinphrase"
 		
 		set wordnumber [expr $wordinphrase+$accumword]
-		puts "wordnumber: $wordnumber"
+		#puts "wordnumber: $wordnumber"
+		regexp {\-([^+]+)\+} $line all segment
+		#puts "segment: $segment"
 		# puts "prom($filename,$wordnumber): $prom($filename,$wordnumber)"
 	    }
 	    if [regexp {@(\d+)\-} $line all sylinword] {
