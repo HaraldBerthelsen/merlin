@@ -19,7 +19,9 @@ proc readpromarkdata {fn} {
 	    set currfile $file
 	    set wordnr 0
 	}
-	if {$word != "."} {
+	#if {$word != "."} 
+	#HB the points have been replaced with zeroes
+	if {$word != "0"} {
 	    incr wordnr
 	} else {
 	    continue
