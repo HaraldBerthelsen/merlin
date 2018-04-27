@@ -140,6 +140,9 @@ class HTSLabelModification(object):
 
         label_number = len(utt_labels)
         logger.info('loaded %s, %3d labels' % (label_file_name, label_number) )
+        #HB these lengths should be the same..
+        if len(dur_features) != len(utt_labels):
+            logger.warning('len(dur_features) from %s = %d, len(utt_labels) from %s = %d' % (gen_dur_file_name, len(dur_features), label_file_name, len(utt_labels)))
 
         out_fid = open(gen_lab_file_name, 'w')
 
@@ -169,7 +172,13 @@ class HTSLabelModification(object):
                 prev_end_time = prev_end_time+current_phone_dur
                 continue;
             else:
-                phone_dur = dur_features[current_index]
+                try:
+                    phone_dur = dur_features[current_index]
+                except IndexError:
+                    phone_dur = end_time - start_time
+                    logger.warning("Index %d doesn't exist .. This may be a problem. Setting phone_dur to %f. Check output file: %s" % (current_index, phone_dur, gen_lab_file_name))
+
+
                 phone_dur = int(phone_dur)*5*10000
                 out_fid.write(str(prev_end_time)+' '+str(prev_end_time+phone_dur)+' '+full_label+'\n')
                 prev_end_time = prev_end_time+phone_dur
@@ -291,7 +300,9 @@ class HTSLabelModification(object):
         label_number = len(utt_labels)
         logger.info('loaded %s, %3d labels' % (label_file_name, label_number) )
         #HB these lengths should be the same..
-        logger.info('len(prom_features) from %s = %d, len(utt_labels) from %s = %d' % (gen_prom_file_name, len(prom_features), label_file_name, len(utt_labels)))
+        if len(prom_features) != len(utt_labels):
+            logger.warning('len(prom_features) from %s = %d, len(utt_labels) from %s = %d' % (gen_prom_file_name, len(prom_features), label_file_name, len(utt_labels)))
+            
 		
         out_fid = open(gen_lab_file_name, 'w')
 
@@ -323,6 +334,7 @@ class HTSLabelModification(object):
                 except IndexError:
                     logger.warning("Index %d doesn't exist .. This may be a problem. Setting phone_prom to 0. Check output file: %s" % (current_index, gen_lab_file_name))
                     phone_prom = 0
+                    #sys.exit(1)
                     
                 out_fid.write(str(start_time)+' '+str(end_time)+' '+full_label_noprom+'/K:'+str(phone_prom)+'\n')
 
