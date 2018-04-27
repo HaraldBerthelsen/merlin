@@ -275,7 +275,9 @@ class HTSLabelModification(object):
         logger.debug('modifed label with predicted prominence of %d frames x %d features' % prom_features.shape )
     
     def modify_prom_from_phone_alignment_labels(self, label_file_name, gen_prom_file_name, gen_lab_file_name): 
-        logger = logging.getLogger("prom")
+        #HB prom logger doesn't work. Why?
+        logger = logging.getLogger("main")
+        #logger = logging.getLogger("prom")
 
         prom_dim = 1
         
@@ -288,6 +290,8 @@ class HTSLabelModification(object):
         
         label_number = len(utt_labels)
         logger.info('loaded %s, %3d labels' % (label_file_name, label_number) )
+        #HB these lengths should be the same..
+        logger.info('len(prom_features) from %s = %d, len(utt_labels) from %s = %d' % (gen_prom_file_name, len(prom_features), label_file_name, len(utt_labels)))
 		
         out_fid = open(gen_lab_file_name, 'w')
 
@@ -314,7 +318,12 @@ class HTSLabelModification(object):
                 out_fid.write(str(start_time)+' '+str(end_time)+' '+full_label_noprom+'/K:'+str(phone_prom)+'\n')
                 continue;
             else:
-                phone_prom = int(round(prom_features[current_index, 0]))
+                try:
+                    phone_prom = int(round(prom_features[current_index, 0]))
+                except IndexError:
+                    logger.warning("Index %d doesn't exist .. This may be a problem. Setting phone_prom to 0. Check output file: %s" % (current_index, gen_lab_file_name))
+                    phone_prom = 0
+                    
                 out_fid.write(str(start_time)+' '+str(end_time)+' '+full_label_noprom+'/K:'+str(phone_prom)+'\n')
 
         
