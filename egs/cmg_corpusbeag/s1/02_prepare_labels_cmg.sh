@@ -35,22 +35,43 @@ fi
 ########## Prepare labels ##########
 ####################################
 
-prepare_labels=false
+prepare_labels=true
 copy=true
+
+### frontend scripts
+frontend=${MerlinDir}/misc/scripts/frontend
+
 
 if [ "$prepare_labels" = true ]; then
     echo "Step 2: "
     echo "Preparing labels..."
 
+    cd $lab_dir
+    
     if [ "$Labels" == "state_align" ]
     then
-        ./scripts/run_state_aligner.sh $wav_dir $inp_txt $lab_dir $global_config_file 
+        #./scripts/run_state_aligner.sh $wav_dir $inp_txt $lab_dir $global_config_file
+	echo "normalizing label files for merlin..."
+	python ${frontend}/utils/normalize_lab_for_merlin.py \
+                        full-context-labels/full \
+                        label_state_align \
+                        state_align \
+                        file_id_list.scp
+
     elif [ "$Labels" == "phone_align" ]
     then
-        ./scripts/run_phone_aligner.sh $wav_dir $inp_txt $lab_dir $global_config_file 
+        #./scripts/run_phone_aligner.sh $wav_dir $inp_txt $lab_dir $global_config_file
+	echo "normalizing label files for merlin..."
+	python ${frontend}/utils/normalize_lab_for_merlin.py \
+                        full-context-labels/full \
+                        label_phone_align \
+                        phone_align \
+                        file_id_list.scp
+
     else
         echo "These labels ($Labels) are not supported as of now...please use state_align or phone_align!!"
     fi
+    cd -
 fi
 
 if [ "$copy" = true ]; then
