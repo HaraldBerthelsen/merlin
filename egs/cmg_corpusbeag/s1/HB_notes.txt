@@ -33,3 +33,5 @@ change numbers in global_setting.cfg
 ./05_train_duration_model.sh conf/duration_cmg_corpusbeag.cfg
 ./06_train_duration_model.sh conf/acoustic_cmg_corpusbeag.cfg
 
+Sort of works but the generated wavs in acoustic_model/gen are not right.
+What's wrong? Normalisation of label files?
