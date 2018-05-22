@@ -1,21 +1,35 @@
+cd ~/svn/Corpora/ga_MU/cmg/CMGCorpusBeag
+python ~/svn/Software/Abair/scripts/convertFiles.py htslabel htslab xml/*.xml
+cd -
+
 mkdir database/lab
 ln -s /media/bigdisk/svn/Corpora/ga_MU/cmg/CMGCorpusBeag/htslab database/lab/label_phone_align
 ln -s /media/bigdisk/svn/Corpora/ga_MU/cmg/CMGCorpusBeag/wav16_trimmed database/wav
 
 ./01_setup.sh cmg_corpusbeag
-edit conf/global_settings.cfg
-Labels
-QuestionFile
-more?
+#edit conf/global_settings.cfg
+#Labels
+#QuestionFile
 
-copy labs, extract feats (part of 02_prepare_labels.sh, 03_prepare_acoustic_features.sh)
+
+#copy labs, extract feats (part of 02_prepare_labels.sh, 03_prepare_acoustic_features.sh)
 
 ./02_prepare_labels_cmg.sh database/wav database/lab
 
 ./03_prepare_acoustic_features.sh database/wav database/feats
-(Needed to change to b_use_reaper=False in extract_features_for_merlin.sh)
+(Needed to change to b_use_reaper=False in ~/git/hb_merlin/misc/scripts/vocoder/world/extract_features_for_merlin.sh)
+
+
+
+if running demo:
+make experiments/cmg_corpusbeag/duration_model/data/file_id_list.scp contain just 60 entries!
+make experiments/cmg_corpusbeag/acoustic_model/data/file_id_list.scp contain just 60 entries!
+else:
+change numbers in global_setting.cfg
 
 
 ./04_prepare_conf_files.sh conf/global_settings.cfg
 
+./05_train_duration_model.sh conf/duration_cmg_corpusbeag.cfg
+./06_train_duration_model.sh conf/acoustic_cmg_corpusbeag.cfg
 
