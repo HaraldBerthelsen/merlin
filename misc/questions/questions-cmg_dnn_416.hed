@@ -1,69 +1,3 @@
-
--@+
--a+
--aa+
--ai+
--au+
--b+
--bj+
--d+
--dj+
--e+
--ee+
--ei+
--f+
--fj+
--g+
--gf+
--gfj+
--gj+
--h+
--i@+
--i+
--ii+
--k+
--kj+
--l+
--l_d+
--lj+
--lj_d+
--ll+
--m+
--mj+
--n+
--n_d+
--ng+
--ngj+
--nj+
--nj_d+
--nn+
--nn_d+
--nnj+
--o+
--oo+
--p+
--pj+
--r+
--r_d+
--rj+
--rj_d+
--s+
--sil+
--sj+
--t+
--tj+
--u@+
--u+
--uu+
--v+
--vj+
--x+
--xj+
-
-
-
-
-
 QS "C-Vowel"				{-@+,-a+,-aa+,-ai+,-au+,-e+,-ee+,-ei+,-i@+,-i+,-ii+,-o+,-oo+,-u@+,-u+,-uu+}
 QS "C-Consonant"			{-b+,-bj+,-d+,-dj+,-f+,-fj+,-g+,-gf+,-gfj+,-gj+,-h+,-k+,-kj+,-l+,-l_d+,-lj+,-lj_d+,-ll+,-m+,-mj+,-n+,-n_d+,-ng+,-ngj+,-nj+,-nj_d+,-nn+,-nn_d+,-nnj+,-p+,-pj+,-r+,-r_d+,-rj+,-rj_d+,-s+,-sj+,-t+,-tj+,-v+,-vj+,-x+,-xj+}
 QS "C-Stop"				{-b+,-bj+,-d+,-dj+,-g+,-gj+-k+,-kj+,-p+,-pj+,-t+,-tj+}
@@ -104,349 +38,342 @@ QS "C-Front_Fricative"			{-f+,-fj+,-v+,-vj+}
 QS "C-Central_Fricative"		{-s+,-sj+}
 QS "C-Back_Fricative"			{-gf+,-gfj+,-h+,-x+,-xj+}
 QS "C-silences"				{-pau+,-sil+,-h#+,-brth+}
-QS "C-@+"					{-@+
-QS "C-a+"					{-a+
-QS "C-aa+"					{-aa+
-QS "C-ai+"					{-ai+
-QS "C-au+"					{-au+
-QS "C-b+"					{-b+
-QS "C-bj+"					{-bj+
-QS "C-d+"					{-d+
-QS "C-dj+"					{-dj+
-QS "C-e+"					{-e+
-QS "C-ee+"					{-ee+
-QS "C-ei+"					{-ei+
-QS "C-f+"					{-f+
-QS "C-fj+"					{-fj+
-QS "C-g+"					{
-QS "C-gf+"					{
-QS "C-gfj+"					{
-QS "C-gj+"					{
-QS "C-h+"					{
-QS "C-i@+"					{
-QS "C-i+"					{
-QS "C-ii+"					{
-QS "C-k+"					{
-QS "C-kj+"					{
-QS "C-l+"					{
-QS "C-l_d+"					{
-QS "C-lj+"					{
-QS "C-lj_d+"					{
-QS "C-ll+"					{
-QS "C-m+"					{
-QS "C-mj+"					{
-QS "C-n+"					{
-QS "C-n_d+"					{
-QS "C-ng+"					{
-QS "C-ngj+"					{
-QS "C-nj+"					{
-QS "C-nj_d+"					{
-QS "C-nn+"					{
-QS "C-nn_d+"					{
-QS "C-nnj+"					{
-QS "C-o+"					{
-QS "C-oo+"					{
-QS "C-p+"					{
-QS "C-pj+"					{
-QS "C-r+"					{
-QS "C-r_d+"					{
-QS "C-rj+"					{
-QS "C-rj_d+"					{
-QS "C-s+"					{
-QS "C-sil+"					{
-QS "C-sj+"					{
-QS "C-t+"					{
-QS "C-tj+"					{
-QS "C-u@+"					{
-QS "C-u+"					{
-QS "C-uu+"					{
-QS "C-v+"					{
-QS "C-vj+"					{
-QS "C-x+"					{
-QS "C-xj+"					{
-
+QS "C-@"					{-@+}
+QS "C-a"					{-a+}
 QS "C-aa"					{-aa+}
-QS "C-ae"					{-ae+}
-QS "C-ah"					{-ah+}
-QS "C-ao"					{-ao+}
-QS "C-aw"					{-aw+}
-QS "C-ax"					{-ax+}
-QS "C-axr"					{-axr+}
-QS "C-ay"					{-ay+}
+QS "C-ai"					{-ai+}
+QS "C-au"					{-au+}
 QS "C-b"					{-b+}
-QS "C-ch"					{-ch+}
+QS "C-bj"					{-bj+}
 QS "C-d"					{-d+}
-QS "C-dh"					{-dh+}
-QS "C-dx"					{-dx+}
-QS "C-eh"					{-eh+}
-QS "C-el"					{-el+}
-QS "C-em"					{-em+}
-QS "C-en"					{-en+}
-QS "C-er"					{-er+}
-QS "C-ey"					{-ey+}
+QS "C-dj"					{-dj+}
+QS "C-e"					{-e+}
+QS "C-ee"					{-ee+}
+QS "C-ei"					{-ei+}
 QS "C-f"					{-f+}
+QS "C-fj"					{-fj+}
 QS "C-g"					{-g+}
-QS "C-hh"					{-hh+}
-QS "C-hv"					{-hv+}
-QS "C-ih"					{-ih+}
-QS "C-iy"					{-iy+}
-QS "C-jh"					{-jh+}
+QS "C-gf"					{-gf+}
+QS "C-gfj"					{-gfj+}
+QS "C-gj"					{-gj+}
+QS "C-h"					{-h+}
+QS "C-i@"					{-i@+}
+QS "C-i"					{-i+}
+QS "C-ii"					{-ii+}
 QS "C-k"					{-k+}
+QS "C-kj"					{-kj+}
 QS "C-l"					{-l+}
+QS "C-l_d"					{-l_d+}
+QS "C-lj"					{-lj+}
+QS "C-lj_d"					{-lj_d+}
+QS "C-ll"					{-ll+}
 QS "C-m"					{-m+}
+QS "C-mj"					{-mj+}
 QS "C-n"					{-n+}
-QS "C-nx"					{-nx+}
+QS "C-n_d"					{-n_d+}
 QS "C-ng"					{-ng+}
-QS "C-ow"					{-ow+}
-QS "C-oy"					{-oy+}
+QS "C-ngj"					{-ngj+}
+QS "C-nj"					{-nj+}
+QS "C-nj_d"					{-nj_d+}
+QS "C-nn"					{-nn+}
+QS "C-nn_d"					{-nn_d+}
+QS "C-nnj"					{-nnj+}
+QS "C-o"					{-o+}
+QS "C-oo"					{-oo+}
 QS "C-p"					{-p+}
+QS "C-pj"					{-pj+}
 QS "C-r"					{-r+}
+QS "C-r_d"					{-r_d+}
+QS "C-rj"					{-rj+}
+QS "C-rj_d"					{-rj_d+}
 QS "C-s"					{-s+}
-QS "C-sh"					{-sh+}
+QS "C-sj"					{-sj+}
 QS "C-t"					{-t+}
-QS "C-th"					{-th+}
-QS "C-uh"					{-uh+}
-QS "C-uw"					{-uw+}
+QS "C-tj"					{-tj+}
+QS "C-u@"					{-u@+}
+QS "C-u"					{-u+}
+QS "C-uu"					{-uu+}
 QS "C-v"					{-v+}
-QS "C-w"					{-w+}
-QS "C-y"					{-y+}
-QS "C-z"					{-z+}
-QS "C-zh"					{-zh+}
-QS "C-pau"					{-pau+}
+QS "C-vj"					{-vj+}
+QS "C-x"					{-x+}
+QS "C-xj"					{-xj+}
+QS "C-sil"					{-sil+}
+QS "LL-@"					{@^}
+QS "LL-a"					{a^}
 QS "LL-aa"					{aa^}
-QS "LL-ae"				    {ae^}
-QS "LL-ah"					{ah^}
-QS "LL-ao"					{ao^}
-QS "LL-aw"					{aw^}
-QS "LL-ax"					{ax^}
-QS "LL-axr"					{axr^}
-QS "LL-ay"					{ay^}
+QS "LL-ai"					{ai^}
+QS "LL-au"					{au^}
 QS "LL-b"					{b^}
-QS "LL-ch"					{ch^}
+QS "LL-bj"					{bj^}
 QS "LL-d"					{d^}
-QS "LL-dh"					{dh^}
-QS "LL-dx"					{dx^}
-QS "LL-eh"					{eh^}
-QS "LL-el"					{el^}
-QS "LL-em"					{em^}
-QS "LL-en"					{en^}
-QS "LL-er"					{er^}
-QS "LL-ey"					{ey^}
+QS "LL-dj"					{dj^}
+QS "LL-e"					{e^}
+QS "LL-ee"					{ee^}
+QS "LL-ei"					{ei^}
 QS "LL-f"					{f^}
+QS "LL-fj"					{fj^}
 QS "LL-g"					{g^}
-QS "LL-hh"					{hh^}
-QS "LL-hv"					{hv^}
-QS "LL-ih"					{ih^}
-QS "LL-iy"					{iy^}
-QS "LL-jh"					{jh^}
+QS "LL-gf"					{gf^}
+QS "LL-gfj"					{gfj^}
+QS "LL-gj"					{gj^}
+QS "LL-h"					{h^}
+QS "LL-i@"					{i@^}
+QS "LL-i"					{i^}
+QS "LL-ii"					{ii^}
 QS "LL-k"					{k^}
+QS "LL-kj"					{kj^}
 QS "LL-l"					{l^}
+QS "LL-l_d"					{l_d^}
+QS "LL-lj"					{lj^}
+QS "LL-lj_d"					{lj_d^}
+QS "LL-ll"					{ll^}
 QS "LL-m"					{m^}
+QS "LL-mj"					{mj^}
 QS "LL-n"					{n^}
-QS "LL-nx"					{nx^}
+QS "LL-n_d"					{n_d^}
 QS "LL-ng"					{ng^}
-QS "LL-ow"					{ow^}
-QS "LL-oy"					{oy^}
+QS "LL-ngj"					{ngj^}
+QS "LL-nj"					{nj^}
+QS "LL-nj_d"					{nj_d^}
+QS "LL-nn"					{nn^}
+QS "LL-nn_d"					{nn_d^}
+QS "LL-nnj"					{nnj^}
+QS "LL-o"					{o^}
+QS "LL-oo"					{oo^}
 QS "LL-p"					{p^}
+QS "LL-pj"					{pj^}
 QS "LL-r"					{r^}
+QS "LL-r_d"					{r_d^}
+QS "LL-rj"					{rj^}
+QS "LL-rj_d"					{rj_d^}
 QS "LL-s"					{s^}
-QS "LL-sh"					{sh^}
+QS "LL-sj"					{sj^}
 QS "LL-t"					{t^}
-QS "LL-th"					{th^}
-QS "LL-uh"					{uh^}
-QS "LL-uw"					{uw^}
+QS "LL-tj"					{tj^}
+QS "LL-u@"					{u@^}
+QS "LL-u"					{u^}
+QS "LL-uu"					{uu^}
 QS "LL-v"					{v^}
-QS "LL-w"					{w^}
-QS "LL-y"					{y^}
-QS "LL-z"					{z^}
-QS "LL-zh"					{zh^}
-QS "LL-pau"					{pau^}
+QS "LL-vj"					{vj^}
+QS "LL-x"					{x^}
+QS "LL-xj"					{xj^}
+QS "LL-sil"					{sil^}
+QS "L-@"					{^@-}
+QS "L-a"					{^a-}
 QS "L-aa"					{^aa-}
-QS "L-ae"					{^ae-}
-QS "L-ah"					{^ah-}
-QS "L-ao"					{^ao-}
-QS "L-aw"					{^aw-}
-QS "L-ax"					{^ax-}
-QS "L-axr"					{^axr-}
-QS "L-ay"					{^ay-}
+QS "L-ai"					{^ai-}
+QS "L-au"					{^au-}
 QS "L-b"					{^b-}
-QS "L-ch"					{^ch-}
+QS "L-bj"					{^bj-}
 QS "L-d"					{^d-}
-QS "L-dh"					{^dh-}
-QS "L-dx"					{^dx-}
-QS "L-eh"					{^eh-}
-QS "L-el"					{^el-}
-QS "L-em"					{^em-}
-QS "L-en"					{^en-}
-QS "L-er"					{^er-}
-QS "L-ey"					{^ey-}
+QS "L-dj"					{^dj-}
+QS "L-e"					{^e-}
+QS "L-ee"					{^ee-}
+QS "L-ei"					{^ei-}
 QS "L-f"					{^f-}
+QS "L-fj"					{^fj-}
 QS "L-g"					{^g-}
-QS "L-hh"					{^hh-}
-QS "L-hv"					{^hv-}
-QS "L-ih"					{^ih-}
-QS "L-iy"					{^iy-}
-QS "L-jh"					{^jh-}
+QS "L-gf"					{^gf-}
+QS "L-gfj"					{^gfj-}
+QS "L-gj"					{^gj-}
+QS "L-h"					{^h-}
+QS "L-i@"					{^i@-}
+QS "L-i"					{^i-}
+QS "L-ii"					{^ii-}
 QS "L-k"					{^k-}
+QS "L-kj"					{^kj-}
 QS "L-l"					{^l-}
+QS "L-l_d"					{^l_d-}
+QS "L-lj"					{^lj-}
+QS "L-lj_d"					{^lj_d-}
+QS "L-ll"					{^ll-}
 QS "L-m"					{^m-}
+QS "L-mj"					{^mj-}
 QS "L-n"					{^n-}
-QS "L-nx"					{^nx-}
+QS "L-n_d"					{^n_d-}
 QS "L-ng"					{^ng-}
-QS "L-ow"					{^ow-}
-QS "L-oy"					{^oy-}
+QS "L-ngj"					{^ngj-}
+QS "L-nj"					{^nj-}
+QS "L-nj_d"					{^nj_d-}
+QS "L-nn"					{^nn-}
+QS "L-nn_d"					{^nn_d-}
+QS "L-nnj"					{^nnj-}
+QS "L-o"					{^o-}
+QS "L-oo"					{^oo-}
 QS "L-p"					{^p-}
+QS "L-pj"					{^pj-}
 QS "L-r"					{^r-}
+QS "L-r_d"					{^r_d-}
+QS "L-rj"					{^rj-}
+QS "L-rj_d"					{^rj_d-}
 QS "L-s"					{^s-}
-QS "L-sh"					{^sh-}
+QS "L-sj"					{^sj-}
 QS "L-t"					{^t-}
-QS "L-th"					{^th-}
-QS "L-uh"					{^uh-}
-QS "L-uw"					{^uw-}
+QS "L-tj"					{^tj-}
+QS "L-u@"					{^u@-}
+QS "L-u"					{^u-}
+QS "L-uu"					{^uu-}
 QS "L-v"					{^v-}
-QS "L-w"					{^w-}
-QS "L-y"					{^y-}
-QS "L-z"					{^z-}
-QS "L-zh"					{^zh-}
-QS "L-pau"					{^pau-}
+QS "L-vj"					{^vj-}
+QS "L-x"					{^x-}
+QS "L-xj"					{^xj-}
+QS "L-sil"					{^sil-}
+QS "R-@"					{+@=}
+QS "R-a"					{+a=}
 QS "R-aa"					{+aa=}
-QS "R-ae"					{+ae=}
-QS "R-ah"					{+ah=}
-QS "R-ao"					{+ao=}
-QS "R-aw"					{+aw=}
-QS "R-ax"					{+ax=}
-QS "R-axr"					{+axr=}
-QS "R-ay"					{+ay=}
+QS "R-ai"					{+ai=}
+QS "R-au"					{+au=}
 QS "R-b"					{+b=}
-QS "R-ch"					{+ch=}
+QS "R-bj"					{+bj=}
 QS "R-d"					{+d=}
-QS "R-dh"					{+dh=}
-QS "R-dx"					{+dx=}
-QS "R-eh"					{+eh=}
-QS "R-el"					{+el=}
-QS "R-em"					{+em=}
-QS "R-en"					{+en=}
-QS "R-er"					{+er=}
-QS "R-ey"					{+ey=}
+QS "R-dj"					{+dj=}
+QS "R-e"					{+e=}
+QS "R-ee"					{+ee=}
+QS "R-ei"					{+ei=}
 QS "R-f"					{+f=}
+QS "R-fj"					{+fj=}
 QS "R-g"					{+g=}
-QS "R-hh"					{+hh=}
-QS "R-hv"					{+hv=}
-QS "R-ih"					{+ih=}
-QS "R-iy"					{+iy=}
-QS "R-jh"					{+jh=}
+QS "R-gf"					{+gf=}
+QS "R-gfj"					{+gfj=}
+QS "R-gj"					{+gj=}
+QS "R-h"					{+h=}
+QS "R-i@"					{+i@=}
+QS "R-i"					{+i=}
+QS "R-ii"					{+ii=}
 QS "R-k"					{+k=}
+QS "R-kj"					{+kj=}
 QS "R-l"					{+l=}
+QS "R-l_d"					{+l_d=}
+QS "R-lj"					{+lj=}
+QS "R-lj_d"					{+lj_d=}
+QS "R-ll"					{+ll=}
 QS "R-m"					{+m=}
+QS "R-mj"					{+mj=}
 QS "R-n"					{+n=}
-QS "R-nx"					{+nx=}
+QS "R-n_d"					{+n_d=}
 QS "R-ng"					{+ng=}
-QS "R-ow"					{+ow=}
-QS "R-oy"					{+oy=}
+QS "R-ngj"					{+ngj=}
+QS "R-nj"					{+nj=}
+QS "R-nj_d"					{+nj_d=}
+QS "R-nn"					{+nn=}
+QS "R-nn_d"					{+nn_d=}
+QS "R-nnj"					{+nnj=}
+QS "R-o"					{+o=}
+QS "R-oo"					{+oo=}
 QS "R-p"					{+p=}
+QS "R-pj"					{+pj=}
 QS "R-r"					{+r=}
+QS "R-r_d"					{+r_d=}
+QS "R-rj"					{+rj=}
+QS "R-rj_d"					{+rj_d=}
 QS "R-s"					{+s=}
-QS "R-sh"					{+sh=}
+QS "R-sj"					{+sj=}
 QS "R-t"					{+t=}
-QS "R-th"					{+th=}
-QS "R-uh"					{+uh=}
-QS "R-uw"					{+uw=}
+QS "R-tj"					{+tj=}
+QS "R-u@"					{+u@=}
+QS "R-u"					{+u=}
+QS "R-uu"					{+uu=}
 QS "R-v"					{+v=}
-QS "R-w"					{+w=}
-QS "R-y"					{+y=}
-QS "R-z"					{+z=}
-QS "R-zh"					{+zh=}
-QS "R-pau"					{+pau=}
+QS "R-vj"					{+vj=}
+QS "R-x"					{+x=}
+QS "R-xj"					{+xj=}
+QS "R-sil"					{+sil=}
+QS "RR-@"					{=@@}
+QS "RR-a"					{=a@}
 QS "RR-aa"					{=aa@}
-QS "RR-ae"					{=ae@}
-QS "RR-ah"					{=ah@}
-QS "RR-ao"					{=ao@}
-QS "RR-aw"					{=aw@}
-QS "RR-ax"					{=ax@}
-QS "RR-axr"					{=axr@}
-QS "RR-ay"					{=ay@}
+QS "RR-ai"					{=ai@}
+QS "RR-au"					{=au@}
 QS "RR-b"					{=b@}
-QS "RR-ch"					{=ch@}
+QS "RR-bj"					{=bj@}
 QS "RR-d"					{=d@}
-QS "RR-dh"					{=dh@}
-QS "RR-dx"					{=dx@}
-QS "RR-eh"					{=eh@}
-QS "RR-el"					{=el@}
-QS "RR-em"					{=em@}
-QS "RR-en"					{=en@}
-QS "RR-er"					{=er@}
-QS "RR-ey"					{=ey@}
+QS "RR-dj"					{=dj@}
+QS "RR-e"					{=e@}
+QS "RR-ee"					{=ee@}
+QS "RR-ei"					{=ei@}
 QS "RR-f"					{=f@}
+QS "RR-fj"					{=fj@}
 QS "RR-g"					{=g@}
-QS "RR-hh"					{=hh@}
-QS "RR-hv"					{=hv@}
-QS "RR-ih"					{=ih@}
-QS "RR-iy"					{=iy@}
-QS "RR-jh"					{=jh@}
+QS "RR-gf"					{=gf@}
+QS "RR-gfj"					{=gfj@}
+QS "RR-gj"					{=gj@}
+QS "RR-h"					{=h@}
+QS "RR-i@"					{=i@@}
+QS "RR-i"					{=i@}
+QS "RR-ii"					{=ii@}
 QS "RR-k"					{=k@}
+QS "RR-kj"					{=kj@}
 QS "RR-l"					{=l@}
+QS "RR-l_d"					{=l_d@}
+QS "RR-lj"					{=lj@}
+QS "RR-lj_d"					{=lj_d@}
+QS "RR-ll"					{=ll@}
 QS "RR-m"					{=m@}
+QS "RR-mj"					{=mj@}
 QS "RR-n"					{=n@}
-QS "RR-nx"					{=nx@}
+QS "RR-n_d"					{=n_d@}
 QS "RR-ng"					{=ng@}
-QS "RR-ow"					{=ow@}
-QS "RR-oy"					{=oy@}
+QS "RR-ngj"					{=ngj@}
+QS "RR-nj"					{=nj@}
+QS "RR-nj_d"					{=nj_d@}
+QS "RR-nn"					{=nn@}
+QS "RR-nn_d"					{=nn_d@}
+QS "RR-nnj"					{=nnj@}
+QS "RR-o"					{=o@}
+QS "RR-oo"					{=oo@}
 QS "RR-p"					{=p@}
+QS "RR-pj"					{=pj@}
 QS "RR-r"					{=r@}
+QS "RR-r_d"					{=r_d@}
+QS "RR-rj"					{=rj@}
+QS "RR-rj_d"					{=rj_d@}
 QS "RR-s"					{=s@}
-QS "RR-sh"					{=sh@}
+QS "RR-sj"					{=sj@}
 QS "RR-t"					{=t@}
-QS "RR-th"					{=th@}
-QS "RR-uh"					{=uh@}
-QS "RR-uw"					{=uw@}
+QS "RR-tj"					{=tj@}
+QS "RR-u@"					{=u@@}
+QS "RR-u"					{=u@}
+QS "RR-uu"					{=uu@}
 QS "RR-v"					{=v@}
-QS "RR-w"					{=w@}
-QS "RR-y"					{=y@}
-QS "RR-z"					{=z@}
-QS "RR-zh"					{=zh@}
-QS "RR-pau"					{=pau@}
+QS "RR-vj"					{=vj@}
+QS "RR-x"					{=x@}
+QS "RR-xj"					{=xj@}
+QS "RR-sil"					{=sil@}
 QS "C-Syl_Vowel==x"			{|x/C:}
 QS "C-Syl_Vowel==no"		{|novowel/C:}
-QS "C-Syl_Vowel"			{|aa/C:,|ae/C:,|ah/C:,|ao/C:,|aw/C:,|ax/C:,|axr/C:,|ay/C:,|eh/C:,|el/C:,|em/C:,|en/C:,|er/C:,|ey/C:,|ih/C:,|ix/C:,|iy/C:,|ow/C:,|oy/C:,|uh/C:,|uw/C:}
-QS "C-Syl_Front_Vowel"		{|ae/C:,|eh/C:,|ey/C:,|ih/C:,|iy/C:}
-QS "C-Syl_Central_Vowel"	{|aa/C:,|ah/C:,|ao/C:,|axr/C:,|er/C:}
-QS "C-Syl_Back_Vowel"		{|ax/C:,|ow/C:,|uh/C:,|uw/C:}
-QS "C-Syl_Long_Vowel"		{|ao/C:,|aw/C:,|el/C:,|em/C:,|en/C:,|en/C:,|iy/C:,|ow/C:,|uw/C:}
-QS "C-Syl_Short_Vowel"		{|aa/C:,|ah/C:,|ax/C:,|ay/C:,|eh/C:,|ey/C:,|ih/C:,|ix/C:,|oy/C:,|uh/C:}
-QS "C-Syl_Dipthong_Vowel"	{|aw/C:,|axr/C:,|ay/C:,|el/C:,|em/C:,|en/C:,|er/C:,|ey/C:,|oy/C:}
-QS "C-Syl_Front_Start"		{|aw/C:,|axr/C:,|er/C:,|ey/C:}
-QS "C-Syl_Fronting_Vowel"	{|ay/C:,|ey/C:,|oy/C:}
-QS "C-Syl_High_Vowel"		{|ih/C:,|ix/C:,|iy/C:,|uh/C:,|uw/C:}
-QS "C-Syl_Medium_Vowel"		{|ae/C:,|ah/C:,|ax/C:,|axr/C:,|eh/C:,|el/C:,|em/C:,|en/C:,|er/C:,|ey/C:,|ow/C:}
-QS "C-Syl_Low_Vowel"		{|aa/C:,|ae/C:,|ah/C:,|ao/C:,|aw/C:,|ay/C:,|oy/C:}
-QS "C-Syl_Rounded_Vowel"	{|ao/C:,|ow/C:,|oy/C:,|uh/C:,|uw/C:,|w/C:}
-QS "C-Syl_Unrounded_Vowel"	{|aa/C:,|ae/C:,|ah/C:,|aw/C:,|ax/C:,|axr/C:,|ay/C:,|eh/C:,|el/C:,|em/C:,|en/C:,|er/C:,|ey/C:,|hh/C:,|ih/C:,|ix/C:,|iy/C:,|l/C:,|r/C:,|y/C:}
-QS "C-Syl_Reduced_Vowel"	{|ax/C:,|axr/C:,|ix/C:}
-QS "C-Syl_IVowel"			{|ih/C:,|ix/C:,|iy/C:}
-QS "C-Syl_EVowel"			{|eh/C:,|ey/C:}
-QS "C-Syl_AVowel"			{|aa/C:,|ae/C:,|aw/C:,|axr/C:,|ay/C:,|er/C:}
-QS "C-Syl_OVowel"			{|ao/C:,|ow/C:,|oy/C:}
-QS "C-Syl_UVowel"			{|ah/C:,|ax/C:,|el/C:,|em/C:,|en/C:,|uh/C:,|uw/C:}
-QS "C-Syl_aa"				{|aa/C:}
-QS "C-Syl_ae"				{|ae/C:}
-QS "C-Syl_ah"				{|ah/C:}
-QS "C-Syl_ao"				{|ao/C:}
-QS "C-Syl_aw"				{|aw/C:}
-QS "C-Syl_ax"				{|ax/C:}
-QS "C-Syl_axr"				{|axr/C:}
-QS "C-Syl_ay"				{|ay/C:}
-QS "C-Syl_eh"				{|eh/C:}
-QS "C-Syl_el"				{|el/C:}
-QS "C-Syl_em"				{|em/C:}
-QS "C-Syl_en"				{|en/C:}
-QS "C-Syl_er"				{|er/C:}
-QS "C-Syl_ey"				{|ey/C:}
-QS "C-Syl_ih"				{|ih/C:}
-QS "C-Syl_iy"				{|iy/C:}
-QS "C-Syl_ow"				{|ow/C:}
-QS "C-Syl_oy"				{|oy/C:}
-QS "C-Syl_uh"				{|uh/C:}
-QS "C-Syl_uw"				{|uw/C:}
+QS "C-Syl_Vowel"				{|@/C:,|a/C:,|aa/C:,|ai/C:,|au/C:,|e/C:,|ee/C:,|ei/C:,|i@/C:,|i/C:,|ii/C:,|o/C:,|oo/C:,|u@/C:,|u/C:,|uu/C:}
+QS "C-Syl_Front_Vowel"			{|@/C:,|a/C:,|aa/C:,|ai/C:,|au/C:,|e/C:,|ee/C:,|ei/C:,|i@/C:,|i/C:,|ii/C:}
+QS "C-Syl_Central_Vowel"			{|@/C:,|a/C:,|aa/C:,|ai/C:,|au/C:}
+QS "C-Syl_Back_Vowel"			{|o/C:,|oo/C:,|u@/C:,|u/C:,|uu/C:}
+QS "C-Syl_Long_Vowel"			{|aa/C:,|ai/C:,|au/C:,|ee/C:,|ei/C:,|i@/C:,|ii/C:,|oo/C:,|u@/C:,|uu/C:}
+QS "C-Syl_Short_Vowel"			{|@/C:,|a/C:,|e/C:,|i/C:,|o/C:,|u/C:}
+QS "C-Syl_Dipthong_Vowel"			{|ai/C:,|au/C:,|ei/C:,|i@/C:,|u@/C:}
+QS "C-Syl_High_Vowel"			{|i@/C:,|i/C:,|ii/C:,|u@/C:,|u/C:,|uu/C:}
+QS "C-Syl_Medium_Vowel"			{|@/C:,|e/C:,|ee/C:,|ei/C:,|o/C:,|oo/C:}
+QS "C-Syl_Low_Vowel"			{|a/C:,|aa/C:,|ai/C:,|au/C:}
+QS "C-Syl_Rounded_Vowel"			{|o/C:,|oo/C:,|u@/C:,|u/C:,|uu/C:}
+QS "C-Syl_Unrounded_Vowel"			{|@/C:,|a/C:,|aa/C:,|ai/C:,|au/C:,|e/C:,|ee/C:,|ei/C:,|i@/C:,|i/C:,|ii/C:}
+QS "C-Syl_Reduced_Vowel"			{|@/C:}
+QS "C-Syl_IVowel"				{|i/C:,|ii/C:,|i@/C:}
+QS "C-Syl_EVowel"				{|e/C:,|ee/C:,|ei/C:}
+QS "C-Syl_AVowel"				{|a/C:,|aa/C:,|ai/C:,|au/C:}
+QS "C-Syl_OVowel"				{|o/C:,|oo/C:}
+QS "C-Syl_UVowel"				{|u/C:,|uu/C:,|u@/C:}
+QS "C-Syl_@"					{|@/C:}
+QS "C-Syl_a"					{|a/C:}
+QS "C-Syl_aa"					{|aa/C:}
+QS "C-Syl_ai"					{|ai/C:}
+QS "C-Syl_au"					{|au/C:}
+QS "C-Syl_e"					{|e/C:}
+QS "C-Syl_ee"					{|ee/C:}
+QS "C-Syl_ei"					{|ei/C:}
+QS "C-Syl_i@"					{|i@/C:}
+QS "C-Syl_i"					{|i/C:}
+QS "C-Syl_ii"					{|ii/C:}
+QS "C-Syl_o"					{|o/C:}
+QS "C-Syl_oo"					{|oo/C:}
+QS "C-Syl_u@"					{|u@/C:}
+QS "C-Syl_u"					{|u/C:}
+QS "C-Syl_uu"					{|uu/C:}
 QS "L-Word_GPOS==0"			{/D:0_}
 QS "L-Word_GPOS==aux"		{/D:aux_}
 QS "L-Word_GPOS==cc"		{/D:cc_}
