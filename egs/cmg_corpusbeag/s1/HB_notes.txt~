@@ -1,0 +1,2 @@
+ln -s /media/bigdisk/svn/Corpora/ga_MU/cmg/CMGCorpusBeag/htslab database/lab
+ln -s /media/bigdisk/svn/Corpora/ga_MU/cmg/CMGCorpusBeag/wav16_trimmed database/wav

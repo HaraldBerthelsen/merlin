@@ -1,0 +1,21 @@
+mkdir database/lab
+ln -s /media/bigdisk/svn/Corpora/ga_MU/cmg/CMGCorpusBeag/htslab database/lab/label_phone_align
+ln -s /media/bigdisk/svn/Corpora/ga_MU/cmg/CMGCorpusBeag/wav16_trimmed database/wav
+
+./01_setup.sh cmg_corpusbeag
+edit conf/global_settings.cfg
+Labels
+QuestionFile
+more?
+
+copy labs, extract feats (part of 02_prepare_labels.sh, 03_prepare_acoustic_features.sh)
+
+./02_prepare_labels_cmg.sh database/wav database/lab
+
+./03_prepare_acoustic_features.sh database/wav database/feats
+(Needed to change to b_use_reaper=False in extract_features_for_merlin.sh)
+
+
+./04_prepare_conf_files.sh conf/global_settings.cfg
+
+
