@@ -12,6 +12,7 @@ install_sptk=true
 install_postfilter=true
 install_world=true
 install_reaper=true
+install_magphase=true
 
 # 1. Get and compile SPTK
 if [ "$install_sptk" = true ]; then
@@ -70,7 +71,7 @@ if [ "$install_world" = true ]; then
 fi
 
 
-# 2. Getting REAPER
+# 3. Getting REAPER
 if [ "$install_reaper" = true ]; then
     echo "downloading REAPER..."
     git clone https://github.com/google/REAPER.git
@@ -85,13 +86,40 @@ if [ "$install_reaper" = true ]; then
 fi
 
 
-# 4. Copy binaries
-echo "deleting downloaded tar files..."
-rm -rf $tools_dir/*.tar.gz
-
 SPTK_BIN_DIR=bin/SPTK-3.9
 WORLD_BIN_DIR=bin/WORLD
 REAPER_BIN_DIR=bin/REAPER
+
+# 4. Getting MagPhase vocoder:
+if [ "$install_magphase" = true ]; then
+    echo "downloading MagPhase vocoder..."
+    rm -rf magphase
+    git clone https://github.com/CSTR-Edinburgh/magphase.git
+    #git clone https://github.com/felipeespic/magphase.git
+
+    echo "configuring MagPhase..."
+    (
+        mkdir -p magphase/tools/bin
+        cp -n SPTK-3.9/build/bin/b2mc   magphase/tools/bin/
+        cp -n SPTK-3.9/build/bin/bcp    magphase/tools/bin/
+        cp -n SPTK-3.9/build/bin/c2acr  magphase/tools/bin/
+        cp -n SPTK-3.9/build/bin/freqt  magphase/tools/bin/
+        cp -n SPTK-3.9/build/bin/mc2b   magphase/tools/bin/
+        cp -n SPTK-3.9/build/bin/mcep   magphase/tools/bin/
+        cp -n SPTK-3.9/build/bin/merge  magphase/tools/bin/
+        cp -n SPTK-3.9/build/bin/sopr   magphase/tools/bin/
+        cp -n SPTK-3.9/build/bin/vopr   magphase/tools/bin/
+        cp -n SPTK-3.9/build/bin/x2x    magphase/tools/bin/
+        cp -n REAPER/build/reaper       magphase/tools/bin/
+    )
+fi
+
+
+# 5. Copy binaries
+echo "deleting downloaded tar files..."
+rm -rf $tools_dir/*.tar.gz
+
+
 
 mkdir -p bin
 mkdir -p $SPTK_BIN_DIR

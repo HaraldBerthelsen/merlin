@@ -206,7 +206,7 @@ class HTSLabelNormalisation(LabelNormalisation):
             state_index = int(state_index) - 1
             current_phone = full_label[full_label.index('-') + 1:full_label.index('+')]
 
-            frame_number = int((end_time - start_time)/50000)
+            frame_number = int(end_time/50000) - int(start_time/50000)
 
             if state_index == 1:
                 phone_duration = frame_number
@@ -336,7 +336,7 @@ class HTSLabelNormalisation(LabelNormalisation):
 
             full_label = temp_list[2]
 
-            frame_number = int((end_time - start_time)/50000)
+            frame_number = int(end_time/50000) - int(start_time/50000)
 
             phone_duration = frame_number
 
@@ -388,8 +388,9 @@ class HTSLabelNormalisation(LabelNormalisation):
 
         ph_count=0
         label_feature_index = 0
-        fid = open(file_name)
-        for line in fid.readlines():
+        with open(file_name) as fid:
+            all_data = fid.readlines()
+        for line in all_data:
             line = line.strip()
             if len(line) < 1:
                 continue
@@ -408,7 +409,7 @@ class HTSLabelNormalisation(LabelNormalisation):
                 if dur_file_name:
                     frame_number = manual_dur_data[ph_count]
                 else:
-                    frame_number = int((end_time - start_time)/50000)
+                    frame_number = int(end_time/50000) - int(start_time/50000)
 
                 if self.subphone_feats == "coarse_coding":
                     cc_feat_matrix = self.extract_coarse_coding_features_relative(frame_number)
@@ -452,9 +453,6 @@ class HTSLabelNormalisation(LabelNormalisation):
                 current_block_binary_array = label_vector
                 label_feature_matrix[label_feature_index:label_feature_index+1,] = current_block_binary_array
                 label_feature_index = label_feature_index + 1
-
-
-        fid.close()
 
         label_feature_matrix = label_feature_matrix[0:label_feature_index,]
 
@@ -506,7 +504,7 @@ class HTSLabelNormalisation(LabelNormalisation):
             else:
                 start_time = int(temp_list[0])
                 end_time = int(temp_list[1])
-                frame_number = int((end_time - start_time)/50000)
+                frame_number = int(end_time/50000) - int(start_time/50000)
                 full_label = temp_list[2]
             
                 full_label_length = len(full_label) - 3  # remove state information [k]
@@ -846,7 +844,7 @@ class HTSLabelNormalisation(LabelNormalisation):
         LL=re.compile(re.escape('LL-'))
 
         for line in fid.readlines():
-            line = line.replace('\n', '')
+            line = line.replace('\n', '').replace('\t', ' ')
 
             if len(line) > 5:
                 temp_list = line.split('{')
@@ -903,6 +901,7 @@ class HTSLabelNormalisation(LabelNormalisation):
         question = re.escape(question)
         ## convert remaining HTK wildcards * and ? to equivalent regex:
         question = question.replace('\\*', '.*')
+        question = question.replace('\\?', '.')
         question = prefix + question + postfix
 
         if convert_number_pattern:

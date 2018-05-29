@@ -45,6 +45,7 @@ import math
 
 import subprocess
 import socket # only for socket.getfqdn()
+import multiprocessing
 
 #  numpy & theano imports need to be done in this order (only for some numpy installations, not sure why)
 import numpy
@@ -74,6 +75,7 @@ from models.deep_rnn import DeepRecurrentNetwork
 
 from utils.compute_distortion import DistortionComputation, IndividualDistortionComp
 from utils.generate import generate_wav
+from utils.acous_feat_extraction import acous_feat_extraction
 from utils.learn_rates import ExpDecreaseLearningRate
 
 from io_funcs.binary_io import  BinaryIOCollection
@@ -281,7 +283,7 @@ def train_DNN(train_xy_file_list, valid_xy_file_list, \
                     sys.exit('old and new weight matrices have different shapes')
                 k = k + 1        
     train_fn, valid_fn = dnn_model.build_finetune_functions(
-                    (train_set_x, train_set_y), (valid_set_x, valid_set_y), use_lhuc)  #, batch_size=batch_size
+                    (train_set_x, train_set_y), (valid_set_x, valid_set_y), use_lhuc, layer_index=cfg.freeze_layers)  #, batch_size=batch_size
     logger.info('fine-tuning the %s model' %(model_type))
 
     start_time = time.time()
@@ -476,6 +478,43 @@ def dnn_hidden_generation(valid_file_list, nnets_file_name, n_ins, n_outs, out_f
         fid.close()
 
 
+def perform_acoustic_composition_on_split(args):
+    """ Performs acoustic composition on one chunk of data.
+        This is used as input for Pool.map to allow parallel acoustic composition.
+    """
+    (delta_win, acc_win, in_file_list_dict, nn_cmp_file_list, in_dimension_dict, out_dimension_dict) = args
+    acoustic_worker = AcousticComposition(delta_win = delta_win, acc_win = acc_win)
+    acoustic_worker.prepare_nn_data(in_file_list_dict, nn_cmp_file_list, in_dimension_dict, out_dimension_dict)
+
+
+def perform_acoustic_composition(delta_win, acc_win, in_file_list_dict, nn_cmp_file_list, cfg, parallel=True):
+    """ Runs acoustic composition from in_file_list_dict to nn_cmp_file_list.
+        If parallel is true, splits the data into multiple chunks and calls
+        perform_acoustic_composition_on_split for each chunk.
+    """
+    if parallel:
+        num_splits = multiprocessing.cpu_count()
+        pool = multiprocessing.Pool(num_splits)
+
+        # split data into a list of num_splits tuples with each tuple representing
+        # the parameters for perform_acoustic_compositon_on_split
+        splits_full = [
+             (delta_win,
+              acc_win,
+              {stream: in_file_list_dict[stream][i::num_splits] for stream in in_file_list_dict},
+              nn_cmp_file_list[i::num_splits],
+              cfg.in_dimension_dict,
+              cfg.out_dimension_dict
+             ) for i in range(num_splits) ]
+
+        pool.map(perform_acoustic_composition_on_split, splits_full)
+        pool.close()
+        pool.join()
+    else:
+        acoustic_worker = AcousticComposition(delta_win = delta_win, acc_win = acc_win)
+        acoustic_worker.prepare_nn_data(in_file_list_dict, nn_cmp_file_list, cfg.in_dimension_dict, cfg.out_dimension_dict)
+
+
 def main_function(cfg):
     file_paths = FilePaths(cfg)
 
@@ -508,6 +547,7 @@ def main_function(cfg):
 
     ###total file number including training, development, and testing
     total_file_number = len(file_id_list)
+
     assert cfg.train_file_number+cfg.valid_file_number+cfg.test_file_number == total_file_number, 'check train, valid, test file number'
 
     data_dir = cfg.data_dir
@@ -565,6 +605,16 @@ def main_function(cfg):
     label_norm_file = file_paths.label_norm_file
 
     test_id_list = file_paths.test_id_list
+
+    # Debug:----------------------------------
+    if cfg.ACFTEXTR:
+        logger.info('acoustic feature extraction')
+        acous_feat_extraction(cfg.nat_wav_dir, file_id_list, cfg)
+        #generate_wav(gen_dir, file_id_list, cfg)     # generated speech
+
+
+
+    #-----------------------------------------
 
     if cfg.NORMLAB:
         # simple HTS labels
@@ -632,14 +682,14 @@ def main_function(cfg):
                 in_file_list_dict[feature_name] = prepare_file_path_list(test_id_list, cfg.in_dir_dict[feature_name], cfg.file_extension_dict[feature_name], False)
             nn_cmp_file_list      = prepare_file_path_list(test_id_list, nn_cmp_dir, cfg.cmp_ext)
             nn_cmp_norm_file_list = prepare_file_path_list(test_id_list, nn_cmp_norm_dir, cfg.cmp_ext)
-        
-        acoustic_worker = AcousticComposition(delta_win = delta_win, acc_win = acc_win)
 
         if 'dur' in list(cfg.in_dir_dict.keys()) and cfg.AcousticModel:
             lf0_file_list = file_paths.get_lf0_file_list()
+            acoustic_worker = AcousticComposition(delta_win = delta_win, acc_win = acc_win)
             acoustic_worker.make_equal_frames(dur_file_list, lf0_file_list, cfg.in_dimension_dict)
-
-        acoustic_worker.prepare_nn_data(in_file_list_dict, nn_cmp_file_list, cfg.in_dimension_dict, cfg.out_dimension_dict)
+            acoustic_worker.prepare_nn_data(in_file_list_dict, nn_cmp_file_list, cfg.in_dimension_dict, cfg.out_dimension_dict)
+        else:
+            perform_acoustic_composition(delta_win, acc_win, in_file_list_dict, nn_cmp_file_list, cfg, parallel=True)
 
         if cfg.remove_silence_using_binary_labels:
             ## do this to get lab_dim:
@@ -984,6 +1034,10 @@ def main_function(cfg):
         # for straight or world vocoders
         ref_mgc_list = prepare_file_path_list(gen_file_id_list, ref_data_dir, cfg.mgc_ext)
         ref_bap_list = prepare_file_path_list(gen_file_id_list, ref_data_dir, cfg.bap_ext)
+        # for magphase vocoder
+        ref_mag_list = prepare_file_path_list(gen_file_id_list, ref_data_dir, cfg.mag_ext)
+        ref_real_list = prepare_file_path_list(gen_file_id_list, ref_data_dir, cfg.real_ext)
+        ref_imag_list = prepare_file_path_list(gen_file_id_list, ref_data_dir, cfg.imag_ext)
         # for GlottDNN vocoder
         ref_lsf_list = prepare_file_path_list(gen_file_id_list, ref_data_dir, cfg.lsf_ext)
         ref_slsf_list = prepare_file_path_list(gen_file_id_list, ref_data_dir, cfg.slsf_ext)
@@ -1056,10 +1110,46 @@ def main_function(cfg):
                 remover = SilenceRemover(n_cmp = cfg.lf0_dim, silence_pattern = cfg.silence_pattern, label_type=cfg.label_type)
                 remover.remove_silence(in_file_list_dict['lf0'][cfg.train_file_number:cfg.train_file_number+cfg.valid_file_number+cfg.test_file_number], in_gen_label_align_file_list, ref_lf0_list)
             else:
-                ref_data_dir = os.path.join(data_dir, 'lf0')
+                if cfg.vocoder_type == 'MAGPHASE':
+                    ref_data_dir = os.path.join(data_dir, 'feats')
+                else:
+                    ref_data_dir = os.path.join(data_dir, 'lf0')
             valid_f0_mse, valid_f0_corr, valid_vuv_error   = calculator.compute_distortion(valid_file_id_list, ref_data_dir, gen_dir, cfg.lf0_ext, cfg.lf0_dim)
             test_f0_mse , test_f0_corr, test_vuv_error    = calculator.compute_distortion(test_file_id_list , ref_data_dir, gen_dir, cfg.lf0_ext, cfg.lf0_dim)
-        
+      
+        if 'mag' in cfg.in_dimension_dict:
+            if cfg.remove_silence_using_hts_labels:
+                remover = SilenceRemover(n_cmp = cfg.mag_dim, silence_pattern = cfg.silence_pattern, label_type=cfg.label_type)
+                remover.remove_silence(in_file_list_dict['mag'][cfg.train_file_number:cfg.train_file_number+cfg.valid_file_number+cfg.test_file_number], in_gen_label_align_file_list, ref_mag_list)
+            else:
+                ref_data_dir = os.path.join(data_dir, 'feats')
+            valid_mag_mse = calculator.compute_distortion(valid_file_id_list, ref_data_dir, gen_dir, cfg.mag_ext, cfg.mag_dim)
+            test_mag_mse  = calculator.compute_distortion(test_file_id_list , ref_data_dir, gen_dir, cfg.mag_ext, cfg.mag_dim)
+            valid_mag_mse = 10.0*numpy.log10(valid_mag_mse)    
+            test_mag_mse  = 10.0*numpy.log10(test_mag_mse)
+
+        if 'real' in cfg.in_dimension_dict:
+            if cfg.remove_silence_using_hts_labels:
+                remover = SilenceRemover(n_cmp = cfg.real_dim, silence_pattern = cfg.silence_pattern, label_type=cfg.label_type)
+                remover.remove_silence(in_file_list_dict['real'][cfg.train_file_number:cfg.train_file_number+cfg.valid_file_number+cfg.test_file_number], in_gen_label_align_file_list, ref_real_list)
+            else:
+                ref_data_dir = os.path.join(data_dir, 'feats')
+            valid_real_mse = calculator.compute_distortion(valid_file_id_list, ref_data_dir, gen_dir, cfg.real_ext, cfg.real_dim)
+            test_real_mse = calculator.compute_distortion(test_file_id_list , ref_data_dir, gen_dir, cfg.real_ext, cfg.real_dim)
+            valid_real_mse = 10.0*numpy.log10(valid_real_mse)    
+            test_real_mse  = 10.0*numpy.log10(test_real_mse)
+
+        if 'imag' in cfg.in_dimension_dict:
+            if cfg.remove_silence_using_hts_labels:
+                remover = SilenceRemover(n_cmp = cfg.imag_dim, silence_pattern = cfg.silence_pattern, label_type=cfg.label_type)
+                remover.remove_silence(in_file_list_dict['imag'][cfg.train_file_number:cfg.train_file_number+cfg.valid_file_number+cfg.test_file_number], in_gen_label_align_file_list, ref_imag_list)
+            else:
+                ref_data_dir = os.path.join(data_dir, 'feats')
+            valid_imag_mse = calculator.compute_distortion(valid_file_id_list, ref_data_dir, gen_dir, cfg.imag_ext, cfg.imag_dim)
+            test_imag_mse  = calculator.compute_distortion(test_file_id_list , ref_data_dir, gen_dir, cfg.imag_ext, cfg.imag_dim)
+            valid_imag_mse = 10.0*numpy.log10(valid_imag_mse)    
+            test_imag_mse  = 10.0*numpy.log10(test_imag_mse)
+
         if 'lsf' in cfg.in_dimension_dict:
             if cfg.remove_silence_using_binary_labels:
                 untrimmed_reference_data = in_file_list_dict['lsf'][cfg.train_file_number:cfg.train_file_number+cfg.valid_file_number+cfg.test_file_number]
@@ -1116,9 +1206,15 @@ def main_function(cfg):
             test_spectral_distortion  = calculator.compute_distortion(test_file_id_list , ref_data_dir, gen_dir, cfg.pdd_ext, cfg.pdd_dim)
         
 
-        logger.info('Develop: DNN -- MCD: %.3f dB; BAP: %.3f dB; F0:- RMSE: %.3f Hz; CORR: %.3f; VUV: %.3f%%' \
+        if cfg.vocoder_type == 'MAGPHASE':
+            logger.info('Develop: DNN -- MAG: %.3f dB; REAL: %.3f dB; IMAG: %.3f dB; F0:- RMSE: %.3f Hz; CORR: %.3f; VUV: %.3f%%' \
+                    %(valid_mag_mse, valid_real_mse, valid_imag_mse, valid_f0_mse, valid_f0_corr, valid_vuv_error*100.))
+            logger.info('Test   : DNN -- MAG: %.3f dB; REAL: %.3f dB; IMAG: %.3f dB; F0:- RMSE: %.3f Hz; CORR: %.3f; VUV: %.3f%%' \
+                    %(test_mag_mse, test_real_mse, test_imag_mse , test_f0_mse , test_f0_corr, test_vuv_error*100.))
+        else:
+            logger.info('Develop: DNN -- MCD: %.3f dB; BAP: %.3f dB; F0:- RMSE: %.3f Hz; CORR: %.3f; VUV: %.3f%%' \
                     %(valid_spectral_distortion, valid_bap_mse, valid_f0_mse, valid_f0_corr, valid_vuv_error*100.))
-        logger.info('Test   : DNN -- MCD: %.3f dB; BAP: %.3f dB; F0:- RMSE: %.3f Hz; CORR: %.3f; VUV: %.3f%%' \
+            logger.info('Test   : DNN -- MCD: %.3f dB; BAP: %.3f dB; F0:- RMSE: %.3f Hz; CORR: %.3f; VUV: %.3f%%' \
                     %(test_spectral_distortion , test_bap_mse , test_f0_mse , test_f0_corr, test_vuv_error*100.))
 
 if __name__ == '__main__':
