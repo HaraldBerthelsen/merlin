@@ -82,12 +82,16 @@ if [ "$copy" = true ]; then
     
     cp -r $lab_dir/label_$Labels $duration_data_dir 
     cp -r $lab_dir/label_$Labels $acoustic_data_dir
+
+    #HB only first time!
+    #cp duration_data_dir/$FileIDList $duration_data_dir/$FileIDList
+    #cp acoustic_data_dir/$FileIDList $acoustic_data_dir/$FileIDList
     
-    ls $lab_dir/label_$Labels > $duration_data_dir/$FileIDList
-    ls $lab_dir/label_$Labels > $acoustic_data_dir/$FileIDList
+    #HB ls $lab_dir/label_$Labels > $duration_data_dir/$FileIDList
+    #HB ls $lab_dir/label_$Labels > $acoustic_data_dir/$FileIDList
     
-    sed -i 's/\.lab//g' $duration_data_dir/$FileIDList
-    sed -i 's/\.lab//g' $acoustic_data_dir/$FileIDList
+    #HB sed -i 's/\.lab//g' $duration_data_dir/$FileIDList
+    #HB sed -i 's/\.lab//g' $acoustic_data_dir/$FileIDList
     
     echo "done...!"
 fi
