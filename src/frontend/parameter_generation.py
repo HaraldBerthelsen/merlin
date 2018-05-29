@@ -103,7 +103,7 @@ class   ParameterGeneration(object):
 
             new_file_name = os.path.join(dir_name, file_id + file_extension_dict[feature_name])
 
-            print("get_features length: %d" % len(gen_features))
+            print("gen_features length: %d" % len(gen_features))
             io_funcs.array_to_binary_file(gen_features, new_file_name) 
 
             logger.debug('wrote to file %s' % new_file_name)

@@ -30,7 +30,7 @@ fi
 #fi
 
 ### define few variables here
-#frontend=${MerlinDir}/misc/scripts/frontend
+frontend=${MerlinDir}/misc/scripts/frontend
 out_dir=$lab_dir
 
 if [ "$train" = true ]; then
@@ -46,8 +46,11 @@ fi
 python scripts/genAbairXmlFiles.py $inp_txt ${out_dir}/$file_id_scp ${out_dir}/abair_xml
 
 #convert to htslabel 
-python ~/svn/Software/Abair/scripts/convertFiles.py htslabel ${out_dir}/prompt-lab/full ${out_dir}/abair_xml/*.xml
-
+if [ ! -e ${out_dir}/prompt-lab/full ]; then
+    mkdir -p ${out_dir}/prompt-lab/full
+fi
+python ~/svn/Software/Abair/scripts/convertFiles.py htslabel_data ${out_dir}/prompt-lab/full ${out_dir}/abair_xml/*.xml
+python scripts/addDummyDurations.py ${out_dir}/prompt-lab/full
 
 ### generate a scheme file 
 #python ${frontend}/utils/genScmFile.py \

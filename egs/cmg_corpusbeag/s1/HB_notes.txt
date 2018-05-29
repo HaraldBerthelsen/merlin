@@ -35,7 +35,7 @@ change numbers in global_setting.cfg
 
 Sort of works but the generated wavs in acoustic_model/gen are not right.
 What's wrong? Normalisation of label files?
-Changed 02_prepare_labels_cmg.sh so that it runs normalisation. Donät see huge difference..
+Changed 02_prepare_labels_cmg.sh so that it runs normalisation. Don't see huge difference..
 But trying train again..
 
 Otherwise: the first wavfile still seems to contain a lot of silence? And the last label is empty.. And it doesn't begin at 0 with sil..
@@ -43,8 +43,12 @@ With convertFiles.py htslabel_data it looks better..
 So if not good when this training is run will try again with
 Not good so doing this:
 
+cd ~/svn/Corpora/ga_MU/cmg/CMGCorpusBeag
+python ~/svn/Software/Abair/scripts/convertFiles.py htslabel_data htslab xml/*.xml
+cd -
+
 rm database/lab/full-context-labels/full
-ln -s ~/svn/Corpora/ga_MU/cmg/CMGCorpusBeag/htslabdata database/lab/full-context-labels/full
+ln -s ~/svn/Corpora/ga_MU/cmg/CMGCorpusBeag/htslab database/lab/full-context-labels/full
 ./02_prepare_labels_cmg.sh database/wav database/lab
 #somebody overwrites file_id_list.scp.. Who? When? TODO fix
 ./05_train_duration_model.sh conf/duration_cmg_corpusbeag.cfg
@@ -54,3 +58,8 @@ Better but still not as nice as slt-demo, and generated files are cut at the end
 What to do?
 Trim silence?
 Look again at labfiles to make sure they are of the same format?
+Everything looks fine to me, I don't see anything strange. Maybe though the "@"? Could that cause a problem with the questions file which uses @ as a delimiter?
+Will try to change it in convertFiles.py
+
+Labelfiles not ending with newline? From convertFiles.py? Could this cause the problem?
+

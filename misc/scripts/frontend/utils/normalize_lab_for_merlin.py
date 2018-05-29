@@ -63,9 +63,9 @@ def normalize_label_files(in_lab_file, out_lab_file, label_style, write_time_sta
         if(count<=2 and 'pau' in p1) or (count>len(ph_arr)-2 and 'pau' in p1):
             p1 = p1.replace('pau','sil')
             ftag = p1+p2
-        if(count>=1 and count<len(ph_arr)):
-            if '-sil+' in ftag:
-                ftag = ftag.replace('-sil+','-pau+')
+#HB        if(count>=1 and count<len(ph_arr)):
+#HB            if '-sil+' in ftag:
+#HB                ftag = ftag.replace('-sil+','-pau+')
         merged_data[0].append(start_time)
         merged_data[1].append(end_time)
         merged_data[2].append(ftag)
