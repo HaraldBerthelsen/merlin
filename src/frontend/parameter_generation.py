@@ -90,7 +90,7 @@ class   ParameterGeneration(object):
             file_id = os.path.splitext(os.path.basename(file_name))[0]
 
             features, frame_number = io_funcs.load_binary_file_frame(file_name, dimension)
-            print("features length: %d" % len(features))
+            print("Loaded %s - features length: %d" % (file_name, len(features)))
 
 
             gen_features = numpy.int32(numpy.round(features))

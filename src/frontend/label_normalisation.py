@@ -30,6 +30,8 @@ class LabelNormalisation(LinguisticBase):
         if out_file_name:
             io_funcs = BinaryIOCollection()
             io_funcs.array_to_binary_file(A, out_file_name)
+            #HB
+            print("saved normalised features to %s" % out_file_name)
         else:
             return A
 
@@ -390,6 +392,10 @@ class HTSLabelNormalisation(LabelNormalisation):
 
     def extract_dur_features(self, in_file_name, out_file_name=None, label_type="state_align", feature_type=None, unit_size=None, feat_size=None):
         logger = logging.getLogger("dur")
+
+        #HB
+        logger.debug("extract_dur_features: %s -> %s" % (in_file_name, out_file_name))
+        
         if label_type=="phone_align":
             A = self.extract_dur_from_phone_alignment_labels(in_file_name, feature_type, unit_size, feat_size)
         elif label_type=="state_align":
@@ -401,6 +407,8 @@ class HTSLabelNormalisation(LabelNormalisation):
         if out_file_name:
             io_funcs = BinaryIOCollection()
             io_funcs.array_to_binary_file(A, out_file_name)
+            #HB
+            print("saved dur features to %s" % out_file_name)
         else:
             return A
 

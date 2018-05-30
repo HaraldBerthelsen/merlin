@@ -427,6 +427,8 @@ def dnn_generation(valid_file_list, nnets_file_name, n_ins, n_outs, out_file_lis
         features = features[:(n_ins * (features.size // n_ins))]
         test_set_x = features.reshape((-1, n_ins))
         n_rows = test_set_x.shape[0]
+        #HB
+        logger.info('test_set_x: %d rows' % n_rows)
         
         if reshape_io:
             test_set_x = numpy.reshape(test_set_x, (1, test_set_x.shape[0], n_ins))
@@ -441,7 +443,7 @@ def dnn_generation(valid_file_list, nnets_file_name, n_ins, n_outs, out_file_lis
         temp_parameter = predicted_parameter
         fid = open(out_file_list[i], 'wb')
         predicted_parameter.tofile(fid)
-        logger.debug('saved to %s' % out_file_list[i])
+        logger.info('saved (%d features) to %s' % (len(predicted_parameter), out_file_list[i]))
         fid.close()
 
 ##generate bottleneck layer as features
@@ -596,12 +598,18 @@ def main_function(cfg):
         else:
             min_max_normaliser.find_min_max_values(nn_label_file_list[0:cfg.train_file_number])
 
+        #HB testing to not remove silence? Don't really understand this...
+        #But doing it seems to fix the 2 missing features problem
+        #But training is slower? Does it work right?
+        #Not sure, results seem to be the same..
+        HBTEST = False
         ### enforce silence such that the normalization runs without removing silence: only for final synthesis
         if cfg.GenTestList and cfg.enforce_silence:
             min_max_normaliser.normalise_data(binary_label_file_list, nn_label_norm_file_list)
+        elif HBTEST and cfg.MAKEDUR:
+            min_max_normaliser.normalise_data(binary_label_file_list, nn_label_norm_file_list)
         else:
             min_max_normaliser.normalise_data(nn_label_file_list, nn_label_norm_file_list)
-
 
 
     if min_max_normaliser != None and not cfg.GenTestList:
@@ -614,7 +622,7 @@ def main_function(cfg):
         fid = open(label_norm_file, 'wb')
         label_norm_info.tofile(fid)
         fid.close()
-        logger.info('saved %s vectors to %s' %(label_min_vector.size, label_norm_file))
+        logger.info('after NORMLAB: saved %s vectors to %s' %(label_min_vector.size, label_norm_file))
 
 
     ### make output prominence data

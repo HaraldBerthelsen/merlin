@@ -86,6 +86,8 @@ class SilenceRemover(object):
 
             new_cmp_data = ori_cmp_data[nonsilence_indices,]
 
+            #HB
+            print("remove_silence: saving to file %s" % out_data_list[i])
             io_funcs.array_to_binary_file(new_cmp_data, out_data_list[i])
 
     """

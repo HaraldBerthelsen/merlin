@@ -148,6 +148,10 @@ class MinMaxNormalisation(object):
             for col in self.exclude_columns:
                 norm_features[list(range(m)),[col]*m] = features[list(range(m)),[col]*m]
 
+            #HB
+            #This is where the 2 missing features have disappeared..
+            print("normalise_data: saved %d features to %s" % (len(norm_features),out_file_list[i]))
+            
             io_funcs.array_to_binary_file(norm_features, out_file_list[i])
 
 #            norm_features = numpy.array(norm_features, 'float32')
