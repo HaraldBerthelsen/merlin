@@ -74,6 +74,11 @@ $SED -i s#'train_file_number\s*:.*'#'train_file_number: '${Train}# $duration_con
 $SED -i s#'valid_file_number\s*:.*'#'valid_file_number: '${Valid}# $duration_config_file
 $SED -i s#'test_file_number\s*:.*'#'test_file_number: '${Test}# $duration_config_file
 
+
+#HB
+$SED -i s#'switch_to_tensorflow\s*:.*'#'switch_to_tensorflow: True'# $duration_config_file
+
+
 echo "Duration configuration settings stored in $duration_config_file"
 
 
@@ -183,5 +188,7 @@ $SED -i s#'train_file_number\s*:.*'#'train_file_number: '${Train}# $acoustic_con
 $SED -i s#'valid_file_number\s*:.*'#'valid_file_number: '${Valid}# $acoustic_config_file
 $SED -i s#'test_file_number\s*:.*'#'test_file_number: '${Test}# $acoustic_config_file
 
+#HB
+$SED -i s#'switch_to_tensorflow\s*:.*'#'switch_to_tensorflow: True'# $acoustic_config_file
 
 echo "Acoustic configuration settings stored in $acoustic_config_file"

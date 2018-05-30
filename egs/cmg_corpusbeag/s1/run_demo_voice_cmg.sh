@@ -1,9 +1,9 @@
 #!/bin/bash
 
 setup_data=false
-setup_train=true
+setup_train=false
 train_tts=false
-run_tts=false
+run_tts=true
 
 if test "$#" -ne 1; then
     voice_name="cmg_corpusbeag"
@@ -57,7 +57,7 @@ if [ "$run_tts" = true ]; then
     basename --suffix=.txt -- experiments/${voice_name}/test_synthesis/txt/* > experiments/${voice_name}/test_synthesis/test_id_list.scp
 
     # step 7: run text to speech
-   ./07_run_merlin.sh experiments/${voice_name}/test_synthesis/txt conf/test_dur_synth_${voice_name}.conf conf/test_synth_${voice_name}.conf
+   ./07_run_merlin_cmg.sh experiments/${voice_name}/test_synthesis/txt conf/test_dur_synth_${voice_name}.conf conf/test_synth_${voice_name}.conf
 
 fi
 
