@@ -1,8 +1,8 @@
 #!/bin/bash
 
 setup_data=false
-setup_train=false
-train_tts=true
+setup_train=true
+train_tts=false
 run_tts=false
 
 if test "$#" -ne 1; then
