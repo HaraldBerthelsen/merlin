@@ -63,3 +63,26 @@ Will try to change it in convertFiles.py
 
 Labelfiles not ending with newline? From convertFiles.py? Could this cause the problem?
 
+#HB 180529 Starting again.. labelfiles changed (newline at end, no @'s, x's in first and last line, question file changed), wavfiles changed (no trim at end)
+./01_setup.sh cmg_corpusbeag
+#edit conf/global_settings.cfg
+#Labels
+#QuestionFile
+
+./02_prepare_labels_cmg.sh database/wav database/lab
+./03_prepare_acoustic_features.sh database/wav database/feats
+#Files are not copied to experiments/cmg_corpusbeag/duration_model ? Shouldn't they?
+
+./04_prepare_conf_files.sh conf/global_settings.cfg
+#check file_id_list.scp
+head -60 database/lab/file_id_list.scp > experiments/cmg_corpusbeag/duration_model/data/file_id_list.scp
+./05_train_duration_model.sh conf/duration_cmg_corpusbeag.conf
+#Still get the warning, two "labels" missing:
+#2018-05-29 14:29:17,736 INFO           dur     : loaded /home/harald/git/hb_merlin/egs/cmg_corpusbeag/s1/experiments/cmg_corpusbeag/duration_model/data/label_phone_align/CI0002CMGCorpusBeag_0051.lab,  50 labels
+#2018-05-29 14:29:17,737 WARNING        dur     : len(dur_features) from /home/harald/git/hb_merlin/egs/cmg_corpusbeag/s1/experiments/cmg_corpusbeag/duration_model/gen/feed_forward_6_tanh/CI0002CMGCorpusBeag_0051.dur = 48, len(utt_labels) from /home/harald/git/hb_merlin/egs/cmg_corpusbeag/s1/experiments/cmg_corpusbeag/duration_model/data/label_phone_align/CI0002CMGCorpusBeag_0051.lab = 50
+#Is the alignment actually correct?
+
+head -60 database/lab/file_id_list.scp > experiments/cmg_corpusbeag/acoustic_model/data/file_id_list.scp
+./06_train_acoustic_model.sh conf/acoustic_cmg_corpusbeag.conf
+
+#redid alignment - but no, still the same error.. 
