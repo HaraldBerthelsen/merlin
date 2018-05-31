@@ -57,24 +57,6 @@ python ~/svn/Software/Abair/scripts/convertFiles.py htslabel_data ${out_dir}/pro
 echo "Adding dummy durations .."
 python scripts/addDummyDurations.py ${out_dir}/prompt-lab/full
 
-### generate a scheme file
-#python ${frontend}/utils/genScmFile.py \
-#                            ${inp_txt} \
-#                            ${out_dir}/prompt-utt \
-#                            ${out_dir}/$scheme_file \
-#                            ${out_dir}/$file_id_scp
-
-### generate utt from scheme file
-#echo "generating utts from scheme file"
-#${FESTDIR}/bin/festival -b ${out_dir}/$scheme_file
-
-### convert festival utt to lab
-#echo "converting festival utts to labels..."
-#${frontend}/festival_utt_to_lab/make_labels \
-#                            ${out_dir}/prompt-lab \
-#                            ${out_dir}/prompt-utt \
-#                            ${FESTDIR}/examples/dumpfeats \
-#                            ${frontend}/festival_utt_to_lab
 
 ### normalize lab for merlin with options: state_align or phone_align
 echo "normalizing label files for merlin..."

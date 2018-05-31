@@ -17,7 +17,7 @@ def readtext(fname):
 def create_dictionary_from_txt_dir(txt_dir):
     utt_text = {}
     textfiles = glob.glob(txt_dir + '/*.txt')
-    
+    print(textfiles)
     num_of_files = len(textfiles)
     
     for i in range(num_of_files):
@@ -28,7 +28,7 @@ def create_dictionary_from_txt_dir(txt_dir):
         text = readtext(textfile)
         utt_text[filename] = text
         
-        return utt_text
+    return utt_text
     
 def create_dictionary_from_txt_file(txt_file):
     utt_text = {}
@@ -71,17 +71,19 @@ if __name__ == "__main__":
         utt_text    = create_dictionary_from_txt_file(in_txt_file)
         
     sorted_utt_text = collections.OrderedDict(sorted(utt_text.items()))
+    print(sorted_utt_text)
         
     out_fid = open(out_id_file, 'w')
         
     ### if you want to use a particular voice
-    #out_f1.write("(voice_cstr_edi_fls_multisyn)\n")
+    voice = "ga_MU_nnc_exthts"
         
     for utt_name, sentence in sorted_utt_text.items():
         out_xml_file_name = os.path.join(out_xml_dir, utt_name+'.xml')
+        sentence = sentence.replace('!', '.')
         sentence = sentence.replace('"', '\\"')
         #Run Abair command
-        cmd = "python ~/svn/Software/Abair/abair -t textproc %s > %s" % (sentence, out_xml_file_name)
+        cmd = "python ~/svn/Software/Abair/abair -v %s -t textproc '%s' > %s" % (voice, sentence, out_xml_file_name)
         print("Running command: %s" % cmd)
         os.system(cmd)
             
