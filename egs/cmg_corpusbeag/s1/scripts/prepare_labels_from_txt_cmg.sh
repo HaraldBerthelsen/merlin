@@ -75,7 +75,7 @@ else
 	   ${Labels} \
 	   ${out_dir}/$file_id_scp 0
     ### remove any un-necessary files
-    rm -rf ${out_dir}/prompt-lab/{full,mono,tmp}
+    #rm -rf ${out_dir}/prompt-lab/{full,mono,tmp}
 
     echo "Labels are ready in: ${out_dir}/prompt-lab !!"
 fi
