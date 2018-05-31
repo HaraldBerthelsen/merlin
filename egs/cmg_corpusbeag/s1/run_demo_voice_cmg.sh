@@ -26,7 +26,7 @@ fi
 # setup for train tts system
 if [ "$setup_train" = true ]; then
     # step 1: run setup
-    ./01_setup.sh $voice_name
+    ./01_setup_cmg.sh $voice_name
 
     # step 2: prepare labels
     ./02_prepare_labels_cmg.sh database/wav database/labels demo

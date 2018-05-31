@@ -6,6 +6,7 @@ files = glob.glob(indir+"/*.lab")
 
 starttime = 0
 for filename in files:
+    print("File: %s" % filename)
     infh = io.open(filename, "r", encoding="utf-8")
     lines = infh.readlines()
     infh.close()
@@ -15,5 +16,5 @@ for filename in files:
         endtime = starttime+50000
         outfh.write("%d %d %s\n" % (starttime,endtime,lab))
         starttime = endtime
-        outfh.close()
+    outfh.close()
         

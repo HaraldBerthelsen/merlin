@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -e
 
 if test "$#" -lt 3; then
     echo "Usage: ./scripts/prepare_labels_from_txt.sh <path_to_text_dir> <path_to_lab_dir> <path_to_global_conf_file>"
@@ -43,13 +43,18 @@ fi
 
 
 #Generate xml files using Abair
+echo "Generating abair xml .."
 python scripts/genAbairXmlFiles.py $inp_txt ${out_dir}/$file_id_scp ${out_dir}/abair_xml
 
 #convert to htslabel
 if [ ! -e ${out_dir}/prompt-lab/full ]; then
     mkdir -p ${out_dir}/prompt-lab/full
 fi
+
+echo "Converting to hts lab format .."
 python ~/svn/Software/Abair/scripts/convertFiles.py htslabel_data ${out_dir}/prompt-lab/full ${out_dir}/abair_xml/*.xml
+
+echo "Adding dummy durations .."
 python scripts/addDummyDurations.py ${out_dir}/prompt-lab/full
 
 ### generate a scheme file
