@@ -1,9 +1,9 @@
 #!/bin/bash
 
-if test "$#" -ne 1; then
+if test "$#" -ne 2; then
     echo "################################"
     echo "Usage:"
-    echo "./01_setup.sh <voice_name>"
+    echo "./01_setup_cmg.sh <voice_name> <demo|full>"
     echo ""
     echo "Give a voice name eg., slt_arctic"
     echo "################################"
@@ -16,6 +16,7 @@ experiments_dir=${current_working_dir}/experiments
 data_dir=${current_working_dir}/database
 
 voice_name=$1
+dataset=$2
 voice_dir=${experiments_dir}/${voice_name}
 
 acoustic_dir=${voice_dir}/acoustic_model
@@ -36,7 +37,15 @@ mkdir -p ${synthesis_dir}/txt
 echo "Dia dhuit." > ${synthesis_dir}/txt/test_001.txt
 echo "Tá an aimsir go deas." > ${synthesis_dir}/txt/test_002.txt
 echo "Bain sult as an sintéiseoir nua seo!" > ${synthesis_dir}/txt/test_003.txt
-printf "test_001\ntest_002\ntest_003" > ${synthesis_dir}/test_id_list.scp
+echo "An tSaotharlann Foghraíochta agus Urlabhra, Scoil na nEolaíochtaí Teangeolaíochta, Urlabhra agus Cumarsáide, Coláiste na Tríonóide, Baile Átha Cliath." > ${synthesis_dir}/txt/test_004.txt
+
+echo "An tSaotharlann Foghraíochta agus Urlabhra." > ${synthesis_dir}/txt/test_005.txt
+echo "Scoil na nEolaíochtaí Teangeolaíochta, Urlabhra agus Cumarsáide." > ${synthesis_dir}/txt/test_006.txt
+echo "Coláiste na Tríonóide" > ${synthesis_dir}/txt/test_007.txt
+echo "Baile Átha Cliath." > ${synthesis_dir}/txt/test_008.txt
+
+#HB not needed, test_id_list.scp will be created by 07_run_merlin_cmg.sh
+#printf "test_001\ntest_002\ntest_003" > ${synthesis_dir}/test_id_list.scp
 
 global_config_file=conf/global_settings.cfg
 
@@ -69,9 +78,20 @@ echo "######### No. of files ###############" >> $global_config_file
 echo "######################################" >> $global_config_file
 echo "" >> $global_config_file
 
-echo "Train=50" >> $global_config_file 
-echo "Valid=5" >> $global_config_file 
-echo "Test=5" >> $global_config_file 
+
+if [ "$dataset" = "demo" ]; then
+    echo "Train=50" >> $global_config_file 
+    echo "Valid=5" >> $global_config_file 
+    echo "Test=5" >> $global_config_file
+elif [ "$dataset" = "full" ]; then
+    echo "Train=1432" >> $global_config_file 
+    echo "Valid=10" >> $global_config_file 
+    echo "Test=10" >> $global_config_file
+else
+    echo "ERROR: Dataset $dataset not defined!"
+    exit
+fi
+
 echo "" >> $global_config_file
 
 echo "######################################" >> $global_config_file
