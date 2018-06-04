@@ -108,12 +108,12 @@ if __name__ == '__main__':
     b_copy_data  = 1 # Copies wavs and label data.
     b_setup_data     = 1 # Copies downloaded data into the experiment directory. Plus, makes a backup copy of this script.
     b_config_merlin  = 1 # Saves new configuration files for Merlin.
-    b_feat_extr      = 1 # Performs acoustic feature extraction using the MagPhase vocoder
-    b_conv_labs_rate = 1 # Converts the state aligned labels to variable rate if running in variable frame rate mode (d_mp_opts['b_const_rate'] = False)
-    b_dur_train      = 1 # Merlin: Training of duration model.
-    b_acous_train    = 1 # Merlin: Training of acoustic model.
-    b_dur_syn        = 1 # Merlin: Generation of state durations using the duration model.
-    b_acous_syn      = 1 # Merlin: Waveform generation for the utterances provided in ./test_synthesis/prompt-lab
+    b_feat_extr      = 0 # Performs acoustic feature extraction using the MagPhase vocoder
+    b_conv_labs_rate = 0 # Converts the state aligned labels to variable rate if running in variable frame rate mode (d_mp_opts['b_const_rate'] = False)
+    b_dur_train      = 0 # Merlin: Training of duration model.
+    b_acous_train    = 0 # Merlin: Training of acoustic model.
+    b_dur_syn        = 0 # Merlin: Generation of state durations using the duration model.
+    b_acous_syn      = 0 # Merlin: Waveform generation for the utterances provided in ./test_synthesis/prompt-lab
 
     # MagPhase Vocoder:-----------------------------------------------------------------------
     d_mp_opts = {}                     # Dictionary containing internal options for the MagPhase vocoder (mp).
@@ -169,7 +169,7 @@ if __name__ == '__main__':
 
     # Setup Data:-----------------------------------------------------------------------------
     if b_setup_data:
-        copytree(join(this_dir, 'slt_arctic_' + exper_type + '_data', 'exper'), exper_path)
+        copytree(join(this_dir, '%s_magphase_%s_data' % (dataset,exper_type), 'exper'), exper_path)
         copy2(__file__, join(exper_path, 'run_demo_backup.py'))
 
     # Configure Merlin:-----------------------------------------------------------------------
