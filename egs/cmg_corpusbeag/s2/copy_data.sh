@@ -1,3 +1,5 @@
+#!/bin/bash -e
+
 mkdir -p cmg_corpusbeag_magphase_demo_data/exper
 cd cmg_corpusbeag_magphase_demo_data/exper/
 
