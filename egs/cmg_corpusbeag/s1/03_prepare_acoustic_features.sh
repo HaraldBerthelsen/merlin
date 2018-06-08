@@ -26,7 +26,7 @@ fi
 ##### prepare vocoder features #####
 ####################################
 
-prepare_feats=true
+prepare_feats=false
 copy=true
 
 if [ "$prepare_feats" = true ]; then
@@ -36,8 +36,16 @@ if [ "$prepare_feats" = true ]; then
 fi
 
 if [ "$copy" = true ]; then
-    echo "Copying features to acoustic data directory..."
-    acoustic_data_dir=experiments/${Voice}/acoustic_model/data
+
+    if [ "$Vocoder" = "MAGPHASE" ]; then
+	acoustic_data_dir=experiments/${Voice}/acoustic_model/data/in_acoustic_feats
+    else    
+	acoustic_data_dir=experiments/${Voice}/acoustic_model/data
+    fi
+
+    echo "Copying features to acoustic data directory ($acoustic_data_dir) ..."
+
+
     cp -r ${feat_dir}/* $acoustic_data_dir
     echo "done...!"
 fi
