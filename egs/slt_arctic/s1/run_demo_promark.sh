@@ -1,7 +1,7 @@
 #!/bin/bash -e
 
 if test "$#" -ne 0; then
-    echo "Usage: ./run_demo.sh"
+    echo "Usage: ./run_demo_promark.sh"
     exit 1
 fi
 

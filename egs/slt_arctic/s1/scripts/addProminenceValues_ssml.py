@@ -51,6 +51,7 @@ def getPromValues_P_notation(txt):
     txt = re.sub(" +", " ", txt)
     txttokens = []
     promvalues = []
+    punct = None
     for token in txt.split(" "):            
         #print("Token: %s" % token)
         m = re.match("^(.+):P([a-z0-9|+=%-]+)([^a-z0-9]+)?$", token)
@@ -334,7 +335,6 @@ def testP():
 
 def testSsml():
         
-    #(txttokens, promvalues) = getPromValues_SSML("""<speak> <emphasis level="50%|999"> hello </emphasis> <emphasis level="strong"> this is </emphasis> a <emphasis level="-33%"> test </emphasis> </speak>""")
     (txttokens, promvalues) = getPromValues_SSML("""<speak> <emphasis level="+50%|-20%"> hello </emphasis> <emphasis level="-50%"> this is </emphasis> a <emphasis level="200"> test </emphasis> </speak>""")
 
     printPromvalues(txttokens, promvalues)    
@@ -355,6 +355,6 @@ if __name__ == "__main__":
     if len(sys.argv) > 1:
         main()
     else:
-        #testP()
+        testP()
         testSsml()
 

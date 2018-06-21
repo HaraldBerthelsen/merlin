@@ -250,7 +250,8 @@ class HTSLabelModification(object):
             #HB 180321 the prominence variable is never used?
             #prominence = int(temp_list[3])
             m = re.search("K:([0-9]*)", full_label)
-            prominence = int(m.group(1))
+            if m:
+                prominence = int(m.group(1))
 
             #HB 180321
             #remove the old K: field before appending the new one

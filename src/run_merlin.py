@@ -411,11 +411,12 @@ def train_DNN(train_xy_file_list, valid_xy_file_list, \
 
 def dnn_generation(valid_file_list, nnets_file_name, n_ins, n_outs, out_file_list, reshape_io=False):
     logger = logging.getLogger("dnn_generation")
-    logger.debug('Starting dnn_generation')
+    logger.info('Starting dnn_generation')
 
     plotlogger = logging.getLogger("plotting")
 
     dnn_model = pickle.load(open(nnets_file_name, 'rb'))
+    logger.info('dnn_generation: %s loaded' % nnets_file_name)
 
     file_number = len(valid_file_list)
 

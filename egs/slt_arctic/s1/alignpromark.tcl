@@ -68,6 +68,7 @@ if {$csvformat == "demo"} {
     set wordindex 1
     set fileindex 4
     set promindex 8
+    set outformat "sylprom"
     readpromarkdata promark/A_promark_raters.csv
     readpromarkdata promark/B_promark_raters.csv
 } elseif {$csvformat == "full" || $csvformat == "sylprom"} {
@@ -75,6 +76,7 @@ if {$csvformat == "demo"} {
     set wordindex 2
     set fileindex 4
     set promindex 6
+    set outformat "sylprom"
     readpromarkdata promark/tagger_slt.csv
 } elseif {$csvformat == "tobi"} {
     #For the tagger_slt.csv file
@@ -82,7 +84,7 @@ if {$csvformat == "demo"} {
     set fileindex 4
     #tobi features
     set promindex 8
-	readpromarkdata promark/tagger_slt.csv
+    readpromarkdata promark/tagger_slt.csv
 } elseif {$csvformat == "blizzard"} {
     #For the tagger_audiobooks.csv file
     set wordindex 2
@@ -117,15 +119,18 @@ foreach file [lrange $argv 2 end] {
     set f [open $file]
     set data [split [string trim [read $f]] \n]
     close $f
-  	
-  	#ZM commented this line out for blizzard: "_slt" ending relevant only for arctic?
-    #set filename [file tail [file root $file]]_slt
-    #ZM added:
-    set filename [file tail [file root $file]]
-    #end ZM
+
+    if {$csvformat == "blizzard"} {
+	#ZM added:
+	set filename [file tail [file root $file]]
+	#end ZM
+    } else {
+	#ZM commented this line out for blizzard: "_slt" ending relevant only for arctic?
+	set filename [file tail [file root $file]]_slt
+    }
     set outfile $outdir/[file tail $file]
 
-    puts $filename...
+    #puts $filename...
 
     set outdata {}
     
@@ -176,7 +181,7 @@ foreach file [lrange $argv 2 end] {
 		set prominence $prom($filename,$wordnumber)
 		set sylpromlist $prom($filename,$wordnumber,sylprom)
 	    }
-	    puts $sylpromlist
+	    #puts $sylpromlist
 
 	    if {[llength $sylpromlist]==0} {
 		set sylprominence 0

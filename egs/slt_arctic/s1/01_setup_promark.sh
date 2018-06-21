@@ -18,10 +18,13 @@ prominence_dir=${voice_dir}/prominence_model
 synthesis_dir=${voice_dir}/test_synthesis
 
 mkdir -p ${experiments_dir}
-mkdir -p ${voice_dir}
+
+rm -rf ${voice_dir}
+mkdir ${voice_dir}
 mkdir -p ${acoustic_dir}
 mkdir -p ${duration_dir}
 mkdir -p ${prominence_dir}
+mkdir -p ${synthesis_dir}
 
 if [ "$voice_name" == "slt_arctic_demo" ]
 then
@@ -42,6 +45,13 @@ else
     exit 1
 fi
 
+#HB (start from scratch) if true
+#do_unzip=true
+do_unzip=false
+
+
+
+
 if [[ ! -f ${data_dir}.zip ]]; then
     echo "downloading data....."
     rm -f ${data_dir}.zip
@@ -57,37 +67,52 @@ if [[ ! -f ${data_dir}.zip ]]; then
     do_unzip=true
 fi
 
-#HB (start from scratch)
-do_unzip=true
 
-if [[ ! -d ${data_dir} ]] || [[ -n "$do_unzip" ]]; then
+if [[ ! -d ${data_dir} ]] || [[ "$do_unzip" = "true" ]]; then
     echo "unzipping files......"
     rm -fr ${data_dir}
     rm -fr ${duration_dir}/data
     rm -fr ${acoustic_dir}/data
     rm -fr ${prominence_dir}/data
     unzip -q ${data_dir}.zip
-    #HB mv ${data_dir}/merlin_baseline_practice/duration_data/ ${duration_dir}/data
-    cp -r ${data_dir}/merlin_baseline_practice/duration_data/ ${duration_dir}/data
-    cp -r ${duration_dir}/data ${prominence_dir}/data
-    #HB mv ${data_dir}/merlin_baseline_practice/acoustic_data/ ${acoustic_dir}/data
-    cp -r ${data_dir}/merlin_baseline_practice/acoustic_data/ ${acoustic_dir}/data
-    #mv ${data_dir}/merlin_baseline_practice/test_data/ ${synthesis_dir}
-    cp -r ${data_dir}/merlin_baseline_practice/test_data/ ${synthesis_dir}
+fi
+
+#copy data files
+echo "copying files......"
+
+cp -r ${data_dir}/merlin_baseline_practice/duration_data/ ${duration_dir}/data
+cp -r ${duration_dir}/data ${prominence_dir}/data
+cp -r ${data_dir}/merlin_baseline_practice/acoustic_data/ ${acoustic_dir}/data
+cp -r ${data_dir}/merlin_baseline_practice/test_data/* ${synthesis_dir}
+
+
+use_phone_align=false
+if [[ "$use_phone_align" = "true" ]]; then
     #HB for phone_align
     cp ${prominence_dir}/data/label_phone_align/arctic_a005[6-9].lab ${synthesis_dir}/prompt-lab/
     cp ${prominence_dir}/data/label_phone_align/arctic_a0060.lab ${synthesis_dir}/prompt-lab/
 fi
+    
 echo "data is ready!"
 
 
 
+
 #ZM copy prominence tags to full context labels using alignpromark.tcl 
-if [ "$voice_name" == "slt_arctic_demo_promark" ]
-#HB for phone_align	then make demo
-	then make demo-phone_align
-elif [ "$voice_name" == "slt_arctic_full_promark" ]
-	then make full
+if [ "$voice_name" == "slt_arctic_demo_promark" ]; then
+    if [[ "$use_phone_align" = "true" ]]; then
+	#HB for phone_align
+	make demo-phone_align
+    else
+	make demo
+    fi
+elif [ "$voice_name" == "slt_arctic_full_promark" ]; then
+    if [[ "$use_phone_align" = "true" ]]; then
+	#HB for phone_align
+	make full-phone_align
+    else
+	make full
+    fi
 else
 	echo "The prominence data for voice name ($voice_name) is not available...please use slt_arctic_demo_promark or slt_arctic_full_promark !!"
     exit 1
@@ -101,9 +126,9 @@ global_config_file=conf/global_settings.cfg
 echo "MerlinDir=${merlin_dir}" >  $global_config_file
 echo "WorkDir=${current_working_dir}" >>  $global_config_file
 echo "Voice=${voice_name}" >> $global_config_file
-#HB for phone_align
-#HB echo "Labels=state_align" >> $global_config_file
-echo "Labels=phone_align" >> $global_config_file
+#HB select state_align or phone_align
+echo "Labels=state_align" >> $global_config_file
+#echo "Labels=phone_align" >> $global_config_file
 echo "Vocoder=WORLD" >> $global_config_file
 echo "SamplingFreq=16000" >> $global_config_file
 

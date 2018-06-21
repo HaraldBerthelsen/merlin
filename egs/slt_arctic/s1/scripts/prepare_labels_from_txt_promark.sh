@@ -67,9 +67,12 @@ python ${frontend}/utils/genScmFile.py \
 
 ### generate utt from scheme file
 echo "generating utts from scheme file"
-#${FESTDIR}/bin/festival "(lex.select 'unilex-rpx)" -b ${testDir}/new_test_sentences.scm 
-${FESTDIR}/bin/festival $FESTDIR/lib/dicts/unilex/unilex-rpx.scm "(lex.select 'unilex-rpx)" -b ${testDir}/new_test_sentences.scm
-#${FESTDIR}/bin/festival -b ${testDir}/new_test_sentences.scm 
+
+#USE THIS FOR BLIZZARD
+#${FESTDIR}/bin/festival $FESTDIR/lib/dicts/unilex/unilex-rpx.scm "(lex.select 'unilex-rpx)" -b ${testDir}/new_test_sentences.scm
+
+#USE THIS FOR SLT
+${FESTDIR}/bin/festival -b ${testDir}/new_test_sentences.scm 
 
 ### convert festival utt to lab
 echo "converting festival utts to labels..."
@@ -91,23 +94,5 @@ python ${frontend}/utils/normalize_lab_for_merlin.py \
 rm -rf ${testDir}/prompt-lab/{full,mono,tmp}
 
 
-### for promark test:
-### If text files are in test_synthesis/txt, look for corresponding .prom files
-### in the same directory and add prominence values from them
-#echo "adding promark prominence values"
-#python scripts/addProminenceValues.py ${testDir}/txt ${testDir}/prompt-lab
-#python scripts/addProminenceValues_syll_token-per-line.py ${testDir}/txt ${testDir}/prompt-lab
-
-#HB 180327 
-#Moved to merlin_synthesis_promark.sh, because it needs to be done after prom_synth step
-#python scripts/addProminenceValues_syll_token-per-line.py ${testDir}/txt ${testDir}/gen_prominence-lab
-
-#status_add_prom=$?
-#if [ $status_add_prom -eq 1 ]; then
-#    echo "Failed to add prominence!!"
-#    exit 1
-#fi
-
-
-#echo "Labels are ready in: ${testDir}/prompt-lab !!"
+echo "Labels are ready in: ${testDir}/prompt-lab !!"
 

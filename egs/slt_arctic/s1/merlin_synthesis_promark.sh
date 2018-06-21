@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -e
 
 if test "$#" -ne 1; then
     echo "Usage: ./merlin_synthesis_promark.sh configfile"
@@ -48,25 +48,12 @@ echo "Step 1: creating label files from text..."
 
 
 
-
-status_step1=$?
-if [ $status_step1 -eq 1 ]; then
-    echo "Step 1 not successful !!"
-    exit 1
-fi
-
 ### Step 2: synthesize speech   ###
 echo "Step 2: synthesizing speech..."
 ./scripts/submit.sh ${MerlinDir}/src/run_merlin.py conf/test_prom_synth_${Voice}.conf
 
 #Modify output prom value if needed..
 python scripts/addProminenceValues_ssml.py ${testDir}/txt ${testDir}/gen_prominence-lab
-status_add_prom=$?
-if [ $status_add_prom -eq 1 ]; then
-    echo "Failed to add prominence!!"
-    exit 1
-fi
-
 
 
 ./scripts/submit.sh ${MerlinDir}/src/run_merlin.py conf/test_dur_synth_${Voice}.conf
@@ -74,7 +61,7 @@ fi
 
 ### Step 3: delete intermediate synth files ###
 echo "Step 3: deleting intermediate synthesis files..."
-./scripts/remove_intermediate_files_promark.sh $global_config_file
+#./scripts/remove_intermediate_files_promark.sh $global_config_file
 
 echo "synthesized audio files are in: experiments/${Voice}/test_synthesis/wav"
 
