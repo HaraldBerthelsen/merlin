@@ -1,15 +1,20 @@
 #!/bin/bash
 
-if test "$#" -ne 1; then
-    echo "Usage: ./scripts/setup.sh <voice_directory_name>"
+if test "$#" -ne 2; then
+    echo "Usage: ./01_setup_promark.sh <Voice> <Labels>"
+    echo "Example: ./01_setup_promark.sh slt_arctic_demo_promark state_align"
     exit 1
 fi
+
+voice_name=$1
+Labels=$2
+
+
 
 current_working_dir=$(pwd)
 merlin_dir=$(dirname $(dirname $(dirname $current_working_dir)))
 experiments_dir=${current_working_dir}/experiments
 
-voice_name=$1
 voice_dir=${experiments_dir}/${voice_name}
 
 acoustic_dir=${voice_dir}/acoustic_model
@@ -80,14 +85,15 @@ fi
 #copy data files
 echo "copying files......"
 
-cp -r ${data_dir}/merlin_baseline_practice/duration_data/ ${duration_dir}/data
-cp -r ${duration_dir}/data ${prominence_dir}/data
+cp -r ${data_dir}/merlin_baseline_practice/duration_data/ ${prominence_dir}/data
+#Not necessary really? because we copy and mosify these files with alignpromark.tcl (but at the moment the directories are not created unless we do this)
+cp -r ${prominence_dir}/data ${duration_dir}/data
 cp -r ${data_dir}/merlin_baseline_practice/acoustic_data/ ${acoustic_dir}/data
 cp -r ${data_dir}/merlin_baseline_practice/test_data/* ${synthesis_dir}
 
 
-use_phone_align=false
-if [[ "$use_phone_align" = "true" ]]; then
+#use_phone_align=false
+if [[ "$Labels" = "phone_align" ]]; then
     #HB for phone_align
     cp ${prominence_dir}/data/label_phone_align/arctic_a005[6-9].lab ${synthesis_dir}/prompt-lab/
     cp ${prominence_dir}/data/label_phone_align/arctic_a0060.lab ${synthesis_dir}/prompt-lab/
@@ -100,14 +106,14 @@ echo "data is ready!"
 
 #ZM copy prominence tags to full context labels using alignpromark.tcl 
 if [ "$voice_name" == "slt_arctic_demo_promark" ]; then
-    if [[ "$use_phone_align" = "true" ]]; then
+    if [[ "$Labels" = "phone_align" ]]; then
 	#HB for phone_align
 	make demo-phone_align
     else
 	make demo
     fi
 elif [ "$voice_name" == "slt_arctic_full_promark" ]; then
-    if [[ "$use_phone_align" = "true" ]]; then
+    if [[ "$Labels" = "phone_align" ]]; then
 	#HB for phone_align
 	make full-phone_align
     else
@@ -126,9 +132,12 @@ global_config_file=conf/global_settings.cfg
 echo "MerlinDir=${merlin_dir}" >  $global_config_file
 echo "WorkDir=${current_working_dir}" >>  $global_config_file
 echo "Voice=${voice_name}" >> $global_config_file
+
 #HB select state_align or phone_align
-echo "Labels=state_align" >> $global_config_file
+#echo "Labels=state_align" >> $global_config_file
 #echo "Labels=phone_align" >> $global_config_file
+echo "Labels=$Labels" >> $global_config_file
+
 echo "Vocoder=WORLD" >> $global_config_file
 echo "SamplingFreq=16000" >> $global_config_file
 

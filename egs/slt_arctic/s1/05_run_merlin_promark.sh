@@ -20,7 +20,8 @@ test_synth_config_file=$3
 
 
 ### Step 5: synthesize speech ###
-echo "Step 5:" 
+#echo "Step 5:" 
+
 
 echo "synthesizing prominence..."
 ./scripts/submit.sh ${MerlinDir}/src/run_merlin.py $test_prom_config_file

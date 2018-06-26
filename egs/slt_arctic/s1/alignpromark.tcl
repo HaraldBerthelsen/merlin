@@ -17,15 +17,22 @@ proc readpromarkdata {fn} {
 	set file [lindex $line $::fileindex]
 	if {$file!=$currfile} {
 	    set currfile $file
+	    #puts $currfile
 	    set wordnr 0
 	}
 	#if {$word != "."} 
-	#HB the points have been replaced with zeroes
-	if {$word != "0"} {
-	    incr wordnr
-	} else {
+	#HB the points have been replaced with zeroes (HB 180625 No they have not??)
+	if {$word == "0"} {
 	    continue
+	} elseif {$word == "."} {
+	    continue
+	} else {
+	    incr wordnr
 	}
+	#if {$file=="arctic_a0001_slt"} {
+	#    puts $wordnr
+	#}
+	    
 #	set interval [lindex $line 5]
 	set prominence [string trim [lindex $line $::promindex] \[\]]
 	set maxprom 0 
@@ -47,7 +54,7 @@ proc readpromarkdata {fn} {
 	    set ::prom($file,$wordnr) $maxprom
 	    set ::prom($file,$wordnr,sylprom) $sylprom
 	}
-	#if {$file=="amidsummernightsdream_02_11" || $file=="amidsummernightsdream_02_15"} {
+	#if {$file=="arctic_a0001_slt" || $file=="amidsummernightsdream_02_15"} {
 	#    puts "prom $file $wordnr $word $::prom($file,$wordnr)"
 	#}
     }
@@ -137,6 +144,9 @@ foreach file [lrange $argv 2 end] {
     set accumword 0
     set currphrase 1
     foreach line $data {
+
+	#puts $line
+
 	
 	#HB	if {![regexp {@x\+} $line]}
 	#HB ignore blizzard silences (??)
@@ -181,7 +191,7 @@ foreach file [lrange $argv 2 end] {
 		set prominence $prom($filename,$wordnumber)
 		set sylpromlist $prom($filename,$wordnumber,sylprom)
 	    }
-	    #puts $sylpromlist
+	    #puts "$filename, $wordnumber, $sylpromlist"
 
 	    if {[llength $sylpromlist]==0} {
 		set sylprominence 0

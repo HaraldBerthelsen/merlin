@@ -4,10 +4,11 @@
 #	tclsh alignpromark.tcl demo-prom experiments/slt_arctic_demo_promark/prominence_model/data/label_state_align experiments/slt_arctic_demo/duration_model/data/label_state_align/*.lab
 
 demo:
-	tclsh alignpromark.tcl demo experiments/slt_arctic_demo_promark/prominence_model/data/label_state_align experiments/slt_arctic_demo_promark/duration_model/data/label_state_align/*.lab
+#HB??	tclsh alignpromark.tcl demo-prom experiments/slt_arctic_demo_promark/prominence_model/data/label_state_align experiments/slt_arctic_demo_promark/prominence_model/data/label_state_align/*.lab
+	tclsh alignpromark.tcl demo experiments/slt_arctic_demo_promark/prominence_model/data/label_state_align experiments/slt_arctic_demo_promark/prominence_model/data/label_state_align/*.lab
 	tclsh alignpromark.tcl demo experiments/slt_arctic_demo_promark/duration_model/data/label_state_align experiments/slt_arctic_demo_promark/duration_model/data/label_state_align/*.lab
 	tclsh alignpromark.tcl demo experiments/slt_arctic_demo_promark/acoustic_model/data/label_state_align experiments/slt_arctic_demo_promark/acoustic_model/data/label_state_align/*.lab
-	tclsh alignpromark.tcl demo experiments/slt_arctic_demo_promark/test_synthesis/prompt-lab experiments/slt_arctic_demo_promark/test_synthesis/prompt-lab/*.lab
+#HB??	tclsh alignpromark.tcl demo experiments/slt_arctic_demo_promark/test_synthesis/prompt-lab experiments/slt_arctic_demo_promark/test_synthesis/prompt-lab/*.lab
 
 demo-phone_align:
 	tclsh alignpromark.tcl demo experiments/slt_arctic_demo_promark/prominence_model/data/label_phone_align experiments/slt_arctic_demo_promark/duration_model/data/label_phone_align/*.lab
@@ -16,7 +17,7 @@ demo-phone_align:
 
 
 full:
-	tclsh alignpromark.tcl full experiments/slt_arctic_full_promark/prominence_model/data/label_state_align experiments/slt_arctic_full_promark/duration_model/data/label_state_align/*.lab
+	tclsh alignpromark.tcl full experiments/slt_arctic_full_promark/prominence_model/data/label_state_align experiments/slt_arctic_full_promark/prominence_model/data/label_state_align/*.lab
 	tclsh alignpromark.tcl full experiments/slt_arctic_full_promark/duration_model/data/label_state_align experiments/slt_arctic_full_promark/duration_model/data/label_state_align/*.lab
 	tclsh alignpromark.tcl full experiments/slt_arctic_full_promark/acoustic_model/data/label_state_align experiments/slt_arctic_full_promark/acoustic_model/data/label_state_align/*.lab
 	tclsh alignpromark.tcl full experiments/slt_arctic_full_promark/test_synthesis/prompt-lab experiments/slt_arctic_full_promark/test_synthesis/prompt-lab/*.lab

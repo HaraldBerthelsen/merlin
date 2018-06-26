@@ -1,16 +1,24 @@
 #!/bin/bash
 
-if test "$#" -ne 1; then
-    echo "Usage: ./scripts/remove_intermediate_files.sh conf/global_settings.cfg"
-    exit 1
-fi
+#HB OLD
+#if test "$#" -ne 1; then
+#    echo "Usage: ./scripts/remove_intermediate_files.sh conf/global_settings.cfg"
+#    exit 1
+#fi
+#if [ ! -f $1 ]; then
+#    echo "Global config file doesn't exist"
+#    exit 1
+#else
+#    source $1
+#fi
 
-if [ ! -f $1 ]; then
-    echo "Global config file doesn't exist"
+if test "$#" -ne 1; then
+    echo "Usage: ./scripts/remove_intermediate_files.sh <Voice>"
     exit 1
-else
-    source $1
 fi
+Voice=$1
+
+
 
 ###################################################
 ######## remove intermediate synth files ##########

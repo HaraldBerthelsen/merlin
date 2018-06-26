@@ -1,20 +1,32 @@
 #!/bin/bash
 
-if test "$#" -ne 1; then
-    echo "Usage: ./scripts/prepare_labels_from_txt.sh conf/global_settings.cfg"
-    exit 1
-fi
+#HB OLD
+#if test "$#" -ne 1; then
+#    echo "Usage: ./scripts/prepare_labels_from_txt_promark.sh conf/global_settings.cfg"
+#    exit 1
+#fi
+#if [ ! -f $1 ]; then
+#    echo "Global config file doesn't exist"
+#    exit 1
+#else
+#    source $1
+#fi
 
-if [ ! -f $1 ]; then
-    echo "Global config file doesn't exist"
+#HB NEW
+if test "$#" -ne 3; then
+    echo "Usage: ./scripts/prepare_labels_from_txt_promark.sh <MerlinDir> <Voice> <Labels>"
+    echo "Example: ./scripts/prepare_labels_from_txt_promark.sh ~/git/hb_merlin slt_arctic_demo_promark state_align"
     exit 1
-else
-    source $1
 fi
+MerlinDir=$1
+Voice=$2
+Labels=$3
+#END HB NEW
+
 
 ### tools required
-#FESTDIR=${MerlinDir}/tools/festival
-FESTDIR=/home/harald/festival/festival
+FESTDIR=${MerlinDir}/tools/festival
+#FESTDIR=/home/harald/festival/festival
 
 if [ ! -d "${FESTDIR}" ]; then
     echo "Failed to find $FESTDIR"
