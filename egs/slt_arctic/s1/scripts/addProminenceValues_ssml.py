@@ -229,6 +229,9 @@ def addPromValuesToLab(lab,promvalues):
                 m0 = re.search("/K:([0-9]+)", pl_line)
                 if m0:
                     prev_promvalue = int(m0.group(1))
+                else:
+                    prev_promvalue = 0
+                    print("WARNING: no K in line\n%s\npromvalue set to 0" % pl_line)
                 #remove existing /K:
                 pl_line_no_k = re.sub("/K:[0-9]+", "", pl_line)        
 

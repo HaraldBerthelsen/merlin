@@ -43,14 +43,14 @@ fi
 
 ###
 #Copy txt files to txt_dir
-rm ${txt_dir}/*.txt
+#rm ${txt_dir}/*.txt
 for f in "$@";
 do
     cp $f ${txt_dir};
 done
 	 
 #remove old wav files
-rm experiments/${Voice}/test_synthesis/wav/*.wav
+#rm experiments/${Voice}/test_synthesis/wav/*.wav
 
 ### Step 1: create label files from text ###
 echo "Step 1: creating label files from text..."
