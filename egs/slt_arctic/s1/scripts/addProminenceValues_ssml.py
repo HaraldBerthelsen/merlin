@@ -287,6 +287,8 @@ def addPromValuesToLab(lab,promvalues):
                     new_pl_line = pl_line_no_k+"/K:"+str(promvalue)
                 newsyll.append(new_pl_line)
 
+                
+
             s += 1
             newword.append(newsyll)
             newsyll = []

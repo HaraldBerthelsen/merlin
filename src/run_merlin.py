@@ -948,6 +948,7 @@ def main_function(cfg):
             label_modifier.modify_duration_labels(in_gen_label_align_file_list, gen_dur_list, gen_label_list)
            
         if cfg.ProminenceModel:
+            
             ### Perform prominence normalization(min. state prom set to 1) ### 
             gen_prom_list   = prepare_file_path_list(gen_file_id_list, gen_dir, cfg.prom_ext)
             gen_label_list = prepare_file_path_list(gen_file_id_list, gen_dir, cfg.lab_ext)

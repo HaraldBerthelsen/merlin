@@ -242,7 +242,9 @@ class HTSLabelModification(object):
             
             full_label = temp_list[2]
             full_label_length = len(full_label) - 3  # remove state information [k]
-            full_label_nostate = full_label[0:full_label_length-1]
+            #HB is this removing the last J-value? Yes, apparently..
+            #full_label_nostate = full_label[0:full_label_length-1]
+            full_label_nostate = full_label[0:full_label_length]
             state_index = full_label[full_label_length + 1]
             state_index = int(state_index) - 1
 
@@ -257,6 +259,13 @@ class HTSLabelModification(object):
             #remove the old K: field before appending the new one
             full_label_nostate_noprom = re.sub("/K:[0-9]*","",full_label_nostate)
 
+
+            #HB REMOVE
+            #print(full_label_nostate)
+
+
+
+            
             label_binary_flag = self.check_silence_pattern(full_label)
             #label_binary_flag = 0
             if label_binary_flag == 1:
