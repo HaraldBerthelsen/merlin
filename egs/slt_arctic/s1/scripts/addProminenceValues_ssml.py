@@ -138,6 +138,12 @@ def convertPromString(pm,p,pc):
         pv = ("=", 0, None)
     elif p == "keep":
         pv = "keep"
+
+    #Can't subtract more than 100 %
+    elif pm == "-" and pc == "%" and int(p) > 100:
+        print("Trying to subtract more than 100%%: (%s, %s, %s), changed to 100%%" % (pm,p,pc))
+        pv = (pm,100,pc)
+        
     else:
         pv = (pm,int(p),pc)
     return pv
@@ -208,6 +214,7 @@ def getLab(promptlabfile):
     return lab
 
 def addPromValuesToLab(lab,promvalues):
+    linenr = 0
     i = 0
     newlab = [lab[0]]
     newword = []
@@ -222,8 +229,10 @@ def addPromValuesToLab(lab,promvalues):
                 #one value for all syllables in word
                 pass
             for pl_line in syll:
-
-                print(promsyll)
+                linenr += 1
+                symbol = re.search("-([^+]+)\+", pl_line).group(1)
+                
+                #print(promsyll)
 
                 #Get existing K
                 m0 = re.search("/K:([0-9]+)", pl_line)
@@ -262,6 +271,9 @@ def addPromValuesToLab(lab,promvalues):
                 #round..
                 promvalue = int(promvalue)
 
+                #TODO better print..
+                print("Line %3d, symbol %3s:\t%3d %s\t->\t%d" % (linenr,symbol,prev_promvalue, promsyll, promvalue))
+                #print("%d\t->\t%d" % (prev_promvalue,promvalue))
                     
                 #add prom before state if it exists
                 m = re.search("^(.+)(\[[0-9]+\])$", pl_line_no_k)
